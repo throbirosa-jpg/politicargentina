@@ -184,25 +184,14 @@
     padding: 2rem;
     aspect-ratio: 3/4;
   }
-  .indice-mapa svg {
+  .indice-mapa .map-svg {
     width: 100%;
     height: 100%;
+    display: block;
   }
-  .indice-mapa path {
-    fill: var(--celeste);
-    stroke: white;
-    stroke-width: 0.8;
-    cursor: pointer;
+  .indice-mapa .map-svg path {
     transition: fill 0.2s;
-  }
-  .indice-mapa path:hover {
-    fill: var(--sol);
-  }
-  .indice-mapa path.caba {
-    fill: var(--sol);
-  }
-  .indice-mapa path.activa {
-    fill: var(--rojo-fed);
+    cursor: pointer;
   }
   .mapa-tooltip {
     position: absolute;
@@ -763,79 +752,6 @@
   <div class="indice-layout">
     <div class="indice-mapa">
       <div class="mapa-tooltip" id="mapaTooltip"></div>
-      <svg viewBox="0 0 280 600" preserveAspectRatio="xMidYMid meet">
-        <!-- NOA: Jujuy (esquina superior, forma trapezoidal alargada) -->
-        <path d="M 110 25 L 135 22 L 142 35 L 148 55 L 138 72 L 122 78 L 110 70 L 102 50 L 105 35 Z" data-prov="Jujuy"/>
-
-        <!-- Salta (forma de L invertida hacia el este) -->
-        <path d="M 102 70 L 122 78 L 138 72 L 165 75 L 180 95 L 195 105 L 200 125 L 185 140 L 165 145 L 145 138 L 128 142 L 115 130 L 105 110 L 95 95 Z" data-prov="Salta"/>
-
-        <!-- Formosa (alargada este-oeste, estrecha) -->
-        <path d="M 180 95 L 220 90 L 245 105 L 250 130 L 230 140 L 200 138 L 195 122 L 185 110 Z" data-prov="Formosa"/>
-
-        <!-- Chaco (debajo de Formosa, más ancha al este) -->
-        <path d="M 195 138 L 230 140 L 245 155 L 248 185 L 230 200 L 210 200 L 195 185 L 188 165 L 192 148 Z" data-prov="Chaco"/>
-
-        <!-- Misiones (forma característica de "uña" en el NE) -->
-        <path d="M 248 165 L 265 158 L 270 175 L 268 200 L 258 215 L 245 220 L 240 200 L 245 180 Z" data-prov="Misiones"/>
-
-        <!-- Tucumán (chica, central NOA) -->
-        <path d="M 115 130 L 128 142 L 135 158 L 128 172 L 113 168 L 108 152 Z" data-prov="Tucumán"/>
-
-        <!-- Catamarca (al oeste, alargada N-S) -->
-        <path d="M 95 95 L 105 110 L 108 152 L 100 175 L 88 178 L 80 160 L 78 130 L 82 110 Z" data-prov="Catamarca"/>
-
-        <!-- Santiago del Estero (centro, forma rectangular) -->
-        <path d="M 128 142 L 145 138 L 165 145 L 175 165 L 178 195 L 165 210 L 145 208 L 135 195 L 128 172 L 135 158 Z" data-prov="Santiago del Estero"/>
-
-        <!-- La Rioja (oeste, alargada) -->
-        <path d="M 78 130 L 88 178 L 92 215 L 80 220 L 70 200 L 65 170 L 70 145 Z" data-prov="La Rioja"/>
-
-        <!-- Corrientes (forma redondeada en el NE, junto a Misiones y Paraná) -->
-        <path d="M 210 200 L 230 200 L 245 220 L 250 245 L 245 270 L 225 275 L 205 265 L 195 248 L 200 220 Z" data-prov="Corrientes"/>
-
-        <!-- Santa Fe (centro-este, alargada N-S) -->
-        <path d="M 165 210 L 195 200 L 200 220 L 195 248 L 188 275 L 175 295 L 158 295 L 152 270 L 155 240 L 162 220 Z" data-prov="Santa Fe"/>
-
-        <!-- Entre Ríos (esquina baja del Litoral, redondeada) -->
-        <path d="M 195 248 L 205 265 L 215 285 L 210 315 L 195 325 L 180 318 L 175 295 L 188 275 Z" data-prov="Entre Ríos"/>
-
-        <!-- Córdoba (central, grande, forma de pera) -->
-        <path d="M 100 175 L 108 152 L 128 172 L 135 195 L 145 208 L 152 240 L 155 270 L 140 290 L 120 295 L 105 280 L 95 250 L 92 215 L 95 195 Z" data-prov="Córdoba"/>
-
-        <!-- San Juan (oeste, junto a Mendoza) -->
-        <path d="M 65 170 L 70 200 L 80 220 L 78 245 L 65 250 L 55 235 L 50 205 L 55 180 Z" data-prov="San Juan"/>
-
-        <!-- San Luis (centro-oeste, chica) -->
-        <path d="M 80 220 L 92 215 L 95 250 L 90 280 L 78 285 L 70 270 L 68 250 L 78 245 Z" data-prov="San Luis"/>
-
-        <!-- Mendoza (oeste, grande, alargada N-S) -->
-        <path d="M 50 205 L 55 235 L 65 250 L 68 250 L 70 270 L 65 305 L 50 320 L 38 305 L 32 275 L 32 240 L 40 215 Z" data-prov="Mendoza"/>
-
-        <!-- La Pampa (centro-sur, rectangular) -->
-        <path d="M 65 305 L 90 280 L 105 280 L 120 295 L 125 330 L 115 360 L 90 365 L 70 350 L 62 325 Z" data-prov="La Pampa"/>
-
-        <!-- Buenos Aires (forma característica grande, hacia el SE) -->
-        <path class="activa" d="M 120 295 L 140 290 L 155 270 L 175 295 L 180 318 L 195 325 L 200 355 L 195 390 L 185 420 L 170 445 L 145 455 L 125 445 L 115 420 L 115 390 L 120 360 L 125 330 Z" data-prov="Buenos Aires"/>
-
-        <!-- CABA (puntito amarillo) -->
-        <path class="caba" d="M 172 332 L 182 332 L 182 343 L 172 343 Z" data-prov="CABA"/>
-
-        <!-- PATAGONIA: Neuquén (NO patagónico) -->
-        <path d="M 32 305 L 50 320 L 65 305 L 70 350 L 60 365 L 38 365 L 28 350 L 25 325 Z" data-prov="Neuquén"/>
-
-        <!-- Río Negro (atravesando E-O, ensanchada en el este) -->
-        <path d="M 38 365 L 70 350 L 90 365 L 115 390 L 115 420 L 95 425 L 70 420 L 50 410 L 32 395 Z" data-prov="Río Negro"/>
-
-        <!-- Chubut (más ancha, ensanchamiento característico) -->
-        <path d="M 32 395 L 50 410 L 70 420 L 95 425 L 100 460 L 95 490 L 78 495 L 55 490 L 38 475 L 25 450 L 22 420 Z" data-prov="Chubut"/>
-
-        <!-- Santa Cruz (alargada hacia el sur, esquina inferior) -->
-        <path d="M 25 490 L 38 475 L 55 490 L 78 495 L 85 525 L 78 555 L 60 570 L 42 565 L 28 545 L 18 515 Z" data-prov="Santa Cruz"/>
-
-        <!-- Tierra del Fuego (isla separada al sur) -->
-        <path d="M 50 580 L 75 578 L 80 588 L 65 595 L 48 593 Z" data-prov="Tierra del Fuego"/>
-      </svg>
     </div>
 
     <div>
@@ -1203,32 +1119,6 @@
     });
   });
 
-  // Click en provincia del mapa -> ir a ficha
-  const paths = document.querySelectorAll('.indice-mapa path');
-  const tooltip = document.getElementById('mapaTooltip');
-  const mapa = document.querySelector('.indice-mapa');
-
-  paths.forEach(path => {
-    path.addEventListener('mouseenter', () => {
-      tooltip.textContent = path.getAttribute('data-prov');
-      tooltip.style.opacity = '1';
-    });
-    path.addEventListener('mousemove', (e) => {
-      const rect = mapa.getBoundingClientRect();
-      tooltip.style.left = (e.clientX - rect.left + 15) + 'px';
-      tooltip.style.top = (e.clientY - rect.top + 10) + 'px';
-    });
-    path.addEventListener('mouseleave', () => {
-      tooltip.style.opacity = '0';
-    });
-    path.addEventListener('click', () => {
-      // Si clickea Buenos Aires va a ficha
-      if (path.getAttribute('data-prov') === 'Buenos Aires') {
-        document.querySelector('[data-view="ficha"]').click();
-      }
-    });
-  });
-
   // Click en card de provincia BA -> ir a ficha
   document.querySelectorAll('.provincia-card').forEach(card => {
     card.addEventListener('click', () => {
@@ -1237,6 +1127,17 @@
         document.querySelector('[data-view="ficha"]').click();
       }
     });
+  });
+</script>
+
+<script src="https://d3js.org/d3.v7.min.js"></script>
+<script src="mapa-argentina.js"></script>
+<script>
+  initMapaArgentina({
+    container: '.indice-mapa',
+    tooltipId: 'mapaTooltip',
+    mode: 'indice',
+    geoUrl: 'provincias.geojson'
   });
 </script>
 

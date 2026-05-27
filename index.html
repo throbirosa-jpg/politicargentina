@@ -200,13 +200,13 @@
     width: 100%;
     height: 100%;
     padding: 1.5rem;
+    display: block;
   }
   .map-svg path {
-    fill: var(--celeste);
-    stroke: var(--crema);
-    stroke-width: 0.8;
     transition: fill 0.2s;
-    cursor: pointer;
+  }
+  .hero-visual .map-svg path {
+    cursor: default;
   }
   .map-svg path:hover {
     fill: var(--sol);
@@ -808,42 +808,6 @@
       </g>
     </svg>
     <div class="map-tooltip" id="tooltip"></div>
-    <svg class="map-svg" viewBox="0 0 280 600" preserveAspectRatio="xMidYMid meet">
-      <!-- Mapa de Argentina con coordenadas reales simplificadas. Proyección aproximada para visualización. -->
-      <!-- NOA -->
-      <path d="M 110 30 L 130 25 L 142 50 L 145 75 L 130 85 L 115 70 L 108 55 Z" data-prov="Jujuy"/>
-      <path d="M 115 70 L 130 85 L 155 90 L 165 115 L 160 140 L 140 145 L 120 130 L 108 100 Z" data-prov="Salta"/>
-      <path d="M 108 100 L 120 130 L 110 155 L 92 150 L 88 125 Z" data-prov="Catamarca"/>
-      <path d="M 120 130 L 140 145 L 145 170 L 130 180 L 110 175 L 110 155 Z" data-prov="Tucumán"/>
-      <path d="M 110 175 L 130 180 L 150 195 L 150 220 L 130 225 L 110 210 Z" data-prov="Santiago del Estero"/>
-      <path d="M 165 115 L 195 110 L 215 135 L 215 165 L 195 170 L 175 165 L 160 140 Z" data-prov="Formosa"/>
-      <path d="M 175 165 L 215 165 L 230 195 L 220 220 L 195 220 L 175 200 Z" data-prov="Chaco"/>
-      <path d="M 92 150 L 110 155 L 110 210 L 95 220 L 80 200 L 78 175 Z" data-prov="La Rioja"/>
-
-      <!-- Litoral -->
-      <path d="M 220 220 L 245 230 L 250 260 L 230 265 L 215 250 Z" data-prov="Misiones"/>
-      <path d="M 195 220 L 220 220 L 215 250 L 215 280 L 195 285 L 180 265 L 180 240 Z" data-prov="Corrientes"/>
-      <path d="M 150 220 L 175 220 L 180 240 L 180 265 L 165 290 L 145 290 L 140 260 Z" data-prov="Santa Fe"/>
-      <path d="M 180 265 L 195 285 L 195 320 L 175 325 L 165 290 Z" data-prov="Entre Ríos"/>
-
-      <!-- Centro -->
-      <path d="M 110 210 L 130 225 L 145 240 L 145 290 L 130 305 L 110 295 L 105 260 Z" data-prov="Córdoba"/>
-      <path d="M 95 220 L 110 210 L 105 260 L 95 285 L 75 280 L 75 245 Z" data-prov="San Juan"/>
-      <path d="M 95 285 L 105 260 L 110 295 L 105 325 L 90 335 L 75 320 L 75 280 Z" data-prov="San Luis"/>
-      <path d="M 60 240 L 80 240 L 75 280 L 75 320 L 60 340 L 50 320 L 50 270 Z" data-prov="Mendoza"/>
-
-      <!-- Pampa y BA -->
-      <path d="M 75 320 L 105 325 L 105 380 L 80 385 L 65 365 L 65 340 Z" data-prov="La Pampa"/>
-      <path d="M 105 325 L 130 305 L 165 290 L 175 325 L 175 360 L 150 380 L 145 415 L 115 420 L 105 380 Z" data-prov="Buenos Aires"/>
-      <path d="M 168 335 L 178 335 L 178 348 L 168 348 Z" data-prov="CABA" class="caba"/>
-
-      <!-- Patagonia -->
-      <path d="M 50 320 L 65 340 L 65 365 L 50 385 L 35 375 L 30 350 Z" data-prov="Neuquén"/>
-      <path d="M 50 385 L 80 385 L 115 420 L 90 440 L 60 435 L 45 415 Z" data-prov="Río Negro"/>
-      <path d="M 45 415 L 90 440 L 95 485 L 65 495 L 40 475 L 30 445 Z" data-prov="Chubut"/>
-      <path d="M 30 445 L 65 495 L 70 545 L 45 555 L 25 525 L 18 490 Z" data-prov="Santa Cruz"/>
-      <path d="M 35 565 L 60 565 L 65 590 L 35 590 Z" data-prov="Tierra del Fuego"/>
-    </svg>
   </div>
 </section>
 
@@ -1182,26 +1146,14 @@
   </div>
 </footer>
 
+<script src="https://d3js.org/d3.v7.min.js"></script>
+<script src="mapa-argentina.js"></script>
 <script>
-  // Tooltip interactivo para el mapa
-  const paths = document.querySelectorAll('.map-svg path');
-  const tooltip = document.getElementById('tooltip');
-  const visual = document.querySelector('.hero-visual');
-
-  paths.forEach(path => {
-    path.addEventListener('mouseenter', (e) => {
-      const prov = path.getAttribute('data-prov');
-      tooltip.textContent = prov;
-      tooltip.style.opacity = '1';
-    });
-    path.addEventListener('mousemove', (e) => {
-      const rect = visual.getBoundingClientRect();
-      tooltip.style.left = (e.clientX - rect.left + 12) + 'px';
-      tooltip.style.top = (e.clientY - rect.top + 12) + 'px';
-    });
-    path.addEventListener('mouseleave', () => {
-      tooltip.style.opacity = '0';
-    });
+  initMapaArgentina({
+    container: '.hero-visual',
+    tooltipId: 'tooltip',
+    mode: 'hero',
+    geoUrl: 'provincias.geojson'
   });
 </script>
 
