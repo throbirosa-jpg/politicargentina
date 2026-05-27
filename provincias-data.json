@@ -1,0 +1,523 @@
+{
+  "_meta": {
+    "fuente": "Sitios oficiales provinciales, INDEC Censo 2022, Cámara Nacional Electoral, Wikipedia con citas verificadas",
+    "actualizado": "2026-05",
+    "nota": "Datos estructurales (sistemas electorales, cantidades de bancas, etc.) son estables. Las composiciones legislativas por partido pueden tener variaciones por pases de bloques. Para consulta oficial, ver enlaces al pie de cada ficha."
+  },
+  "provincias": {
+    "buenos-aires": {
+      "id": "buenos-aires",
+      "nombre": "Buenos Aires",
+      "capital": "La Plata",
+      "region": "Centro",
+      "color": "#74ACDF",
+      "superficie_km2": 307571,
+      "poblacion_2022": "17.523.996",
+      "densidad": "57 hab/km²",
+      "ranking_poblacion": "1° del país",
+      "divisiones": {
+        "tipo": "partidos",
+        "cantidad": 135
+      },
+      "ejecutivo": {
+        "titulo": "Gobernador/a",
+        "eleccion": "Voto directo",
+        "mandato_anios": 4,
+        "reeleccion": "Una reelección consecutiva",
+        "vice": true,
+        "vice_titulo": "Vicegobernador/a",
+        "partido_gobernante": "Partido Justicialista",
+        "partido_color": "#4a90c2",
+        "frente_actual": "Fuerza Patria / peronismo bonaerense",
+        "periodo_actual": "2023–2027",
+        "proxima_eleccion": "2027 (concurrente con la nacional)"
+      },
+      "legislativo": {
+        "tipo": "Bicameral",
+        "camara_diputados": 92,
+        "camara_senadores": 46,
+        "total_bancas": 138,
+        "renovacion": "Mitad cada 2 años",
+        "composicion_nota": "Principales bloques: Unión por la Patria (mayoría), La Libertad Avanza, PRO y aliados, UCR + radicalismo, bloques menores. Composición sujeta a pases de bloques."
+      },
+      "judicial": {
+        "tribunal_superior": "Suprema Corte de Justicia",
+        "miembros": 7,
+        "designacion": "Gobernador con acuerdo del Senado provincial",
+        "mandato": "Vitalicio (hasta 75 años)"
+      },
+      "representacion_nacional": {
+        "diputados_nacionales": 70,
+        "senadores_nacionales": 3
+      },
+      "economia": {
+        "principales_actividades": [
+          "Industria manufacturera (la mayor del país)",
+          "Agropecuaria (zona pampeana)",
+          "Puerto y comercio internacional"
+        ],
+        "aporte_pbi_nacional": "≈ 33% del PBI nacional"
+      },
+      "particularidades": [
+        "Es la provincia más poblada y de mayor peso económico del país.",
+        "Su capital (La Plata) es una ciudad planificada fundada en 1882.",
+        "Aporta el 40% de la coparticipación y recibe aproximadamente el 7%, según datos provinciales.",
+        "Su territorio incluye al conurbano bonaerense, área urbana más densa de Argentina."
+      ],
+      "fuentes_oficiales": [
+        { "nombre": "Gobierno de la Provincia", "url": "https://www.gba.gob.ar" },
+        { "nombre": "Honorable Senado bonaerense", "url": "https://www.senado-ba.gov.ar" },
+        { "nombre": "Honorable Cámara de Diputados", "url": "https://www.hcdiputados-ba.gov.ar" }
+      ]
+    },
+    "caba": {
+      "id": "caba",
+      "nombre": "Ciudad Autónoma de Buenos Aires",
+      "nombre_corto": "CABA",
+      "capital": "—",
+      "capital_nota": "Es la Capital Federal de la República Argentina.",
+      "region": "Centro",
+      "color": "#74ACDF",
+      "superficie_km2": 203,
+      "poblacion_2022": "3.120.612",
+      "densidad": "15.367 hab/km²",
+      "ranking_poblacion": "Mayor densidad del país",
+      "divisiones": {
+        "tipo": "comunas",
+        "cantidad": 15
+      },
+      "ejecutivo": {
+        "titulo": "Jefe/a de Gobierno",
+        "eleccion": "Voto directo (con balotaje si nadie supera 50% en primera vuelta)",
+        "mandato_anios": 4,
+        "reeleccion": "Una reelección consecutiva",
+        "vice": true,
+        "vice_titulo": "Vicejefe/a de Gobierno",
+        "partido_gobernante": "PRO",
+        "partido_color": "#F6B40E",
+        "frente_actual": "PRO",
+        "periodo_actual": "2023–2027",
+        "proxima_eleccion": "2027"
+      },
+      "legislativo": {
+        "tipo": "Unicameral",
+        "camara_unica": "Legislatura de la Ciudad",
+        "total_bancas": 60,
+        "renovacion": "Mitad cada 2 años",
+        "composicion_nota": "Bloques principales: PRO, La Libertad Avanza, Unión por la Patria, Confianza Pública, UCR-Evolución y bloques menores. Composición sujeta a pases de bloques."
+      },
+      "judicial": {
+        "tribunal_superior": "Tribunal Superior de Justicia",
+        "miembros": 5,
+        "designacion": "Jefe/a de Gobierno con acuerdo de la Legislatura (2/3)",
+        "mandato": "Vitalicio (hasta 75 años)"
+      },
+      "representacion_nacional": {
+        "diputados_nacionales": 25,
+        "senadores_nacionales": 3
+      },
+      "economia": {
+        "principales_actividades": [
+          "Servicios financieros y empresariales",
+          "Comercio y administración pública",
+          "Turismo y servicios culturales"
+        ],
+        "aporte_pbi_nacional": "≈ 22% del PBI nacional"
+      },
+      "particularidades": [
+        "Tiene autonomía constitucional desde la reforma de 1994 (artículo 129).",
+        "Su Constitución propia fue sancionada en 1996.",
+        "Es la única jurisdicción con régimen mixto: provincia y a la vez Capital Federal.",
+        "Concentra la sede de los tres poderes del Estado Nacional."
+      ],
+      "fuentes_oficiales": [
+        { "nombre": "Gobierno de la Ciudad", "url": "https://www.buenosaires.gob.ar" },
+        { "nombre": "Legislatura porteña", "url": "https://www.legislatura.gob.ar" }
+      ]
+    },
+    "cordoba": {
+      "id": "cordoba",
+      "nombre": "Córdoba",
+      "capital": "Córdoba",
+      "region": "Centro",
+      "color": "#74ACDF",
+      "superficie_km2": 165321,
+      "poblacion_2022": "3.840.905",
+      "densidad": "23 hab/km²",
+      "ranking_poblacion": "2° del país",
+      "divisiones": {
+        "tipo": "departamentos",
+        "cantidad": 26
+      },
+      "ejecutivo": {
+        "titulo": "Gobernador/a",
+        "eleccion": "Voto directo (sistema de Ley de Lemas hasta 2008; hoy mayoría simple)",
+        "mandato_anios": 4,
+        "reeleccion": "Una reelección consecutiva",
+        "vice": true,
+        "vice_titulo": "Vicegobernador/a",
+        "partido_gobernante": "Hacemos Unidos por Córdoba",
+        "partido_color": "#2a5a4a",
+        "frente_actual": "Coalición provincial de raíz peronista, alineada con Provincias Unidas a nivel nacional",
+        "periodo_actual": "2023–2027",
+        "proxima_eleccion": "2027 (desdoblada del calendario nacional según decisión del Ejecutivo provincial)"
+      },
+      "legislativo": {
+        "tipo": "Unicameral",
+        "camara_unica": "Legislatura de Córdoba",
+        "total_bancas": 70,
+        "renovacion": "Total cada 4 años (concurrente con gobernación)",
+        "composicion_nota": "Mayoría de Hacemos Unidos por Córdoba. Principales oposiciones: La Libertad Avanza, Juntos por el Cambio / radicalismo, Unión por la Patria."
+      },
+      "judicial": {
+        "tribunal_superior": "Tribunal Superior de Justicia",
+        "miembros": 7,
+        "designacion": "Gobernador con acuerdo de la Legislatura",
+        "mandato": "Vitalicio (con confirmación cada 6 años hasta los 70)"
+      },
+      "representacion_nacional": {
+        "diputados_nacionales": 18,
+        "senadores_nacionales": 3
+      },
+      "economia": {
+        "principales_actividades": [
+          "Industria automotriz (clúster Renault, Fiat, Iveco)",
+          "Agroindustria y producción de granos",
+          "Turismo serrano y servicios"
+        ],
+        "aporte_pbi_nacional": "≈ 8% del PBI nacional"
+      },
+      "particularidades": [
+        "Su universidad pública (UNC) es la más antigua del país, fundada en 1613.",
+        "Tradicionalmente se autodenomina 'La Docta' por su tradición educativa.",
+        "Suele desdoblar sus elecciones provinciales del calendario nacional.",
+        "Es uno de los principales polos industriales del país."
+      ],
+      "fuentes_oficiales": [
+        { "nombre": "Gobierno de Córdoba", "url": "https://www.cba.gov.ar" },
+        { "nombre": "Legislatura provincial", "url": "https://legislaturacba.gob.ar" }
+      ]
+    },
+    "mendoza": {
+      "id": "mendoza",
+      "nombre": "Mendoza",
+      "capital": "Mendoza",
+      "region": "Cuyo",
+      "color": "#A47551",
+      "superficie_km2": 148827,
+      "poblacion_2022": "2.014.533",
+      "densidad": "14 hab/km²",
+      "ranking_poblacion": "5° del país",
+      "divisiones": {
+        "tipo": "departamentos",
+        "cantidad": 18
+      },
+      "ejecutivo": {
+        "titulo": "Gobernador/a",
+        "eleccion": "Voto directo",
+        "mandato_anios": 4,
+        "reeleccion": "Sin reelección consecutiva",
+        "vice": true,
+        "vice_titulo": "Vicegobernador/a",
+        "partido_gobernante": "Unión Cívica Radical",
+        "partido_color": "#b8341b",
+        "frente_actual": "Cambia Mendoza (UCR + PRO + aliados)",
+        "periodo_actual": "2023–2027",
+        "proxima_eleccion": "2027 (desdoblada del calendario nacional)"
+      },
+      "legislativo": {
+        "tipo": "Bicameral",
+        "camara_diputados": 48,
+        "camara_senadores": 38,
+        "total_bancas": 86,
+        "renovacion": "Mitad cada 2 años",
+        "composicion_nota": "Principales bloques: Cambia Mendoza (oficialismo), La Libertad Avanza, Unión por la Patria, PRO. Composición sujeta a pases de bloques."
+      },
+      "judicial": {
+        "tribunal_superior": "Suprema Corte de Justicia",
+        "miembros": 7,
+        "designacion": "Gobernador con acuerdo del Senado provincial",
+        "mandato": "Vitalicio (hasta 75 años)"
+      },
+      "representacion_nacional": {
+        "diputados_nacionales": 10,
+        "senadores_nacionales": 3
+      },
+      "economia": {
+        "principales_actividades": [
+          "Vitivinicultura (mayor productor de vino del país)",
+          "Hidrocarburos y minería",
+          "Turismo y servicios"
+        ],
+        "aporte_pbi_nacional": "≈ 4% del PBI nacional"
+      },
+      "particularidades": [
+        "Tiene una Constitución provincial sancionada en 1916, una de las más antiguas vigentes.",
+        "No admite reelección consecutiva del gobernador (caso poco frecuente en el país).",
+        "Es la principal productora de vino: aporta más del 70% del vino argentino.",
+        "Tiene legislación propia sobre uso del agua, recurso crítico por su geografía árida."
+      ],
+      "fuentes_oficiales": [
+        { "nombre": "Gobierno de Mendoza", "url": "https://www.mendoza.gov.ar" },
+        { "nombre": "Legislatura provincial", "url": "https://www.legislaturamendoza.gov.ar" }
+      ]
+    },
+    "santa-fe": {
+      "id": "santa-fe",
+      "nombre": "Santa Fe",
+      "capital": "Santa Fe",
+      "region": "Centro",
+      "color": "#74ACDF",
+      "superficie_km2": 133007,
+      "poblacion_2022": "3.556.522",
+      "densidad": "27 hab/km²",
+      "ranking_poblacion": "3° del país",
+      "divisiones": {
+        "tipo": "departamentos",
+        "cantidad": 19
+      },
+      "ejecutivo": {
+        "titulo": "Gobernador/a",
+        "eleccion": "Voto directo (sistema con PASO provinciales)",
+        "mandato_anios": 4,
+        "reeleccion": "Sin reelección consecutiva (régimen modificado tras reforma constitucional 2025)",
+        "vice": true,
+        "vice_titulo": "Vicegobernador/a",
+        "partido_gobernante": "Unión Cívica Radical",
+        "partido_color": "#b8341b",
+        "frente_actual": "Unidos para Cambiar Santa Fe (UCR + PRO + Socialismo + aliados), integrante de Provincias Unidas",
+        "periodo_actual": "2023–2027",
+        "proxima_eleccion": "2027 (desdoblada del calendario nacional)"
+      },
+      "legislativo": {
+        "tipo": "Bicameral",
+        "camara_diputados": 50,
+        "camara_senadores": 19,
+        "total_bancas": 69,
+        "renovacion": "Total cada 4 años (concurrente con gobernación)",
+        "composicion_nota": "Principales bloques: Unidos (oficialismo), Más para Santa Fe (peronismo), La Libertad Avanza, otros bloques menores."
+      },
+      "judicial": {
+        "tribunal_superior": "Corte Suprema de Justicia",
+        "miembros": 6,
+        "designacion": "Gobernador con acuerdo de la Asamblea Legislativa",
+        "mandato": "Vitalicio"
+      },
+      "representacion_nacional": {
+        "diputados_nacionales": 19,
+        "senadores_nacionales": 3
+      },
+      "economia": {
+        "principales_actividades": [
+          "Complejo agroexportador (puerto de Rosario, principal salida granaria)",
+          "Industria oleaginosa y alimentos",
+          "Industria metalmecánica y siderurgia"
+        ],
+        "aporte_pbi_nacional": "≈ 8% del PBI nacional"
+      },
+      "particularidades": [
+        "Sancionó una reforma constitucional en 2025, la primera desde 1962.",
+        "La ciudad de Rosario, sin ser capital provincial, es la más poblada y el tercer aglomerado urbano del país.",
+        "El sistema portuario del Gran Rosario es el más importante de granos del país.",
+        "Tradicionalmente es laboratorio político: probó PASO, eliminación de listas sábana, y reformas en sistemas de elección."
+      ],
+      "fuentes_oficiales": [
+        { "nombre": "Gobierno de Santa Fe", "url": "https://www.santafe.gov.ar" },
+        { "nombre": "Legislatura provincial", "url": "https://www.legislaturasantafe.gob.ar" }
+      ]
+    },
+    "tucuman": {
+      "id": "tucuman",
+      "nombre": "Tucumán",
+      "capital": "San Miguel de Tucumán",
+      "region": "NOA",
+      "color": "#D4793C",
+      "superficie_km2": 22524,
+      "poblacion_2022": "1.694.656",
+      "densidad": "75 hab/km²",
+      "ranking_poblacion": "5° del país en habitantes, 1° en densidad entre las provincias",
+      "divisiones": {
+        "tipo": "departamentos",
+        "cantidad": 17
+      },
+      "ejecutivo": {
+        "titulo": "Gobernador/a",
+        "eleccion": "Voto directo (con sistema de acoples)",
+        "mandato_anios": 4,
+        "reeleccion": "Una reelección consecutiva",
+        "vice": true,
+        "vice_titulo": "Vicegobernador/a",
+        "partido_gobernante": "Partido Justicialista",
+        "partido_color": "#4a90c2",
+        "frente_actual": "Frente de Todos / peronismo tucumano",
+        "periodo_actual": "2023–2027",
+        "proxima_eleccion": "2027 (desdoblada del calendario nacional)"
+      },
+      "legislativo": {
+        "tipo": "Unicameral",
+        "camara_unica": "Legislatura de Tucumán",
+        "total_bancas": 49,
+        "renovacion": "Total cada 4 años (concurrente con gobernación)",
+        "composicion_nota": "Mayoría del peronismo tucumano. Oposición principal: Juntos por el Cambio, La Libertad Avanza, partidos provinciales."
+      },
+      "judicial": {
+        "tribunal_superior": "Corte Suprema de Justicia",
+        "miembros": 5,
+        "designacion": "Gobernador con acuerdo de la Legislatura",
+        "mandato": "Vitalicio (hasta 75 años)"
+      },
+      "representacion_nacional": {
+        "diputados_nacionales": 9,
+        "senadores_nacionales": 3
+      },
+      "economia": {
+        "principales_actividades": [
+          "Industria azucarera y citrícola (líder nacional en limón)",
+          "Producción agroindustrial",
+          "Servicios y administración pública"
+        ],
+        "aporte_pbi_nacional": "≈ 2% del PBI nacional"
+      },
+      "particularidades": [
+        "Es la provincia más chica del país en superficie continental (no contando Tierra del Fuego).",
+        "Tiene la mayor densidad poblacional entre las provincias.",
+        "Cuna de la Independencia: la Declaración del 9 de julio de 1816 fue firmada en su capital.",
+        "Principal productor mundial de limón industrializado."
+      ],
+      "fuentes_oficiales": [
+        { "nombre": "Gobierno de Tucumán", "url": "https://www.tucuman.gob.ar" },
+        { "nombre": "Legislatura provincial", "url": "https://www.legislaturadetucuman.gob.ar" }
+      ]
+    },
+    "salta": {
+      "id": "salta",
+      "nombre": "Salta",
+      "capital": "Salta",
+      "region": "NOA",
+      "color": "#D4793C",
+      "superficie_km2": 155488,
+      "poblacion_2022": "1.424.397",
+      "densidad": "9 hab/km²",
+      "ranking_poblacion": "8° del país",
+      "divisiones": {
+        "tipo": "departamentos",
+        "cantidad": 23
+      },
+      "ejecutivo": {
+        "titulo": "Gobernador/a",
+        "eleccion": "Voto directo (con sistema de Ley de Lemas vigente)",
+        "mandato_anios": 4,
+        "reeleccion": "Una reelección consecutiva",
+        "vice": true,
+        "vice_titulo": "Vicegobernador/a",
+        "partido_gobernante": "Partido de la Victoria (PV) / Gana Salta",
+        "partido_color": "#A47551",
+        "frente_actual": "Frente provincial encabezado por el oficialismo salteño",
+        "periodo_actual": "2023–2027",
+        "proxima_eleccion": "2027 (desdoblada del calendario nacional)"
+      },
+      "legislativo": {
+        "tipo": "Bicameral",
+        "camara_diputados": 60,
+        "camara_senadores": 23,
+        "total_bancas": 83,
+        "renovacion": "Mitad cada 2 años",
+        "composicion_nota": "Composición fragmentada por sistema de Ley de Lemas: bloques del oficialismo provincial, peronismo, La Libertad Avanza, partidos provinciales menores."
+      },
+      "judicial": {
+        "tribunal_superior": "Corte de Justicia",
+        "miembros": 9,
+        "designacion": "Gobernador con acuerdo del Senado provincial",
+        "mandato": "Vitalicio (hasta 75 años)"
+      },
+      "representacion_nacional": {
+        "diputados_nacionales": 7,
+        "senadores_nacionales": 3
+      },
+      "economia": {
+        "principales_actividades": [
+          "Minería (litio, cobre, oro - parte del 'triángulo del litio')",
+          "Tabaco y agricultura (poroto, soja, caña)",
+          "Turismo cultural y natural"
+        ],
+        "aporte_pbi_nacional": "≈ 1,5% del PBI nacional"
+      },
+      "particularidades": [
+        "Mantiene el sistema de Ley de Lemas, eliminado en la mayoría de las provincias.",
+        "Es una de las principales productoras de litio del país, recurso estratégico.",
+        "Tiene frontera con Bolivia, Chile y Paraguay (situación tripartita única).",
+        "Conserva una identidad cultural fuertemente tradicional y católica."
+      ],
+      "fuentes_oficiales": [
+        { "nombre": "Gobierno de Salta", "url": "https://www.salta.gob.ar" },
+        { "nombre": "Cámara de Diputados", "url": "https://www.diputadosalta.gob.ar" }
+      ]
+    },
+    "tierra-del-fuego": {
+      "id": "tierra-del-fuego",
+      "nombre": "Tierra del Fuego, Antártida e Islas del Atlántico Sur",
+      "nombre_corto": "Tierra del Fuego",
+      "capital": "Ushuaia",
+      "region": "Patagonia",
+      "color": "#5A7BA5",
+      "superficie_km2": 21263,
+      "superficie_nota": "21.263 km² (sector continental); reclama 965.597 km² adicionales en Antártida e islas del Atlántico Sur, no incluidos en superficie efectiva.",
+      "poblacion_2022": "190.641",
+      "densidad": "9 hab/km² (sector continental)",
+      "ranking_poblacion": "24° del país (la menos poblada)",
+      "divisiones": {
+        "tipo": "departamentos",
+        "cantidad": 4
+      },
+      "ejecutivo": {
+        "titulo": "Gobernador/a",
+        "eleccion": "Voto directo con balotaje si nadie supera 50%",
+        "mandato_anios": 4,
+        "reeleccion": "Una reelección consecutiva",
+        "vice": true,
+        "vice_titulo": "Vicegobernador/a",
+        "partido_gobernante": "Partido FORJA (Frente de Concertación FORJA)",
+        "partido_color": "#4a90c2",
+        "frente_actual": "FORJA, alineado con el peronismo / Frente de Todos",
+        "periodo_actual": "2023–2027",
+        "proxima_eleccion": "2027"
+      },
+      "legislativo": {
+        "tipo": "Unicameral",
+        "camara_unica": "Legislatura de Tierra del Fuego",
+        "total_bancas": 15,
+        "renovacion": "Total cada 4 años",
+        "composicion_nota": "Bloques principales: FORJA (oficialismo), Partido Justicialista, Somos Fueguinos, Movimiento Popular Fueguino, PRO, otros. Es una legislatura pequeña con composición fragmentada."
+      },
+      "judicial": {
+        "tribunal_superior": "Superior Tribunal de Justicia",
+        "miembros": 3,
+        "designacion": "Gobernador con acuerdo de la Legislatura",
+        "mandato": "Vitalicio"
+      },
+      "representacion_nacional": {
+        "diputados_nacionales": 5,
+        "senadores_nacionales": 3
+      },
+      "economia": {
+        "principales_actividades": [
+          "Industria electrónica (régimen aduanero especial)",
+          "Hidrocarburos (gas y petróleo)",
+          "Turismo y pesca"
+        ],
+        "aporte_pbi_nacional": "≈ 0,6% del PBI nacional"
+      },
+      "particularidades": [
+        "Es la provincia más nueva: se provincializó en 1990 (antes era Territorio Nacional).",
+        "Tiene régimen aduanero especial (Ley 19.640) que promueve industria electrónica.",
+        "Es la única provincia que reclama soberanía sobre la Antártida Argentina e Islas Malvinas.",
+        "Ushuaia es la ciudad capital más austral del mundo.",
+        "Su Constitución provincial es de 1991, una de las más recientes."
+      ],
+      "fuentes_oficiales": [
+        { "nombre": "Gobierno de Tierra del Fuego", "url": "https://www.tierradelfuego.gob.ar" },
+        { "nombre": "Legislatura provincial", "url": "https://www.legislaturatdf.gov.ar" }
+      ]
+    }
+  }
+}

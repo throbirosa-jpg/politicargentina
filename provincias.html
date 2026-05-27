@@ -675,6 +675,239 @@
     .municipios-preview { grid-template-columns: 1fr; gap: 1.5rem; }
     .prov-stats { grid-template-columns: 1fr 1fr; }
   }
+  /* ============================================ */
+  /* FICHA DINÁMICA DE PROVINCIA                  */
+  /* ============================================ */
+  .ficha-loading, .ficha-error {
+    text-align: center;
+    padding: 4rem 2rem;
+    color: var(--tinta-soft);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.85rem;
+  }
+  .ficha-error { color: #b8341b; }
+
+  .ficha-header {
+    background: white;
+    border-bottom: 1px solid var(--linea);
+    padding: 0;
+  }
+  .ficha-header-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 3rem 2rem 2.5rem;
+  }
+  .ficha-region-chip {
+    display: inline-block;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.65rem;
+    letter-spacing: 0.2em;
+    padding: 0.4rem 0.9rem;
+    background: var(--celeste-soft);
+    color: var(--tinta);
+    margin-bottom: 1.5rem;
+  }
+  .ficha-titulo {
+    font-family: 'Fraunces', serif;
+    font-weight: 300;
+    font-size: clamp(2rem, 5vw, 3.4rem);
+    line-height: 1.05;
+    color: var(--tinta);
+    margin-bottom: 2rem;
+  }
+  .ficha-stats-cabecera {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 1.5rem;
+    padding: 1.5rem 0;
+    border-top: 1px solid var(--linea);
+    border-bottom: 1px solid var(--linea);
+    margin-bottom: 1.2rem;
+  }
+  .ficha-stats-cabecera > div {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+  }
+  .stat-num {
+    font-family: 'Fraunces', serif;
+    font-size: 1.4rem;
+    color: var(--tinta);
+    font-weight: 400;
+    line-height: 1.1;
+  }
+  .stat-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.65rem;
+    color: var(--tinta-soft);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+  .ficha-capital-info {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.78rem;
+    color: var(--tinta-soft);
+    letter-spacing: 0.04em;
+  }
+
+  .ficha-section {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 3rem 2rem;
+    border-bottom: 1px solid var(--linea);
+  }
+  .ficha-section:last-of-type {
+    border-bottom: none;
+  }
+  .ficha-eyebrow {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.7rem;
+    letter-spacing: 0.18em;
+    color: var(--tinta-soft);
+    text-transform: uppercase;
+    margin-bottom: 0.8rem;
+  }
+  .ficha-section h2 {
+    font-family: 'Fraunces', serif;
+    font-weight: 400;
+    font-size: 1.7rem;
+    color: var(--tinta);
+    margin-bottom: 1.8rem;
+  }
+  .ficha-grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    align-items: start;
+  }
+  .ficha-data {
+    display: flex;
+    flex-direction: column;
+  }
+  .ficha-data-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.85rem 0;
+    border-bottom: 1px dotted var(--linea);
+    font-size: 0.9rem;
+  }
+  .ficha-data-row span:first-child {
+    color: var(--tinta-soft);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.75rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+  }
+  .ficha-data-row span:last-child {
+    color: var(--tinta);
+    font-weight: 500;
+    text-align: right;
+  }
+  .ficha-partido-box {
+    background: var(--crema);
+    padding: 1.8rem 1.5rem;
+    border-left: 4px solid var(--celeste);
+  }
+  .partido-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.65rem;
+    letter-spacing: 0.15em;
+    color: var(--tinta-soft);
+    text-transform: uppercase;
+    margin-bottom: 0.8rem;
+  }
+  .partido-nombre {
+    font-family: 'Fraunces', serif;
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: var(--tinta);
+    line-height: 1.2;
+    margin-bottom: 0.5rem;
+  }
+  .partido-frente {
+    font-size: 0.85rem;
+    color: var(--tinta-soft);
+    font-style: italic;
+    line-height: 1.4;
+  }
+  .ficha-nota-bloque {
+    background: var(--crema);
+    padding: 1rem 1.2rem;
+    margin-top: 1.2rem;
+    font-size: 0.85rem;
+    color: var(--tinta);
+    line-height: 1.5;
+    border-left: 3px solid var(--linea);
+  }
+  .ficha-lista {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .ficha-lista li {
+    padding: 0.8rem 1rem;
+    background: white;
+    border-left: 3px solid var(--celeste);
+    font-size: 0.92rem;
+    line-height: 1.5;
+  }
+  .ficha-footer {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 2.5rem 2rem 4rem;
+    background: var(--crema);
+  }
+  .ficha-fuentes {
+    font-size: 0.85rem;
+    color: var(--tinta);
+    margin-bottom: 1rem;
+    line-height: 1.6;
+  }
+  .ficha-fuentes a {
+    color: var(--celeste-dark);
+    text-decoration: none;
+    border-bottom: 1px dotted var(--celeste-dark);
+  }
+  .ficha-fuentes a:hover {
+    color: var(--tinta);
+    border-bottom-color: var(--tinta);
+  }
+  .ficha-nota-actualizacion {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.7rem;
+    color: var(--tinta-soft);
+    line-height: 1.6;
+    letter-spacing: 0.03em;
+    padding-top: 1rem;
+    border-top: 1px solid var(--linea);
+  }
+  .prov-tarjeta-pendiente {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: var(--tinta);
+    color: var(--crema);
+    padding: 0.5rem 0.9rem;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.7rem;
+    letter-spacing: 0.08em;
+    text-align: center;
+    animation: fadeOut 2.5s ease forwards;
+  }
+  @keyframes fadeOut {
+    0% { opacity: 0; transform: translateY(10px); }
+    15% { opacity: 1; transform: translateY(0); }
+    85% { opacity: 1; }
+    100% { opacity: 0; }
+  }
+
+  @media (max-width: 700px) {
+    .ficha-grid-2 { grid-template-columns: 1fr; }
+    .ficha-stats-cabecera { grid-template-columns: 1fr 1fr; }
+  }
 </style>
 </head>
 <body>
@@ -973,179 +1206,13 @@
 <!-- ========================================== -->
 <!-- PANEL 2: FICHA INDIVIDUAL (BUENOS AIRES)   -->
 <!-- ========================================== -->
+<!-- PANEL 2: FICHA INDIVIDUAL (DINÁMICA)       -->
+<!-- ========================================== -->
 <div class="panel" id="panel-ficha">
-
-  <header class="prov-header">
-    <div class="prov-header-inner">
-      <div class="prov-id">
-        <div class="prov-bandera-grande ba"></div>
-        <div>
-          <div class="prov-eyebrow">— Provincia 02 de 24</div>
-          <h1 class="prov-titulo">Buenos <em>Aires</em></h1>
-          <div class="prov-capital">Capital: La Plata · Lema: "Tradición y progreso"</div>
-        </div>
-      </div>
-
-      <div class="prov-stats">
-        <div class="prov-stat-box">
-          <div class="prov-stat-num">17,5 M</div>
-          <div class="prov-stat-label">Habitantes · Censo 2022</div>
-        </div>
-        <div class="prov-stat-box">
-          <div class="prov-stat-num">307.571</div>
-          <div class="prov-stat-label">km² · 11% del territorio</div>
-        </div>
-        <div class="prov-stat-box">
-          <div class="prov-stat-num">135</div>
-          <div class="prov-stat-label">Partidos (municipios)</div>
-        </div>
-        <div class="prov-stat-box">
-          <div class="prov-stat-num">38%</div>
-          <div class="prov-stat-label">Del padrón electoral nacional</div>
-        </div>
-      </div>
-    </div>
-  </header>
-
-  <div class="ficha-tabs">
-    <div class="ficha-tabs-inner">
-      <div class="ficha-tab active">Resumen</div>
-      <div class="ficha-tab">Poderes provinciales</div>
-      <div class="ficha-tab">Representación nacional</div>
-      <div class="ficha-tab">Municipios</div>
-      <div class="ficha-tab">Datos electorales</div>
-      <div class="ficha-tab">Historia</div>
-    </div>
+  <div id="ficha-content">
+    <!-- Renderizado dinámicamente desde provincias-data.json -->
+    <div class="ficha-loading">Cargando ficha...</div>
   </div>
-
-  <!-- TRES PODERES PROVINCIALES -->
-  <section class="ficha-section">
-    <div class="ficha-eyebrow">— Capítulo 01 · La foto actual</div>
-    <h2 class="ficha-title">Los tres <em>poderes provinciales</em></h2>
-    <p class="ficha-desc">Cada provincia tiene sus propios tres poderes, en paralelo a los nacionales. Buenos Aires tiene la particularidad de tener una legislatura <strong>bicameral</strong> (con Senado y Diputados provinciales), como solo 7 provincias más.</p>
-
-    <div class="poderes-prov">
-      <div class="poder-prov">
-        <div class="poder-prov-cargo">Ejecutivo Provincial</div>
-        <div class="poder-prov-foto">G</div>
-        <div class="poder-prov-nombre">[Gobernador/a]</div>
-        <div class="poder-prov-detalle">Espacio político · Vice: [Nombre]</div>
-        <div class="poder-prov-data">
-          <div class="poder-prov-data-row"><span>Mandato</span><span>4 años</span></div>
-          <div class="poder-prov-data-row"><span>Reelección</span><span>1 consecutiva</span></div>
-          <div class="poder-prov-data-row"><span>Asumió</span><span>10 dic. 2023</span></div>
-          <div class="poder-prov-data-row"><span>Hasta</span><span>10 dic. 2027</span></div>
-        </div>
-      </div>
-
-      <div class="poder-prov legi">
-        <div class="poder-prov-cargo">Legislatura Bicameral</div>
-        <div class="poder-prov-foto">L</div>
-        <div class="poder-prov-nombre">Honorable Legislatura</div>
-        <div class="poder-prov-detalle">Senado + Diputados Provinciales</div>
-        <div class="poder-prov-data">
-          <div class="poder-prov-data-row"><span>Senadores prov.</span><span>46 bancas</span></div>
-          <div class="poder-prov-data-row"><span>Diputados prov.</span><span>92 bancas</span></div>
-          <div class="poder-prov-data-row"><span>Total</span><span>138 bancas</span></div>
-          <div class="poder-prov-data-row"><span>Renovación</span><span>Cada 2 años</span></div>
-        </div>
-      </div>
-
-      <div class="poder-prov judi">
-        <div class="poder-prov-cargo">Judicial Provincial</div>
-        <div class="poder-prov-foto">J</div>
-        <div class="poder-prov-nombre">Suprema Corte de Justicia</div>
-        <div class="poder-prov-detalle">Máximo tribunal bonaerense</div>
-        <div class="poder-prov-data">
-          <div class="poder-prov-data-row"><span>Miembros</span><span>7 jueces</span></div>
-          <div class="poder-prov-data-row"><span>Sede</span><span>La Plata</span></div>
-          <div class="poder-prov-data-row"><span>Mandato</span><span>Vitalicio</span></div>
-          <div class="poder-prov-data-row"><span>Procurador</span><span>[Nombre]</span></div>
-        </div>
-      </div>
-    </div>
-    <p class="nota-fuentes">Datos a verificar contra gba.gob.ar, hcdiputados-ba.gov.ar, scba.gov.ar</p>
-  </section>
-
-  <!-- REPRESENTACIÓN NACIONAL -->
-  <section class="ficha-section papel">
-    <div class="ficha-section-inner">
-      <div class="ficha-eyebrow">— Capítulo 02 · En el Congreso de la Nación</div>
-      <h2 class="ficha-title">¿Cuánto <em>pesa</em> Buenos Aires a nivel federal?</h2>
-      <p class="ficha-desc">Buenos Aires concentra el mayor poder electoral del país: aporta más diputados nacionales que cualquier otra provincia, aunque en el Senado todas tienen igual representación (3 bancas).</p>
-
-      <div class="repnac-grid">
-        <div class="repnac-card">
-          <div class="repnac-num">70</div>
-          <div class="repnac-label">Diputados Nacionales</div>
-          <div class="repnac-desc">Es la provincia con más diputados (27% del total). La cantidad se asigna en proporción a la población, según el último censo.</div>
-        </div>
-        <div class="repnac-card">
-          <div class="repnac-num">3</div>
-          <div class="repnac-label">Senadores Nacionales</div>
-          <div class="repnac-desc">Como todas las provincias y CABA. Es el principio igualitario del federalismo argentino: cada jurisdicción tiene igual voz en el Senado.</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- PARTICULARIDADES INSTITUCIONALES -->
-  <section class="ficha-section">
-    <div class="ficha-eyebrow">— Capítulo 03 · Lo que la hace única</div>
-    <h2 class="ficha-title">Particularidades <em>institucionales</em></h2>
-    <p class="ficha-desc">Cada provincia tiene su propia constitución y sus reglas. Estas son las características más distintivas de Buenos Aires.</p>
-
-    <div class="particularidades">
-      <div class="partic-card">
-        <div class="partic-titulo">Legislatura bicameral</div>
-        <div class="partic-desc">Una de las 8 provincias con dos cámaras legislativas. La mayoría tiene legislatura unicameral.</div>
-        <span class="partic-tag">8 DE 24 JURISDICCIONES</span>
-      </div>
-      <div class="partic-card">
-        <div class="partic-titulo">Reelección limitada</div>
-        <div class="partic-desc">El Gobernador puede ser reelecto una sola vez consecutiva. Luego debe pasar un período.</div>
-        <span class="partic-tag">CONSTITUCIÓN PROVINCIAL</span>
-      </div>
-      <div class="partic-card">
-        <div class="partic-titulo">Conurbano bonaerense</div>
-        <div class="partic-desc">Los 24 partidos del Gran Buenos Aires concentran el 60% de la población provincial.</div>
-        <span class="partic-tag">FENÓMENO ÚNICO</span>
-      </div>
-    </div>
-  </section>
-
-  <!-- MUNICIPIOS -->
-  <section class="ficha-section papel">
-    <div class="ficha-section-inner">
-      <div class="ficha-eyebrow">— Capítulo 04 · El nivel municipal</div>
-      <h2 class="ficha-title">135 <em>partidos</em>, 135 intendencias</h2>
-      <p class="ficha-desc">En Buenos Aires los municipios se llaman "partidos". Cada uno tiene un intendente y un concejo deliberante propios.</p>
-
-      <div class="municipios-preview">
-        <div>
-          <div class="municipios-stat">135</div>
-          <div class="municipios-stat-label">PARTIDOS · INTENDENCIAS</div>
-        </div>
-        <div class="municipios-desc">
-          <h3>Una galaxia de gobiernos locales</h3>
-          <p>Buenos Aires tiene más municipios que cualquier otra provincia. Cada partido elige su propio intendente cada 4 años, y un concejo deliberante que se renueva cada 2. Los 24 partidos del conurbano son los más poblados, y concentran la mayor disputa política provincial.</p>
-          <a href="#" class="municipios-link">Ver lista completa de partidos</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- CTA HISTORIA -->
-  <section class="ficha-section" style="padding-bottom: 6rem;">
-    <div style="background: var(--verde-hist); color: var(--crema); padding: 3rem; display: grid; grid-template-columns: 2fr 1fr; gap: 2rem; align-items: center;">
-      <div>
-        <div style="font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; color: var(--sol); letter-spacing: 0.2em; margin-bottom: 0.75rem;">★ ACCESO PREMIUM</div>
-        <h2 style="font-family: 'Fraunces', serif; font-size: 1.8rem; font-weight: 500; line-height: 1.1; margin-bottom: 0.75rem;">Mirá <em style="font-family: 'Instrument Serif', serif; font-style: italic; color: var(--sol);">todos los gobernadores</em> de Buenos Aires desde 1820.</h2>
-        <p style="color: rgba(251,247,240,0.75); margin: 0;">El archivo histórico premium incluye la sucesión completa de gobernadores, intervenciones federales y contexto histórico provincia por provincia.</p>
-      </div>
-      <a href="historia.html" style="background: var(--sol); color: var(--tinta); padding: 1rem 2rem; border-radius: 100px; font-weight: 600; text-decoration: none; justify-self: end;">Explorar archivo →</a>
-    </div>
-  </section>
 </div>
 
 <footer>
@@ -1153,11 +1220,49 @@
 </footer>
 
 <script>
-  // Toggle entre vistas
+  // ============================================================
+  // ESTADO Y CONFIGURACIÓN
+  // ============================================================
+  let PROVINCIAS_DATA = null;  // Se carga del JSON
   const tabs = document.querySelectorAll('.view-tab');
   const panels = document.querySelectorAll('.panel');
   const bc = document.getElementById('bc-current');
 
+  // Mapeo de nombre largo a ID del JSON
+  const NOMBRE_A_ID = {
+    'Buenos Aires': 'buenos-aires',
+    'Ciudad Autónoma de Buenos Aires': 'caba',
+    'Córdoba': 'cordoba',
+    'Mendoza': 'mendoza',
+    'Santa Fe': 'santa-fe',
+    'Tucumán': 'tucuman',
+    'Salta': 'salta',
+    'Tierra del Fuego': 'tierra-del-fuego'
+  };
+
+  // ============================================================
+  // CARGAR DATOS DEL JSON
+  // ============================================================
+  fetch('provincias-data.json')
+    .then(r => r.json())
+    .then(data => {
+      PROVINCIAS_DATA = data.provincias;
+      // Si hay un ?id= en la URL, mostrar esa ficha
+      const params = new URLSearchParams(window.location.search);
+      const idParam = params.get('id');
+      if (idParam && PROVINCIAS_DATA[idParam]) {
+        mostrarFicha(idParam);
+      }
+    })
+    .catch(err => {
+      console.error('Error cargando datos:', err);
+      document.getElementById('ficha-content').innerHTML =
+        '<div class="ficha-error">No se pudieron cargar los datos. Verificá que el archivo provincias-data.json esté disponible.</div>';
+    });
+
+  // ============================================================
+  // NAVEGACIÓN ENTRE PANELES (ÍNDICE / FICHA)
+  // ============================================================
   tabs.forEach(tab => {
     tab.addEventListener('click', () => {
       const target = tab.getAttribute('data-view');
@@ -1165,12 +1270,18 @@
       panels.forEach(p => p.classList.remove('active'));
       tab.classList.add('active');
       document.getElementById('panel-' + target).classList.add('active');
-      bc.textContent = target === 'indice' ? 'Provincias' : 'Provincias · Buenos Aires';
+      bc.textContent = target === 'indice' ? 'Provincias' : 'Provincias · Ficha';
+      // Limpiar el ?id= si volvemos al índice
+      if (target === 'indice') {
+        history.replaceState(null, '', 'provincias.html');
+      }
       window.scrollTo({ top: 0, behavior: 'smooth' });
     });
   });
 
-  // Filtros de región
+  // ============================================================
+  // FILTROS DE REGIÓN EN ÍNDICE
+  // ============================================================
   const filtros = document.querySelectorAll('.filtro-chip');
   const tarjetas = document.querySelectorAll('.prov-tarjeta');
 
@@ -1179,33 +1290,183 @@
       filtros.forEach(f => f.classList.remove('active'));
       filtro.classList.add('active');
       const region = filtro.getAttribute('data-filter');
-
       tarjetas.forEach(tarjeta => {
-        if (region === 'todas') {
+        if (region === 'todas' || tarjeta.getAttribute('data-region') === region) {
           tarjeta.classList.remove('hidden');
         } else {
-          if (tarjeta.getAttribute('data-region') === region) {
-            tarjeta.classList.remove('hidden');
-          } else {
-            tarjeta.classList.add('hidden');
-          }
+          tarjeta.classList.add('hidden');
         }
       });
     });
   });
 
-  // Click en tarjeta de Buenos Aires -> ir a ficha
+  // ============================================================
+  // CLICK EN TARJETA -> ABRIR FICHA
+  // ============================================================
   tarjetas.forEach(tarjeta => {
     tarjeta.addEventListener('click', (e) => {
+      e.preventDefault();
       const nombre = tarjeta.querySelector('.prov-tarjeta-nombre').textContent;
-      if (nombre === 'Buenos Aires') {
-        e.preventDefault();
-        document.querySelector('[data-view="ficha"]').click();
+      const id = NOMBRE_A_ID[nombre];
+      if (id && PROVINCIAS_DATA && PROVINCIAS_DATA[id]) {
+        mostrarFicha(id);
       } else {
-        e.preventDefault();
+        // Provincia sin ficha cargada todavía
+        const indicador = tarjeta.querySelector('.prov-tarjeta-pendiente');
+        if (!indicador) {
+          const p = document.createElement('div');
+          p.className = 'prov-tarjeta-pendiente';
+          p.textContent = 'Ficha en preparación';
+          tarjeta.appendChild(p);
+          setTimeout(() => p.remove(), 2500);
+        }
       }
     });
   });
+
+  // ============================================================
+  // RENDERIZAR FICHA DE PROVINCIA
+  // ============================================================
+  function mostrarFicha(id) {
+    const p = PROVINCIAS_DATA[id];
+    if (!p) return;
+
+    const ficha = document.getElementById('ficha-content');
+    ficha.innerHTML = construirFichaHTML(p);
+
+    // Cambiar al panel de ficha
+    document.querySelector('[data-view="ficha"]').click();
+
+    // Actualizar URL sin recargar
+    history.replaceState(null, '', `provincias.html?id=${id}`);
+
+    // Actualizar breadcrumb
+    bc.textContent = 'Provincias · ' + (p.nombre_corto || p.nombre);
+  }
+
+  function construirFichaHTML(p) {
+    const nombre = p.nombre_corto || p.nombre;
+    const supTxt = p.superficie_nota || (p.superficie_km2.toLocaleString('es-AR') + ' km²');
+
+    // Legislativo: armar texto según unicameral / bicameral
+    let legislativoTexto = '';
+    if (p.legislativo.tipo === 'Bicameral') {
+      legislativoTexto = `
+        <div class="ficha-data-row"><span>Tipo</span><span>Bicameral</span></div>
+        <div class="ficha-data-row"><span>Diputados</span><span>${p.legislativo.camara_diputados} bancas</span></div>
+        <div class="ficha-data-row"><span>Senadores</span><span>${p.legislativo.camara_senadores} bancas</span></div>
+        <div class="ficha-data-row"><span>Renovación</span><span>${p.legislativo.renovacion}</span></div>
+      `;
+    } else {
+      legislativoTexto = `
+        <div class="ficha-data-row"><span>Tipo</span><span>Unicameral</span></div>
+        <div class="ficha-data-row"><span>Bancas</span><span>${p.legislativo.total_bancas}</span></div>
+        <div class="ficha-data-row"><span>Renovación</span><span>${p.legislativo.renovacion}</span></div>
+      `;
+    }
+
+    const particularidadesHTML = p.particularidades.map(part =>
+      `<li>${part}</li>`
+    ).join('');
+
+    const economiaHTML = p.economia.principales_actividades.map(act =>
+      `<li>${act}</li>`
+    ).join('');
+
+    const fuentesHTML = p.fuentes_oficiales.map(f =>
+      `<a href="${f.url}" target="_blank" rel="noopener">${f.nombre}</a>`
+    ).join(' · ');
+
+    const capitalTxt = p.capital === '—' ? (p.capital_nota || '—') : p.capital;
+
+    return `
+      <header class="ficha-header" style="border-top: 4px solid ${p.color};">
+        <div class="ficha-header-inner">
+          <div class="ficha-region-chip">${p.region.toUpperCase()}</div>
+          <h1 class="ficha-titulo">${p.nombre}</h1>
+          <div class="ficha-stats-cabecera">
+            <div><span class="stat-num">${p.poblacion_2022}</span><span class="stat-label">habitantes (Censo 2022)</span></div>
+            <div><span class="stat-num">${supTxt}</span><span class="stat-label">superficie</span></div>
+            <div><span class="stat-num">${p.divisiones.cantidad}</span><span class="stat-label">${p.divisiones.tipo}</span></div>
+            <div><span class="stat-num">${p.ranking_poblacion}</span><span class="stat-label">en población</span></div>
+          </div>
+          <div class="ficha-capital-info">
+            <strong>Capital:</strong> ${capitalTxt} · <strong>Densidad:</strong> ${p.densidad}
+          </div>
+        </div>
+      </header>
+
+      <section class="ficha-section">
+        <div class="ficha-eyebrow">— Poder Ejecutivo provincial</div>
+        <h2>El cargo de ${p.ejecutivo.titulo}</h2>
+        <div class="ficha-grid-2">
+          <div class="ficha-data">
+            <div class="ficha-data-row"><span>Elección</span><span>${p.ejecutivo.eleccion}</span></div>
+            <div class="ficha-data-row"><span>Mandato</span><span>${p.ejecutivo.mandato_anios} años</span></div>
+            <div class="ficha-data-row"><span>Reelección</span><span>${p.ejecutivo.reeleccion}</span></div>
+            <div class="ficha-data-row"><span>Vice</span><span>${p.ejecutivo.vice ? p.ejecutivo.vice_titulo : 'No tiene'}</span></div>
+            <div class="ficha-data-row"><span>Período actual</span><span>${p.ejecutivo.periodo_actual}</span></div>
+            <div class="ficha-data-row"><span>Próxima elección</span><span>${p.ejecutivo.proxima_eleccion}</span></div>
+          </div>
+          <div class="ficha-partido-box" style="border-left: 4px solid ${p.ejecutivo.partido_color};">
+            <div class="partido-label">Partido gobernante actual</div>
+            <div class="partido-nombre">${p.ejecutivo.partido_gobernante}</div>
+            <div class="partido-frente">${p.ejecutivo.frente_actual}</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="ficha-section">
+        <div class="ficha-eyebrow">— Poder Legislativo provincial</div>
+        <h2>La Legislatura</h2>
+        <div class="ficha-data">
+          ${legislativoTexto}
+        </div>
+        <p class="ficha-nota-bloque">${p.legislativo.composicion_nota}</p>
+      </section>
+
+      <section class="ficha-section">
+        <div class="ficha-eyebrow">— Poder Judicial provincial</div>
+        <h2>${p.judicial.tribunal_superior}</h2>
+        <div class="ficha-data">
+          <div class="ficha-data-row"><span>Miembros</span><span>${p.judicial.miembros}</span></div>
+          <div class="ficha-data-row"><span>Designación</span><span>${p.judicial.designacion}</span></div>
+          <div class="ficha-data-row"><span>Mandato</span><span>${p.judicial.mandato}</span></div>
+        </div>
+      </section>
+
+      <section class="ficha-section">
+        <div class="ficha-eyebrow">— Representación en el Congreso nacional</div>
+        <h2>Aporte al federalismo</h2>
+        <div class="ficha-data">
+          <div class="ficha-data-row"><span>Diputados nacionales</span><span>${p.representacion_nacional.diputados_nacionales}</span></div>
+          <div class="ficha-data-row"><span>Senadores nacionales</span><span>${p.representacion_nacional.senadores_nacionales}</span></div>
+        </div>
+      </section>
+
+      <section class="ficha-section">
+        <div class="ficha-eyebrow">— Economía</div>
+        <h2>Actividades económicas principales</h2>
+        <ul class="ficha-lista">${economiaHTML}</ul>
+        <p class="ficha-nota-bloque"><strong>Aporte al PBI nacional:</strong> ${p.economia.aporte_pbi_nacional}</p>
+      </section>
+
+      <section class="ficha-section">
+        <div class="ficha-eyebrow">— Lo que la hace única</div>
+        <h2>Particularidades</h2>
+        <ul class="ficha-lista">${particularidadesHTML}</ul>
+      </section>
+
+      <footer class="ficha-footer">
+        <div class="ficha-fuentes">
+          <strong>Fuentes oficiales:</strong> ${fuentesHTML}
+        </div>
+        <div class="ficha-nota-actualizacion">
+          Datos institucionales actualizados a mayo de 2026. Las composiciones legislativas pueden tener variaciones por pases de bloques. Para verificación, consultar fuentes oficiales.
+        </div>
+      </footer>
+    `;
+  }
 </script>
 
 </body>
