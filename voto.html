@@ -1,0 +1,732 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>El voto en Argentina — Educación Cívica</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,400;0,500;0,600;1,400&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --crema: #FBF7F0;
+    --crema-warm: #F4ECDB;
+    --tinta: #1A1A2E;
+    --tinta-soft: #545465;
+    --celeste: #74ACDF;
+    --celeste-soft: #E4F0FA;
+    --celeste-dark: #3D7BB0;
+    --sol: #F6B40E;
+    --sol-soft: #FBE5AA;
+    --sol-dark: #C8941A;
+    --rojo-fed: #B8341B;
+    --rojo-soft: #F2D5CE;
+    --linea: #DDD7CB;
+    --linea-soft: #ECE6DA;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Fraunces', Georgia, serif;
+    background: var(--crema);
+    color: var(--tinta);
+    line-height: 1.6;
+    font-weight: 400;
+  }
+
+  /* ========== NAV ========== */
+  nav {
+    background: white;
+    border-bottom: 1px solid var(--linea);
+    padding: 1.2rem 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+  .nav-inner {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-family: 'Fraunces', serif;
+    font-weight: 500;
+    font-size: 1.1rem;
+    color: var(--tinta);
+    text-decoration: none;
+  }
+  .logo-dot {
+    width: 12px;
+    height: 12px;
+    background: var(--sol);
+    border-radius: 50%;
+    display: inline-block;
+  }
+  .breadcrumb {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.7rem;
+    letter-spacing: 0.1em;
+    color: var(--tinta-soft);
+  }
+  .breadcrumb a { color: var(--tinta-soft); text-decoration: none; }
+  .breadcrumb a:hover { color: var(--tinta); }
+
+  /* ========== HEADER ========== */
+  .page-header {
+    background: linear-gradient(180deg, var(--celeste-soft) 0%, var(--crema) 100%);
+    padding: 4rem 2rem 3rem;
+    border-bottom: 1px solid var(--linea);
+  }
+  .page-header-inner {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  .page-eyebrow {
+    display: inline-block;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.7rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--celeste-dark);
+    background: white;
+    padding: 0.5rem 1rem;
+    border: 1px solid var(--celeste);
+    margin-bottom: 1.5rem;
+  }
+  .page-title {
+    font-family: 'Fraunces', serif;
+    font-weight: 300;
+    font-size: clamp(2.2rem, 5vw, 3.6rem);
+    line-height: 1.05;
+    margin-bottom: 1.5rem;
+    color: var(--tinta);
+  }
+  .page-title em {
+    font-style: italic;
+    color: var(--celeste-dark);
+    font-weight: 400;
+  }
+  .page-intro {
+    font-size: 1.15rem;
+    line-height: 1.7;
+    color: var(--tinta);
+    max-width: 720px;
+  }
+
+  /* ========== TOC (índice lateral en desktop) ========== */
+  .layout {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 3rem 2rem;
+    display: grid;
+    grid-template-columns: 220px 1fr;
+    gap: 4rem;
+    align-items: start;
+  }
+  .toc {
+    position: sticky;
+    top: 90px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.78rem;
+  }
+  .toc-titulo {
+    font-size: 0.65rem;
+    letter-spacing: 0.18em;
+    color: var(--tinta-soft);
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    padding-bottom: 0.8rem;
+    border-bottom: 1px solid var(--linea);
+  }
+  .toc ul {
+    list-style: none;
+  }
+  .toc li {
+    margin-bottom: 0.6rem;
+    line-height: 1.4;
+  }
+  .toc a {
+    color: var(--tinta-soft);
+    text-decoration: none;
+    border-left: 2px solid var(--linea);
+    padding-left: 0.8rem;
+    display: block;
+    transition: all 0.18s ease;
+  }
+  .toc a:hover {
+    color: var(--tinta);
+    border-left-color: var(--celeste);
+  }
+  .toc-num {
+    color: var(--celeste-dark);
+    font-weight: 500;
+  }
+
+  /* ========== CONTENIDO ========== */
+  .contenido {
+    max-width: 720px;
+  }
+  .seccion {
+    margin-bottom: 3.5rem;
+    padding-bottom: 3rem;
+    border-bottom: 1px solid var(--linea);
+  }
+  .seccion:last-of-type {
+    border-bottom: none;
+  }
+  .seccion-eyebrow {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.7rem;
+    letter-spacing: 0.18em;
+    color: var(--celeste-dark);
+    text-transform: uppercase;
+    margin-bottom: 0.6rem;
+  }
+  .seccion h2 {
+    font-family: 'Fraunces', serif;
+    font-weight: 400;
+    font-size: 1.9rem;
+    line-height: 1.15;
+    color: var(--tinta);
+    margin-bottom: 1.5rem;
+  }
+  .seccion h2 em {
+    font-style: italic;
+    color: var(--celeste-dark);
+  }
+  .seccion h3 {
+    font-family: 'Fraunces', serif;
+    font-weight: 500;
+    font-size: 1.2rem;
+    color: var(--tinta);
+    margin-top: 2rem;
+    margin-bottom: 0.8rem;
+  }
+  .seccion p {
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    line-height: 1.75;
+    color: var(--tinta);
+  }
+  .seccion p strong {
+    font-weight: 600;
+    color: var(--tinta);
+  }
+  .seccion ul {
+    margin: 1rem 0 1.5rem 0;
+    padding-left: 0;
+    list-style: none;
+  }
+  .seccion ul li {
+    padding-left: 1.5rem;
+    margin-bottom: 0.6rem;
+    line-height: 1.6;
+    position: relative;
+  }
+  .seccion ul li::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: var(--celeste-dark);
+    font-weight: 600;
+  }
+
+  /* Tarjeta destacada */
+  .destacado {
+    background: white;
+    border-left: 4px solid var(--celeste);
+    padding: 1.5rem 1.8rem;
+    margin: 1.5rem 0;
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+  .destacado-titulo {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.7rem;
+    letter-spacing: 0.15em;
+    color: var(--celeste-dark);
+    text-transform: uppercase;
+    margin-bottom: 0.6rem;
+  }
+  .destacado.atencion {
+    background: var(--sol-soft);
+    border-left-color: var(--sol-dark);
+  }
+  .destacado.atencion .destacado-titulo {
+    color: var(--sol-dark);
+  }
+
+  /* Tabla de datos */
+  .tabla-datos {
+    width: 100%;
+    margin: 1.5rem 0;
+    border-collapse: collapse;
+    font-size: 0.92rem;
+  }
+  .tabla-datos th {
+    text-align: left;
+    padding: 0.8rem 1rem;
+    background: var(--celeste-soft);
+    border-bottom: 2px solid var(--celeste-dark);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.7rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--tinta);
+    font-weight: 600;
+  }
+  .tabla-datos td {
+    padding: 0.85rem 1rem;
+    border-bottom: 1px dotted var(--linea);
+    vertical-align: top;
+  }
+  .tabla-datos tr:last-child td {
+    border-bottom: none;
+  }
+  .tabla-datos td:first-child {
+    font-weight: 500;
+    color: var(--tinta);
+  }
+
+  /* Cita legal */
+  .cita-legal {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.75rem;
+    color: var(--tinta-soft);
+    background: var(--linea-soft);
+    padding: 0.8rem 1rem;
+    margin: 1rem 0;
+    line-height: 1.5;
+    border-left: 3px solid var(--tinta-soft);
+  }
+
+  /* ========== FUENTES ========== */
+  .fuentes {
+    margin-top: 4rem;
+    padding-top: 2.5rem;
+    border-top: 2px solid var(--linea);
+  }
+  .fuentes h3 {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.75rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--tinta-soft);
+    margin-bottom: 1.5rem;
+    border: none;
+    padding: 0;
+  }
+  .fuentes ul {
+    list-style: none;
+    padding: 0;
+  }
+  .fuentes li {
+    padding: 0.6rem 0;
+    border-bottom: 1px dotted var(--linea);
+    font-size: 0.88rem;
+    padding-left: 0;
+  }
+  .fuentes li::before {
+    content: none;
+  }
+  .fuentes a {
+    color: var(--celeste-dark);
+    text-decoration: none;
+    border-bottom: 1px dotted var(--celeste-dark);
+  }
+  .fuentes a:hover {
+    color: var(--tinta);
+  }
+
+  /* ========== FOOTER ========== */
+  footer {
+    background: var(--tinta);
+    color: var(--crema);
+    padding: 3rem 2rem;
+    margin-top: 4rem;
+  }
+  .footer-inner {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 3rem;
+  }
+  footer h3 {
+    font-family: 'Fraunces', serif;
+    font-weight: 400;
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    color: var(--crema);
+  }
+  footer p, footer a {
+    color: var(--crema);
+    opacity: 0.85;
+    font-size: 0.9rem;
+    line-height: 1.6;
+  }
+  footer a {
+    text-decoration: none;
+    display: block;
+    padding: 0.3rem 0;
+  }
+  footer a:hover {
+    opacity: 1;
+    color: var(--sol);
+  }
+  .footer-meta {
+    grid-column: 1 / -1;
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(251, 247, 240, 0.15);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.7rem;
+    opacity: 0.6;
+    letter-spacing: 0.05em;
+  }
+
+  /* ========== RESPONSIVE ========== */
+  @media (max-width: 900px) {
+    .layout {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+    .toc {
+      position: relative;
+      top: 0;
+      padding: 1.5rem;
+      background: white;
+      border: 1px solid var(--linea);
+    }
+    .footer-inner {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="logo">
+      <span class="logo-dot"></span>
+      Educación Cívica
+    </a>
+    <div class="breadcrumb"><a href="index.html">Inicio</a> · <a href="index.html#sistema-electoral">Elecciones</a> · <span>El voto</span></div>
+  </div>
+</nav>
+
+<header class="page-header">
+  <div class="page-header-inner">
+    <div class="page-eyebrow">Capítulo 03.01 · Sistema electoral</div>
+    <h1 class="page-title">El <em>voto</em> en Argentina</h1>
+    <p class="page-intro">El voto es el acto democrático más importante: el momento en el que cada ciudadano define, junto con millones de otros, quién va a gobernar y representar al país. Esta guía explica cómo funciona el sistema en Argentina, sin tecnicismos y con todo lo que necesitás saber para entender (y ejercer) este derecho-deber.</p>
+  </div>
+</header>
+
+<div class="layout">
+
+  <!-- ÍNDICE LATERAL -->
+  <aside class="toc">
+    <div class="toc-titulo">— En esta página</div>
+    <ul>
+      <li><a href="#tipo"><span class="toc-num">01</span> Qué tipo de voto tenemos</a></li>
+      <li><a href="#quienes"><span class="toc-num">02</span> Quiénes votan</a></li>
+      <li><a href="#edades"><span class="toc-num">03</span> Desde qué edad</a></li>
+      <li><a href="#que"><span class="toc-num">04</span> Qué se vota</a></li>
+      <li><a href="#cuando"><span class="toc-num">05</span> Cuándo se vota</a></li>
+      <li><a href="#prohibido"><span class="toc-num">06</span> Lo que no se puede hacer</a></li>
+      <li><a href="#especiales"><span class="toc-num">07</span> Casos especiales</a></li>
+      <li><a href="#practico"><span class="toc-num">08</span> Recursos prácticos</a></li>
+    </ul>
+  </aside>
+
+  <!-- CONTENIDO PRINCIPAL -->
+  <main class="contenido">
+
+    <!-- SECCIÓN 01 -->
+    <section class="seccion" id="tipo">
+      <div class="seccion-eyebrow">— 01 / Qué tipo de voto tenemos</div>
+      <h2>Universal, <em>secreto</em> y obligatorio</h2>
+
+      <p>El voto argentino tiene cuatro características que definen su naturaleza. Las introdujo la <strong>Ley Sáenz Peña en 1912</strong> y se mantienen vigentes hasta hoy. Cada palabra implica un compromiso institucional importante.</p>
+
+      <h3>Universal</h3>
+      <p>Significa que <strong>todos los ciudadanos pueden votar</strong>, sin distinción de género, religión, riqueza, nivel educativo u origen. No siempre fue así: hasta 1912 votaba solo una parte de la población masculina, y las mujeres recién pudieron votar a nivel nacional en 1951.</p>
+
+      <h3>Secreto</h3>
+      <p>Nadie puede ver por quién votás, ni puede obligarte a revelarlo. El secreto del voto es una garantía constitucional: protege la libertad individual frente a presiones del empleador, la familia, los punteros políticos o cualquier otra persona. Por eso existe el <strong>cuarto oscuro</strong>: un espacio donde estás solo con tu boleta.</p>
+
+      <h3>Obligatorio</h3>
+      <p>Esto es lo que más distingue al sistema argentino de muchos otros. <strong>No votar tiene consecuencias</strong>: una multa económica e inhabilitaciones administrativas durante un año. La idea detrás de la obligatoriedad es que el voto no es solo un derecho individual sino un deber cívico: la democracia funciona mejor cuando todos participan.</p>
+
+      <h3>Igual</h3>
+      <p>Una persona, un voto. El voto de un ciudadano cualquiera vale exactamente lo mismo que el voto del Presidente o de un empresario. Es uno de los principios más igualitarios del sistema democrático.</p>
+
+      <div class="cita-legal">
+        Fundamento legal: artículo 37 de la Constitución Nacional ("El sufragio es universal, igual, secreto y obligatorio") y Código Electoral Nacional (Ley 19.945 y sus modificatorias).
+      </div>
+    </section>
+
+    <!-- SECCIÓN 02 -->
+    <section class="seccion" id="quienes">
+      <div class="seccion-eyebrow">— 02 / Quiénes votan</div>
+      <h2>Los <em>electores</em> habilitados</h2>
+
+      <p>Para votar en elecciones nacionales argentinas hay que cumplir tres condiciones: tener nacionalidad argentina, estar inscripto en el padrón electoral, y no estar inhabilitado por algún motivo legal específico.</p>
+
+      <h3>Argentinos nativos y por opción</h3>
+      <p>Los nacidos en territorio argentino, y quienes nacieron en el exterior pero hijos de argentinos y optaron por la nacionalidad. <strong>Votan desde los 16 años</strong> y la obligación es desde los 18.</p>
+
+      <h3>Argentinos por naturalización</h3>
+      <p>Extranjeros que tramitaron y obtuvieron la nacionalidad argentina. <strong>Votan desde los 18 años</strong>. Para ellos, el voto a los 16 no está disponible: deben ser mayores de edad.</p>
+
+      <h3>Extranjeros residentes</h3>
+      <p>Los extranjeros <strong>no votan en elecciones nacionales</strong> argentinas. Sin embargo, algunas provincias y municipios sí les permiten votar en elecciones locales si cumplen con ciertos requisitos (años de residencia, registro en padrones especiales). Las reglas varían según cada jurisdicción.</p>
+
+      <div class="destacado">
+        <div class="destacado-titulo">El padrón electoral</div>
+        <p>El padrón es el registro oficial de quiénes pueden votar y en qué mesa. Lo administra la <strong>Cámara Nacional Electoral</strong>. Cualquier ciudadano puede consultar su lugar de votación en <a href="https://www.padron.gob.ar" target="_blank" rel="noopener" style="color: var(--celeste-dark);">padron.gob.ar</a> ingresando su número de DNI.</p>
+      </div>
+    </section>
+
+    <!-- SECCIÓN 03 -->
+    <section class="seccion" id="edades">
+      <div class="seccion-eyebrow">— 03 / Desde qué edad</div>
+      <h2>El <em>voto joven</em> y el voto opcional</h2>
+
+      <p>Argentina tiene un sistema de edades particular que combina obligatoriedad y opcionalidad según la franja etaria. Esto resulta de la reforma de 2012, conocida como "voto joven".</p>
+
+      <table class="tabla-datos">
+        <thead>
+          <tr><th>Edad</th><th>Carácter del voto</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>16 y 17 años</td><td>Opcional (pueden votar si lo deciden)</td></tr>
+          <tr><td>18 a 70 años</td><td>Obligatorio (con sanción si no votan)</td></tr>
+          <tr><td>Más de 70 años</td><td>Opcional (sin sanción si no votan)</td></tr>
+        </tbody>
+      </table>
+
+      <h3>La Ley 26.774 de "voto joven"</h3>
+      <p>Sancionada en 2012, esta ley amplió el derecho al voto a los argentinos de 16 y 17 años. Argentina se sumó así a un grupo reducido de países que reconocen el voto desde esa edad (Austria, Brasil, Nicaragua, Ecuador, entre otros). El voto en esa franja es <strong>opcional pero válido</strong>: si el joven decide ir a votar, su voto se cuenta exactamente igual que el de cualquier adulto.</p>
+
+      <div class="destacado">
+        <div class="destacado-titulo">¿Por qué los mayores de 70 también pueden no votar?</div>
+        <p>El criterio es similar: a partir de cierta edad, el sistema entiende que ir a votar puede implicar un esfuerzo físico considerable. Pero el voto sigue siendo un derecho que pueden ejercer si lo desean. Es opcional, no prohibido.</p>
+      </div>
+    </section>
+
+    <!-- SECCIÓN 04 -->
+    <section class="seccion" id="que">
+      <div class="seccion-eyebrow">— 04 / Qué se vota</div>
+      <h2>Los <em>cargos electivos</em> en cada nivel</h2>
+
+      <p>Por el sistema federal argentino, el ciudadano elige autoridades en <strong>tres niveles de gobierno</strong>: nacional, provincial y municipal. Cada nivel tiene sus propias elecciones y sus propios cargos.</p>
+
+      <h3>A nivel nacional</h3>
+      <ul>
+        <li><strong>Presidente y Vicepresidente</strong> de la Nación (cada 4 años).</li>
+        <li><strong>Diputados nacionales</strong> (cada provincia elige los suyos, según su población).</li>
+        <li><strong>Senadores nacionales</strong> (3 por cada provincia y CABA).</li>
+        <li><strong>Parlamentarios del Mercosur</strong> (representantes argentinos al Parlasur).</li>
+      </ul>
+
+      <h3>A nivel provincial</h3>
+      <ul>
+        <li><strong>Gobernador y Vicegobernador</strong> (en CABA, Jefe y Vicejefe de Gobierno).</li>
+        <li><strong>Legisladores provinciales</strong> (Diputados y Senadores, según si la provincia tiene Legislatura unicameral o bicameral).</li>
+        <li>En algunas provincias: <strong>convencionales constituyentes</strong>, cuando se reforma la constitución provincial.</li>
+      </ul>
+
+      <h3>A nivel municipal</h3>
+      <ul>
+        <li><strong>Intendente</strong> (en algunas jurisdicciones, "Jefe Comunal" o "Presidente Municipal").</li>
+        <li><strong>Concejales</strong> (Concejo Deliberante).</li>
+        <li>En algunos casos, <strong>autoridades de comunas o juntas vecinales</strong>.</li>
+      </ul>
+
+      <div class="destacado atencion">
+        <div class="destacado-titulo">PASO y elecciones generales</div>
+        <p>Las <strong>PASO</strong> (Primarias, Abiertas, Simultáneas y Obligatorias) son las elecciones internas de los partidos, pero el padrón completo participa. Sirven para definir candidatos y para que pasen a la elección general solo los partidos que superan el 1.5% de los votos. Las <strong>generales</strong> son las elecciones definitivas. Si para Presidente nadie supera ciertos umbrales, hay <strong>balotaje</strong> entre las dos fórmulas más votadas.</p>
+      </div>
+    </section>
+
+    <!-- SECCIÓN 05 -->
+    <section class="seccion" id="cuando">
+      <div class="seccion-eyebrow">— 05 / Cuándo se vota</div>
+      <h2>El <em>calendario</em> electoral</h2>
+
+      <p>Argentina tiene un calendario electoral con varios ritmos superpuestos. No todas las elecciones son cada 4 años: depende del cargo.</p>
+
+      <table class="tabla-datos">
+        <thead>
+          <tr><th>Tipo de elección</th><th>Frecuencia</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Presidente y Vicepresidente</td><td>Cada 4 años</td></tr>
+          <tr><td>Diputados nacionales</td><td>Cada 2 años se renueva la mitad (mandato: 4 años)</td></tr>
+          <tr><td>Senadores nacionales</td><td>Cada 2 años se renueva un tercio (mandato: 6 años)</td></tr>
+          <tr><td>Gobernadores</td><td>Cada 4 años (cada provincia define cuándo)</td></tr>
+          <tr><td>Legislaturas provinciales</td><td>Varía según provincia</td></tr>
+          <tr><td>Intendentes y Concejales</td><td>Cada 4 años (varía según provincia)</td></tr>
+        </tbody>
+      </table>
+
+      <h3>Elecciones concurrentes vs. desdobladas</h3>
+      <p>Una decisión política importante: <strong>cada provincia elige si vota junto con la elección nacional ("concurrente") o en una fecha distinta ("desdoblada")</strong>. Las provincias que desdoblan suelen hacerlo para "despegar" la elección local de la nacional y que el debate provincial tenga su propio espacio. Hoy varias provincias desdoblan, especialmente cuando hay intereses políticos locales fuertes.</p>
+
+      <div class="destacado">
+        <div class="destacado-titulo">Día de la elección</div>
+        <p>Por tradición, en Argentina se vota en <strong>domingo</strong>. Las mesas abren a las 8 de la mañana y cierran a las 18. La votación es presencial, en la mesa que indica el padrón.</p>
+      </div>
+    </section>
+
+    <!-- SECCIÓN 06 -->
+    <section class="seccion" id="prohibido">
+      <div class="seccion-eyebrow">— 06 / Lo que no se puede hacer</div>
+      <h2>Prohibiciones y <em>sanciones</em></h2>
+
+      <p>Hay reglas estrictas sobre lo que se puede y no se puede hacer en torno al acto electoral. Algunas son para proteger el secreto del voto; otras, para evitar presiones y manipulaciones.</p>
+
+      <h3>Durante la votación</h3>
+      <ul>
+        <li>No se puede <strong>sacar foto al voto</strong> ni mostrarlo a otra persona. Romper el secreto del voto puede ser delito.</li>
+        <li>No se puede entrar al cuarto oscuro <strong>acompañado</strong>, salvo casos de personas con discapacidad o impedimentos físicos.</li>
+        <li>No se puede portar <strong>elementos identificatorios</strong> de un partido (remeras, banderas, gorras con logo partidario) al ingresar al lugar de votación.</li>
+      </ul>
+
+      <h3>Veda electoral</h3>
+      <p>Desde <strong>48 horas antes</strong> de la elección y hasta que cierren las mesas, está prohibida la propaganda política, difundir encuestas, ofrecer alcohol en lugares públicos y portar armas. Esto se llama "veda electoral" y busca asegurar un clima sereno para la decisión.</p>
+
+      <h3>Sanciones por no votar</h3>
+      <p>Si no votás (siendo mayor de 18 y menor de 70 años) y no justificás tu ausencia, te aplican:</p>
+
+      <table class="tabla-datos">
+        <thead>
+          <tr><th>Infracciones acumuladas</th><th>Multa</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Primera infracción</td><td>$50</td></tr>
+          <tr><td>Segunda</td><td>$100</td></tr>
+          <tr><td>Tercera</td><td>$200</td></tr>
+          <tr><td>Cuarta</td><td>$400</td></tr>
+          <tr><td>Quinta o más</td><td>$500</td></tr>
+        </tbody>
+      </table>
+
+      <p>Además, quien no paga ni justifica <strong>queda inscripto en el Registro Nacional de Infractores</strong> y no puede realizar trámites en organismos públicos durante un año. Tampoco puede ser designado en cargos públicos durante tres años desde la elección no votada.</p>
+
+      <div class="cita-legal">
+        Los montos están establecidos en el artículo 125 del Código Electoral Nacional. Las multas pueden actualizarse por resolución de la Cámara Nacional Electoral. En algunas jurisdicciones provinciales (como CABA) los montos son mayores. Datos a mayo de 2026.
+      </div>
+    </section>
+
+    <!-- SECCIÓN 07 -->
+    <section class="seccion" id="especiales">
+      <div class="seccion-eyebrow">— 07 / Casos especiales</div>
+      <h2>Situaciones <em>particulares</em></h2>
+
+      <h3>Voto en el extranjero</h3>
+      <p>Los argentinos que viven en el exterior pueden votar en <strong>consulados argentinos</strong> de su país de residencia, siempre que estén inscriptos en el padrón consular. Desde 2024 también pueden hacerlo <strong>por correo postal</strong>. La oferta electoral es la misma que en el país.</p>
+
+      <h3>Personas privadas de libertad</h3>
+      <p>Las <strong>personas detenidas sin condena firme</strong> (con prisión preventiva) tienen derecho a votar. Lo hacen en mesas especiales instaladas en las unidades penitenciarias. La Corte Suprema lo reconoció como derecho en 2002 y existe el "padrón de detenidos sin condena" administrado por la Cámara Nacional Electoral.</p>
+
+      <h3>Fuerzas Armadas y de Seguridad</h3>
+      <p>El personal de las Fuerzas Armadas y de Seguridad <strong>vota en mesas comunes</strong>, como cualquier ciudadano. Si están de servicio el día de la elección, deben presentar la constancia correspondiente para justificar la imposibilidad de votar.</p>
+
+      <h3>Personas con discapacidad</h3>
+      <p>Pueden ingresar al cuarto oscuro <strong>acompañadas</strong> por una persona de su elección. Las mesas accesibles están señalizadas. La Boleta Única de Papel tiene también una versión accesible para personas con discapacidad visual.</p>
+
+      <div class="destacado atencion">
+        <div class="destacado-titulo">El nuevo sistema: la Boleta Única de Papel (BUP)</div>
+        <p>Desde 2025, las elecciones nacionales argentinas usan la <strong>Boleta Única de Papel</strong>, establecida por la Ley 27.781 (sancionada en octubre de 2024). Es una sola hoja con toda la oferta electoral: cada partido en una columna, cada categoría de cargo en una fila. Se marca con una lapicera la opción elegida en cada categoría. Reemplazó al viejo sistema de múltiples boletas partidarias por categoría. <strong>Solo se aplica a cargos nacionales</strong>; cada provincia mantiene su propio sistema para cargos locales.</p>
+      </div>
+    </section>
+
+    <!-- SECCIÓN 08 -->
+    <section class="seccion" id="practico">
+      <div class="seccion-eyebrow">— 08 / Recursos prácticos</div>
+      <h2>Lo que necesitás <em>saber</em> el día que votás</h2>
+
+      <h3>Qué documento llevar</h3>
+      <p>Es <strong>indispensable presentar el DNI</strong>. Solo se aceptan: DNI tarjeta, DNI libreta verde, DNI libreta celeste o el DNI emitido posteriormente al que figura en el padrón. <strong>No se aceptan</strong>: pasaporte, registro de conducir, denuncia por extravío ni constancia de trámite.</p>
+
+      <h3>Cómo consultar dónde te toca votar</h3>
+      <p>Entrá a <a href="https://www.padron.gob.ar" target="_blank" rel="noopener" style="color: var(--celeste-dark);"><strong>padron.gob.ar</strong></a>. Ingresás tu DNI y te dice: la escuela, la mesa, el orden y el distrito electoral que te corresponde.</p>
+
+      <h3>Cómo justificar si no votás</h3>
+      <p>Si tenés una razón válida (enfermedad, distancia mayor a 500 km del lugar de votación, trabajo esencial, etc.) podés justificar tu ausencia. El trámite se hace en <a href="https://infractores.padron.gob.ar" target="_blank" rel="noopener" style="color: var(--celeste-dark);"><strong>infractores.padron.gob.ar</strong></a> dentro de los <strong>60 días posteriores</strong> a la elección. Tenés que presentar la constancia que acredite la causa (certificado médico, constancia policial de distancia, certificación del empleador, etc.).</p>
+
+      <h3>Cómo pagar la multa</h3>
+      <p>Si quedás registrado como infractor, podés pagar la multa online en el mismo sitio del Registro de Infractores, o en sucursales del Banco Nación con Mercado Pago, transferencia o efectivo.</p>
+
+      <div class="destacado">
+        <div class="destacado-titulo">Resumen rápido</div>
+        <ul>
+          <li>Llevá tu DNI.</li>
+          <li>Consultá tu mesa antes de salir de casa.</li>
+          <li>Si no podés ir, justificá dentro de 60 días.</li>
+          <li>No saques foto al voto.</li>
+          <li>En la BUP: marcá con la lapicera, una opción por categoría, plegá y depositá.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- FUENTES -->
+    <section class="fuentes">
+      <h3>— Fuentes oficiales y normativa</h3>
+      <ul>
+        <li><strong>Constitución Nacional</strong>, artículo 37. Sufragio universal, igual, secreto y obligatorio.</li>
+        <li><strong>Ley 19.945</strong> — Código Electoral Nacional. Norma central del sistema electoral. <a href="https://www.argentina.gob.ar/normativa/nacional/ley-19945-19442" target="_blank" rel="noopener">Texto vigente</a></li>
+        <li><strong>Ley 26.774</strong> (2012) — "Voto joven". Extendió el derecho a votar a los argentinos de 16 y 17 años.</li>
+        <li><strong>Ley 27.781</strong> (2024) — Boleta Única de Papel. Reformó el sistema de votación nacional.</li>
+        <li><strong>Cámara Nacional Electoral</strong>. <a href="https://www.electoral.gob.ar" target="_blank" rel="noopener">electoral.gob.ar</a></li>
+        <li><strong>Consulta del padrón</strong>. <a href="https://www.padron.gob.ar" target="_blank" rel="noopener">padron.gob.ar</a></li>
+        <li><strong>Registro de Infractores</strong>. <a href="https://infractores.padron.gob.ar" target="_blank" rel="noopener">infractores.padron.gob.ar</a></li>
+        <li><strong>Observatorio Electoral</strong> (Ministerio del Interior). <a href="https://www.argentina.gob.ar/interior/observatorioelectoral" target="_blank" rel="noopener">argentina.gob.ar/interior/observatorioelectoral</a></li>
+      </ul>
+      <p style="font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; color: var(--tinta-soft); margin-top: 1.5rem; padding-top: 1rem; border-top: 1px solid var(--linea); line-height: 1.6;">
+        Esta página es un material educativo. Los datos y montos pueden actualizarse según resoluciones de la Cámara Nacional Electoral o cambios legislativos. Para trámites oficiales, consultá siempre las fuentes citadas arriba. Última revisión: mayo de 2026.
+      </p>
+    </section>
+
+  </main>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div>
+      <h3>Educación Cívica</h3>
+      <p>Una guía visual y educativa sobre el Estado argentino, sus poderes, las provincias, el sistema electoral, los derechos del ciudadano y la historia institucional. Para estudiantes, docentes, ciudadanos y curiosos.</p>
+    </div>
+    <div>
+      <h3>Secciones</h3>
+      <a href="poderes.html">Los poderes</a>
+      <a href="provincias.html">Provincias</a>
+      <a href="index.html#sistema-electoral">Elecciones</a>
+      <a href="index.html#derechos">Derechos</a>
+      <a href="historia.html">Historia</a>
+    </div>
+    <div>
+      <h3>El proyecto</h3>
+      <a href="#">Sobre nosotros</a>
+      <a href="#">Manifiesto editorial</a>
+      <a href="#">Suscribirse</a>
+      <a href="#">Contacto</a>
+    </div>
+    <div class="footer-meta">
+      educacioncivica.com.ar · v0.3 prototipo · Educación cívica con datos · Sin grieta · Datos institucionales actualizados a mayo de 2026
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
