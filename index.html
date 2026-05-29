@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Política Argentina — Educación cívica con datos</title>
+<title>Educación Cívica — Entendé el Estado argentino con datos</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,800&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&family=Inter+Tight:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -275,6 +275,74 @@
     padding: 5rem 2rem;
     max-width: 1400px;
     margin: 0 auto;
+  }
+  .seccion-alt {
+    background: var(--celeste-soft);
+    max-width: none;
+    width: 100%;
+  }
+  .seccion-alt .section-head,
+  .seccion-alt .section-intro-text,
+  .seccion-alt .temas-grid {
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .section-intro-text {
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: var(--tinta);
+    max-width: 720px;
+    margin: -1.5rem 0 2.5rem;
+  }
+  .temas-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+  }
+  .tema-card {
+    background: white;
+    border: 1px solid var(--linea);
+    padding: 1.8rem 1.5rem;
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    transition: all 0.2s ease;
+    position: relative;
+  }
+  .tema-card:hover {
+    border-color: var(--celeste-dark);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.06);
+  }
+  .tema-card-num {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.7rem;
+    letter-spacing: 0.18em;
+    color: var(--celeste-dark);
+  }
+  .tema-card-title {
+    font-family: 'Fraunces', serif;
+    font-size: 1.25rem;
+    font-weight: 500;
+    color: var(--tinta);
+    line-height: 1.25;
+  }
+  .tema-card-desc {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: var(--tinta-soft);
+    flex-grow: 1;
+  }
+  .tema-card-link {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.7rem;
+    letter-spacing: 0.1em;
+    color: var(--sol-dark, #c8941a);
+    text-transform: uppercase;
+    margin-top: 0.5rem;
   }
   .section-head {
     display: flex;
@@ -789,14 +857,15 @@
   <div class="nav-inner">
     <div class="logo">
       <span class="logo-dot"></span>
-      Política Argentina
+      Educación Cívica
     </div>
     <ul class="nav-links">
       <li><a href="poderes.html">Los poderes</a></li>
-      <li><a href="historia.html">Historia</a></li>
       <li><a href="provincias.html">Provincias</a></li>
-      <li><a href="#calendario">Calendario</a></li>
-      <li><a href="#aprender">Aprender</a></li>
+      <li><a href="#sistema-electoral">Elecciones</a></li>
+      <li><a href="#derechos">Derechos</a></li>
+      <li><a href="historia.html">Historia</a></li>
+      <li><a href="#aprender">Aula</a></li>
     </ul>
     <a href="#" class="nav-cta">Suscribirse</a>
   </div>
@@ -804,9 +873,9 @@
 
 <section class="hero">
   <div>
-    <div class="hero-tag">Educación cívica · Datos abiertos</div>
-    <h1>Entendé cómo funciona <em>la política argentina</em>, con datos y sin grieta.</h1>
-    <p class="hero-sub">Una guía visual y educativa sobre los poderes del Estado, las provincias, el calendario electoral y la historia institucional. Hecha para estudiantes, ciudadanos y curiosos.</p>
+    <div class="hero-tag">Educación cívica · Datos abiertos · Sin grieta</div>
+    <h1>Entendé cómo funciona <em>el Estado argentino</em>, con datos y sin grieta.</h1>
+    <p class="hero-sub">Una guía visual y educativa sobre los poderes del Estado, las provincias, el sistema electoral, tus derechos como ciudadano y la historia institucional. Hecha para estudiantes, docentes, ciudadanos y curiosos.</p>
     <div class="hero-stats">
       <div class="stat">
         <span class="stat-num">23+1</span>
@@ -918,13 +987,197 @@
 </section>
 
 <!-- HISTORIA / PREMIUM -->
+
+<section id="provincias" class="provincias-strip">
+  <div class="provincias-inner">
+    <div class="section-head" style="border-bottom-color: rgba(26,26,46,0.1);">
+      <div>
+        <div class="section-eyebrow">Capítulo 02 · El federalismo</div>
+        <h2 class="section-title">24 jurisdicciones, <em>24 realidades políticas</em></h2>
+      </div>
+    </div>
+    <div class="provincias-grid">
+      <div class="prov-chip caba">CABA</div>
+      <div class="prov-chip ba">Buenos Aires</div>
+      <div class="prov-chip">Catamarca</div>
+      <div class="prov-chip">Chaco</div>
+      <div class="prov-chip">Chubut</div>
+      <div class="prov-chip cba">Córdoba</div>
+      <div class="prov-chip">Corrientes</div>
+      <div class="prov-chip">Entre Ríos</div>
+      <div class="prov-chip">Formosa</div>
+      <div class="prov-chip">Jujuy</div>
+      <div class="prov-chip">La Pampa</div>
+      <div class="prov-chip">La Rioja</div>
+      <div class="prov-chip">Mendoza</div>
+      <div class="prov-chip">Misiones</div>
+      <div class="prov-chip">Neuquén</div>
+      <div class="prov-chip">Río Negro</div>
+      <div class="prov-chip">Salta</div>
+      <div class="prov-chip">San Juan</div>
+      <div class="prov-chip">San Luis</div>
+      <div class="prov-chip">Santa Cruz</div>
+      <div class="prov-chip">Santa Fe</div>
+      <div class="prov-chip">Santiago del Estero</div>
+      <div class="prov-chip">Tierra del Fuego</div>
+      <div class="prov-chip">Tucumán</div>
+    </div>
+  </div>
+</section>
+
+<!-- SISTEMA ELECTORAL (NUEVO) -->
+<section id="sistema-electoral">
+  <div class="section-head">
+    <div>
+      <div class="section-eyebrow">Capítulo 03 · Cómo votamos</div>
+      <h2 class="section-title">El <em>sistema electoral</em> argentino</h2>
+    </div>
+  </div>
+  <p class="section-intro-text">Cómo se elige a quienes nos gobiernan. Las reglas del juego democrático explicadas paso a paso, sin tecnicismos.</p>
+  <div class="temas-grid">
+    <a href="#" class="tema-card">
+      <div class="tema-card-num">01</div>
+      <h3 class="tema-card-title">El voto en Argentina</h3>
+      <p class="tema-card-desc">Voto universal, secreto y obligatorio. Quiénes votan, desde qué edad, y por qué es obligatorio. El padrón electoral.</p>
+      <span class="tema-card-link">Próximamente →</span>
+    </a>
+    <a href="#" class="tema-card">
+      <div class="tema-card-num">02</div>
+      <h3 class="tema-card-title">PASO, generales y balotaje</h3>
+      <p class="tema-card-desc">Qué son las elecciones primarias, cómo funciona la primera vuelta y cuándo se va a segunda vuelta para presidente.</p>
+      <span class="tema-card-link">Próximamente →</span>
+    </a>
+    <a href="#" class="tema-card">
+      <div class="tema-card-num">03</div>
+      <h3 class="tema-card-title">La Boleta Única</h3>
+      <p class="tema-card-desc">El nuevo sistema de votación nacional. Cómo se vota, en qué se diferencia de la boleta partidaria tradicional.</p>
+      <span class="tema-card-link">Próximamente →</span>
+    </a>
+    <a href="#" class="tema-card">
+      <div class="tema-card-num">04</div>
+      <h3 class="tema-card-title">Sistema D'Hondt</h3>
+      <p class="tema-card-desc">Cómo se reparten las bancas de Diputados según los votos. El método matemático detrás de la representación.</p>
+      <span class="tema-card-link">Próximamente →</span>
+    </a>
+  </div>
+</section>
+
+<!-- DERECHOS Y GARANTÍAS (NUEVO) -->
+<section id="derechos" class="seccion-alt">
+  <div class="section-head">
+    <div>
+      <div class="section-eyebrow">Capítulo 04 · Tus derechos</div>
+      <h2 class="section-title">Derechos y <em>garantías</em> constitucionales</h2>
+    </div>
+  </div>
+  <p class="section-intro-text">Qué te garantiza la Constitución como ciudadano y qué herramientas tenés para defender tus derechos frente al Estado.</p>
+  <div class="temas-grid">
+    <a href="#" class="tema-card">
+      <div class="tema-card-num">01</div>
+      <h3 class="tema-card-title">Derechos fundamentales</h3>
+      <p class="tema-card-desc">Los derechos civiles, políticos y sociales que reconoce la Constitución. La parte dogmática y los tratados con jerarquía constitucional.</p>
+      <span class="tema-card-link">Próximamente →</span>
+    </a>
+    <a href="#" class="tema-card">
+      <div class="tema-card-num">02</div>
+      <h3 class="tema-card-title">El amparo</h3>
+      <p class="tema-card-desc">Qué es la acción de amparo y cómo te protege cuando un derecho constitucional es vulnerado de forma urgente.</p>
+      <span class="tema-card-link">Próximamente →</span>
+    </a>
+    <a href="#" class="tema-card">
+      <div class="tema-card-num">03</div>
+      <h3 class="tema-card-title">Habeas corpus y habeas data</h3>
+      <p class="tema-card-desc">Las garantías que protegen tu libertad física y tus datos personales. Cuándo y cómo se usan.</p>
+      <span class="tema-card-link">Próximamente →</span>
+    </a>
+    <a href="#" class="tema-card">
+      <div class="tema-card-num">04</div>
+      <h3 class="tema-card-title">Acceso a la información pública</h3>
+      <p class="tema-card-desc">Tu derecho a pedir información al Estado. Cómo hacer un pedido y qué organismos deben responderte.</p>
+      <span class="tema-card-link">Próximamente →</span>
+    </a>
+  </div>
+</section>
+
+<!-- EL ESTADO Y VOS (NUEVO) -->
+<section id="estado-ciudadano">
+  <div class="section-head">
+    <div>
+      <div class="section-eyebrow">Capítulo 05 · El Estado y vos</div>
+      <h2 class="section-title">Cómo el <em>Estado</em> afecta tu vida diaria</h2>
+    </div>
+  </div>
+  <p class="section-intro-text">Los conceptos que conectan las instituciones con tu vida cotidiana: impuestos, presupuesto, coparticipación y servicios públicos.</p>
+  <div class="temas-grid">
+    <a href="#" class="tema-card">
+      <div class="tema-card-num">01</div>
+      <h3 class="tema-card-title">Para qué sirven los impuestos</h3>
+      <p class="tema-card-desc">Qué impuestos pagás (aunque no te des cuenta), quién los cobra y a dónde va esa plata. Nación, provincia y municipio.</p>
+      <span class="tema-card-link">Próximamente →</span>
+    </a>
+    <a href="#" class="tema-card">
+      <div class="tema-card-num">02</div>
+      <h3 class="tema-card-title">La coparticipación federal</h3>
+      <p class="tema-card-desc">Cómo se reparte la recaudación entre la Nación y las provincias. Uno de los temas más complejos y conflictivos del federalismo.</p>
+      <span class="tema-card-link">Próximamente →</span>
+    </a>
+    <a href="#" class="tema-card">
+      <div class="tema-card-num">03</div>
+      <h3 class="tema-card-title">El Presupuesto Nacional</h3>
+      <p class="tema-card-desc">Qué es la 'ley de leyes', cómo se aprueba cada año y por qué define todo lo que el Estado puede hacer.</p>
+      <span class="tema-card-link">Próximamente →</span>
+    </a>
+    <a href="#" class="tema-card">
+      <div class="tema-card-num">04</div>
+      <h3 class="tema-card-title">Los tres niveles de gobierno</h3>
+      <p class="tema-card-desc">Qué hace la Nación, qué hace tu provincia y qué hace tu municipio. Quién es responsable de qué servicio.</p>
+      <span class="tema-card-link">Próximamente →</span>
+    </a>
+  </div>
+</section>
+
+<section id="calendario" style="padding: 0; max-width: none;">
+  <div class="calendario">
+    <div class="calendario-inner">
+      <div class="section-head">
+        <div>
+          <div class="section-eyebrow">Capítulo 06 · Qué viene</div>
+          <h2 class="section-title">Calendario <em>institucional</em></h2>
+        </div>
+      </div>
+      <div class="timeline">
+        <div class="event">
+          <div class="event-date">— PRÓXIMO</div>
+          <h3 class="event-title">Sesiones ordinarias</h3>
+          <p class="event-desc">Apertura del año legislativo en el Congreso de la Nación.</p>
+        </div>
+        <div class="event">
+          <div class="event-date">— 2027</div>
+          <h3 class="event-title">Elecciones presidenciales</h3>
+          <p class="event-desc">Se renuevan Presidencia, Vicepresidencia y bancas del Congreso.</p>
+        </div>
+        <div class="event">
+          <div class="event-date">— BIENAL</div>
+          <h3 class="event-title">Renovación legislativa</h3>
+          <p class="event-desc">Cada 2 años se renueva la mitad de Diputados y un tercio del Senado.</p>
+        </div>
+        <div class="event">
+          <div class="event-date">— PROVINCIAL</div>
+          <h3 class="event-title">Elecciones locales</h3>
+          <p class="event-desc">Cada provincia define su propio calendario electoral.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section id="historia" style="padding: 0; max-width: none;">
   <div class="historia">
     <div class="historia-inner">
       <div class="section-head">
         <div>
           <div class="premium-badge">★ Acceso premium</div>
-          <div class="section-eyebrow">Capítulo 05 · Línea histórica</div>
+          <div class="section-eyebrow">Capítulo 07 · Línea histórica</div>
           <h2 class="section-title">Desde 1853 hasta hoy: <em>la historia institucional</em> en un solo lugar.</h2>
         </div>
       </div>
@@ -996,82 +1249,10 @@
   </div>
 </section>
 
-<section id="provincias" class="provincias-strip">
-  <div class="provincias-inner">
-    <div class="section-head" style="border-bottom-color: rgba(26,26,46,0.1);">
-      <div>
-        <div class="section-eyebrow">Capítulo 02 · El federalismo</div>
-        <h2 class="section-title">24 jurisdicciones, <em>24 realidades políticas</em></h2>
-      </div>
-    </div>
-    <div class="provincias-grid">
-      <div class="prov-chip caba">CABA</div>
-      <div class="prov-chip ba">Buenos Aires</div>
-      <div class="prov-chip">Catamarca</div>
-      <div class="prov-chip">Chaco</div>
-      <div class="prov-chip">Chubut</div>
-      <div class="prov-chip cba">Córdoba</div>
-      <div class="prov-chip">Corrientes</div>
-      <div class="prov-chip">Entre Ríos</div>
-      <div class="prov-chip">Formosa</div>
-      <div class="prov-chip">Jujuy</div>
-      <div class="prov-chip">La Pampa</div>
-      <div class="prov-chip">La Rioja</div>
-      <div class="prov-chip">Mendoza</div>
-      <div class="prov-chip">Misiones</div>
-      <div class="prov-chip">Neuquén</div>
-      <div class="prov-chip">Río Negro</div>
-      <div class="prov-chip">Salta</div>
-      <div class="prov-chip">San Juan</div>
-      <div class="prov-chip">San Luis</div>
-      <div class="prov-chip">Santa Cruz</div>
-      <div class="prov-chip">Santa Fe</div>
-      <div class="prov-chip">Santiago del Estero</div>
-      <div class="prov-chip">Tierra del Fuego</div>
-      <div class="prov-chip">Tucumán</div>
-    </div>
-  </div>
-</section>
-
-<section id="calendario" style="padding: 0; max-width: none;">
-  <div class="calendario">
-    <div class="calendario-inner">
-      <div class="section-head">
-        <div>
-          <div class="section-eyebrow">Capítulo 03 · Qué viene</div>
-          <h2 class="section-title">Calendario <em>institucional</em></h2>
-        </div>
-      </div>
-      <div class="timeline">
-        <div class="event">
-          <div class="event-date">— PRÓXIMO</div>
-          <h3 class="event-title">Sesiones ordinarias</h3>
-          <p class="event-desc">Apertura del año legislativo en el Congreso de la Nación.</p>
-        </div>
-        <div class="event">
-          <div class="event-date">— 2027</div>
-          <h3 class="event-title">Elecciones presidenciales</h3>
-          <p class="event-desc">Se renuevan Presidencia, Vicepresidencia y bancas del Congreso.</p>
-        </div>
-        <div class="event">
-          <div class="event-date">— BIENAL</div>
-          <h3 class="event-title">Renovación legislativa</h3>
-          <p class="event-desc">Cada 2 años se renueva la mitad de Diputados y un tercio del Senado.</p>
-        </div>
-        <div class="event">
-          <div class="event-date">— PROVINCIAL</div>
-          <h3 class="event-title">Elecciones locales</h3>
-          <p class="event-desc">Cada provincia define su propio calendario electoral.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
 <section id="aprender">
   <div class="section-head">
     <div>
-      <div class="section-eyebrow">Capítulo 04 · Aula abierta</div>
+      <div class="section-eyebrow">Capítulo 08 · Aula abierta</div>
       <h2 class="section-title">Aprendé desde cero <em>cómo funciona todo</em></h2>
     </div>
   </div>
@@ -1128,7 +1309,7 @@
 
       <div class="disclaimer-block">
         <h3>Naturaleza educativa e informativa</h3>
-        <p>Política Argentina es un proyecto de educación cívica y divulgación. El contenido tiene exclusivamente fines informativos y pedagógicos. No constituye asesoramiento legal, político, electoral ni recomendación de voto.</p>
+        <p>Educación Cívica es un proyecto de educación cívica y divulgación. El contenido tiene exclusivamente fines informativos y pedagógicos. No constituye asesoramiento legal, político, electoral ni recomendación de voto.</p>
       </div>
 
       <div class="disclaimer-block">
@@ -1143,7 +1324,7 @@
 
       <div class="disclaimer-block">
         <h3>Propiedad intelectual</h3>
-        <p>El contenido original elaborado por Política Argentina se publica bajo licencia Creative Commons Atribución-CompartirIgual 4.0 Internacional (CC BY-SA 4.0). Los textos, imágenes y datos de terceros conservan los derechos de sus respectivos titulares y se utilizan citando la fuente correspondiente.</p>
+        <p>El contenido original elaborado por Educación Cívica se publica bajo licencia Creative Commons Atribución-CompartirIgual 4.0 Internacional (CC BY-SA 4.0). Los textos, imágenes y datos de terceros conservan los derechos de sus respectivos titulares y se utilizan citando la fuente correspondiente.</p>
       </div>
 
       <div class="disclaimer-block">
@@ -1153,7 +1334,7 @@
 
       <div class="disclaimer-block">
         <h3>Limitación de responsabilidad</h3>
-        <p>Política Argentina no se responsabiliza por decisiones tomadas a partir de la información publicada. Recomendamos siempre contrastar con las fuentes oficiales originales antes de utilizar los datos en contextos académicos, periodísticos o profesionales.</p>
+        <p>Educación Cívica no se responsabiliza por decisiones tomadas a partir de la información publicada. Recomendamos siempre contrastar con las fuentes oficiales originales antes de utilizar los datos en contextos académicos, periodísticos o profesionales.</p>
       </div>
 
       <div class="disclaimer-note">
@@ -1166,7 +1347,7 @@
 <footer>
   <div class="footer-inner">
     <div class="footer-brand">
-      <h3>Política Argentina</h3>
+      <h3>Educación Cívica</h3>
       <p>Un proyecto de educación cívica con datos abiertos. Sin partidismo, sin grieta. Para entender mejor el país en el que vivimos.</p>
     </div>
     <div class="footer-col">
@@ -1198,7 +1379,7 @@
     </div>
   </div>
   <div class="footer-inner footer-meta">
-    <span>politicargentina.com.ar · v0.2 prototipo</span>
+    <span>educacioncivica.com.ar · v0.3 prototipo</span>
     <span>Última actualización de datos: pendiente</span>
   </div>
 </footer>
