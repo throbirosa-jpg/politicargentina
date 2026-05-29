@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>El Amparo — Educación Cívica</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,400;0,500;0,600;1,400&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --crema: #FBF7F0; --crema-warm: #F4ECDB; --tinta: #1A1A2E; --tinta-soft: #545465;
+    --celeste: #74ACDF; --celeste-soft: #E4F0FA; --celeste-dark: #3D7BB0;
+    --sol: #F6B40E; --sol-soft: #FBE5AA; --sol-dark: #C8941A;
+    --rojo-fed: #B8341B; --rojo-soft: #F2D5CE;
+    --verde-ok: #4A7C59; --verde-soft: #DAEAE0;
+    --linea: #DDD7CB; --linea-soft: #ECE6DA;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Fraunces', Georgia, serif; background: var(--crema); color: var(--tinta); line-height: 1.6; }
+  nav { background: white; border-bottom: 1px solid var(--linea); padding: 1.2rem 2rem; position: sticky; top: 0; z-index: 100; }
+  .nav-inner { max-width: 1400px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
+  .logo { display: flex; align-items: center; gap: 0.5rem; font-family: 'Fraunces', serif; font-weight: 500; font-size: 1.1rem; color: var(--tinta); text-decoration: none; }
+  .logo-dot { width: 12px; height: 12px; background: var(--sol); border-radius: 50%; }
+  .breadcrumb { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.1em; color: var(--tinta-soft); }
+  .breadcrumb a { color: var(--tinta-soft); text-decoration: none; }
+  .breadcrumb a:hover { color: var(--tinta); }
+  .page-header { background: linear-gradient(180deg, var(--celeste-soft) 0%, var(--crema) 100%); padding: 4rem 2rem 3rem; border-bottom: 1px solid var(--linea); }
+  .page-header-inner { max-width: 900px; margin: 0 auto; }
+  .page-eyebrow { display: inline-block; font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--celeste-dark); background: white; padding: 0.5rem 1rem; border: 1px solid var(--celeste); margin-bottom: 1.5rem; }
+  .page-title { font-family: 'Fraunces', serif; font-weight: 300; font-size: clamp(2.2rem, 5vw, 3.6rem); line-height: 1.05; margin-bottom: 1.5rem; color: var(--tinta); }
+  .page-title em { font-style: italic; color: var(--celeste-dark); font-weight: 400; }
+  .page-intro { font-size: 1.15rem; line-height: 1.7; color: var(--tinta); max-width: 720px; }
+  .layout { max-width: 1400px; margin: 0 auto; padding: 3rem 2rem; display: grid; grid-template-columns: 220px 1fr; gap: 4rem; align-items: start; }
+  .toc { position: sticky; top: 90px; font-family: 'JetBrains Mono', monospace; font-size: 0.78rem; }
+  .toc-titulo { font-size: 0.65rem; letter-spacing: 0.18em; color: var(--tinta-soft); text-transform: uppercase; margin-bottom: 1rem; padding-bottom: 0.8rem; border-bottom: 1px solid var(--linea); }
+  .toc ul { list-style: none; }
+  .toc li { margin-bottom: 0.6rem; line-height: 1.4; }
+  .toc a { color: var(--tinta-soft); text-decoration: none; border-left: 2px solid var(--linea); padding-left: 0.8rem; display: block; transition: all 0.18s ease; }
+  .toc a:hover { color: var(--tinta); border-left-color: var(--celeste); }
+  .toc-num { color: var(--celeste-dark); font-weight: 500; }
+  .contenido { max-width: 720px; }
+  .seccion { margin-bottom: 3.5rem; padding-bottom: 3rem; border-bottom: 1px solid var(--linea); }
+  .seccion:last-of-type { border-bottom: none; }
+  .seccion-eyebrow { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.18em; color: var(--celeste-dark); text-transform: uppercase; margin-bottom: 0.6rem; }
+  .seccion h2 { font-family: 'Fraunces', serif; font-weight: 400; font-size: 1.9rem; line-height: 1.15; color: var(--tinta); margin-bottom: 1.5rem; }
+  .seccion h2 em { font-style: italic; color: var(--celeste-dark); }
+  .seccion h3 { font-family: 'Fraunces', serif; font-weight: 500; font-size: 1.2rem; color: var(--tinta); margin-top: 2rem; margin-bottom: 0.8rem; }
+  .seccion p { margin-bottom: 1rem; font-size: 1rem; line-height: 1.75; color: var(--tinta); }
+  .seccion p strong { font-weight: 600; color: var(--tinta); }
+  .seccion ul { margin: 1rem 0 1.5rem 0; padding-left: 0; list-style: none; }
+  .seccion ul li { padding-left: 1.5rem; margin-bottom: 0.6rem; line-height: 1.6; position: relative; }
+  .seccion ul li::before { content: '→'; position: absolute; left: 0; color: var(--celeste-dark); font-weight: 600; }
+  .destacado { background: white; border-left: 4px solid var(--celeste); padding: 1.5rem 1.8rem; margin: 1.5rem 0; font-size: 0.95rem; line-height: 1.6; }
+  .destacado-titulo { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.15em; color: var(--celeste-dark); text-transform: uppercase; margin-bottom: 0.6rem; }
+  .destacado.atencion { background: var(--sol-soft); border-left-color: var(--sol-dark); }
+  .destacado.atencion .destacado-titulo { color: var(--sol-dark); }
+  .destacado.historico { background: var(--rojo-soft); border-left-color: var(--rojo-fed); }
+  .destacado.historico .destacado-titulo { color: var(--rojo-fed); }
+  .cita-legal { font-family: 'JetBrains Mono', monospace; font-size: 0.75rem; color: var(--tinta-soft); background: var(--linea-soft); padding: 0.8rem 1rem; margin: 1rem 0; line-height: 1.5; border-left: 3px solid var(--tinta-soft); }
+  .cita-articulo { background: white; border: 1px solid var(--linea); padding: 1.5rem 1.8rem; margin: 1.5rem 0; font-family: 'Fraunces', serif; font-style: italic; font-size: 1.02rem; line-height: 1.7; color: var(--tinta); border-left: 4px solid var(--sol-dark); position: relative; }
+  .cita-articulo::before { content: '"'; position: absolute; top: -0.5rem; left: 1.2rem; font-size: 3rem; color: var(--sol); font-family: serif; line-height: 1; }
+  .cita-articulo-ref { font-family: 'JetBrains Mono', monospace; font-style: normal; font-size: 0.7rem; letter-spacing: 0.12em; color: var(--tinta-soft); text-transform: uppercase; margin-top: 0.8rem; }
+  .tabla-datos { width: 100%; margin: 1.5rem 0; border-collapse: collapse; font-size: 0.92rem; }
+  .tabla-datos th { text-align: left; padding: 0.8rem 1rem; background: var(--celeste-soft); border-bottom: 2px solid var(--celeste-dark); font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--tinta); font-weight: 600; }
+  .tabla-datos td { padding: 0.85rem 1rem; border-bottom: 1px dotted var(--linea); vertical-align: top; }
+  .tabla-datos tr:last-child td { border-bottom: none; }
+  .tabla-datos td:first-child { font-weight: 500; color: var(--tinta); }
+  .timeline-box { background: white; border: 1px solid var(--linea); padding: 1.5rem; margin: 1.5rem 0; }
+  .timeline-paso { display: flex; gap: 1rem; padding: 1rem 0; border-bottom: 1px dotted var(--linea); align-items: start; }
+  .timeline-paso:last-child { border-bottom: none; }
+  .timeline-num { font-family: 'Fraunces', serif; font-size: 1.8rem; color: var(--celeste-dark); font-weight: 500; flex-shrink: 0; min-width: 50px; line-height: 1; }
+  .timeline-text { flex: 1; }
+  .timeline-text strong { display: block; font-family: 'Fraunces', serif; font-size: 1.1rem; font-weight: 500; margin-bottom: 0.3rem; }
+  .timeline-text p { font-size: 0.9rem; line-height: 1.5; color: var(--tinta-soft); margin: 0; }
+  .fuentes { margin-top: 4rem; padding-top: 2.5rem; border-top: 2px solid var(--linea); }
+  .fuentes h3 { font-family: 'JetBrains Mono', monospace; font-size: 0.75rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--tinta-soft); margin-bottom: 1.5rem; border: none; padding: 0; }
+  .fuentes ul { list-style: none; padding: 0; }
+  .fuentes li { padding: 0.6rem 0; border-bottom: 1px dotted var(--linea); font-size: 0.88rem; padding-left: 0; }
+  .fuentes li::before { content: none; }
+  .fuentes a { color: var(--celeste-dark); text-decoration: none; border-bottom: 1px dotted var(--celeste-dark); }
+  .fuentes a:hover { color: var(--tinta); }
+  footer { background: var(--tinta); color: var(--crema); padding: 3rem 2rem; margin-top: 4rem; }
+  .footer-inner { max-width: 1400px; margin: 0 auto; display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 3rem; }
+  footer h3 { font-family: 'Fraunces', serif; font-weight: 400; font-size: 1.3rem; margin-bottom: 1rem; color: var(--crema); }
+  footer p, footer a { color: var(--crema); opacity: 0.85; font-size: 0.9rem; line-height: 1.6; }
+  footer a { text-decoration: none; display: block; padding: 0.3rem 0; }
+  footer a:hover { opacity: 1; color: var(--sol); }
+  .footer-meta { grid-column: 1 / -1; margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid rgba(251, 247, 240, 0.15); font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; opacity: 0.6; letter-spacing: 0.05em; }
+  @media (max-width: 900px) {
+    .layout { grid-template-columns: 1fr; gap: 2rem; }
+    .toc { position: relative; top: 0; padding: 1.5rem; background: white; border: 1px solid var(--linea); }
+    .footer-inner { grid-template-columns: 1fr; gap: 2rem; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="logo"><span class="logo-dot"></span>Educación Cívica</a>
+    <div class="breadcrumb"><a href="index.html">Inicio</a> · <a href="index.html#derechos">Derechos</a> · <span>El amparo</span></div>
+  </div>
+</nav>
+
+<header class="page-header">
+  <div class="page-header-inner">
+    <div class="page-eyebrow">Capítulo 04.02 · Tus derechos</div>
+    <h1 class="page-title">La acción de <em>amparo</em></h1>
+    <p class="page-intro">Cuando un derecho constitucional es vulnerado y no hay tiempo de esperar un juicio común, existe una herramienta jurídica especial: el amparo. Es rápida, accesible y poderosa. Esta guía explica qué es, cómo funciona, cuándo procede y cómo se presenta.</p>
+  </div>
+</header>
+
+<div class="layout">
+
+  <aside class="toc">
+    <div class="toc-titulo">— En esta página</div>
+    <ul>
+      <li><a href="#que-es"><span class="toc-num">01</span> Qué es el amparo</a></li>
+      <li><a href="#origen"><span class="toc-num">02</span> Origen e historia</a></li>
+      <li><a href="#cuando"><span class="toc-num">03</span> Cuándo procede</a></li>
+      <li><a href="#tipos"><span class="toc-num">04</span> Tipos de amparo</a></li>
+      <li><a href="#colectivo"><span class="toc-num">05</span> El amparo colectivo</a></li>
+      <li><a href="#procedimiento"><span class="toc-num">06</span> Cómo se presenta</a></li>
+      <li><a href="#ejemplos"><span class="toc-num">07</span> Casos típicos</a></li>
+      <li><a href="#limitaciones"><span class="toc-num">08</span> Límites y críticas</a></li>
+    </ul>
+  </aside>
+
+  <main class="contenido">
+
+    <section class="seccion" id="que-es">
+      <div class="seccion-eyebrow">— 01 / Qué es</div>
+      <h2>Una <em>vía rápida</em> de justicia</h2>
+      <p>El amparo es una <strong>acción judicial expedita y rápida</strong> que permite a cualquier persona reclamar ante la justicia cuando un derecho constitucional es vulnerado por un acto u omisión, ya sea del Estado o de un particular. Es la herramienta más poderosa que tiene el ciudadano para defender derechos fundamentales cuando otras vías no resultarían efectivas a tiempo.</p>
+
+      <p>Está reconocido en el <strong>artículo 43 de la Constitución Nacional</strong> desde la reforma de 1994, aunque ya existía antes en la práctica judicial argentina por desarrollo jurisprudencial. Su regulación detallada está en la <strong>Ley 16.986</strong> de 1966, todavía vigente en lo que no contradice la Constitución reformada.</p>
+
+      <div class="cita-articulo">
+        Toda persona puede interponer acción expedita y rápida de amparo, siempre que no exista otro medio judicial más idóneo, contra todo acto u omisión de autoridades públicas o de particulares, que en forma actual o inminente lesione, restrinja, altere o amenace, con arbitrariedad o ilegalidad manifiesta, derechos y garantías reconocidos por esta Constitución, un tratado o una ley.
+        <div class="cita-articulo-ref">— Artículo 43 de la Constitución Nacional (primer párrafo)</div>
+      </div>
+
+      <h3>Las cinco palabras clave del artículo 43</h3>
+      <p>Cada palabra del artículo 43 tiene un significado preciso:</p>
+      <ul>
+        <li><strong>"Expedita y rápida":</strong> el procedimiento es sumario, sin las dilaciones de un juicio común.</li>
+        <li><strong>"Toda persona":</strong> cualquier individuo, incluso extranjeros. No se exigen requisitos especiales.</li>
+        <li><strong>"Acto u omisión":</strong> protege contra acciones (algo que el Estado o un particular hizo) pero también contra inacción (algo que debió hacer y no hizo).</li>
+        <li><strong>"Arbitrariedad o ilegalidad manifiesta":</strong> la violación tiene que ser clara, evidente, sin necesidad de un debate complejo.</li>
+        <li><strong>"Actual o inminente":</strong> protege tanto contra daños ya producidos como contra amenazas concretas y próximas.</li>
+      </ul>
+    </section>
+
+    <section class="seccion" id="origen">
+      <div class="seccion-eyebrow">— 02 / Origen e historia</div>
+      <h2>De la <em>jurisprudencia</em> a la Constitución</h2>
+      <p>El amparo no nació en la Constitución argentina de 1853. Fue desarrollado paso a paso por la jurisprudencia (las decisiones de la justicia) a lo largo del siglo XX, hasta llegar a tener rango constitucional en 1994.</p>
+
+      <h3>Los casos fundadores</h3>
+      <p>Dos sentencias históricas de la Corte Suprema crearon el amparo en Argentina:</p>
+
+      <div class="destacado historico">
+        <div class="destacado-titulo">Caso "Siri" (1957)</div>
+        <p>En 1956, un periodista de Mercedes (provincia de Buenos Aires) llamado Ángel Siri vio cómo la policía clausuraba el diario donde trabajaba sin orden judicial. Presentó una acción judicial defendiendo la libertad de expresión y la libertad de trabajo. La Corte Suprema le dio la razón, creando por primera vez en Argentina una protección judicial expedita contra actos del Estado: el amparo contra autoridad pública.</p>
+      </div>
+
+      <div class="destacado historico">
+        <div class="destacado-titulo">Caso "Kot" (1958)</div>
+        <p>Un año después, en una fábrica textil ocupada por sus trabajadores, los propietarios pidieron protección judicial inmediata. La Corte extendió el amparo: ya no era solo contra el Estado, sino también contra particulares. Esta sentencia consolidó el amparo como herramienta de protección general de derechos constitucionales.</p>
+      </div>
+
+      <h3>Cronología</h3>
+      <table class="tabla-datos">
+        <thead><tr><th>Año</th><th>Hito</th></tr></thead>
+        <tbody>
+          <tr><td>1957</td><td>Fallo "Siri": nacimiento jurisprudencial del amparo</td></tr>
+          <tr><td>1958</td><td>Fallo "Kot": amparo también contra particulares</td></tr>
+          <tr><td>1966</td><td>Ley 16.986: regula el amparo contra actos estatales</td></tr>
+          <tr><td>1968</td><td>Código Procesal Civil (Art. 321): amparo contra particulares</td></tr>
+          <tr><td>1994</td><td>Reforma constitucional: amparo en Art. 43 de la CN</td></tr>
+          <tr><td>1994</td><td>Reforma de 1994 incorpora el amparo colectivo</td></tr>
+        </tbody>
+      </table>
+
+      <h3>El cambio de 1994</h3>
+      <p>La reforma constitucional de 1994 fue un salto enorme. No solo elevó el amparo a rango constitucional, sino que también:</p>
+      <ul>
+        <li>Amplió los derechos protegidos a los que están en tratados internacionales y leyes.</li>
+        <li>Incorporó el <strong>amparo colectivo</strong>: ya no es solo individual.</li>
+        <li>Permitió declarar la inconstitucionalidad de la norma que afecta el derecho.</li>
+        <li>Reconoció el amparo contra omisiones, no solo actos.</li>
+      </ul>
+    </section>
+
+    <section class="seccion" id="cuando">
+      <div class="seccion-eyebrow">— 03 / Cuándo procede</div>
+      <h2>Los <em>requisitos</em> del amparo</h2>
+      <p>No todo problema legal se resuelve con un amparo. La acción tiene requisitos estrictos. Si no se cumplen, hay que ir por la vía ordinaria.</p>
+
+      <h3>Requisitos sustanciales</h3>
+      <ul>
+        <li><strong>Lesión a un derecho:</strong> debe haber un acto u omisión que afecte un derecho reconocido por la Constitución, un tratado o una ley.</li>
+        <li><strong>Arbitrariedad o ilegalidad manifiesta:</strong> la violación debe ser clara y obvia, sin necesidad de un debate jurídico complejo.</li>
+        <li><strong>Actualidad o inminencia:</strong> el daño debe estar ocurriendo o estar próximo a ocurrir.</li>
+        <li><strong>Inexistencia de otra vía idónea:</strong> el amparo es subsidiario; solo procede cuando no hay otro mecanismo judicial más adecuado para el caso.</li>
+      </ul>
+
+      <h3>Requisitos formales</h3>
+      <ul>
+        <li><strong>Legitimación:</strong> quien presenta el amparo debe ser afectado directamente (en el amparo individual) o tener legitimación colectiva en el caso del amparo colectivo.</li>
+        <li><strong>Plazo:</strong> según la Ley 16.986, hay 15 días desde que el acto se conoce o desde que la lesión se produce. La jurisprudencia tiende a flexibilizar este plazo.</li>
+        <li><strong>Patrocinio letrado:</strong> es obligatorio contar con abogado, aunque hay defensorías oficiales gratuitas que pueden patrocinar.</li>
+      </ul>
+
+      <div class="destacado">
+        <div class="destacado-titulo">El criterio de "vía idónea"</div>
+        <p>La idea es que el amparo no reemplace a los juicios comunes. Si tu reclamo puede esperar el tiempo de un juicio ordinario, no corresponde el amparo. Solo procede cuando la urgencia o gravedad del caso hacen que un trámite normal sea ineficaz. Por ejemplo: si una obra social te niega un tratamiento médico urgente, sí corresponde amparo. Si discutís una deuda comercial, no.</p>
+      </div>
+    </section>
+
+    <section class="seccion" id="tipos">
+      <div class="seccion-eyebrow">— 04 / Tipos</div>
+      <h2>Las <em>variantes</em> del amparo</h2>
+      <p>El amparo argentino se divide en varias modalidades según quién es el demandado y qué tipo de derecho se protege.</p>
+
+      <h3>Por la naturaleza del demandado</h3>
+      <ul>
+        <li><strong>Amparo contra autoridad pública</strong> (Ley 16.986): contra el Estado nacional, provincial o municipal, o cualquier organismo público.</li>
+        <li><strong>Amparo contra particulares</strong> (Art. 321 CPCCN y Art. 43 CN): contra individuos, empresas, asociaciones, obras sociales privadas, etc.</li>
+      </ul>
+
+      <h3>Por la materia</h3>
+      <ul>
+        <li><strong>Amparo por mora:</strong> obliga a la administración a responder pedidos cuando no respeta los plazos.</li>
+        <li><strong>Amparo ambiental:</strong> en defensa del medio ambiente, contemplado especialmente en el Art. 41 de la CN.</li>
+        <li><strong>Amparo de salud:</strong> contra obras sociales, prepagas o el sistema público por negativa o demora en prestaciones médicas.</li>
+        <li><strong>Amparo previsional:</strong> contra ANSES por retrasos o negativas en jubilaciones, pensiones y haberes.</li>
+        <li><strong>Amparo electoral:</strong> contra decisiones administrativas que afecten derechos políticos.</li>
+        <li><strong>Amparo educativo:</strong> contra negativas de inscripción, expulsiones arbitrarias, etc.</li>
+        <li><strong>Amparo laboral:</strong> contra despidos discriminatorios, persecución sindical, etc.</li>
+      </ul>
+
+      <h3>Por el sujeto demandante</h3>
+      <ul>
+        <li><strong>Amparo individual:</strong> presentado por la persona directamente afectada.</li>
+        <li><strong>Amparo colectivo:</strong> presentado por afectados, asociaciones o el Defensor del Pueblo en defensa de derechos de incidencia colectiva.</li>
+      </ul>
+    </section>
+
+    <section class="seccion" id="colectivo">
+      <div class="seccion-eyebrow">— 05 / Amparo colectivo</div>
+      <h2>El amparo <em>colectivo</em></h2>
+      <p>Uno de los aportes más innovadores de la reforma de 1994 fue el reconocimiento expreso del <strong>amparo colectivo</strong>, regulado en el segundo párrafo del artículo 43 de la Constitución. Permite proteger derechos que afectan no a una persona sino a un grupo, una categoría o a toda la sociedad.</p>
+
+      <div class="cita-articulo">
+        Podrán interponer esta acción contra cualquier forma de discriminación y en lo relativo a los derechos que protegen al ambiente, a la competencia, al usuario y al consumidor, así como a los derechos de incidencia colectiva en general, el afectado, el defensor del pueblo y las asociaciones que propendan a esos fines, registradas conforme a la ley, la que determinará los requisitos y formas de su organización.
+        <div class="cita-articulo-ref">— Artículo 43 de la Constitución Nacional (segundo párrafo)</div>
+      </div>
+
+      <h3>Derechos protegidos</h3>
+      <p>El amparo colectivo se aplica especialmente a:</p>
+      <ul>
+        <li><strong>Discriminación:</strong> en cualquiera de sus formas (racial, de género, religiosa, política, etc.).</li>
+        <li><strong>Derecho al ambiente:</strong> contaminación, daño ecológico, decisiones que afecten zonas protegidas.</li>
+        <li><strong>Defensa de la competencia:</strong> prácticas monopólicas, abusos de posición dominante.</li>
+        <li><strong>Derechos del consumidor y usuario:</strong> tarifas, calidad de servicios públicos, publicidad engañosa.</li>
+        <li><strong>Derechos de incidencia colectiva en general:</strong> es una cláusula abierta que permite proteger otros derechos colectivos no enumerados.</li>
+      </ul>
+
+      <h3>Quiénes pueden presentarlo</h3>
+      <p>A diferencia del amparo individual (que solo puede presentar el afectado directo), el amparo colectivo tiene legitimación ampliada:</p>
+      <ul>
+        <li><strong>El afectado:</strong> cualquier persona que sufra la lesión, aunque no actúe en nombre del grupo.</li>
+        <li><strong>El Defensor del Pueblo:</strong> tanto el nacional como los provinciales, en sus respectivos ámbitos.</li>
+        <li><strong>Las asociaciones</strong> registradas que tengan como objetivo proteger ese tipo de derechos (asociaciones de consumidores, ambientales, antidiscriminación, etc.).</li>
+      </ul>
+
+      <div class="destacado">
+        <div class="destacado-titulo">Caso emblemático: "Halabi" (2009)</div>
+        <p>La Corte Suprema dictó un fallo que sentó precedente sobre amparos colectivos. Un abogado llamado Halabi cuestionó una ley que permitía interceptar comunicaciones telefónicas sin orden judicial. La Corte aceptó su acción como un amparo de "clase" o "colectivo" en defensa de todos los usuarios de teléfono. Estableció requisitos para los amparos colectivos y fue un cambio importante en la doctrina argentina sobre acciones de clase.</p>
+      </div>
+    </section>
+
+    <section class="seccion" id="procedimiento">
+      <div class="seccion-eyebrow">— 06 / Procedimiento</div>
+      <h2>Cómo se <em>presenta</em> un amparo</h2>
+      <p>El procedimiento del amparo está pensado para ser rápido. Mientras un juicio común puede durar años, un amparo bien resuelto puede tener sentencia en semanas o pocos meses.</p>
+
+      <div class="timeline-box">
+        <div class="timeline-paso">
+          <div class="timeline-num">01</div>
+          <div class="timeline-text">
+            <strong>Identificación del problema</strong>
+            <p>Identificás el derecho vulnerado, el acto u omisión que lo lesiona, y a quién hay que demandar (Estado o particular). Es recomendable consultar con un abogado.</p>
+          </div>
+        </div>
+        <div class="timeline-paso">
+          <div class="timeline-num">02</div>
+          <div class="timeline-text">
+            <strong>Presentación de la demanda</strong>
+            <p>El abogado redacta y presenta la demanda ante el juez competente (federal o provincial, según el caso), con la prueba documental que respalde el reclamo.</p>
+          </div>
+        </div>
+        <div class="timeline-paso">
+          <div class="timeline-num">03</div>
+          <div class="timeline-text">
+            <strong>Medida cautelar (opcional)</strong>
+            <p>Si la urgencia es extrema, se puede pedir una medida cautelar al inicio. Si el juez la concede, el demandado debe cumplirla mientras se resuelve el fondo.</p>
+          </div>
+        </div>
+        <div class="timeline-paso">
+          <div class="timeline-num">04</div>
+          <div class="timeline-text">
+            <strong>Traslado al demandado</strong>
+            <p>El juez le notifica al demandado y le pide un informe en plazos cortos (entre 3 y 5 días según la jurisdicción). Es lo que en otros juicios sería la "contestación de demanda".</p>
+          </div>
+        </div>
+        <div class="timeline-paso">
+          <div class="timeline-num">05</div>
+          <div class="timeline-text">
+            <strong>Producción de prueba</strong>
+            <p>Si es necesario, se produce prueba (generalmente documental, ya que la prueba compleja es incompatible con la rapidez del amparo). La oferta de prueba es limitada.</p>
+          </div>
+        </div>
+        <div class="timeline-paso">
+          <div class="timeline-num">06</div>
+          <div class="timeline-text">
+            <strong>Sentencia</strong>
+            <p>El juez resuelve. Si admite el amparo, ordena al demandado cesar la conducta lesiva. Si rechaza, se puede apelar. La sentencia se ejecuta inmediatamente, salvo orden expresa en contrario.</p>
+          </div>
+        </div>
+      </div>
+
+      <h3>Costos y patrocinio</h3>
+      <p>El amparo tiene tasa de justicia (un costo administrativo de presentación), aunque en muchos casos se solicita beneficio de litigar sin gastos. Para patrocinio:</p>
+      <ul>
+        <li><strong>Abogado particular:</strong> opción más rápida pero con costo.</li>
+        <li><strong>Defensoría General de la Nación:</strong> patrocinio gratuito para quienes no pueden pagar abogado.</li>
+        <li><strong>Consultorios jurídicos gratuitos:</strong> en colegios de abogados, universidades públicas.</li>
+        <li><strong>ONGs especializadas:</strong> en casos de derechos humanos, ambiente, consumidores.</li>
+      </ul>
+    </section>
+
+    <section class="seccion" id="ejemplos">
+      <div class="seccion-eyebrow">— 07 / Casos típicos</div>
+      <h2>Para qué se <em>usa</em> en la práctica</h2>
+      <p>El amparo es una de las acciones más utilizadas en la justicia argentina. Te mostramos los escenarios más comunes:</p>
+
+      <h3>Salud</h3>
+      <p>Es uno de los usos más frecuentes. Casos típicos:</p>
+      <ul>
+        <li>Obras sociales o prepagas que niegan cobertura de tratamientos médicos.</li>
+        <li>Demoras inaceptables en autorizaciones médicas urgentes.</li>
+        <li>Acceso a medicamentos de alto costo no incluidos en el plan médico obligatorio.</li>
+        <li>Negativa a tratamientos de fertilidad asistida (cubiertos por Ley 26.862).</li>
+        <li>Adecuación de prestaciones para personas con discapacidad (Ley 24.901).</li>
+      </ul>
+
+      <h3>Previsional</h3>
+      <ul>
+        <li>Demoras de ANSES en otorgar jubilaciones o pensiones.</li>
+        <li>Mora administrativa en reajustes.</li>
+        <li>Negativa a reconocer aportes o servicios.</li>
+      </ul>
+
+      <h3>Ambiental</h3>
+      <ul>
+        <li>Obras o industrias que generan contaminación.</li>
+        <li>Decisiones administrativas que afectan áreas protegidas.</li>
+        <li>Falta de información o consulta previa en proyectos extractivos.</li>
+      </ul>
+
+      <h3>Educación</h3>
+      <ul>
+        <li>Negativa de inscripción en escuelas públicas por motivos arbitrarios.</li>
+        <li>Falta de docentes o de condiciones edilicias mínimas.</li>
+        <li>Cuestiones de discriminación en el ámbito educativo.</li>
+      </ul>
+
+      <h3>Consumidores</h3>
+      <ul>
+        <li>Tarifas de servicios públicos abusivas.</li>
+        <li>Cláusulas abusivas en contratos.</li>
+        <li>Cortes de servicios esenciales sin previo aviso o sin causa.</li>
+      </ul>
+    </section>
+
+    <section class="seccion" id="limitaciones">
+      <div class="seccion-eyebrow">— 08 / Límites</div>
+      <h2>Lo que el amparo <em>no</em> resuelve</h2>
+      <p>Aunque es una herramienta poderosa, el amparo tiene límites importantes que es bueno conocer para evitar frustraciones.</p>
+
+      <h3>Cuando NO procede</h3>
+      <ul>
+        <li><strong>Cuando existe otra vía idónea:</strong> si tu reclamo tiene un trámite específico (como un juicio laboral, un proceso administrativo, etc.), generalmente debés ir por esa vía.</li>
+        <li><strong>Cuando se necesita prueba compleja:</strong> el amparo no admite peritajes extensos ni testimonios masivos. Si tu caso requiere debate amplio sobre los hechos, no es la vía.</li>
+        <li><strong>Cuando la cuestión es opinable o ambigua:</strong> el amparo exige "arbitrariedad o ilegalidad manifiesta". Si hay un debate jurídico legítimo sobre cómo aplicar una norma, no es un caso de amparo.</li>
+        <li><strong>Contra leyes en general:</strong> el amparo no es para cuestionar la constitucionalidad de una ley en abstracto. Necesita un caso concreto que aplique esa ley.</li>
+      </ul>
+
+      <h3>Críticas y debates</h3>
+      <p>Aunque el amparo es generalmente bien valorado, también recibe críticas:</p>
+      <ul>
+        <li><strong>Uso excesivo:</strong> hay quienes sostienen que se abusa del amparo para casos que deberían ir por otras vías, sobrecargando a la justicia.</li>
+        <li><strong>Dilaciones:</strong> en la práctica, no siempre es tan rápido como debiera. Algunas jurisdicciones tienen demoras importantes.</li>
+        <li><strong>Acceso desigual:</strong> aunque existe patrocinio gratuito, no todos saben que pueden acceder a él, generando desigualdad en el ejercicio del derecho.</li>
+        <li><strong>Cosa juzgada limitada:</strong> el amparo resuelve la urgencia pero no necesariamente cierra el debate de fondo, que puede continuar en juicios ordinarios posteriores.</li>
+      </ul>
+
+      <div class="destacado atencion">
+        <div class="destacado-titulo">Antes de presentar un amparo</div>
+        <p>Es muy recomendable agotar primero las vías administrativas (presentar nota, pedir formalmente la prestación, hacer la reclamación correspondiente). No siempre es obligatorio, pero los jueces valoran que el ciudadano haya intentado resolver el problema antes de judicializarlo. Y a veces se resuelve solo, sin necesidad de litigar.</p>
+      </div>
+    </section>
+
+    <section class="fuentes">
+      <h3>— Fuentes oficiales y normativa</h3>
+      <ul>
+        <li><strong>Constitución Nacional Argentina</strong>, artículo 43. <a href="https://www.argentina.gob.ar/normativa/nacional/constituci%C3%B3n-de-la-naci%C3%B3n-argentina-804" target="_blank" rel="noopener">Texto oficial</a></li>
+        <li><strong>Ley 16.986</strong> (1966) — Regula la acción de amparo contra actos de autoridad pública. <a href="https://servicios.infoleg.gob.ar/infolegInternet/anexos/45000-49999/46871/norma.htm" target="_blank" rel="noopener">Texto vigente</a></li>
+        <li><strong>Código Procesal Civil y Comercial de la Nación</strong>, artículo 321 — Amparo contra particulares.</li>
+        <li><strong>Fallo "Siri" (1957)</strong> — Corte Suprema de Justicia de la Nación.</li>
+        <li><strong>Fallo "Kot" (1958)</strong> — Corte Suprema de Justicia de la Nación.</li>
+        <li><strong>Fallo "Halabi" (2009)</strong> — Corte Suprema de Justicia de la Nación, sobre amparo colectivo.</li>
+        <li><strong>Defensoría General de la Nación</strong>. <a href="https://www.mpd.gov.ar" target="_blank" rel="noopener">mpd.gov.ar</a></li>
+        <li><strong>Sistema Argentino de Información Jurídica (SAIJ)</strong>. <a href="https://www.saij.gob.ar" target="_blank" rel="noopener">saij.gob.ar</a></li>
+        <li><strong>Defensor del Pueblo de la Nación</strong>. <a href="https://www.dpn.gob.ar" target="_blank" rel="noopener">dpn.gob.ar</a></li>
+      </ul>
+      <p style="font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; color: var(--tinta-soft); margin-top: 1.5rem; padding-top: 1rem; border-top: 1px solid var(--linea); line-height: 1.6;">
+        Esta página es un material educativo. No constituye asesoramiento legal. Para casos concretos que requieran acción judicial, consultá con un abogado o con las defensorías oficiales. Última revisión: mayo de 2026.
+      </p>
+    </section>
+
+  </main>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div>
+      <h3>Educación Cívica</h3>
+      <p>Una guía visual y educativa sobre el Estado argentino, sus poderes, las provincias, el sistema electoral, los derechos del ciudadano y la historia institucional.</p>
+    </div>
+    <div>
+      <h3>Secciones</h3>
+      <a href="poderes.html">Los poderes</a>
+      <a href="provincias.html">Provincias</a>
+      <a href="index.html#sistema-electoral">Elecciones</a>
+      <a href="index.html#derechos">Derechos</a>
+      <a href="historia.html">Historia</a>
+    </div>
+    <div>
+      <h3>El proyecto</h3>
+      <a href="#">Sobre nosotros</a>
+      <a href="#">Manifiesto editorial</a>
+      <a href="#">Suscribirse</a>
+      <a href="#">Contacto</a>
+    </div>
+    <div class="footer-meta">
+      educacioncivica.com.ar · v0.3 prototipo · Educación cívica con datos · Sin grieta · Datos institucionales actualizados a mayo de 2026
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

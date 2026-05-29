@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Habeas Corpus y Habeas Data — Educación Cívica</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,400;0,500;0,600;1,400&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --crema: #FBF7F0; --crema-warm: #F4ECDB; --tinta: #1A1A2E; --tinta-soft: #545465;
+    --celeste: #74ACDF; --celeste-soft: #E4F0FA; --celeste-dark: #3D7BB0;
+    --sol: #F6B40E; --sol-soft: #FBE5AA; --sol-dark: #C8941A;
+    --rojo-fed: #B8341B; --rojo-soft: #F2D5CE;
+    --verde-ok: #4A7C59; --verde-soft: #DAEAE0;
+    --linea: #DDD7CB; --linea-soft: #ECE6DA;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Fraunces', Georgia, serif; background: var(--crema); color: var(--tinta); line-height: 1.6; }
+  nav { background: white; border-bottom: 1px solid var(--linea); padding: 1.2rem 2rem; position: sticky; top: 0; z-index: 100; }
+  .nav-inner { max-width: 1400px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
+  .logo { display: flex; align-items: center; gap: 0.5rem; font-family: 'Fraunces', serif; font-weight: 500; font-size: 1.1rem; color: var(--tinta); text-decoration: none; }
+  .logo-dot { width: 12px; height: 12px; background: var(--sol); border-radius: 50%; }
+  .breadcrumb { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.1em; color: var(--tinta-soft); }
+  .breadcrumb a { color: var(--tinta-soft); text-decoration: none; }
+  .breadcrumb a:hover { color: var(--tinta); }
+  .page-header { background: linear-gradient(180deg, var(--celeste-soft) 0%, var(--crema) 100%); padding: 4rem 2rem 3rem; border-bottom: 1px solid var(--linea); }
+  .page-header-inner { max-width: 900px; margin: 0 auto; }
+  .page-eyebrow { display: inline-block; font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--celeste-dark); background: white; padding: 0.5rem 1rem; border: 1px solid var(--celeste); margin-bottom: 1.5rem; }
+  .page-title { font-family: 'Fraunces', serif; font-weight: 300; font-size: clamp(2.2rem, 5vw, 3.6rem); line-height: 1.05; margin-bottom: 1.5rem; color: var(--tinta); }
+  .page-title em { font-style: italic; color: var(--celeste-dark); font-weight: 400; }
+  .page-intro { font-size: 1.15rem; line-height: 1.7; color: var(--tinta); max-width: 720px; }
+  .layout { max-width: 1400px; margin: 0 auto; padding: 3rem 2rem; display: grid; grid-template-columns: 220px 1fr; gap: 4rem; align-items: start; }
+  .toc { position: sticky; top: 90px; font-family: 'JetBrains Mono', monospace; font-size: 0.78rem; }
+  .toc-titulo { font-size: 0.65rem; letter-spacing: 0.18em; color: var(--tinta-soft); text-transform: uppercase; margin-bottom: 1rem; padding-bottom: 0.8rem; border-bottom: 1px solid var(--linea); }
+  .toc ul { list-style: none; }
+  .toc li { margin-bottom: 0.6rem; line-height: 1.4; }
+  .toc a { color: var(--tinta-soft); text-decoration: none; border-left: 2px solid var(--linea); padding-left: 0.8rem; display: block; transition: all 0.18s ease; }
+  .toc a:hover { color: var(--tinta); border-left-color: var(--celeste); }
+  .toc-num { color: var(--celeste-dark); font-weight: 500; }
+  .contenido { max-width: 720px; }
+  .seccion { margin-bottom: 3.5rem; padding-bottom: 3rem; border-bottom: 1px solid var(--linea); }
+  .seccion:last-of-type { border-bottom: none; }
+  .seccion-eyebrow { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.18em; color: var(--celeste-dark); text-transform: uppercase; margin-bottom: 0.6rem; }
+  .seccion h2 { font-family: 'Fraunces', serif; font-weight: 400; font-size: 1.9rem; line-height: 1.15; color: var(--tinta); margin-bottom: 1.5rem; }
+  .seccion h2 em { font-style: italic; color: var(--celeste-dark); }
+  .seccion h3 { font-family: 'Fraunces', serif; font-weight: 500; font-size: 1.2rem; color: var(--tinta); margin-top: 2rem; margin-bottom: 0.8rem; }
+  .seccion p { margin-bottom: 1rem; font-size: 1rem; line-height: 1.75; color: var(--tinta); }
+  .seccion p strong { font-weight: 600; color: var(--tinta); }
+  .seccion ul { margin: 1rem 0 1.5rem 0; padding-left: 0; list-style: none; }
+  .seccion ul li { padding-left: 1.5rem; margin-bottom: 0.6rem; line-height: 1.6; position: relative; }
+  .seccion ul li::before { content: '→'; position: absolute; left: 0; color: var(--celeste-dark); font-weight: 600; }
+  .destacado { background: white; border-left: 4px solid var(--celeste); padding: 1.5rem 1.8rem; margin: 1.5rem 0; font-size: 0.95rem; line-height: 1.6; }
+  .destacado-titulo { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.15em; color: var(--celeste-dark); text-transform: uppercase; margin-bottom: 0.6rem; }
+  .destacado.atencion { background: var(--sol-soft); border-left-color: var(--sol-dark); }
+  .destacado.atencion .destacado-titulo { color: var(--sol-dark); }
+  .destacado.historico { background: var(--rojo-soft); border-left-color: var(--rojo-fed); }
+  .destacado.historico .destacado-titulo { color: var(--rojo-fed); }
+  .cita-legal { font-family: 'JetBrains Mono', monospace; font-size: 0.75rem; color: var(--tinta-soft); background: var(--linea-soft); padding: 0.8rem 1rem; margin: 1rem 0; line-height: 1.5; border-left: 3px solid var(--tinta-soft); }
+  .cita-articulo { background: white; border: 1px solid var(--linea); padding: 1.5rem 1.8rem; margin: 1.5rem 0; font-family: 'Fraunces', serif; font-style: italic; font-size: 1.02rem; line-height: 1.7; color: var(--tinta); border-left: 4px solid var(--sol-dark); position: relative; }
+  .cita-articulo::before { content: '"'; position: absolute; top: -0.5rem; left: 1.2rem; font-size: 3rem; color: var(--sol); font-family: serif; line-height: 1; }
+  .cita-articulo-ref { font-family: 'JetBrains Mono', monospace; font-style: normal; font-size: 0.7rem; letter-spacing: 0.12em; color: var(--tinta-soft); text-transform: uppercase; margin-top: 0.8rem; }
+  .tabla-datos { width: 100%; margin: 1.5rem 0; border-collapse: collapse; font-size: 0.92rem; }
+  .tabla-datos th { text-align: left; padding: 0.8rem 1rem; background: var(--celeste-soft); border-bottom: 2px solid var(--celeste-dark); font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--tinta); font-weight: 600; }
+  .tabla-datos td { padding: 0.85rem 1rem; border-bottom: 1px dotted var(--linea); vertical-align: top; }
+  .tabla-datos tr:last-child td { border-bottom: none; }
+  .tabla-datos td:first-child { font-weight: 500; color: var(--tinta); }
+  .gran-divisor { background: var(--tinta); color: var(--crema); padding: 2rem; margin: 3rem 0; text-align: center; }
+  .gran-divisor-titulo { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.2em; color: var(--sol); margin-bottom: 0.5rem; }
+  .gran-divisor h2 { font-family: 'Fraunces', serif; font-size: 2rem; font-weight: 300; color: var(--crema); margin: 0; border: none; padding: 0; }
+  .gran-divisor h2 em { color: var(--sol); font-style: italic; font-weight: 400; }
+  .fuentes { margin-top: 4rem; padding-top: 2.5rem; border-top: 2px solid var(--linea); }
+  .fuentes h3 { font-family: 'JetBrains Mono', monospace; font-size: 0.75rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--tinta-soft); margin-bottom: 1.5rem; border: none; padding: 0; }
+  .fuentes ul { list-style: none; padding: 0; }
+  .fuentes li { padding: 0.6rem 0; border-bottom: 1px dotted var(--linea); font-size: 0.88rem; padding-left: 0; }
+  .fuentes li::before { content: none; }
+  .fuentes a { color: var(--celeste-dark); text-decoration: none; border-bottom: 1px dotted var(--celeste-dark); }
+  .fuentes a:hover { color: var(--tinta); }
+  footer { background: var(--tinta); color: var(--crema); padding: 3rem 2rem; margin-top: 4rem; }
+  .footer-inner { max-width: 1400px; margin: 0 auto; display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 3rem; }
+  footer h3 { font-family: 'Fraunces', serif; font-weight: 400; font-size: 1.3rem; margin-bottom: 1rem; color: var(--crema); }
+  footer p, footer a { color: var(--crema); opacity: 0.85; font-size: 0.9rem; line-height: 1.6; }
+  footer a { text-decoration: none; display: block; padding: 0.3rem 0; }
+  footer a:hover { opacity: 1; color: var(--sol); }
+  .footer-meta { grid-column: 1 / -1; margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid rgba(251, 247, 240, 0.15); font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; opacity: 0.6; letter-spacing: 0.05em; }
+  @media (max-width: 900px) {
+    .layout { grid-template-columns: 1fr; gap: 2rem; }
+    .toc { position: relative; top: 0; padding: 1.5rem; background: white; border: 1px solid var(--linea); }
+    .footer-inner { grid-template-columns: 1fr; gap: 2rem; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="logo"><span class="logo-dot"></span>Educación Cívica</a>
+    <div class="breadcrumb"><a href="index.html">Inicio</a> · <a href="index.html#derechos">Derechos</a> · <span>Habeas corpus y data</span></div>
+  </div>
+</nav>
+
+<header class="page-header">
+  <div class="page-header-inner">
+    <div class="page-eyebrow">Capítulo 04.03 · Tus derechos</div>
+    <h1 class="page-title"><em>Habeas corpus</em> y <em>habeas data</em></h1>
+    <p class="page-intro">Son dos garantías constitucionales con nombre en latín y un objetivo común: proteger lo más íntimo de la persona. El habeas corpus protege tu libertad física frente a detenciones ilegales. El habeas data protege tu información personal frente a registros que la usen mal. Esta guía explica ambas, sus orígenes, cómo funcionan y cuándo se usan.</p>
+  </div>
+</header>
+
+<div class="layout">
+
+  <aside class="toc">
+    <div class="toc-titulo">— En esta página</div>
+    <ul>
+      <li><a href="#dos-garantias"><span class="toc-num">01</span> Dos garantías hermanas</a></li>
+      <li><a href="#habeas-corpus"><span class="toc-num">02</span> Habeas corpus: qué es</a></li>
+      <li><a href="#hc-tipos"><span class="toc-num">03</span> Tipos de habeas corpus</a></li>
+      <li><a href="#hc-procedimiento"><span class="toc-num">04</span> Cómo se presenta</a></li>
+      <li><a href="#habeas-data"><span class="toc-num">05</span> Habeas data: qué es</a></li>
+      <li><a href="#hd-objetivos"><span class="toc-num">06</span> Para qué sirve</a></li>
+      <li><a href="#hd-ley"><span class="toc-num">07</span> La Ley 25.326</a></li>
+      <li><a href="#diferencias"><span class="toc-num">08</span> Diferencias clave</a></li>
+    </ul>
+  </aside>
+
+  <main class="contenido">
+
+    <section class="seccion" id="dos-garantias">
+      <div class="seccion-eyebrow">— 01 / Dos garantías</div>
+      <h2>Dos <em>garantías</em> hermanas</h2>
+      <p>El <strong>habeas corpus</strong> y el <strong>habeas data</strong> son dos garantías constitucionales con nombres en latín que protegen aspectos esenciales de la persona. Ambas están reconocidas en el artículo 43 de la Constitución Nacional desde la reforma de 1994.</p>
+
+      <h3>¿Por qué los nombres en latín?</h3>
+      <p>Las dos garantías comparten el verbo latino <em>habeas</em> (del verbo <em>habere</em>, "tener"). En la fórmula medieval inglesa, "habeas corpus" significa literalmente "que tengas el cuerpo": una orden judicial para que el responsable de una detención presente al detenido ante el juez. "Habeas data" es una construcción moderna que aplica la misma lógica a la información: "que tengas los datos".</p>
+
+      <h3>Una protección común, dos esferas distintas</h3>
+      <ul>
+        <li><strong>Habeas corpus:</strong> protege la <strong>libertad física</strong>. Sirve contra detenciones ilegales, desapariciones, o agravamientos arbitrarios de condiciones de detención.</li>
+        <li><strong>Habeas data:</strong> protege la <strong>información personal</strong>. Sirve para conocer qué datos tuyos tiene una entidad pública o privada, rectificarlos si son falsos, y eliminar los que se usen indebidamente.</li>
+      </ul>
+
+      <p>Aunque parecen muy distintos, comparten el espíritu: <strong>el ciudadano tiene derecho a saber y a controlar qué hace el Estado (o cualquier organización con poder) sobre su persona</strong>. Uno en lo físico, otro en lo informacional.</p>
+    </section>
+
+    <div class="gran-divisor">
+      <div class="gran-divisor-titulo">PARTE I</div>
+      <h2><em>Habeas corpus</em></h2>
+    </div>
+
+    <section class="seccion" id="habeas-corpus">
+      <div class="seccion-eyebrow">— 02 / Habeas corpus</div>
+      <h2>Qué es el <em>habeas corpus</em></h2>
+      <p>El habeas corpus es una <strong>acción judicial sumarísima</strong> destinada a proteger la libertad física de las personas contra actos arbitrarios del Estado o de particulares. Tiene rango constitucional en el artículo 43 de la CN y está regulado por la <strong>Ley 23.098</strong> de 1984.</p>
+
+      <div class="cita-articulo">
+        Cuando el derecho lesionado, restringido, alterado o amenazado fuera la libertad física, o en caso de agravamiento ilegítimo en la forma o condiciones de detención, o en el de desaparición forzada de personas, la acción de habeas corpus podrá ser interpuesta por el afectado o por cualquiera en su favor y el juez resolverá de inmediato, aún durante la vigencia del estado de sitio.
+        <div class="cita-articulo-ref">— Artículo 43 de la Constitución Nacional (cuarto párrafo)</div>
+      </div>
+
+      <h3>Una historia larga</h3>
+      <p>El habeas corpus es una de las garantías más antiguas del mundo. Sus orígenes se remontan a la <strong>Magna Carta inglesa de 1215</strong> y al <strong>Habeas Corpus Act de 1679</strong>. Llegó a Argentina con la Constitución de 1853 (aunque no estaba expresamente reconocido, surgía del artículo 18). En 1984, ya en democracia, se sancionó la Ley 23.098 que lo regula en detalle.</p>
+
+      <div class="destacado historico">
+        <div class="destacado-titulo">El habeas corpus durante la dictadura</div>
+        <p>Durante la última dictadura militar (1976-1983), miles de familias presentaron habeas corpus pidiendo conocer el paradero de sus seres queridos detenidos-desaparecidos. La mayoría fueron rechazados por la justicia de la época. Después de la recuperación democrática, el habeas corpus fue una herramienta clave para investigar lo ocurrido. La Ley 23.098, sancionada en 1984, fue una de las primeras leyes garantistas del retorno democrático.</p>
+      </div>
+
+      <h3>Características fundamentales</h3>
+      <ul>
+        <li><strong>Sumarísimo:</strong> el procedimiento es ultra-rápido. El juez debe resolver de inmediato.</li>
+        <li><strong>Sin formalidades:</strong> puede presentarse por escrito o verbalmente, ante cualquier juez disponible.</li>
+        <li><strong>Sin patrocinio letrado obligatorio:</strong> a diferencia del amparo, no se necesita abogado. Cualquier persona puede presentarlo.</li>
+        <li><strong>Por uno mismo o por otro:</strong> "podrá ser interpuesta por el afectado o por cualquiera en su favor". No necesitás permiso del detenido.</li>
+        <li><strong>Funciona incluso en estado de sitio:</strong> ni siquiera la suspensión de garantías constitucionales lo limita.</li>
+      </ul>
+    </section>
+
+    <section class="seccion" id="hc-tipos">
+      <div class="seccion-eyebrow">— 03 / Tipos</div>
+      <h2>Los <em>tipos</em> de habeas corpus</h2>
+      <p>La Ley 23.098 reconoce varias modalidades, según la situación que se busca remediar. Cada una tiene sus particularidades.</p>
+
+      <h3>Habeas corpus reparador (clásico)</h3>
+      <p>Procede cuando una persona está <strong>ilegítimamente privada de su libertad</strong>. Es la forma "histórica" del habeas corpus: una persona está detenida y se cuestiona la legalidad de esa detención. El juez ordena al detentor que presente al detenido y justifique la detención. Si no la justifica, libera al detenido inmediatamente.</p>
+
+      <h3>Habeas corpus preventivo</h3>
+      <p>Procede cuando existe una <strong>amenaza inminente</strong> a la libertad física. La detención no ocurrió todavía, pero hay indicios concretos de que va a ocurrir de forma ilegítima. Permite anticiparse al daño.</p>
+
+      <h3>Habeas corpus correctivo</h3>
+      <p>Procede cuando hay un <strong>agravamiento ilegítimo de las condiciones de detención</strong>. La persona está legalmente detenida pero la trata indebidamente: malos tratos, condiciones insalubres, falta de atención médica, aislamiento injustificado. Este tipo de habeas corpus busca corregir las condiciones sin liberar al detenido.</p>
+
+      <h3>Habeas corpus restringido</h3>
+      <p>Procede ante <strong>limitaciones o molestias menores</strong> a la libertad ambulatoria. Por ejemplo: seguimientos policiales indebidos, controles arbitrarios, prohibiciones injustificadas de ingreso a lugares públicos. No es una detención total, pero sí una restricción.</p>
+
+      <h3>Habeas corpus por desaparición forzada</h3>
+      <p>Una modalidad incorporada expresamente por el artículo 43 de la Constitución después de la experiencia traumática de la última dictadura. Procede cuando una persona desaparece y se sospecha que está privada de su libertad en lugares no oficiales o por agentes del Estado o con su aquiescencia.</p>
+
+      <h3>Habeas corpus colectivo</h3>
+      <p>Aunque no está expresamente regulado en la Ley 23.098, la jurisprudencia argentina ha admitido habeas corpus colectivos para situaciones de violación masiva de derechos en penales o instituciones cerradas. Un caso emblemático fue el fallo "Verbitsky" (2005) de la Corte Suprema sobre superpoblación carcelaria en Buenos Aires.</p>
+    </section>
+
+    <section class="seccion" id="hc-procedimiento">
+      <div class="seccion-eyebrow">— 04 / Procedimiento</div>
+      <h2>Cómo se <em>presenta</em></h2>
+      <p>El habeas corpus es la garantía más simple de presentar. La ley establece un procedimiento extremadamente ágil.</p>
+
+      <h3>Quién puede presentarlo</h3>
+      <ul>
+        <li>El propio afectado.</li>
+        <li>Cualquier otra persona en su favor (familiares, amigos, conocidos, abogados, organizaciones de derechos humanos).</li>
+        <li>El Defensor del Pueblo.</li>
+        <li>El Ministerio Público Fiscal o de la Defensa.</li>
+        <li>El juez de oficio (es decir, sin pedido de parte) si toma conocimiento de la situación.</li>
+      </ul>
+
+      <h3>Dónde se presenta</h3>
+      <p>Se presenta <strong>ante cualquier juez del lugar donde se cometió el acto</strong> denunciado. No requiere "competencia" en sentido estricto: cualquier juez con jurisdicción territorial puede recibirlo. Si llega fuera del horario de oficina, los juzgados tienen jueces de feria o turno que reciben habeas corpus las 24 horas, los 365 días del año.</p>
+
+      <h3>Cómo se presenta</h3>
+      <ul>
+        <li><strong>Por escrito:</strong> en una nota o formulario simple, identificando al detenido y la situación denunciada.</li>
+        <li><strong>Por escrito o verbalmente:</strong> es decir, te podés presentar al juzgado y contarle al funcionario lo que pasa. Él lo levanta como acta y lo presenta en tu nombre.</li>
+        <li><strong>Sin formalidades:</strong> no se necesita timbrado, ni firma de abogado, ni redacción especial.</li>
+      </ul>
+
+      <h3>Qué debe hacer el juez</h3>
+      <p>El juez tiene poderes excepcionales:</p>
+      <ul>
+        <li>Examinar de inmediato la denuncia.</li>
+        <li>Pedir un informe a la autoridad denunciada en plazos extremadamente breves.</li>
+        <li>Constituirse personalmente en el lugar donde se encuentra el detenido si es necesario.</li>
+        <li>Liberar al detenido si la detención es ilegítima.</li>
+        <li>Ordenar correcciones inmediatas si las condiciones son agravadas ilegítimamente.</li>
+      </ul>
+
+      <div class="destacado">
+        <div class="destacado-titulo">Importante</div>
+        <p>El habeas corpus <strong>no admite demoras</strong>. La ley establece que el juez debe actuar "sin tardanza" y que el procedimiento debe ser inmediato. Las dilaciones en habeas corpus son consideradas faltas graves de los jueces y pueden generar sanciones disciplinarias.</p>
+      </div>
+    </section>
+
+    <div class="gran-divisor">
+      <div class="gran-divisor-titulo">PARTE II</div>
+      <h2><em>Habeas data</em></h2>
+    </div>
+
+    <section class="seccion" id="habeas-data">
+      <div class="seccion-eyebrow">— 05 / Habeas data</div>
+      <h2>Qué es el <em>habeas data</em></h2>
+      <p>El habeas data es una <strong>acción judicial específica para proteger los datos personales</strong>. Permite a cualquier persona conocer qué información sobre ella tienen registrada bases de datos públicas o privadas, y exigir su rectificación, actualización, eliminación o tratamiento confidencial cuando corresponda.</p>
+
+      <p>Fue incorporado expresamente a la Constitución por la reforma de 1994 (Art. 43, tercer párrafo) y está regulado en detalle por la <strong>Ley 25.326 de Protección de Datos Personales</strong> de 2000.</p>
+
+      <div class="cita-articulo">
+        Toda persona podrá interponer esta acción para tomar conocimiento de los datos a ella referidos y de su finalidad, que consten en registros o bancos de datos públicos, o los privados destinados a proveer informes, y en caso de falsedad o discriminación, para exigir la supresión, rectificación, confidencialidad o actualización de aquéllos. No podrá afectarse el secreto de las fuentes de información periodística.
+        <div class="cita-articulo-ref">— Artículo 43 de la Constitución Nacional (tercer párrafo)</div>
+      </div>
+
+      <h3>Por qué surgió</h3>
+      <p>El habeas data es una garantía relativamente nueva. Surgió en el siglo XX, ante el avance de la tecnología y la informática, cuando se hizo evidente que los registros masivos de datos personales podían convertirse en una amenaza para la libertad y la intimidad. Brasil fue uno de los primeros países en incorporarlo a su Constitución (1988), y Argentina lo hizo en 1994.</p>
+
+      <div class="destacado historico">
+        <div class="destacado-titulo">Origen del término</div>
+        <p>El término "habeas data" es una construcción moderna que toma prestada la estructura latina del "habeas corpus" pero referida a "datos" en lugar de "cuerpo". Fue acuñado en Brasil en 1988 por el jurista Néstor Sampaio y se difundió rápidamente por toda Latinoamérica.</p>
+      </div>
+    </section>
+
+    <section class="seccion" id="hd-objetivos">
+      <div class="seccion-eyebrow">— 06 / Para qué sirve</div>
+      <h2>Los <em>cinco objetivos</em> del habeas data</h2>
+      <p>El habeas data puede tener cinco finalidades distintas, según el problema concreto que enfrente la persona:</p>
+
+      <h3>1. Conocer (habeas data informativo)</h3>
+      <p>Saber <strong>qué datos</strong> tiene una entidad sobre vos, <strong>de dónde los sacó</strong> y <strong>para qué los usa</strong>. Es el primer paso obligado: antes de rectificar o suprimir, hay que saber qué hay registrado.</p>
+
+      <h3>2. Rectificar (habeas data correctivo)</h3>
+      <p>Corregir datos inexactos o erróneos. Por ejemplo: si en una base de datos crediticia figura una deuda que ya pagaste, podés exigir la rectificación.</p>
+
+      <h3>3. Actualizar (habeas data actualizador)</h3>
+      <p>Pedir que se actualice información desactualizada. Por ejemplo: cambio de domicilio, estado civil, dirección de email, etc.</p>
+
+      <h3>4. Suprimir (habeas data cancelatorio)</h3>
+      <p>Eliminar datos que <strong>no deberían figurar</strong> en una base de datos. Esto incluye datos obtenidos ilegalmente, datos sobre situaciones ya resueltas hace tiempo, datos sensibles registrados sin autorización, etc.</p>
+
+      <h3>5. Tratamiento confidencial (habeas data reservado)</h3>
+      <p>Pedir que ciertos datos no se difundan o se mantengan en reserva. Por ejemplo: datos médicos, ideología política, orientación sexual u otros datos sensibles cuya divulgación podría perjudicar a la persona.</p>
+
+      <h3>Datos sensibles</h3>
+      <p>La Ley 25.326 establece una categoría especial: los <strong>datos sensibles</strong>. Son aquellos que revelan origen racial o étnico, opiniones políticas, convicciones religiosas o filosóficas, afiliación sindical, e información sobre salud o vida sexual. Estos datos tienen una protección reforzada: <strong>nadie puede ser obligado a proporcionarlos</strong>, y solo pueden ser tratados con consentimiento expreso de la persona.</p>
+    </section>
+
+    <section class="seccion" id="hd-ley">
+      <div class="seccion-eyebrow">— 07 / Ley 25.326</div>
+      <h2>La <em>Ley</em> de Protección de Datos Personales</h2>
+      <p>La regulación detallada del habeas data está en la <strong>Ley 25.326</strong>, sancionada en 2000. Es una ley extensa que va más allá del habeas data: regula todo el sistema de protección de datos personales en Argentina, incluyendo la actividad de las bases de datos.</p>
+
+      <h3>Lo que establece la Ley 25.326</h3>
+      <ul>
+        <li><strong>Principios básicos:</strong> licitud, calidad, finalidad, consentimiento, seguridad y confidencialidad de los datos.</li>
+        <li><strong>Derechos de los titulares:</strong> derecho de información, acceso, rectificación, actualización y supresión.</li>
+        <li><strong>Obligaciones de los responsables:</strong> registrar las bases de datos, garantizar la seguridad, atender los pedidos de los titulares.</li>
+        <li><strong>Régimen sancionatorio:</strong> multas y sanciones para quienes incumplan.</li>
+        <li><strong>Organismo de control:</strong> Agencia de Acceso a la Información Pública (AAIP), encargada de fiscalizar el cumplimiento.</li>
+      </ul>
+
+      <h3>Qué bases de datos están alcanzadas</h3>
+      <ul>
+        <li>Bases de datos del Estado nacional, provincial y municipal.</li>
+        <li>Bases de datos de empresas privadas destinadas a "proveer informes" (consultoras crediticias, agencias de marketing, etc.).</li>
+        <li>Bases de datos de empresas que recopilan información de empleados, clientes o usuarios.</li>
+        <li>Por excepción y con limitaciones, bases de datos exclusivamente personales (un agendita propia, por ejemplo, no está alcanzada).</li>
+      </ul>
+
+      <h3>Plazos y procedimiento</h3>
+      <ul>
+        <li>El titular puede pedir información a la base de datos por correo o personalmente.</li>
+        <li>La base tiene <strong>10 días corridos</strong> para responder.</li>
+        <li>Si no responde o responde insatisfactoriamente, el titular puede:
+          <ul>
+            <li>Denunciar ante la AAIP (vía administrativa).</li>
+            <li>Iniciar acción de habeas data ante la justicia (vía judicial).</li>
+          </ul>
+        </li>
+        <li>El procedimiento judicial sigue las reglas del amparo: es rápido y sumario.</li>
+      </ul>
+
+      <div class="destacado">
+        <div class="destacado-titulo">Agencia de Acceso a la Información Pública</div>
+        <p>Si tu pedido a una base de datos no fue respondido, podés denunciar ante la <strong>AAIP</strong> antes (o en paralelo) de ir a la justicia. Es una vía administrativa más rápida y gratuita. La AAIP puede ordenar sanciones administrativas a las bases que incumplan la ley. Más info: <a href="https://www.argentina.gob.ar/aaip" target="_blank" rel="noopener" style="color: var(--celeste-dark);">argentina.gob.ar/aaip</a></p>
+      </div>
+    </section>
+
+    <section class="seccion" id="diferencias">
+      <div class="seccion-eyebrow">— 08 / Diferencias</div>
+      <h2>Habeas corpus vs. habeas data en <em>resumen</em></h2>
+      <p>Aunque tienen el mismo origen latino, ambos institutos protegen aspectos muy distintos de la persona y tienen reglas procesales propias.</p>
+
+      <table class="tabla-datos">
+        <thead><tr><th></th><th>Habeas corpus</th><th>Habeas data</th></tr></thead>
+        <tbody>
+          <tr><td>Qué protege</td><td>Libertad física</td><td>Datos personales</td></tr>
+          <tr><td>Origen histórico</td><td>Magna Carta (1215), siglos de tradición</td><td>Brasil (1988), origen reciente</td></tr>
+          <tr><td>Marco legal</td><td>Art. 43 CN + Ley 23.098 (1984)</td><td>Art. 43 CN + Ley 25.326 (2000)</td></tr>
+          <tr><td>Patrocinio letrado</td><td>No es obligatorio</td><td>Es obligatorio (como el amparo)</td></tr>
+          <tr><td>Procedimiento</td><td>Sumarísimo, urgentísimo</td><td>Sumario (como el amparo)</td></tr>
+          <tr><td>Quién puede presentarlo</td><td>El afectado o cualquiera en su favor</td><td>Solo el titular del dato</td></tr>
+          <tr><td>Estado de sitio</td><td>Procede igual</td><td>Procede pero con restricciones</td></tr>
+          <tr><td>Demandado típico</td><td>Estado (policía, autoridad penitenciaria)</td><td>Bases de datos (públicas o privadas)</td></tr>
+          <tr><td>Resultado típico</td><td>Liberación o corrección de condiciones</td><td>Acceso, rectificación o supresión de datos</td></tr>
+        </tbody>
+      </table>
+
+      <h3>Punto en común: ambos son acciones constitucionales</h3>
+      <p>Lo que une al habeas corpus y al habeas data es que ambos son <strong>garantías constitucionales</strong>: mecanismos especiales pensados para hacer efectivos derechos fundamentales. No son "juicios comunes" sino acciones expeditas, accesibles, pensadas para que el ciudadano pueda defender lo más íntimo de su persona frente a abusos del poder.</p>
+
+      <div class="destacado atencion">
+        <div class="destacado-titulo">Para profundizar</div>
+        <p>Estas garantías se complementan con la <strong>acción de amparo</strong>, que es la "garantía madre" del artículo 43. Si tu problema no entra exactamente en habeas corpus ni habeas data, probablemente sí entre en el amparo general. Mirá nuestra guía dedicada al <a href="amparo.html" style="color: var(--celeste-dark);">amparo</a> para más información.</p>
+      </div>
+    </section>
+
+    <section class="fuentes">
+      <h3>— Fuentes oficiales y normativa</h3>
+      <ul>
+        <li><strong>Constitución Nacional Argentina</strong>, artículo 43. <a href="https://www.argentina.gob.ar/normativa/nacional/constituci%C3%B3n-de-la-naci%C3%B3n-argentina-804" target="_blank" rel="noopener">Texto oficial</a></li>
+        <li><strong>Ley 23.098</strong> (1984) — Habeas corpus. <a href="https://servicios.infoleg.gob.ar/infolegInternet/anexos/20000-24999/22669/norma.htm" target="_blank" rel="noopener">Texto vigente</a></li>
+        <li><strong>Ley 25.326</strong> (2000) — Protección de Datos Personales. <a href="https://servicios.infoleg.gob.ar/infolegInternet/anexos/60000-64999/64790/norma.htm" target="_blank" rel="noopener">Texto vigente</a></li>
+        <li><strong>Decreto 1558/2001</strong> — Reglamentario de la Ley 25.326.</li>
+        <li><strong>Fallo "Verbitsky" (2005)</strong> — Corte Suprema, habeas corpus colectivo por superpoblación carcelaria.</li>
+        <li><strong>Agencia de Acceso a la Información Pública (AAIP)</strong>. <a href="https://www.argentina.gob.ar/aaip" target="_blank" rel="noopener">argentina.gob.ar/aaip</a></li>
+        <li><strong>Defensor del Pueblo de la Nación</strong>. <a href="https://www.dpn.gob.ar" target="_blank" rel="noopener">dpn.gob.ar</a></li>
+        <li><strong>Sistema Argentino de Información Jurídica (SAIJ)</strong>. <a href="https://www.saij.gob.ar" target="_blank" rel="noopener">saij.gob.ar</a></li>
+      </ul>
+      <p style="font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; color: var(--tinta-soft); margin-top: 1.5rem; padding-top: 1rem; border-top: 1px solid var(--linea); line-height: 1.6;">
+        Esta página es un material educativo. No constituye asesoramiento legal. Para casos concretos que requieran acción judicial, consultá con un abogado o con las defensorías oficiales. Última revisión: mayo de 2026.
+      </p>
+    </section>
+
+  </main>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div>
+      <h3>Educación Cívica</h3>
+      <p>Una guía visual y educativa sobre el Estado argentino, sus poderes, las provincias, el sistema electoral, los derechos del ciudadano y la historia institucional.</p>
+    </div>
+    <div>
+      <h3>Secciones</h3>
+      <a href="poderes.html">Los poderes</a>
+      <a href="provincias.html">Provincias</a>
+      <a href="index.html#sistema-electoral">Elecciones</a>
+      <a href="index.html#derechos">Derechos</a>
+      <a href="historia.html">Historia</a>
+    </div>
+    <div>
+      <h3>El proyecto</h3>
+      <a href="#">Sobre nosotros</a>
+      <a href="#">Manifiesto editorial</a>
+      <a href="#">Suscribirse</a>
+      <a href="#">Contacto</a>
+    </div>
+    <div class="footer-meta">
+      educacioncivica.com.ar · v0.3 prototipo · Educación cívica con datos · Sin grieta · Datos institucionales actualizados a mayo de 2026
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

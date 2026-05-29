@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Derechos fundamentales — Educación Cívica</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,400;0,500;0,600;1,400&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --crema: #FBF7F0; --crema-warm: #F4ECDB; --tinta: #1A1A2E; --tinta-soft: #545465;
+    --celeste: #74ACDF; --celeste-soft: #E4F0FA; --celeste-dark: #3D7BB0;
+    --sol: #F6B40E; --sol-soft: #FBE5AA; --sol-dark: #C8941A;
+    --rojo-fed: #B8341B; --rojo-soft: #F2D5CE;
+    --verde-ok: #4A7C59; --verde-soft: #DAEAE0;
+    --linea: #DDD7CB; --linea-soft: #ECE6DA;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Fraunces', Georgia, serif; background: var(--crema); color: var(--tinta); line-height: 1.6; }
+  nav { background: white; border-bottom: 1px solid var(--linea); padding: 1.2rem 2rem; position: sticky; top: 0; z-index: 100; }
+  .nav-inner { max-width: 1400px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
+  .logo { display: flex; align-items: center; gap: 0.5rem; font-family: 'Fraunces', serif; font-weight: 500; font-size: 1.1rem; color: var(--tinta); text-decoration: none; }
+  .logo-dot { width: 12px; height: 12px; background: var(--sol); border-radius: 50%; }
+  .breadcrumb { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.1em; color: var(--tinta-soft); }
+  .breadcrumb a { color: var(--tinta-soft); text-decoration: none; }
+  .breadcrumb a:hover { color: var(--tinta); }
+  .page-header { background: linear-gradient(180deg, var(--celeste-soft) 0%, var(--crema) 100%); padding: 4rem 2rem 3rem; border-bottom: 1px solid var(--linea); }
+  .page-header-inner { max-width: 900px; margin: 0 auto; }
+  .page-eyebrow { display: inline-block; font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--celeste-dark); background: white; padding: 0.5rem 1rem; border: 1px solid var(--celeste); margin-bottom: 1.5rem; }
+  .page-title { font-family: 'Fraunces', serif; font-weight: 300; font-size: clamp(2.2rem, 5vw, 3.6rem); line-height: 1.05; margin-bottom: 1.5rem; color: var(--tinta); }
+  .page-title em { font-style: italic; color: var(--celeste-dark); font-weight: 400; }
+  .page-intro { font-size: 1.15rem; line-height: 1.7; color: var(--tinta); max-width: 720px; }
+  .layout { max-width: 1400px; margin: 0 auto; padding: 3rem 2rem; display: grid; grid-template-columns: 220px 1fr; gap: 4rem; align-items: start; }
+  .toc { position: sticky; top: 90px; font-family: 'JetBrains Mono', monospace; font-size: 0.78rem; }
+  .toc-titulo { font-size: 0.65rem; letter-spacing: 0.18em; color: var(--tinta-soft); text-transform: uppercase; margin-bottom: 1rem; padding-bottom: 0.8rem; border-bottom: 1px solid var(--linea); }
+  .toc ul { list-style: none; }
+  .toc li { margin-bottom: 0.6rem; line-height: 1.4; }
+  .toc a { color: var(--tinta-soft); text-decoration: none; border-left: 2px solid var(--linea); padding-left: 0.8rem; display: block; transition: all 0.18s ease; }
+  .toc a:hover { color: var(--tinta); border-left-color: var(--celeste); }
+  .toc-num { color: var(--celeste-dark); font-weight: 500; }
+  .contenido { max-width: 720px; }
+  .seccion { margin-bottom: 3.5rem; padding-bottom: 3rem; border-bottom: 1px solid var(--linea); }
+  .seccion:last-of-type { border-bottom: none; }
+  .seccion-eyebrow { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.18em; color: var(--celeste-dark); text-transform: uppercase; margin-bottom: 0.6rem; }
+  .seccion h2 { font-family: 'Fraunces', serif; font-weight: 400; font-size: 1.9rem; line-height: 1.15; color: var(--tinta); margin-bottom: 1.5rem; }
+  .seccion h2 em { font-style: italic; color: var(--celeste-dark); }
+  .seccion h3 { font-family: 'Fraunces', serif; font-weight: 500; font-size: 1.2rem; color: var(--tinta); margin-top: 2rem; margin-bottom: 0.8rem; }
+  .seccion p { margin-bottom: 1rem; font-size: 1rem; line-height: 1.75; color: var(--tinta); }
+  .seccion p strong { font-weight: 600; color: var(--tinta); }
+  .seccion ul { margin: 1rem 0 1.5rem 0; padding-left: 0; list-style: none; }
+  .seccion ul li { padding-left: 1.5rem; margin-bottom: 0.6rem; line-height: 1.6; position: relative; }
+  .seccion ul li::before { content: '→'; position: absolute; left: 0; color: var(--celeste-dark); font-weight: 600; }
+  .destacado { background: white; border-left: 4px solid var(--celeste); padding: 1.5rem 1.8rem; margin: 1.5rem 0; font-size: 0.95rem; line-height: 1.6; }
+  .destacado-titulo { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.15em; color: var(--celeste-dark); text-transform: uppercase; margin-bottom: 0.6rem; }
+  .destacado.atencion { background: var(--sol-soft); border-left-color: var(--sol-dark); }
+  .destacado.atencion .destacado-titulo { color: var(--sol-dark); }
+  .destacado.historico { background: var(--rojo-soft); border-left-color: var(--rojo-fed); }
+  .destacado.historico .destacado-titulo { color: var(--rojo-fed); }
+  .cita-legal { font-family: 'JetBrains Mono', monospace; font-size: 0.75rem; color: var(--tinta-soft); background: var(--linea-soft); padding: 0.8rem 1rem; margin: 1rem 0; line-height: 1.5; border-left: 3px solid var(--tinta-soft); }
+  .cita-articulo { background: white; border: 1px solid var(--linea); padding: 1.5rem 1.8rem; margin: 1.5rem 0; font-family: 'Fraunces', serif; font-style: italic; font-size: 1.02rem; line-height: 1.7; color: var(--tinta); border-left: 4px solid var(--sol-dark); position: relative; }
+  .cita-articulo::before { content: '"'; position: absolute; top: -0.5rem; left: 1.2rem; font-size: 3rem; color: var(--sol); font-family: serif; line-height: 1; }
+  .cita-articulo-ref { font-family: 'JetBrains Mono', monospace; font-style: normal; font-size: 0.7rem; letter-spacing: 0.12em; color: var(--tinta-soft); text-transform: uppercase; margin-top: 0.8rem; }
+  .tarjetas-derechos { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.2rem; margin: 1.5rem 0; }
+  .tarjeta-derecho { background: white; border: 1px solid var(--linea); padding: 1.4rem; transition: all 0.2s ease; }
+  .tarjeta-derecho:hover { border-color: var(--celeste); transform: translateY(-2px); box-shadow: 0 4px 12px rgba(0,0,0,0.05); }
+  .tarjeta-derecho-titulo { font-family: 'Fraunces', serif; font-size: 1.1rem; font-weight: 500; color: var(--tinta); margin-bottom: 0.5rem; }
+  .tarjeta-derecho-art { font-family: 'JetBrains Mono', monospace; font-size: 0.65rem; letter-spacing: 0.12em; color: var(--celeste-dark); text-transform: uppercase; margin-bottom: 0.8rem; }
+  .tarjeta-derecho-desc { font-size: 0.88rem; line-height: 1.5; color: var(--tinta-soft); }
+  .tabla-datos { width: 100%; margin: 1.5rem 0; border-collapse: collapse; font-size: 0.92rem; }
+  .tabla-datos th { text-align: left; padding: 0.8rem 1rem; background: var(--celeste-soft); border-bottom: 2px solid var(--celeste-dark); font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--tinta); font-weight: 600; }
+  .tabla-datos td { padding: 0.85rem 1rem; border-bottom: 1px dotted var(--linea); vertical-align: top; }
+  .tabla-datos tr:last-child td { border-bottom: none; }
+  .tabla-datos td:first-child { font-weight: 500; color: var(--tinta); }
+  .fuentes { margin-top: 4rem; padding-top: 2.5rem; border-top: 2px solid var(--linea); }
+  .fuentes h3 { font-family: 'JetBrains Mono', monospace; font-size: 0.75rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--tinta-soft); margin-bottom: 1.5rem; border: none; padding: 0; }
+  .fuentes ul { list-style: none; padding: 0; }
+  .fuentes li { padding: 0.6rem 0; border-bottom: 1px dotted var(--linea); font-size: 0.88rem; padding-left: 0; }
+  .fuentes li::before { content: none; }
+  .fuentes a { color: var(--celeste-dark); text-decoration: none; border-bottom: 1px dotted var(--celeste-dark); }
+  .fuentes a:hover { color: var(--tinta); }
+  footer { background: var(--tinta); color: var(--crema); padding: 3rem 2rem; margin-top: 4rem; }
+  .footer-inner { max-width: 1400px; margin: 0 auto; display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 3rem; }
+  footer h3 { font-family: 'Fraunces', serif; font-weight: 400; font-size: 1.3rem; margin-bottom: 1rem; color: var(--crema); }
+  footer p, footer a { color: var(--crema); opacity: 0.85; font-size: 0.9rem; line-height: 1.6; }
+  footer a { text-decoration: none; display: block; padding: 0.3rem 0; }
+  footer a:hover { opacity: 1; color: var(--sol); }
+  .footer-meta { grid-column: 1 / -1; margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid rgba(251, 247, 240, 0.15); font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; opacity: 0.6; letter-spacing: 0.05em; }
+  @media (max-width: 900px) {
+    .layout { grid-template-columns: 1fr; gap: 2rem; }
+    .toc { position: relative; top: 0; padding: 1.5rem; background: white; border: 1px solid var(--linea); }
+    .footer-inner { grid-template-columns: 1fr; gap: 2rem; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="logo"><span class="logo-dot"></span>Educación Cívica</a>
+    <div class="breadcrumb"><a href="index.html">Inicio</a> · <a href="index.html#derechos">Derechos</a> · <span>Derechos fundamentales</span></div>
+  </div>
+</nav>
+
+<header class="page-header">
+  <div class="page-header-inner">
+    <div class="page-eyebrow">Capítulo 04.01 · Tus derechos</div>
+    <h1 class="page-title">Los <em>derechos fundamentales</em> en Argentina</h1>
+    <p class="page-intro">La Constitución no es un libro de buenas intenciones: es un catálogo concreto de derechos que el Estado tiene la obligación de respetar y garantizar. En esta guía recorremos cuáles son esos derechos, cómo evolucionaron a lo largo de la historia argentina, y qué papel juegan los tratados internacionales con jerarquía constitucional.</p>
+  </div>
+</header>
+
+<div class="layout">
+
+  <aside class="toc">
+    <div class="toc-titulo">— En esta página</div>
+    <ul>
+      <li><a href="#concepto"><span class="toc-num">01</span> Qué son los derechos fundamentales</a></li>
+      <li><a href="#civiles"><span class="toc-num">02</span> Derechos civiles</a></li>
+      <li><a href="#politicos"><span class="toc-num">03</span> Derechos políticos</a></li>
+      <li><a href="#sociales"><span class="toc-num">04</span> Derechos sociales</a></li>
+      <li><a href="#nuevos"><span class="toc-num">05</span> Derechos nuevos (1994)</a></li>
+      <li><a href="#tratados"><span class="toc-num">06</span> Tratados internacionales</a></li>
+      <li><a href="#garantias"><span class="toc-num">07</span> Garantías constitucionales</a></li>
+      <li><a href="#vulneracion"><span class="toc-num">08</span> Cuando se vulneran</a></li>
+    </ul>
+  </aside>
+
+  <main class="contenido">
+
+    <section class="seccion" id="concepto">
+      <div class="seccion-eyebrow">— 01 / Concepto</div>
+      <h2>Qué son los <em>derechos fundamentales</em></h2>
+      <p>Los derechos fundamentales son aquellos derechos básicos que toda persona tiene por el solo hecho de ser persona, y que el Estado está obligado a respetar, proteger y garantizar. En Argentina, estos derechos están reconocidos en la <strong>Constitución Nacional</strong> (especialmente en su Primera Parte: "Declaraciones, derechos y garantías") y en los <strong>tratados internacionales con jerarquía constitucional</strong>.</p>
+
+      <h3>Tres características esenciales</h3>
+      <ul>
+        <li><strong>Universalidad:</strong> son de todas las personas, sin importar nacionalidad, religión, género, posición social o cualquier otra condición.</li>
+        <li><strong>Inalienabilidad:</strong> no se pueden vender, ceder ni renunciar. Son parte de la dignidad humana.</li>
+        <li><strong>Indivisibilidad:</strong> todos los derechos están conectados entre sí. No se puede tener derecho a votar si no se tiene derecho a la educación, por ejemplo.</li>
+      </ul>
+
+      <h3>Parte dogmática y parte orgánica</h3>
+      <p>La Constitución argentina se divide en dos grandes partes:</p>
+      <ul>
+        <li><strong>Parte dogmática</strong> (artículos 1 a 43): contiene las declaraciones, los derechos y las garantías. Es donde se reconocen los derechos fundamentales.</li>
+        <li><strong>Parte orgánica</strong> (artículos 44 en adelante): regula el funcionamiento del Estado, los poderes públicos, las elecciones, etc.</li>
+      </ul>
+
+      <p>Los derechos fundamentales están concentrados en la parte dogmática, pero hay derechos importantes también en otros artículos: por ejemplo, el artículo 75 inciso 22 incorpora los tratados internacionales con jerarquía constitucional.</p>
+
+      <div class="cita-articulo">
+        Los habitantes de la Nación gozan de los siguientes derechos conforme a las leyes que reglamenten su ejercicio; a saber: de trabajar y ejercer toda industria lícita; de navegar y comerciar; de peticionar a las autoridades; de entrar, permanecer, transitar y salir del territorio argentino; de publicar sus ideas por la prensa sin censura previa; de usar y disponer de su propiedad; de asociarse con fines útiles; de profesar libremente su culto; de enseñar y aprender.
+        <div class="cita-articulo-ref">— Artículo 14 de la Constitución Nacional</div>
+      </div>
+    </section>
+
+    <section class="seccion" id="civiles">
+      <div class="seccion-eyebrow">— 02 / Derechos civiles</div>
+      <h2>Los derechos <em>civiles</em></h2>
+      <p>Los derechos civiles son los más antiguos. Vienen de la Constitución de 1853 y reflejan los valores liberales de la época: garantizar la libertad individual frente al poder del Estado. Son derechos "negativos" en el sentido de que exigen al Estado <strong>no interferir</strong> con la vida del ciudadano.</p>
+
+      <h3>El catálogo del artículo 14</h3>
+      <p>El artículo 14 es uno de los más importantes de la Constitución. Enumera derechos básicos para todos los habitantes (incluso los extranjeros que residan legalmente):</p>
+
+      <div class="tarjetas-derechos">
+        <div class="tarjeta-derecho">
+          <div class="tarjeta-derecho-art">Art. 14 CN</div>
+          <div class="tarjeta-derecho-titulo">Trabajar e ejercer industria</div>
+          <div class="tarjeta-derecho-desc">Cualquier actividad económica lícita, sin necesidad de autorización previa más allá de las reglamentaciones razonables.</div>
+        </div>
+        <div class="tarjeta-derecho">
+          <div class="tarjeta-derecho-art">Art. 14 CN</div>
+          <div class="tarjeta-derecho-titulo">Libertad de circulación</div>
+          <div class="tarjeta-derecho-desc">Entrar, permanecer, transitar y salir del territorio argentino, sin restricciones arbitrarias.</div>
+        </div>
+        <div class="tarjeta-derecho">
+          <div class="tarjeta-derecho-art">Art. 14 CN</div>
+          <div class="tarjeta-derecho-titulo">Libertad de expresión</div>
+          <div class="tarjeta-derecho-desc">Publicar ideas por la prensa sin censura previa. Es uno de los derechos más protegidos del sistema.</div>
+        </div>
+        <div class="tarjeta-derecho">
+          <div class="tarjeta-derecho-art">Art. 14 CN</div>
+          <div class="tarjeta-derecho-titulo">Propiedad privada</div>
+          <div class="tarjeta-derecho-desc">Usar y disponer de los bienes propios. La expropiación solo procede por causa de utilidad pública y con indemnización previa.</div>
+        </div>
+        <div class="tarjeta-derecho">
+          <div class="tarjeta-derecho-art">Art. 14 CN</div>
+          <div class="tarjeta-derecho-titulo">Asociarse</div>
+          <div class="tarjeta-derecho-desc">Reunirse y asociarse con fines lícitos. Base de los clubes, ONGs, sindicatos y demás organizaciones.</div>
+        </div>
+        <div class="tarjeta-derecho">
+          <div class="tarjeta-derecho-art">Art. 14 CN</div>
+          <div class="tarjeta-derecho-titulo">Libertad de culto</div>
+          <div class="tarjeta-derecho-desc">Profesar cualquier religión (o ninguna) sin que el Estado lo impida.</div>
+        </div>
+        <div class="tarjeta-derecho">
+          <div class="tarjeta-derecho-art">Art. 14 CN</div>
+          <div class="tarjeta-derecho-titulo">Enseñar y aprender</div>
+          <div class="tarjeta-derecho-desc">Acceso a la educación y posibilidad de transmitir conocimientos. Complementado luego por el artículo 14 bis.</div>
+        </div>
+        <div class="tarjeta-derecho">
+          <div class="tarjeta-derecho-art">Art. 14 CN</div>
+          <div class="tarjeta-derecho-titulo">Peticionar a las autoridades</div>
+          <div class="tarjeta-derecho-desc">Dirigir reclamos, solicitudes y propuestas a cualquier funcionario público.</div>
+        </div>
+      </div>
+
+      <h3>Igualdad ante la ley (Art. 16)</h3>
+      <p>La Constitución establece un principio fundamental: <strong>todos somos iguales ante la ley</strong>. Esto significa:</p>
+      <ul>
+        <li>No hay prerrogativas de sangre ni de nacimiento.</li>
+        <li>No existen títulos de nobleza ni fueros personales.</li>
+        <li>La admisión en los empleos públicos se rige por la idoneidad, no por privilegios.</li>
+        <li>Los impuestos deben ser iguales para todos los habitantes en igualdad de condiciones.</li>
+      </ul>
+
+      <h3>Inviolabilidad del domicilio y la correspondencia (Art. 18)</h3>
+      <p>El artículo 18 protege la intimidad y la libertad personal. Establece que:</p>
+      <ul>
+        <li>Nadie puede ser obligado a declarar contra sí mismo.</li>
+        <li>Es inviolable el domicilio, la correspondencia y los papeles privados.</li>
+        <li>Nadie puede ser arrestado sin orden escrita de autoridad competente.</li>
+        <li>Las cárceles deben ser sanas y limpias, "para seguridad y no para castigo".</li>
+        <li>Se prohíbe la pena de muerte por causas políticas, toda especie de tormento y los azotes.</li>
+      </ul>
+    </section>
+
+    <section class="seccion" id="politicos">
+      <div class="seccion-eyebrow">— 03 / Derechos políticos</div>
+      <h2>Los derechos <em>políticos</em></h2>
+      <p>Los derechos políticos garantizan la participación de los ciudadanos en la vida democrática. A diferencia de los derechos civiles (que son para todos los habitantes), los derechos políticos se reservan generalmente para los <strong>ciudadanos argentinos</strong>.</p>
+
+      <h3>El sufragio</h3>
+      <p>El derecho a votar y a ser electo. Fue ampliándose con el tiempo:</p>
+
+      <table class="tabla-datos">
+        <thead><tr><th>Año</th><th>Reforma</th></tr></thead>
+        <tbody>
+          <tr><td>1853</td><td>Voto restringido (varones, calificado)</td></tr>
+          <tr><td>1912</td><td>Ley Sáenz Peña: voto universal, secreto, obligatorio (varones)</td></tr>
+          <tr><td>1947</td><td>Voto femenino sancionado (Ley 13.010)</td></tr>
+          <tr><td>1951</td><td>Primera elección con voto femenino a nivel nacional</td></tr>
+          <tr><td>1983</td><td>Restablecimiento del voto democrático tras la dictadura</td></tr>
+          <tr><td>2012</td><td>Voto opcional desde los 16 años (Ley 26.774)</td></tr>
+        </tbody>
+      </table>
+
+      <p>Profundizamos sobre el voto en <a href="voto.html" style="color: var(--celeste-dark);">esta guía dedicada</a>.</p>
+
+      <h3>Participación política</h3>
+      <ul>
+        <li><strong>Iniciativa popular</strong> (Art. 39 CN): los ciudadanos pueden presentar proyectos de ley con un mínimo del 3% del padrón nacional.</li>
+        <li><strong>Consulta popular</strong> (Art. 40 CN): el Congreso o el Presidente pueden someter ciertas decisiones a referéndum.</li>
+        <li><strong>Derecho de asociación política</strong>: a formar partidos políticos, asociaciones electorales y sindicatos.</li>
+        <li><strong>Acceso a cargos públicos</strong>: cualquier ciudadano puede postularse a cargos electivos, salvo las inhabilidades específicas que establece la ley.</li>
+      </ul>
+
+      <div class="destacado">
+        <div class="destacado-titulo">Los partidos políticos</div>
+        <p>El artículo 38 de la Constitución reconoce a los partidos políticos como "instituciones fundamentales del sistema democrático". Garantiza su libre creación y el ejercicio de sus actividades, sin permitir el monopolio de la actividad política por parte de un solo partido. La organización y financiamiento de los partidos se regula por leyes específicas.</p>
+      </div>
+    </section>
+
+    <section class="seccion" id="sociales">
+      <div class="seccion-eyebrow">— 04 / Derechos sociales</div>
+      <h2>Los derechos <em>sociales</em></h2>
+      <p>Mientras los derechos civiles son del siglo XIX y los políticos del siglo XX temprano, los <strong>derechos sociales</strong> entraron a la Constitución argentina en 1957, con la incorporación del famoso <strong>artículo 14 bis</strong> tras la Convención Constituyente reunida ese año.</p>
+
+      <h3>El artículo 14 bis: el corazón de los derechos laborales y sociales</h3>
+      <p>Este artículo, único en su categoría, reconoce tres bloques de derechos:</p>
+
+      <h3>Derechos del trabajador</h3>
+      <ul>
+        <li>Condiciones dignas y equitativas de labor.</li>
+        <li>Jornada limitada (de ahí derivan las leyes de las 8 horas y los descansos).</li>
+        <li>Descanso y vacaciones pagas.</li>
+        <li>Retribución justa, salario mínimo vital y móvil.</li>
+        <li>Igual remuneración por igual tarea.</li>
+        <li>Participación en las ganancias de las empresas.</li>
+        <li>Protección contra el despido arbitrario.</li>
+        <li>Estabilidad del empleado público.</li>
+        <li>Organización sindical libre y democrática.</li>
+      </ul>
+
+      <h3>Derechos del sindicato</h3>
+      <ul>
+        <li>Convenios colectivos de trabajo.</li>
+        <li>Conciliación y arbitraje.</li>
+        <li>Derecho de huelga.</li>
+        <li>Protección especial a los representantes gremiales en sus funciones.</li>
+      </ul>
+
+      <h3>Derechos de la seguridad social</h3>
+      <ul>
+        <li>El seguro social obligatorio.</li>
+        <li>Jubilaciones y pensiones móviles.</li>
+        <li>Protección integral de la familia, vivienda digna, compensaciones económicas familiares, acceso a una vivienda digna.</li>
+      </ul>
+
+      <div class="cita-articulo">
+        El trabajo en sus diversas formas gozará de la protección de las leyes, las que asegurarán al trabajador: condiciones dignas y equitativas de labor; jornada limitada; descanso y vacaciones pagados; retribución justa; salario mínimo vital móvil; igual remuneración por igual tarea (...); protección contra el despido arbitrario; estabilidad del empleado público; organización sindical libre y democrática (...).
+        <div class="cita-articulo-ref">— Artículo 14 bis de la Constitución Nacional</div>
+      </div>
+
+      <div class="destacado historico">
+        <div class="destacado-titulo">Contexto histórico</div>
+        <p>El artículo 14 bis fue incorporado por la Convención Constituyente de 1957 tras la derogación de la Constitución de 1949 (que ya contenía derechos sociales similares pero fue anulada por el gobierno militar). La continuidad del 14 bis a lo largo de las décadas es uno de los grandes consensos institucionales argentinos. Sobrevivió a todas las dictaduras y a la reforma de 1994.</p>
+      </div>
+    </section>
+
+    <section class="seccion" id="nuevos">
+      <div class="seccion-eyebrow">— 05 / Derechos nuevos (1994)</div>
+      <h2>Los <em>nuevos derechos</em> de 1994</h2>
+      <p>La reforma constitucional de 1994 amplió considerablemente el catálogo de derechos reconocidos en la Constitución. Incorporó un nuevo capítulo entero ("Nuevos derechos y garantías", artículos 36 a 43) y dio rango constitucional a varios tratados internacionales.</p>
+
+      <h3>Defensa de la democracia (Art. 36)</h3>
+      <p>Establece que esta Constitución mantendrá su imperio aun cuando se interrumpiera su observancia por actos de fuerza. Quienes hagan tal interrupción serán inhabilitados a perpetuidad. <strong>Es la respuesta de la sociedad argentina a los golpes de Estado del siglo XX.</strong></p>
+
+      <h3>Derechos políticos ampliados (Arts. 37, 38, 39, 40)</h3>
+      <ul>
+        <li>Sufragio universal, igual, secreto y obligatorio (constitucionalizado).</li>
+        <li>Igualdad real de oportunidades entre varones y mujeres para el acceso a cargos electivos (cupos).</li>
+        <li>Reconocimiento explícito de los partidos políticos (Art. 38).</li>
+        <li>Iniciativa popular (Art. 39): los ciudadanos pueden presentar proyectos de ley.</li>
+        <li>Consulta popular (Art. 40): mecanismo de referéndum vinculante o no vinculante.</li>
+      </ul>
+
+      <h3>Derecho al medio ambiente sano (Art. 41)</h3>
+      <p>Es uno de los aportes más innovadores de la reforma de 1994. Establece que todos los habitantes gozan del <strong>derecho a un ambiente sano, equilibrado y apto para el desarrollo humano</strong>. El daño ambiental genera la obligación prioritaria de reparar. Las provincias conservan el dominio originario de los recursos naturales en sus territorios.</p>
+
+      <h3>Derechos de los consumidores y usuarios (Art. 42)</h3>
+      <p>Establece que los consumidores y usuarios de bienes y servicios tienen derecho a:</p>
+      <ul>
+        <li>La protección de su salud, seguridad e intereses económicos.</li>
+        <li>Información adecuada y veraz.</li>
+        <li>Libertad de elección.</li>
+        <li>Condiciones de trato equitativo y digno.</li>
+        <li>Educación para el consumo.</li>
+        <li>Defensa de la competencia contra toda forma de distorsión de los mercados.</li>
+      </ul>
+
+      <h3>Garantías constitucionales (Art. 43)</h3>
+      <p>El artículo 43 reconoce expresamente cuatro garantías que permiten exigir el cumplimiento de los derechos:</p>
+      <ul>
+        <li><strong>Acción de amparo:</strong> contra actos u omisiones que lesionen derechos constitucionales.</li>
+        <li><strong>Amparo colectivo:</strong> contra discriminación, en defensa del ambiente, de la competencia, y de los derechos de incidencia colectiva.</li>
+        <li><strong>Habeas data:</strong> para conocer y rectificar datos personales en registros públicos o privados.</li>
+        <li><strong>Habeas corpus:</strong> contra detenciones ilegítimas o agravamiento de condiciones de detención.</li>
+      </ul>
+
+      <p>Profundizamos sobre <a href="amparo.html" style="color: var(--celeste-dark);">el amparo</a> y <a href="habeas.html" style="color: var(--celeste-dark);">habeas corpus y habeas data</a> en páginas dedicadas.</p>
+    </section>
+
+    <section class="seccion" id="tratados">
+      <div class="seccion-eyebrow">— 06 / Tratados internacionales</div>
+      <h2>Los <em>tratados con jerarquía</em> constitucional</h2>
+      <p>Una de las novedades más importantes de la reforma de 1994 fue otorgar <strong>jerarquía constitucional</strong> a una serie de tratados internacionales sobre derechos humanos. Esto significa que esos tratados <strong>tienen el mismo rango que la Constitución Nacional</strong> y se aplican con esa fuerza dentro del país.</p>
+
+      <h3>Cómo funciona el sistema</h3>
+      <p>La Constitución argentina, en su artículo 75 inciso 22, establece tres niveles para los tratados:</p>
+      <ul>
+        <li><strong>Tratados con jerarquía constitucional:</strong> los enumerados específicamente en el artículo 75.22, más los que el Congreso incorpore con una mayoría de 2/3 en cada cámara. Tienen el mismo rango que la Constitución.</li>
+        <li><strong>Tratados con jerarquía superior a las leyes:</strong> el resto de los tratados aprobados por Argentina. Están por encima de las leyes nacionales pero por debajo de la Constitución.</li>
+        <li><strong>Tratados de integración:</strong> regulados por el inciso 24 del mismo artículo, son los referidos a procesos de integración regional (como el Mercosur).</li>
+      </ul>
+
+      <h3>Los 11 tratados originales (artículo 75.22)</h3>
+      <p>La reforma de 1994 incluyó originalmente estos 11 instrumentos:</p>
+      <ul>
+        <li>Declaración Americana de los Derechos y Deberes del Hombre (1948).</li>
+        <li>Declaración Universal de Derechos Humanos (1948).</li>
+        <li>Convención Americana sobre Derechos Humanos (Pacto de San José de Costa Rica, 1969).</li>
+        <li>Pacto Internacional de Derechos Económicos, Sociales y Culturales.</li>
+        <li>Pacto Internacional de Derechos Civiles y Políticos.</li>
+        <li>Protocolo Facultativo del Pacto Internacional de Derechos Civiles y Políticos.</li>
+        <li>Convención para la Prevención y Sanción del Delito de Genocidio.</li>
+        <li>Convención sobre Eliminación de Todas las Formas de Discriminación Racial.</li>
+        <li>Convención sobre Eliminación de Todas las Formas de Discriminación contra la Mujer (CEDAW).</li>
+        <li>Convención contra la Tortura y Otros Tratos o Penas Crueles, Inhumanos o Degradantes.</li>
+        <li>Convención sobre los Derechos del Niño.</li>
+      </ul>
+
+      <h3>Tratados incorporados después de 1994</h3>
+      <p>Por el mecanismo del 75.22, el Congreso incorporó más tratados con jerarquía constitucional. Actualmente son 15 instrumentos en total:</p>
+      <ul>
+        <li>Convención Interamericana sobre Desaparición Forzada de Personas (Ley 24.820, 1997).</li>
+        <li>Convención sobre la Imprescriptibilidad de los Crímenes de Guerra y Lesa Humanidad (Ley 25.778, 2003).</li>
+        <li>Convención sobre los Derechos de las Personas con Discapacidad (Ley 27.044, 2014).</li>
+        <li>Convención Interamericana sobre Protección de los Derechos Humanos de las Personas Mayores (Ley 27.700, 2022).</li>
+      </ul>
+
+      <div class="cita-legal">
+        Total actual de instrumentos con jerarquía constitucional: 15. La Constitución prevé un mecanismo abierto: el Congreso puede sumar más con mayoría de 2/3 en cada cámara.
+      </div>
+
+      <h3>Por qué importa</h3>
+      <p>El bloque de constitucionalidad (Constitución + tratados con jerarquía) amplía significativamente los derechos reconocidos en Argentina. Por ejemplo:</p>
+      <ul>
+        <li>Los derechos de los niños (no contemplados en detalle en la Constitución original) están protegidos por la Convención de los Derechos del Niño.</li>
+        <li>Los derechos de las personas con discapacidad tienen reconocimiento expreso desde 2014.</li>
+        <li>La igualdad de género tiene un instrumento específico (CEDAW).</li>
+        <li>Los pueblos originarios tienen reconocimiento en la Constitución (Art. 75.17) y en tratados de derechos humanos.</li>
+      </ul>
+    </section>
+
+    <section class="seccion" id="garantias">
+      <div class="seccion-eyebrow">— 07 / Garantías</div>
+      <h2>Las <em>garantías</em> constitucionales</h2>
+      <p>Una cosa son los derechos, otra son las <strong>garantías</strong> que permiten hacerlos efectivos. De nada sirve tener un derecho reconocido en el papel si no existen mecanismos para defenderlo cuando es vulnerado. Las garantías son esos mecanismos.</p>
+
+      <h3>Garantías procesales (Art. 18)</h3>
+      <p>La Constitución protege especialmente al ciudadano en su relación con la justicia penal:</p>
+      <ul>
+        <li><strong>Juicio previo:</strong> nadie puede ser penado sin un juicio previo fundado en ley anterior al hecho.</li>
+        <li><strong>Juez natural:</strong> no puede ser juzgado por comisiones especiales ni sacado de los jueces designados por la ley antes del hecho.</li>
+        <li><strong>No autoincriminación:</strong> nadie puede ser obligado a declarar contra sí mismo.</li>
+        <li><strong>Inviolabilidad de la defensa:</strong> el imputado tiene derecho a defenderse y a contar con abogado.</li>
+        <li><strong>Plazo razonable:</strong> el proceso debe tener una duración razonable.</li>
+      </ul>
+
+      <h3>Garantías específicas (Art. 43)</h3>
+      <p>La reforma de 1994 incorporó garantías específicas:</p>
+      <ul>
+        <li><strong>Amparo:</strong> acción judicial rápida y expedita contra cualquier acto u omisión que lesione derechos constitucionales.</li>
+        <li><strong>Habeas corpus:</strong> contra detenciones ilegales o desmejoras en condiciones de detención.</li>
+        <li><strong>Habeas data:</strong> para acceder y rectificar datos personales en registros públicos o privados.</li>
+      </ul>
+
+      <h3>Garantías institucionales</h3>
+      <p>El sistema institucional argentino también protege derechos:</p>
+      <ul>
+        <li><strong>División de poderes:</strong> evita que un solo poder concentre demasiado.</li>
+        <li><strong>Control de constitucionalidad:</strong> la Corte Suprema puede declarar inconstitucional una ley que viole derechos.</li>
+        <li><strong>Defensor del Pueblo:</strong> órgano de control que defiende derechos de la ciudadanía frente al Estado.</li>
+        <li><strong>Ministerio Público:</strong> Fiscal y Defensoría, garantizan el acceso a la justicia.</li>
+      </ul>
+    </section>
+
+    <section class="seccion" id="vulneracion">
+      <div class="seccion-eyebrow">— 08 / Vulneración</div>
+      <h2>Cuando un derecho se <em>vulnera</em></h2>
+      <p>Saber qué hacer cuando un derecho se vulnera es tan importante como saber cuáles son los derechos. Argentina tiene un sistema de protección que combina vías administrativas, judiciales e internacionales.</p>
+
+      <h3>Camino administrativo</h3>
+      <p>El primer paso suele ser administrativo: presentar un reclamo formal ante el organismo del Estado responsable. Esto puede tomar la forma de:</p>
+      <ul>
+        <li>Pedido formal por nota.</li>
+        <li>Acceso a la información pública (Ley 27.275).</li>
+        <li>Denuncia ante el Defensor del Pueblo.</li>
+        <li>Denuncia ante organismos específicos según el derecho (INADI por discriminación, AAIP por datos personales, etc.).</li>
+      </ul>
+
+      <h3>Camino judicial</h3>
+      <p>Si la vía administrativa no funciona o no aplica, hay caminos judiciales:</p>
+      <ul>
+        <li><strong>Amparo</strong>: para situaciones urgentes que requieren respuesta rápida.</li>
+        <li><strong>Habeas corpus</strong>: ante privación ilegítima de la libertad.</li>
+        <li><strong>Habeas data</strong>: contra registros con datos personales erróneos o usados ilegítimamente.</li>
+        <li><strong>Demanda ordinaria:</strong> en casos donde no aplica el amparo, se puede iniciar un juicio común.</li>
+        <li><strong>Recurso extraordinario federal:</strong> ante la Corte Suprema, en casos de violación constitucional.</li>
+      </ul>
+
+      <h3>Camino internacional</h3>
+      <p>Cuando se agotan las vías internas sin éxito, Argentina permite acudir a instancias internacionales:</p>
+      <ul>
+        <li><strong>Comisión Interamericana de Derechos Humanos (CIDH):</strong> recibe denuncias contra el Estado argentino por violaciones a la Convención Americana.</li>
+        <li><strong>Corte Interamericana de Derechos Humanos:</strong> los fallos son vinculantes para Argentina.</li>
+        <li><strong>Comités de la ONU:</strong> reciben comunicaciones individuales según los tratados específicos (Comité de Derechos Humanos, Comité de Derechos del Niño, etc.).</li>
+      </ul>
+
+      <div class="destacado">
+        <div class="destacado-titulo">Apoyo institucional</div>
+        <p>Quien sienta que un derecho propio fue vulnerado y no sepa cómo proceder, puede acudir a: el <strong>Defensor del Pueblo</strong>, la <strong>Defensoría General de la Nación</strong> (que ofrece patrocinio gratuito), organizaciones de derechos humanos, colegios de abogados (consultorios jurídicos gratuitos), o universidades públicas con áreas de práctica jurídica.</p>
+      </div>
+    </section>
+
+    <section class="fuentes">
+      <h3>— Fuentes oficiales y normativa</h3>
+      <ul>
+        <li><strong>Constitución Nacional Argentina</strong>, especialmente Primera Parte (artículos 1 a 43). <a href="https://www.argentina.gob.ar/normativa/nacional/constituci%C3%B3n-de-la-naci%C3%B3n-argentina-804" target="_blank" rel="noopener">Texto oficial</a></li>
+        <li><strong>Reforma Constitucional de 1994</strong> — Introdujo los "Nuevos derechos y garantías" (Cap. II).</li>
+        <li><strong>Artículo 75 inciso 22</strong> — Otorga jerarquía constitucional a los tratados de derechos humanos.</li>
+        <li><strong>Pacto de San José de Costa Rica</strong> (Convención Americana sobre Derechos Humanos, 1969). Ratificado por Ley 23.054.</li>
+        <li><strong>Ley 23.054</strong> — Ratifica la Convención Americana sobre Derechos Humanos.</li>
+        <li><strong>Defensoría del Pueblo de la Nación</strong>. <a href="https://www.dpn.gob.ar" target="_blank" rel="noopener">dpn.gob.ar</a></li>
+        <li><strong>Defensoría General de la Nación</strong>. <a href="https://www.mpd.gov.ar" target="_blank" rel="noopener">mpd.gov.ar</a></li>
+        <li><strong>Corte Suprema de Justicia</strong>. <a href="https://www.csjn.gov.ar" target="_blank" rel="noopener">csjn.gov.ar</a></li>
+        <li><strong>Comisión Interamericana de Derechos Humanos</strong>. <a href="https://www.oas.org/es/cidh/" target="_blank" rel="noopener">oas.org/es/cidh</a></li>
+      </ul>
+      <p style="font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; color: var(--tinta-soft); margin-top: 1.5rem; padding-top: 1rem; border-top: 1px solid var(--linea); line-height: 1.6;">
+        Esta página es un material educativo. No constituye asesoramiento legal. Para casos concretos de violación de derechos, consultá con un abogado o con las defensorías oficiales. Última revisión: mayo de 2026.
+      </p>
+    </section>
+
+  </main>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div>
+      <h3>Educación Cívica</h3>
+      <p>Una guía visual y educativa sobre el Estado argentino, sus poderes, las provincias, el sistema electoral, los derechos del ciudadano y la historia institucional.</p>
+    </div>
+    <div>
+      <h3>Secciones</h3>
+      <a href="poderes.html">Los poderes</a>
+      <a href="provincias.html">Provincias</a>
+      <a href="index.html#sistema-electoral">Elecciones</a>
+      <a href="index.html#derechos">Derechos</a>
+      <a href="historia.html">Historia</a>
+    </div>
+    <div>
+      <h3>El proyecto</h3>
+      <a href="#">Sobre nosotros</a>
+      <a href="#">Manifiesto editorial</a>
+      <a href="#">Suscribirse</a>
+      <a href="#">Contacto</a>
+    </div>
+    <div class="footer-meta">
+      educacioncivica.com.ar · v0.3 prototipo · Educación cívica con datos · Sin grieta · Datos institucionales actualizados a mayo de 2026
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

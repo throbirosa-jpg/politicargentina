@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Acceso a la Información Pública — Educación Cívica</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,400;0,500;0,600;1,400&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --crema: #FBF7F0; --crema-warm: #F4ECDB; --tinta: #1A1A2E; --tinta-soft: #545465;
+    --celeste: #74ACDF; --celeste-soft: #E4F0FA; --celeste-dark: #3D7BB0;
+    --sol: #F6B40E; --sol-soft: #FBE5AA; --sol-dark: #C8941A;
+    --rojo-fed: #B8341B; --rojo-soft: #F2D5CE;
+    --verde-ok: #4A7C59; --verde-soft: #DAEAE0;
+    --linea: #DDD7CB; --linea-soft: #ECE6DA;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Fraunces', Georgia, serif; background: var(--crema); color: var(--tinta); line-height: 1.6; }
+  nav { background: white; border-bottom: 1px solid var(--linea); padding: 1.2rem 2rem; position: sticky; top: 0; z-index: 100; }
+  .nav-inner { max-width: 1400px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
+  .logo { display: flex; align-items: center; gap: 0.5rem; font-family: 'Fraunces', serif; font-weight: 500; font-size: 1.1rem; color: var(--tinta); text-decoration: none; }
+  .logo-dot { width: 12px; height: 12px; background: var(--sol); border-radius: 50%; }
+  .breadcrumb { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.1em; color: var(--tinta-soft); }
+  .breadcrumb a { color: var(--tinta-soft); text-decoration: none; }
+  .breadcrumb a:hover { color: var(--tinta); }
+  .page-header { background: linear-gradient(180deg, var(--celeste-soft) 0%, var(--crema) 100%); padding: 4rem 2rem 3rem; border-bottom: 1px solid var(--linea); }
+  .page-header-inner { max-width: 900px; margin: 0 auto; }
+  .page-eyebrow { display: inline-block; font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--celeste-dark); background: white; padding: 0.5rem 1rem; border: 1px solid var(--celeste); margin-bottom: 1.5rem; }
+  .page-title { font-family: 'Fraunces', serif; font-weight: 300; font-size: clamp(2.2rem, 5vw, 3.6rem); line-height: 1.05; margin-bottom: 1.5rem; color: var(--tinta); }
+  .page-title em { font-style: italic; color: var(--celeste-dark); font-weight: 400; }
+  .page-intro { font-size: 1.15rem; line-height: 1.7; color: var(--tinta); max-width: 720px; }
+  .layout { max-width: 1400px; margin: 0 auto; padding: 3rem 2rem; display: grid; grid-template-columns: 220px 1fr; gap: 4rem; align-items: start; }
+  .toc { position: sticky; top: 90px; font-family: 'JetBrains Mono', monospace; font-size: 0.78rem; }
+  .toc-titulo { font-size: 0.65rem; letter-spacing: 0.18em; color: var(--tinta-soft); text-transform: uppercase; margin-bottom: 1rem; padding-bottom: 0.8rem; border-bottom: 1px solid var(--linea); }
+  .toc ul { list-style: none; }
+  .toc li { margin-bottom: 0.6rem; line-height: 1.4; }
+  .toc a { color: var(--tinta-soft); text-decoration: none; border-left: 2px solid var(--linea); padding-left: 0.8rem; display: block; transition: all 0.18s ease; }
+  .toc a:hover { color: var(--tinta); border-left-color: var(--celeste); }
+  .toc-num { color: var(--celeste-dark); font-weight: 500; }
+  .contenido { max-width: 720px; }
+  .seccion { margin-bottom: 3.5rem; padding-bottom: 3rem; border-bottom: 1px solid var(--linea); }
+  .seccion:last-of-type { border-bottom: none; }
+  .seccion-eyebrow { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.18em; color: var(--celeste-dark); text-transform: uppercase; margin-bottom: 0.6rem; }
+  .seccion h2 { font-family: 'Fraunces', serif; font-weight: 400; font-size: 1.9rem; line-height: 1.15; color: var(--tinta); margin-bottom: 1.5rem; }
+  .seccion h2 em { font-style: italic; color: var(--celeste-dark); }
+  .seccion h3 { font-family: 'Fraunces', serif; font-weight: 500; font-size: 1.2rem; color: var(--tinta); margin-top: 2rem; margin-bottom: 0.8rem; }
+  .seccion p { margin-bottom: 1rem; font-size: 1rem; line-height: 1.75; color: var(--tinta); }
+  .seccion p strong { font-weight: 600; color: var(--tinta); }
+  .seccion ul { margin: 1rem 0 1.5rem 0; padding-left: 0; list-style: none; }
+  .seccion ul li { padding-left: 1.5rem; margin-bottom: 0.6rem; line-height: 1.6; position: relative; }
+  .seccion ul li::before { content: '→'; position: absolute; left: 0; color: var(--celeste-dark); font-weight: 600; }
+  .destacado { background: white; border-left: 4px solid var(--celeste); padding: 1.5rem 1.8rem; margin: 1.5rem 0; font-size: 0.95rem; line-height: 1.6; }
+  .destacado-titulo { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.15em; color: var(--celeste-dark); text-transform: uppercase; margin-bottom: 0.6rem; }
+  .destacado.atencion { background: var(--sol-soft); border-left-color: var(--sol-dark); }
+  .destacado.atencion .destacado-titulo { color: var(--sol-dark); }
+  .destacado.historico { background: var(--rojo-soft); border-left-color: var(--rojo-fed); }
+  .destacado.historico .destacado-titulo { color: var(--rojo-fed); }
+  .destacado.ok { background: var(--verde-soft); border-left-color: var(--verde-ok); }
+  .destacado.ok .destacado-titulo { color: var(--verde-ok); }
+  .cita-legal { font-family: 'JetBrains Mono', monospace; font-size: 0.75rem; color: var(--tinta-soft); background: var(--linea-soft); padding: 0.8rem 1rem; margin: 1rem 0; line-height: 1.5; border-left: 3px solid var(--tinta-soft); }
+  .cita-articulo { background: white; border: 1px solid var(--linea); padding: 1.5rem 1.8rem; margin: 1.5rem 0; font-family: 'Fraunces', serif; font-style: italic; font-size: 1.02rem; line-height: 1.7; color: var(--tinta); border-left: 4px solid var(--sol-dark); position: relative; }
+  .cita-articulo::before { content: '"'; position: absolute; top: -0.5rem; left: 1.2rem; font-size: 3rem; color: var(--sol); font-family: serif; line-height: 1; }
+  .cita-articulo-ref { font-family: 'JetBrains Mono', monospace; font-style: normal; font-size: 0.7rem; letter-spacing: 0.12em; color: var(--tinta-soft); text-transform: uppercase; margin-top: 0.8rem; }
+  .tabla-datos { width: 100%; margin: 1.5rem 0; border-collapse: collapse; font-size: 0.92rem; }
+  .tabla-datos th { text-align: left; padding: 0.8rem 1rem; background: var(--celeste-soft); border-bottom: 2px solid var(--celeste-dark); font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--tinta); font-weight: 600; }
+  .tabla-datos td { padding: 0.85rem 1rem; border-bottom: 1px dotted var(--linea); vertical-align: top; }
+  .tabla-datos tr:last-child td { border-bottom: none; }
+  .tabla-datos td:first-child { font-weight: 500; color: var(--tinta); }
+  .timeline-box { background: white; border: 1px solid var(--linea); padding: 1.5rem; margin: 1.5rem 0; }
+  .timeline-paso { display: flex; gap: 1rem; padding: 1rem 0; border-bottom: 1px dotted var(--linea); align-items: start; }
+  .timeline-paso:last-child { border-bottom: none; }
+  .timeline-num { font-family: 'Fraunces', serif; font-size: 1.8rem; color: var(--celeste-dark); font-weight: 500; flex-shrink: 0; min-width: 50px; line-height: 1; }
+  .timeline-text { flex: 1; }
+  .timeline-text strong { display: block; font-family: 'Fraunces', serif; font-size: 1.1rem; font-weight: 500; margin-bottom: 0.3rem; }
+  .timeline-text p { font-size: 0.9rem; line-height: 1.5; color: var(--tinta-soft); margin: 0; }
+  .formulario-ejemplo { background: white; border: 2px dashed var(--celeste); padding: 1.5rem; margin: 1.5rem 0; font-family: 'JetBrains Mono', monospace; font-size: 0.85rem; line-height: 1.7; }
+  .formulario-ejemplo strong { color: var(--celeste-dark); display: inline-block; min-width: 110px; }
+  .fuentes { margin-top: 4rem; padding-top: 2.5rem; border-top: 2px solid var(--linea); }
+  .fuentes h3 { font-family: 'JetBrains Mono', monospace; font-size: 0.75rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--tinta-soft); margin-bottom: 1.5rem; border: none; padding: 0; }
+  .fuentes ul { list-style: none; padding: 0; }
+  .fuentes li { padding: 0.6rem 0; border-bottom: 1px dotted var(--linea); font-size: 0.88rem; padding-left: 0; }
+  .fuentes li::before { content: none; }
+  .fuentes a { color: var(--celeste-dark); text-decoration: none; border-bottom: 1px dotted var(--celeste-dark); }
+  .fuentes a:hover { color: var(--tinta); }
+  footer { background: var(--tinta); color: var(--crema); padding: 3rem 2rem; margin-top: 4rem; }
+  .footer-inner { max-width: 1400px; margin: 0 auto; display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 3rem; }
+  footer h3 { font-family: 'Fraunces', serif; font-weight: 400; font-size: 1.3rem; margin-bottom: 1rem; color: var(--crema); }
+  footer p, footer a { color: var(--crema); opacity: 0.85; font-size: 0.9rem; line-height: 1.6; }
+  footer a { text-decoration: none; display: block; padding: 0.3rem 0; }
+  footer a:hover { opacity: 1; color: var(--sol); }
+  .footer-meta { grid-column: 1 / -1; margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid rgba(251, 247, 240, 0.15); font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; opacity: 0.6; letter-spacing: 0.05em; }
+  @media (max-width: 900px) {
+    .layout { grid-template-columns: 1fr; gap: 2rem; }
+    .toc { position: relative; top: 0; padding: 1.5rem; background: white; border: 1px solid var(--linea); }
+    .footer-inner { grid-template-columns: 1fr; gap: 2rem; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="logo"><span class="logo-dot"></span>Educación Cívica</a>
+    <div class="breadcrumb"><a href="index.html">Inicio</a> · <a href="index.html#derechos">Derechos</a> · <span>Acceso a la información</span></div>
+  </div>
+</nav>
+
+<header class="page-header">
+  <div class="page-header-inner">
+    <div class="page-eyebrow">Capítulo 04.04 · Tus derechos</div>
+    <h1 class="page-title">Acceso a la <em>información pública</em></h1>
+    <p class="page-intro">Tenés derecho a saber qué hace el Estado. Es así de simple, y es así de potente. La información en poder del Estado es pública por definición, salvo excepciones bien específicas. Esta guía explica qué es la transparencia activa, cómo pedir información, los plazos y vías de reclamo, y por qué este derecho es una herramienta clave de la democracia.</p>
+  </div>
+</header>
+
+<div class="layout">
+
+  <aside class="toc">
+    <div class="toc-titulo">— En esta página</div>
+    <ul>
+      <li><a href="#concepto"><span class="toc-num">01</span> Qué es el derecho a saber</a></li>
+      <li><a href="#ley-27275"><span class="toc-num">02</span> La Ley 27.275</a></li>
+      <li><a href="#sujetos"><span class="toc-num">03</span> Quiénes están obligados</a></li>
+      <li><a href="#como-pedir"><span class="toc-num">04</span> Cómo se pide información</a></li>
+      <li><a href="#plazos"><span class="toc-num">05</span> Plazos y respuestas</a></li>
+      <li><a href="#excepciones"><span class="toc-num">06</span> Excepciones</a></li>
+      <li><a href="#reclamos"><span class="toc-num">07</span> Si te niegan información</a></li>
+      <li><a href="#aaip"><span class="toc-num">08</span> La AAIP y el contexto</a></li>
+    </ul>
+  </aside>
+
+  <main class="contenido">
+
+    <section class="seccion" id="concepto">
+      <div class="seccion-eyebrow">— 01 / El derecho</div>
+      <h2>El derecho a <em>saber</em> qué hace el Estado</h2>
+      <p>El derecho de acceso a la información pública es uno de los pilares de la democracia moderna. En palabras simples: <strong>vos tenés derecho a saber qué hace el Estado con la plata de tus impuestos, cómo toma sus decisiones, y qué información tiene en su poder</strong>. El Estado, por su parte, tiene la obligación correlativa de entregar esa información, salvo excepciones muy específicas y bien fundadas.</p>
+
+      <p>Este derecho no es un beneficio que el Estado "da": es una <strong>obligación constitucional</strong> que viene de la propia naturaleza republicana del gobierno. Si gobiernan en nombre del pueblo, el pueblo tiene derecho a saber cómo gobiernan.</p>
+
+      <h3>Tres principios fundamentales</h3>
+      <ul>
+        <li><strong>Presunción de publicidad:</strong> toda información en poder del Estado se presume pública. La regla es entregar la información; las excepciones son la excepción.</li>
+        <li><strong>No necesitás justificar tu interés:</strong> podés pedir información sobre cualquier tema sin explicar por qué. No tenés que demostrar un "interés legítimo" ni acreditar nada.</li>
+        <li><strong>Gratuidad:</strong> el acceso es gratuito. Solo pueden cobrarte si pedís copias en formatos especiales, y los precios deben ser razonables.</li>
+      </ul>
+
+      <h3>Por qué importa</h3>
+      <p>El derecho a saber tiene impactos concretos en la calidad democrática:</p>
+      <ul>
+        <li><strong>Control ciudadano:</strong> permite que cualquier persona controle qué hacen los funcionarios.</li>
+        <li><strong>Periodismo:</strong> es la base del periodismo de investigación y de la fiscalización pública.</li>
+        <li><strong>Participación informada:</strong> sin información no hay opinión pública genuina ni voto consciente.</li>
+        <li><strong>Combate a la corrupción:</strong> la opacidad es el ámbito natural de los abusos. La transparencia los previene.</li>
+        <li><strong>Mejora la gestión:</strong> obligar al Estado a publicar lo que hace tiende a mejorar la calidad de su trabajo.</li>
+      </ul>
+    </section>
+
+    <section class="seccion" id="ley-27275">
+      <div class="seccion-eyebrow">— 02 / La ley</div>
+      <h2>La <em>Ley 27.275</em></h2>
+      <p>El derecho de acceso a la información pública se reconoce en la <strong>Constitución Nacional</strong> (Art. 1 del régimen republicano, Art. 38 de la publicidad de los actos de gobierno) y en los tratados internacionales con jerarquía constitucional (especialmente el Pacto de San José de Costa Rica, Art. 13).</p>
+
+      <p>Pero su regulación detallada llegó tarde: recién en 2016 se sancionó la <strong>Ley 27.275 de Derecho de Acceso a la Información Pública</strong>, una de las leyes más importantes de las últimas décadas en materia de transparencia.</p>
+
+      <h3>Qué establece la ley</h3>
+      <ul>
+        <li>Define claramente qué es "información pública".</li>
+        <li>Establece qué organismos están obligados a entregarla (los "sujetos obligados").</li>
+        <li>Regula el procedimiento para solicitarla.</li>
+        <li>Fija plazos máximos para responder.</li>
+        <li>Enumera las excepciones legítimas para no entregar información.</li>
+        <li>Crea las vías de reclamo cuando el pedido es denegado o ignorado.</li>
+        <li>Crea la <strong>Agencia de Acceso a la Información Pública (AAIP)</strong>, el organismo de control.</li>
+      </ul>
+
+      <div class="cita-articulo">
+        La presente ley tiene por objeto garantizar el efectivo ejercicio del derecho de acceso a la información pública, promover la participación ciudadana y la transparencia de la gestión pública.
+        <div class="cita-articulo-ref">— Artículo 1 de la Ley 27.275</div>
+      </div>
+
+      <h3>El decreto reglamentario</h3>
+      <p>La ley fue reglamentada por el <strong>Decreto 206/2017</strong>, que precisa detalles operativos: formularios, organismos a cargo de responder en cada repartición, registros, etc.</p>
+
+      <div class="cita-legal">
+        Marco normativo principal: Constitución Nacional (Arts. 1, 38, 41, 42, 43 y 75 inc. 22) + Ley 27.275 (2016) + Decreto 206/2017 + Convención Americana de DDHH (Art. 13).
+      </div>
+
+      <h3>Transparencia activa vs. transparencia pasiva</h3>
+      <p>La ley distingue dos modalidades:</p>
+      <ul>
+        <li><strong>Transparencia pasiva:</strong> es lo que vos pedís específicamente. El Estado responde cuando un ciudadano lo solicita. Es el corazón del "acceso a la información" tradicional.</li>
+        <li><strong>Transparencia activa:</strong> es lo que el Estado debe publicar <strong>por iniciativa propia</strong>, sin esperar pedidos. Incluye datos sobre presupuesto, contrataciones, salarios de funcionarios, organigramas, normativa, declaraciones juradas, etc. La ley enumera mínimos obligatorios en su artículo 32.</li>
+      </ul>
+    </section>
+
+    <section class="seccion" id="sujetos">
+      <div class="seccion-eyebrow">— 03 / Sujetos obligados</div>
+      <h2>Quiénes <em>tienen que</em> darte información</h2>
+      <p>Una pregunta clave: ¿a quiénes podés pedirle información? La Ley 27.275 establece una lista amplia de "sujetos obligados", que va más allá del Poder Ejecutivo tradicional.</p>
+
+      <h3>Los tres poderes</h3>
+      <ul>
+        <li><strong>Poder Ejecutivo:</strong> ministerios, secretarías, organismos descentralizados, empresas y sociedades del Estado.</li>
+        <li><strong>Poder Legislativo:</strong> Congreso de la Nación y sus dependencias administrativas.</li>
+        <li><strong>Poder Judicial:</strong> Consejo de la Magistratura, Procuración General, Defensoría General.</li>
+      </ul>
+
+      <h3>Órganos extra-poder</h3>
+      <ul>
+        <li>Ministerio Público Fiscal y Ministerio Público de la Defensa.</li>
+        <li>Defensoría del Pueblo.</li>
+        <li>Banco Central de la República Argentina (BCRA).</li>
+      </ul>
+
+      <h3>Sector público no estatal</h3>
+      <ul>
+        <li>Empresas y sociedades con participación estatal.</li>
+        <li>Empresas concesionarias de servicios públicos.</li>
+        <li>Entidades que reciban subsidios o aportes del Estado.</li>
+        <li>Universidades nacionales.</li>
+        <li>Organizaciones empresariales y gremiales con poder de regulación delegado.</li>
+      </ul>
+
+      <div class="destacado atencion">
+        <div class="destacado-titulo">Importante: solo el ámbito nacional</div>
+        <p>La Ley 27.275 <strong>solo se aplica al Sector Público Nacional</strong>. Si querés pedir información a una provincia, municipio o sus poderes públicos, tenés que revisar la normativa local sobre acceso a la información (la mayoría de las provincias tiene su propia ley o adhirió a la nacional). Para coordinar, existe el <strong>Consejo Federal para la Transparencia</strong>.</p>
+      </div>
+    </section>
+
+    <section class="seccion" id="como-pedir">
+      <div class="seccion-eyebrow">— 04 / Cómo se pide</div>
+      <h2>Cómo se <em>pide</em> información</h2>
+      <p>Pedir información pública es uno de los trámites más simples que existen. Se diseñó para que cualquier persona, sin necesidad de patrocinio ni conocimientos técnicos, pueda ejercer este derecho.</p>
+
+      <div class="timeline-box">
+        <div class="timeline-paso">
+          <div class="timeline-num">01</div>
+          <div class="timeline-text">
+            <strong>Identificá qué información querés</strong>
+            <p>Debe ser razonablemente precisa: "Todos los gastos del Ministerio X" no sirve, pero sí "Detalle de contrataciones del Ministerio X en 2025 por más de $1 millón".</p>
+          </div>
+        </div>
+        <div class="timeline-paso">
+          <div class="timeline-num">02</div>
+          <div class="timeline-text">
+            <strong>Identificá al sujeto obligado</strong>
+            <p>¿A qué organismo le corresponde tener esa información? Si no sabés, podés pedir igualmente y el organismo debe redirigirte si la información no es suya.</p>
+          </div>
+        </div>
+        <div class="timeline-paso">
+          <div class="timeline-num">03</div>
+          <div class="timeline-text">
+            <strong>Hacé el pedido formalmente</strong>
+            <p>Por escrito (carta, nota, formulario online del organismo). Indicá tu nombre, la información que pedís y dónde quieren que te envíen la respuesta.</p>
+          </div>
+        </div>
+        <div class="timeline-paso">
+          <div class="timeline-num">04</div>
+          <div class="timeline-text">
+            <strong>Conservá la constancia</strong>
+            <p>El organismo está obligado a darte una constancia de tu pedido. Conservala. Es la prueba de que pediste y desde cuándo corre el plazo.</p>
+          </div>
+        </div>
+        <div class="timeline-paso">
+          <div class="timeline-num">05</div>
+          <div class="timeline-text">
+            <strong>Esperá la respuesta</strong>
+            <p>El organismo tiene 15 días hábiles para responderte. Puede pedir una prórroga de 15 días hábiles más si la información es compleja de obtener.</p>
+          </div>
+        </div>
+      </div>
+
+      <h3>Cómo redactar el pedido</h3>
+      <p>No hay un formato único, pero tu pedido debe contener al menos:</p>
+
+      <div class="formulario-ejemplo">
+        <strong>Destinatario:</strong> Sr. Ministro/Director/Responsable de [Organismo]<br>
+        <strong>Asunto:</strong> Solicitud de acceso a la información pública - Ley 27.275<br>
+        <strong>De mi consideración:</strong><br>
+        <strong>Solicitante:</strong> [Tu nombre completo y DNI]<br>
+        <strong>Información:</strong> [Descripción precisa de lo que pedís]<br>
+        <strong>Domicilio:</strong> [Dirección física o electrónica para recibir respuesta]<br>
+        <strong>Firma:</strong> [Tu firma o firma digital]
+      </div>
+
+      <h3>Vías de presentación</h3>
+      <ul>
+        <li><strong>Online:</strong> muchos organismos tienen formularios web específicos. El portal Argentina.gob.ar tiene un sistema centralizado para varios organismos.</li>
+        <li><strong>Email:</strong> a la dirección oficial del organismo. Las leyes consideran válida la solicitud por medios electrónicos.</li>
+        <li><strong>Presencial:</strong> en la mesa de entradas del organismo. Te tienen que dar constancia de recepción.</li>
+        <li><strong>Por carta certificada:</strong> también es válida.</li>
+      </ul>
+
+      <div class="destacado ok">
+        <div class="destacado-titulo">No necesitás justificar tu interés</div>
+        <p>Una de las características más importantes del régimen es que <strong>no tenés que explicar por qué querés la información</strong>. El periodista que investiga, el académico que estudia, el vecino curioso, el activista político: todos tienen el mismo derecho. La ley no permite que el organismo te pregunte para qué la querés.</p>
+      </div>
+    </section>
+
+    <section class="seccion" id="plazos">
+      <div class="seccion-eyebrow">— 05 / Plazos</div>
+      <h2>Los <em>plazos</em> de respuesta</h2>
+      <p>El régimen de plazos es claro y obligatorio. El organismo no puede dilatar indefinidamente.</p>
+
+      <table class="tabla-datos">
+        <thead><tr><th>Etapa</th><th>Plazo</th></tr></thead>
+        <tbody>
+          <tr><td>Plazo para responder</td><td>15 días hábiles desde recepción del pedido</td></tr>
+          <tr><td>Prórroga (si la información es compleja)</td><td>15 días hábiles adicionales, debiendo notificar la prórroga al solicitante</td></tr>
+          <tr><td>Plazo máximo total</td><td>30 días hábiles</td></tr>
+          <tr><td>Plazo para reclamar denegatoria</td><td>40 días hábiles desde la respuesta o vencimiento del plazo</td></tr>
+          <tr><td>Plazo de resolución de reclamo (AAIP)</td><td>30 días hábiles</td></tr>
+        </tbody>
+      </table>
+
+      <h3>Días hábiles vs. días corridos</h3>
+      <p>Importante: los plazos son en <strong>días hábiles</strong> (días laborables), no en días corridos. Eso significa que se descuentan sábados, domingos y feriados. Si el plazo vence en un día no laborable, se traslada al siguiente día hábil.</p>
+
+      <h3>Qué pasa si el organismo no responde</h3>
+      <p>Si pasan los 15 días hábiles (o los 30 con prórroga) sin respuesta, se configura una <strong>denegatoria tácita</strong>. Esto significa que la falta de respuesta equivale legalmente a una negativa. A partir de ahí, podés iniciar el reclamo formal.</p>
+
+      <h3>Formatos de la respuesta</h3>
+      <p>La respuesta debe llegar en el formato que solicitaste, siempre que sea posible. Opciones típicas:</p>
+      <ul>
+        <li>Respuesta escrita (papel o correo electrónico).</li>
+        <li>Copia digital de documentos (PDF, Excel, etc.).</li>
+        <li>Copias físicas de documentos (puede tener costo razonable de fotocopiado).</li>
+        <li>Acceso para consultar in situ los documentos.</li>
+        <li>Datos en formatos abiertos cuando sea aplicable (CSV, JSON, etc.).</li>
+      </ul>
+    </section>
+
+    <section class="seccion" id="excepciones">
+      <div class="seccion-eyebrow">— 06 / Excepciones</div>
+      <h2>Cuándo pueden <em>negarte</em> información</h2>
+      <p>Aunque la regla general es la publicidad, hay excepciones legítimas establecidas en el artículo 8 de la Ley 27.275. Estas excepciones deben interpretarse <strong>restrictivamente</strong>: ante la duda, gana la publicidad.</p>
+
+      <h3>Información clasificada por razones de defensa o política exterior</h3>
+      <p>Información que pueda afectar la seguridad nacional, la defensa o las relaciones internacionales del país. Esta excepción tiene un fundamento legítimo pero exige una clasificación formal y temporalidad.</p>
+
+      <h3>Información financiera sensible</h3>
+      <p>Información que pueda afectar el sistema financiero (información del BCRA sobre supervisión bancaria, por ejemplo) o decisiones que dependan de la reserva (próximas tasas de interés, intervenciones cambiarias).</p>
+
+      <h3>Secretos comerciales o industriales</h3>
+      <p>Información protegida por la ley de propiedad intelectual o industrial, secretos empresariales presentados al Estado en el marco de licitaciones o regulaciones.</p>
+
+      <h3>Datos personales sensibles</h3>
+      <p>Datos sobre salud, orientación sexual, ideología política, etc., de terceras personas. Esto es para proteger la intimidad de quienes no son los solicitantes. Si la información incluye datos personales, se aplican técnicas de "disociación" (eliminar lo personal y entregar el resto).</p>
+
+      <h3>Información protegida por secreto profesional</h3>
+      <p>Información cubierta por secreto bancario, secreto fiscal, secreto profesional (médico, abogado, etc.), o secretos similares reconocidos por la ley.</p>
+
+      <h3>Información en elaboración</h3>
+      <p>Borradores, documentos preparatorios, deliberaciones internas previas a la toma de una decisión. Lo que se publica es la decisión final, no los borradores.</p>
+
+      <h3>Información judicial reservada</h3>
+      <p>Información sobre procesos judiciales en curso que la ley considere reservada.</p>
+
+      <h3>Información que ponga en riesgo a personas</h3>
+      <p>Información cuya divulgación pueda poner en riesgo la vida, la seguridad o la salud de una persona física.</p>
+
+      <div class="destacado atencion">
+        <div class="destacado-titulo">Disociación de datos</div>
+        <p>Si un documento contiene parte de información pública y parte de información protegida (por ejemplo, datos personales sensibles), el organismo debe <strong>entregar la parte pública</strong> y tachar o eliminar la parte protegida. No puede negar todo el documento aduciendo que una parte está protegida.</p>
+      </div>
+    </section>
+
+    <section class="seccion" id="reclamos">
+      <div class="seccion-eyebrow">— 07 / Reclamos</div>
+      <h2>Si te <em>niegan</em> información</h2>
+      <p>Tu pedido puede ser denegado expresamente (te responden que no), denegado tácitamente (no te responden en plazo) o respondido parcialmente. En cualquiera de estos casos, tenés derecho a reclamar.</p>
+
+      <h3>Vía administrativa: el reclamo ante la AAIP</h3>
+      <p>La <strong>Agencia de Acceso a la Información Pública (AAIP)</strong> es el organismo creado por la ley específicamente para resolver estos conflictos. Sus resoluciones son obligatorias para los organismos del Poder Ejecutivo (no para los demás poderes, que tienen sus propios mecanismos).</p>
+
+      <ul>
+        <li><strong>Plazo para presentar reclamo:</strong> 40 días hábiles desde la respuesta o la denegatoria tácita.</li>
+        <li><strong>Costo:</strong> gratuito.</li>
+        <li><strong>Patrocinio letrado:</strong> no es necesario.</li>
+        <li><strong>Plazo de resolución:</strong> 30 días hábiles.</li>
+        <li><strong>Cómo se presenta:</strong> formulario en el sitio web de la AAIP o por escrito en sus oficinas.</li>
+      </ul>
+
+      <h3>Vía judicial: amparo por mora o amparo común</h3>
+      <p>Si la AAIP no resuelve o el organismo desconoce su resolución, podés ir a la justicia. Las dos vías principales:</p>
+      <ul>
+        <li><strong>Amparo por mora (Art. 28 Ley 19.549):</strong> obliga al organismo a expedirse cuando no respeta los plazos.</li>
+        <li><strong>Acción de amparo (Art. 43 CN y Ley 16.986):</strong> contra la negativa expresa de información que viole el derecho de acceso. Para más detalles, ver nuestra <a href="amparo.html" style="color: var(--celeste-dark);">guía dedicada al amparo</a>.</li>
+      </ul>
+
+      <h3>Otros canales</h3>
+      <ul>
+        <li><strong>Defensoría del Pueblo:</strong> también puede intermediar y exigir información a los organismos.</li>
+        <li><strong>Sindicatura General de la Nación:</strong> en casos de gestión de fondos públicos.</li>
+        <li><strong>Comisiones del Congreso:</strong> pueden solicitar información en el marco de su función de control.</li>
+        <li><strong>Periodismo y ONGs especializadas:</strong> existen organizaciones que litigan estos casos en nombre del interés público.</li>
+      </ul>
+    </section>
+
+    <section class="seccion" id="aaip">
+      <div class="seccion-eyebrow">— 08 / La AAIP</div>
+      <h2>La <em>Agencia</em> de Acceso a la Información Pública</h2>
+      <p>La <strong>Agencia de Acceso a la Información Pública (AAIP)</strong> fue creada por la Ley 27.275 como organismo descentralizado, autónomo, encargado de fiscalizar el cumplimiento del derecho de acceso y de la protección de datos personales (que veíamos en habeas data).</p>
+
+      <h3>Sus funciones</h3>
+      <ul>
+        <li>Velar por el cumplimiento de la ley en todo el sector público nacional.</li>
+        <li>Recibir y resolver reclamos por denegatorias o inacción.</li>
+        <li>Promover capacitación y difusión sobre el derecho de acceso.</li>
+        <li>Realizar acciones administrativas y judiciales contra incumplimientos.</li>
+        <li>Coordinar políticas de transparencia con el Consejo Federal.</li>
+        <li>Aplicar también la Ley 25.326 de Protección de Datos Personales.</li>
+      </ul>
+
+      <h3>Cómo es su director</h3>
+      <p>El director de la AAIP es designado por un proceso participativo que la ley establece detalladamente: el Poder Ejecutivo propone un candidato, se hace una audiencia pública, los ciudadanos y organizaciones pueden presentar observaciones, y luego el cargo se confirma. La duración del mandato es de 5 años con la posibilidad de una reelección.</p>
+
+      <h3>El Consejo Federal para la Transparencia</h3>
+      <p>Dentro de la AAIP funciona el <strong>Consejo Federal para la Transparencia</strong>, donde las provincias coordinan políticas en materia de acceso a la información, transparencia activa y protección de datos personales. Es el ámbito de armonización entre los niveles nacional, provincial y municipal.</p>
+
+      <h3>Datos públicos y portales</h3>
+      <p>Argentina cuenta con varios portales de datos públicos que materializan la transparencia activa:</p>
+      <ul>
+        <li><strong>datos.gob.ar:</strong> portal de datos abiertos del Estado nacional.</li>
+        <li><strong>Argentina.gob.ar:</strong> portal centralizado de servicios y trámites.</li>
+        <li><strong>Boletín Oficial:</strong> publicación oficial de normas y actos.</li>
+        <li><strong>InfoLEG:</strong> sistema de información legislativa.</li>
+        <li><strong>SAIJ:</strong> Sistema Argentino de Información Jurídica.</li>
+      </ul>
+
+      <div class="destacado">
+        <div class="destacado-titulo">Para ejercer este derecho</div>
+        <p>Si querés practicar tu derecho de acceso a la información pública, podés empezar por el portal de la AAIP: <a href="https://www.argentina.gob.ar/aaip" target="_blank" rel="noopener" style="color: var(--celeste-dark);">argentina.gob.ar/aaip</a>. Ahí encontrás formularios, guías, capacitaciones gratuitas y la posibilidad de hacer pedidos online a varios organismos.</p>
+      </div>
+    </section>
+
+    <section class="fuentes">
+      <h3>— Fuentes oficiales y normativa</h3>
+      <ul>
+        <li><strong>Ley 27.275</strong> (2016) — Derecho de Acceso a la Información Pública. <a href="https://servicios.infoleg.gob.ar/infolegInternet/anexos/265000-269999/265949/norma.htm" target="_blank" rel="noopener">Texto vigente</a></li>
+        <li><strong>Decreto 206/2017</strong> — Reglamentario de la Ley 27.275.</li>
+        <li><strong>Constitución Nacional</strong>, arts. 1, 38, 41, 42, 43.</li>
+        <li><strong>Pacto de San José de Costa Rica</strong>, art. 13 (libertad de pensamiento y expresión).</li>
+        <li><strong>Agencia de Acceso a la Información Pública (AAIP)</strong>. <a href="https://www.argentina.gob.ar/aaip" target="_blank" rel="noopener">argentina.gob.ar/aaip</a></li>
+        <li><strong>Portal de Datos Abiertos del Estado</strong>. <a href="https://www.datos.gob.ar" target="_blank" rel="noopener">datos.gob.ar</a></li>
+        <li><strong>Defensoría del Pueblo de la Nación</strong>. <a href="https://www.dpn.gob.ar" target="_blank" rel="noopener">dpn.gob.ar</a></li>
+        <li><strong>Boletín Oficial de la República Argentina</strong>. <a href="https://www.boletinoficial.gob.ar" target="_blank" rel="noopener">boletinoficial.gob.ar</a></li>
+      </ul>
+      <p style="font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; color: var(--tinta-soft); margin-top: 1.5rem; padding-top: 1rem; border-top: 1px solid var(--linea); line-height: 1.6;">
+        Esta página es un material educativo. Las normas pueden ser modificadas por leyes posteriores. Para casos concretos consultá con un abogado o con las defensorías oficiales. Última revisión: mayo de 2026.
+      </p>
+    </section>
+
+  </main>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div>
+      <h3>Educación Cívica</h3>
+      <p>Una guía visual y educativa sobre el Estado argentino, sus poderes, las provincias, el sistema electoral, los derechos del ciudadano y la historia institucional.</p>
+    </div>
+    <div>
+      <h3>Secciones</h3>
+      <a href="poderes.html">Los poderes</a>
+      <a href="provincias.html">Provincias</a>
+      <a href="index.html#sistema-electoral">Elecciones</a>
+      <a href="index.html#derechos">Derechos</a>
+      <a href="historia.html">Historia</a>
+    </div>
+    <div>
+      <h3>El proyecto</h3>
+      <a href="#">Sobre nosotros</a>
+      <a href="#">Manifiesto editorial</a>
+      <a href="#">Suscribirse</a>
+      <a href="#">Contacto</a>
+    </div>
+    <div class="footer-meta">
+      educacioncivica.com.ar · v0.3 prototipo · Educación cívica con datos · Sin grieta · Datos institucionales actualizados a mayo de 2026
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
