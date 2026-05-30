@@ -6,12 +6,12 @@
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Crect width=%22100%22 height=%22100%22 fill=%22%23FBF7F0%22/%3E%3Ccircle cx=%2250%22 cy=%2250%22 r=%2230%22 fill=%22%23F6B40E%22/%3E%3C/svg%3E">
 <title>Educación Cívica — Entendé el Estado argentino con datos</title>
 <meta name="google-site-verification" content="t4xlSmdvdLl4hRi3YsrjdNA4BDIbPuu4llnYsSypVdo" />
-<meta name="description" content="Educación cívica argentina con datos. Conocé los poderes del Estado, las 24 provincias, el sistema electoral, tus derechos y la historia institucional del país.">
+<meta name="description" content="Educación cívica argentina con datos. Conocé los poderes del Estado, las 24 provincias, el sistema electoral, tus derechos, la historia institucional y un estudio profundo de CABA.">
 <link rel="canonical" href="https://educacioncivica.com.ar/">
 
 <!-- Open Graph -->
 <meta property="og:title" content="Educación Cívica · Guía del Estado argentino con datos">
-<meta property="og:description" content="Educación cívica argentina con datos. Conocé los poderes del Estado, las 24 provincias, el sistema electoral, tus derechos y la historia institucional del país.">
+<meta property="og:description" content="Educación cívica argentina con datos. Poderes, provincias, sistema electoral, derechos, historia y estudio profundo de CABA. Sin grieta, con datos abiertos.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://educacioncivica.com.ar/">
 <meta property="og:site_name" content="Educación Cívica">
@@ -20,7 +20,7 @@
 <!-- Twitter Card -->
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Educación Cívica · Guía del Estado argentino con datos">
-<meta name="twitter:description" content="Educación cívica argentina con datos. Conocé los poderes del Estado, las 24 provincias, el sistema electoral, tus derechos y la historia institucional del país.">
+<meta name="twitter:description" content="Educación cívica argentina con datos. Poderes, provincias, sistema electoral, derechos, historia y estudio profundo de CABA. Sin grieta, con datos abiertos.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,800&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&family=Inter+Tight:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -707,6 +707,158 @@
     font-family: 'JetBrains Mono', monospace;
   }
 
+  /* ========== ESTUDIOS EN PROFUNDIDAD (CAP 09) ========== */
+  .estudios {
+    background: #6B4F8C;
+    color: var(--crema);
+    margin: 5rem -2rem 0;
+    padding: 5rem 2rem;
+    position: relative;
+    overflow: hidden;
+  }
+  .estudios::before {
+    content: '';
+    position: absolute;
+    top: 0; left: -100px;
+    width: 400px; height: 400px;
+    background: radial-gradient(circle, rgba(246,180,14,0.18), transparent 70%);
+    pointer-events: none;
+  }
+  .estudios::after {
+    content: '';
+    position: absolute;
+    bottom: 0; right: -100px;
+    width: 350px; height: 350px;
+    background: radial-gradient(circle, rgba(116,172,223,0.15), transparent 70%);
+    pointer-events: none;
+  }
+  .estudios-inner {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    position: relative;
+  }
+  .estudios .section-head { border-color: rgba(255,255,255,0.15); }
+  .estudios .section-eyebrow { color: var(--sol); }
+  .estudios .section-title { color: var(--crema); }
+  .estudios .section-title em { color: var(--sol); font-style: italic; }
+  .estudios-intro {
+    font-size: 1.1rem;
+    max-width: 720px;
+    color: rgba(251, 247, 240, 0.88);
+    margin-bottom: 3rem;
+    line-height: 1.65;
+  }
+  .estudios-intro strong { color: var(--sol); font-weight: 500; }
+  .estudios-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+  }
+  .estudio-card {
+    background: rgba(251, 247, 240, 0.06);
+    border: 1px solid rgba(251, 247, 240, 0.15);
+    padding: 2.5rem;
+    text-decoration: none;
+    color: inherit;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    gap: 2rem;
+    align-items: center;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(8px);
+  }
+  .estudio-card:hover {
+    background: rgba(251, 247, 240, 0.1);
+    border-color: var(--sol);
+    transform: translateY(-2px);
+  }
+  .estudio-card-num {
+    font-family: 'Fraunces', serif;
+    font-size: 3rem;
+    font-weight: 300;
+    color: var(--sol);
+    line-height: 1;
+    min-width: 80px;
+  }
+  .estudio-card-content { flex: 1; }
+  .estudio-card-eyebrow {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.7rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--sol);
+    margin-bottom: 0.6rem;
+  }
+  .estudio-card-titulo {
+    font-family: 'Fraunces', serif;
+    font-size: 1.7rem;
+    font-weight: 400;
+    color: var(--crema);
+    margin-bottom: 0.7rem;
+    line-height: 1.15;
+  }
+  .estudio-card-titulo em { color: var(--sol); font-style: italic; }
+  .estudio-card-desc {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: rgba(251, 247, 240, 0.78);
+    margin-bottom: 1rem;
+  }
+  .estudio-card-meta {
+    display: flex;
+    gap: 1.2rem;
+    flex-wrap: wrap;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.7rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: rgba(251, 247, 240, 0.6);
+  }
+  .estudio-card-meta span::before {
+    content: '◆';
+    margin-right: 0.4rem;
+    color: var(--sol);
+  }
+  .estudio-card-arrow {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.85rem;
+    color: var(--sol);
+    letter-spacing: 0.05em;
+    white-space: nowrap;
+    align-self: end;
+  }
+  .estudios-roadmap {
+    background: rgba(251, 247, 240, 0.04);
+    border: 1px dashed rgba(251, 247, 240, 0.2);
+    padding: 2rem;
+    margin-top: 1.5rem;
+  }
+  .estudios-roadmap-titulo {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.72rem;
+    letter-spacing: 0.18em;
+    color: var(--sol);
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+  }
+  .estudios-roadmap p {
+    font-size: 0.92rem;
+    line-height: 1.65;
+    color: rgba(251, 247, 240, 0.78);
+    max-width: 720px;
+  }
+  @media (max-width: 800px) {
+    .estudio-card {
+      grid-template-columns: 1fr;
+      gap: 1rem;
+      padding: 2rem;
+    }
+    .estudio-card-num { font-size: 2.5rem; }
+    .estudio-card-arrow { align-self: start; }
+  }
+
   /* ========== PROVINCIAS ========== */
   .provincias-strip {
     background: var(--celeste-soft);
@@ -987,6 +1139,7 @@
       <li><a href="#sistema-electoral">Elecciones</a></li>
       <li><a href="#derechos">Derechos</a></li>
       <li><a href="historia.html">Historia</a></li>
+      <li><a href="caba-en-profundidad.html">CABA</a></li>
       <li><a href="#aprender">Aula</a></li>
     </ul>
     <a href="#" class="nav-cta">Suscribirse</a>
@@ -1422,6 +1575,46 @@
   </div>
 </section>
 
+<!-- CAPÍTULO 09: ESTUDIOS EN PROFUNDIDAD -->
+<section id="estudios" style="padding: 0; max-width: none;">
+  <div class="estudios">
+    <div class="estudios-inner">
+      <div class="section-head">
+        <div>
+          <div class="premium-badge">★ Acceso premium</div>
+          <div class="section-eyebrow">Capítulo 09 · Estudios en profundidad</div>
+          <h2 class="section-title">Análisis especializado de <em>casos institucionales</em></h2>
+        </div>
+      </div>
+      <p class="estudios-intro">Una nueva línea de contenido del sitio. Cada estudio toma un tema institucional argentino concreto —una jurisdicción, un período, una temática— y lo desarrolla con la <strong>densidad jurídica, las citas a fuentes oficiales y las referencias que merece</strong>. Sin nombres propios, sin grieta, con foco institucional. Acceso libre durante el período de prueba.</p>
+
+      <div class="estudios-grid">
+
+        <a href="caba-en-profundidad.html" class="estudio-card">
+          <div class="estudio-card-num">01</div>
+          <div class="estudio-card-content">
+            <div class="estudio-card-eyebrow">Estudio disponible</div>
+            <h3 class="estudio-card-titulo">Ciudad Autónoma de <em>Buenos Aires</em></h3>
+            <p class="estudio-card-desc">El caso institucional más complejo del federalismo argentino. Historia, los tres poderes porteños, las 15 comunas, sistema fiscal y coparticipación, y los pendientes de la autonomía.</p>
+            <div class="estudio-card-meta">
+              <span>5 capítulos</span>
+              <span>~228 KB</span>
+              <span>Mayo 2026</span>
+            </div>
+          </div>
+          <div class="estudio-card-arrow">Leer estudio →</div>
+        </a>
+
+      </div>
+
+      <div class="estudios-roadmap">
+        <div class="estudios-roadmap-titulo">— Próximos estudios en desarrollo</div>
+        <p>El formato es replicable. Próximamente sumaremos estudios en profundidad sobre otras jurisdicciones, instituciones y períodos históricos argentinos. Si querés sugerir un tema, escribinos.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- DISCLAIMER LEGAL -->
 <section style="padding: 0; max-width: none;">
   <div class="disclaimer">
@@ -1495,7 +1688,8 @@
         <li><a href="poderes.html">Los poderes</a></li>
         <li><a href="historia.html">Historia</a></li>
         <li><a href="provincias.html">Provincias</a></li>
-        <li><a href="#">Aula</a></li>
+        <li><a href="caba-en-profundidad.html">CABA en profundidad</a></li>
+        <li><a href="#aprender">Aula</a></li>
       </ul>
     </div>
     <div class="footer-col">
