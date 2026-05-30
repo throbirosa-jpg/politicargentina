@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Crect width=%22100%22 height=%22100%22 fill=%22%23FBF7F0%22/%3E%3Ccircle cx=%2250%22 cy=%2250%22 r=%2230%22 fill=%22%23F6B40E%22/%3E%3C/svg%3E">
+<title>Historia institucional de CABA — Educación Cívica</title>
+<meta name="description" content="Historia institucional de Buenos Aires: de la fundación de 1580 a la autonomía de 1994. Federalización, Ley 1029, reforma constitucional, Ley Cafiero, Constitución porteña.">
+<link rel="canonical" href="https://educacioncivica.com.ar/caba-historia.html">
+<meta property="og:title" content="Historia institucional de CABA · Educación Cívica">
+<meta property="og:description" content="De la fundación de 1580 a la autonomía constitucional de 1994. Recorrido histórico-jurídico de la Ciudad de Buenos Aires.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://educacioncivica.com.ar/caba-historia.html">
+<meta property="og:site_name" content="Educación Cívica">
+<meta property="og:locale" content="es_AR">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Historia institucional de CABA · Educación Cívica">
+<meta name="twitter:description" content="De la fundación de 1580 a la autonomía constitucional de 1994. Recorrido histórico-jurídico de la Ciudad de Buenos Aires.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,400;0,500;0,600;1,400&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --crema: #FBF7F0; --crema-warm: #F4ECDB; --tinta: #1A1A2E; --tinta-soft: #545465;
+    --celeste: #74ACDF; --celeste-soft: #E4F0FA; --celeste-dark: #3D7BB0;
+    --sol: #F6B40E; --sol-soft: #FBE5AA; --sol-dark: #C8941A;
+    --rojo-fed: #B8341B; --rojo-soft: #F2D5CE;
+    --verde-ok: #4A7C59; --verde-soft: #DAEAE0;
+    --premium: #6B4F8C; --premium-soft: #E8DFF0; --premium-dark: #4A3661;
+    --linea: #DDD7CB; --linea-soft: #ECE6DA;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Fraunces', Georgia, serif; background: var(--crema); color: var(--tinta); line-height: 1.6; }
+  nav { background: white; border-bottom: 1px solid var(--linea); padding: 1.2rem 2rem; position: sticky; top: 0; z-index: 100; }
+  .nav-inner { max-width: 1400px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
+  .logo { display: flex; align-items: center; gap: 0.5rem; font-family: 'Fraunces', serif; font-weight: 500; font-size: 1.1rem; color: var(--tinta); text-decoration: none; }
+  .logo-dot { width: 12px; height: 12px; background: var(--sol); border-radius: 50%; }
+  .breadcrumb { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.1em; color: var(--tinta-soft); }
+  .breadcrumb a { color: var(--tinta-soft); text-decoration: none; }
+  .breadcrumb a:hover { color: var(--tinta); }
+  .premium-banner { background: var(--premium); color: white; padding: 0.6rem 2rem; font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase; text-align: center; }
+  .premium-banner strong { color: var(--sol); }
+  .page-header { background: linear-gradient(180deg, var(--premium-soft) 0%, var(--crema) 100%); padding: 4rem 2rem 3rem; border-bottom: 1px solid var(--linea); }
+  .page-header-inner { max-width: 900px; margin: 0 auto; }
+  .page-eyebrow { display: inline-block; font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--premium-dark); background: white; padding: 0.5rem 1rem; border: 1px solid var(--premium); margin-bottom: 1.5rem; }
+  .page-title { font-family: 'Fraunces', serif; font-weight: 300; font-size: clamp(2.2rem, 5vw, 3.6rem); line-height: 1.05; margin-bottom: 1.5rem; color: var(--tinta); }
+  .page-title em { font-style: italic; color: var(--premium-dark); font-weight: 400; }
+  .page-intro { font-size: 1.15rem; line-height: 1.7; color: var(--tinta); max-width: 720px; }
+  .layout { max-width: 1400px; margin: 0 auto; padding: 3rem 2rem; display: grid; grid-template-columns: 220px 1fr; gap: 4rem; align-items: start; }
+  .toc { position: sticky; top: 90px; font-family: 'JetBrains Mono', monospace; font-size: 0.78rem; }
+  .toc-titulo { font-size: 0.65rem; letter-spacing: 0.18em; color: var(--tinta-soft); text-transform: uppercase; margin-bottom: 1rem; padding-bottom: 0.8rem; border-bottom: 1px solid var(--linea); }
+  .toc ul { list-style: none; }
+  .toc li { margin-bottom: 0.6rem; line-height: 1.4; }
+  .toc a { color: var(--tinta-soft); text-decoration: none; border-left: 2px solid var(--linea); padding-left: 0.8rem; display: block; transition: all 0.18s ease; }
+  .toc a:hover { color: var(--tinta); border-left-color: var(--premium); }
+  .toc-num { color: var(--premium-dark); font-weight: 500; }
+  .contenido { max-width: 720px; }
+  .seccion { margin-bottom: 3.5rem; padding-bottom: 3rem; border-bottom: 1px solid var(--linea); }
+  .seccion:last-of-type { border-bottom: none; }
+  .seccion-eyebrow { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.18em; color: var(--premium-dark); text-transform: uppercase; margin-bottom: 0.6rem; }
+  .seccion-year { font-family: 'Fraunces', serif; font-size: 2.5rem; font-weight: 300; color: var(--premium); line-height: 1; margin-bottom: 0.5rem; }
+  .seccion h2 { font-family: 'Fraunces', serif; font-weight: 400; font-size: 1.9rem; line-height: 1.15; color: var(--tinta); margin-bottom: 1.5rem; }
+  .seccion h2 em { font-style: italic; color: var(--premium-dark); }
+  .seccion h3 { font-family: 'Fraunces', serif; font-weight: 500; font-size: 1.2rem; color: var(--tinta); margin-top: 2rem; margin-bottom: 0.8rem; }
+  .seccion p { margin-bottom: 1rem; font-size: 1rem; line-height: 1.75; color: var(--tinta); }
+  .seccion p strong { font-weight: 600; color: var(--tinta); }
+  .seccion ul { margin: 1rem 0 1.5rem 0; padding-left: 0; list-style: none; }
+  .seccion ul li { padding-left: 1.5rem; margin-bottom: 0.6rem; line-height: 1.6; position: relative; }
+  .seccion ul li::before { content: '→'; position: absolute; left: 0; color: var(--premium); font-weight: 600; }
+  .ficha-norma { background: white; border: 1px solid var(--linea); border-left: 4px solid var(--premium); padding: 1.5rem 1.8rem; margin-bottom: 1.5rem; }
+  .ficha-norma-row { display: flex; padding: 0.5rem 0; border-bottom: 1px dotted var(--linea); font-size: 0.9rem; }
+  .ficha-norma-row:last-child { border-bottom: none; }
+  .ficha-norma-row .label { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--tinta-soft); min-width: 130px; }
+  .ficha-norma-row .valor { flex: 1; color: var(--tinta); }
+  .destacado { background: white; border-left: 4px solid var(--celeste); padding: 1.5rem 1.8rem; margin: 1.5rem 0; font-size: 0.95rem; line-height: 1.6; }
+  .destacado-titulo { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.15em; color: var(--celeste-dark); text-transform: uppercase; margin-bottom: 0.6rem; }
+  .destacado.atencion { background: var(--sol-soft); border-left-color: var(--sol-dark); }
+  .destacado.atencion .destacado-titulo { color: var(--sol-dark); }
+  .destacado.historico { background: var(--rojo-soft); border-left-color: var(--rojo-fed); }
+  .destacado.historico .destacado-titulo { color: var(--rojo-fed); }
+  .destacado.premium { background: var(--premium-soft); border-left-color: var(--premium); }
+  .destacado.premium .destacado-titulo { color: var(--premium-dark); }
+  .cita-articulo { background: white; border: 1px solid var(--linea); padding: 1.5rem 1.8rem; margin: 1.5rem 0; font-family: 'Fraunces', serif; font-style: italic; font-size: 1.02rem; line-height: 1.7; color: var(--tinta); border-left: 4px solid var(--sol-dark); position: relative; }
+  .cita-articulo::before { content: '"'; position: absolute; top: -0.5rem; left: 1.2rem; font-size: 3rem; color: var(--sol); font-family: serif; line-height: 1; }
+  .cita-articulo-ref { font-family: 'JetBrains Mono', monospace; font-style: normal; font-size: 0.7rem; letter-spacing: 0.12em; color: var(--tinta-soft); text-transform: uppercase; margin-top: 0.8rem; }
+  .cita-legal { font-family: 'JetBrains Mono', monospace; font-size: 0.75rem; color: var(--tinta-soft); background: var(--linea-soft); padding: 0.8rem 1rem; margin: 1rem 0; line-height: 1.5; border-left: 3px solid var(--tinta-soft); }
+  .tabla-datos { width: 100%; margin: 1.5rem 0; border-collapse: collapse; font-size: 0.88rem; }
+  .tabla-datos th { text-align: left; padding: 0.7rem 0.8rem; background: var(--premium-soft); border-bottom: 2px solid var(--premium); font-family: 'JetBrains Mono', monospace; font-size: 0.65rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--tinta); font-weight: 600; }
+  .tabla-datos td { padding: 0.7rem 0.8rem; border-bottom: 1px dotted var(--linea); vertical-align: top; }
+  .tabla-datos tr:last-child td { border-bottom: none; }
+  .tabla-datos td:first-child { font-weight: 500; color: var(--tinta); font-family: 'JetBrains Mono', monospace; font-size: 0.78rem; }
+  .fuentes { margin-top: 4rem; padding-top: 2.5rem; border-top: 2px solid var(--linea); }
+  .fuentes h3 { font-family: 'JetBrains Mono', monospace; font-size: 0.75rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--tinta-soft); margin-bottom: 1.5rem; border: none; padding: 0; }
+  .fuentes ul { list-style: none; padding: 0; }
+  .fuentes li { padding: 0.6rem 0; border-bottom: 1px dotted var(--linea); font-size: 0.88rem; padding-left: 0; }
+  .fuentes li::before { content: none; }
+  .fuentes a { color: var(--premium-dark); text-decoration: none; border-bottom: 1px dotted var(--premium-dark); }
+  .fuentes a:hover { color: var(--tinta); }
+  footer { background: var(--tinta); color: var(--crema); padding: 3rem 2rem; margin-top: 4rem; }
+  .footer-inner { max-width: 1400px; margin: 0 auto; display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 3rem; }
+  footer h3 { font-family: 'Fraunces', serif; font-weight: 400; font-size: 1.3rem; margin-bottom: 1rem; color: var(--crema); }
+  footer p, footer a { color: var(--crema); opacity: 0.85; font-size: 0.9rem; line-height: 1.6; }
+  footer a { text-decoration: none; display: block; padding: 0.3rem 0; }
+  footer a:hover { opacity: 1; color: var(--sol); }
+  .footer-meta { grid-column: 1 / -1; margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid rgba(251, 247, 240, 0.15); font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; opacity: 0.6; letter-spacing: 0.05em; }
+  @media (max-width: 900px) {
+    .layout { grid-template-columns: 1fr; gap: 2rem; }
+    .toc { position: relative; top: 0; padding: 1.5rem; background: white; border: 1px solid var(--linea); }
+    .footer-inner { grid-template-columns: 1fr; gap: 2rem; }
+    .ficha-norma-row { flex-direction: column; gap: 0.3rem; }
+    .ficha-norma-row .label { min-width: auto; }
+  }
+</style>
+</head>
+<body>
+
+<div class="premium-banner">— Capítulo premium · <strong>Acceso libre durante el período de prueba</strong></div>
+
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="logo"><span class="logo-dot"></span>Educación Cívica</a>
+    <div class="breadcrumb"><a href="index.html">Inicio</a> · <a href="caba-en-profundidad.html">CABA en profundidad</a> · <span>Historia institucional</span></div>
+  </div>
+</nav>
+
+<header class="page-header">
+  <div class="page-header-inner">
+    <div class="page-eyebrow">Capítulo 09.01 · Estudios en profundidad</div>
+    <h1 class="page-title">Historia <em>institucional</em> de CABA</h1>
+    <p class="page-intro">De la fundación colonial de 1580 a la autonomía constitucional de 1994. Más de cuatro siglos en los que Buenos Aires fue pueblo de frontera, capital virreinal, plaza disputada, sede de gobierno provisorio, municipalidad federal y, finalmente, ciudad-estado autónoma. Un recorrido jurídico-institucional con sus normas, sus fechas y sus debates.</p>
+  </div>
+</header>
+
+<div class="layout">
+
+  <aside class="toc">
+    <div class="toc-titulo">— En esta página</div>
+    <ul>
+      <li><a href="#colonia"><span class="toc-num">01</span> 1580 · Pueblo colonial</a></li>
+      <li><a href="#cuestion-capital"><span class="toc-num">02</span> 1853-1880 · La cuestión capital</a></li>
+      <li><a href="#federalizacion"><span class="toc-num">03</span> 1880 · Federalización</a></li>
+      <li><a href="#municipalidad"><span class="toc-num">04</span> 1880-1994 · Municipalidad federal</a></li>
+      <li><a href="#reforma-1994"><span class="toc-num">05</span> 1994 · Reforma y Art. 129</a></li>
+      <li><a href="#ley-cafiero"><span class="toc-num">06</span> 1995 · Ley Cafiero</a></li>
+      <li><a href="#constitucion-1996"><span class="toc-num">07</span> 1996 · Constitución porteña</a></li>
+      <li><a href="#consolidacion"><span class="toc-num">08</span> 1996-presente · Consolidación</a></li>
+    </ul>
+  </aside>
+
+  <main class="contenido">
+
+    <section class="seccion" id="colonia">
+      <div class="seccion-eyebrow">— 01 / Antecedentes coloniales</div>
+      <div class="seccion-year">1580</div>
+      <h2>De la <em>fundación</em> al Virreinato</h2>
+
+      <p>La ciudad de Buenos Aires tiene una historia institucional anterior a la Argentina misma. Fue fundada dos veces. La primera, por Pedro de Mendoza en 1536 como "Puerto de Nuestra Señora de Santa María del Buen Ayre". Ese asentamiento fue abandonado en 1541 por la presión de los pueblos originarios y la falta de provisiones. La segunda fundación, la que perduró, fue obra de Juan de Garay el <strong>11 de junio de 1580</strong>, con el nombre de "Ciudad de la Trinidad y Puerto de Santa María de los Buenos Aires".</p>
+
+      <p>Durante casi dos siglos, Buenos Aires fue una pequeña ciudad-puerto de frontera dentro del Virreinato del Perú, sin demasiada relevancia política. Su status institucional cambió radicalmente con la creación del <strong>Virreinato del Río de la Plata en 1776</strong>, cuando pasó a ser capital virreinal y sede de las autoridades coloniales españolas en todo el Cono Sur.</p>
+
+      <h3>Tras la Revolución de Mayo</h3>
+      <p>Con la Revolución de Mayo de 1810 y la independencia de 1816, Buenos Aires mantuvo de hecho un rol central en la organización del nuevo Estado, pero su status formal fue ambiguo durante décadas. Fue sede del Directorio (1814-1820), capital provisoria de las Provincias Unidas del Río de la Plata, y centro de las disputas entre unitarios y federales que marcaron el siglo XIX argentino.</p>
+
+      <div class="destacado historico">
+        <div class="destacado-titulo">La Ley de Capital de 1826</div>
+        <p>Durante la presidencia de Bernardino Rivadavia, el Congreso General Constituyente sancionó el <strong>4 de marzo de 1826</strong> una "Ley de Capital" que declaraba a la ciudad de Buenos Aires capital del Estado y la sujetaba a la jurisdicción exclusiva del Presidente y del Congreso. La medida fue resistida por los federales porteños y desencadenó tal crisis política que terminó con la renuncia de Rivadavia en 1827 y la derogación de la ley. La cuestión capital quedaba pendiente y se mantendría sin resolución por más de medio siglo.</p>
+      </div>
+    </section>
+
+    <section class="seccion" id="cuestion-capital">
+      <div class="seccion-eyebrow">— 02 / Cuestión capital</div>
+      <div class="seccion-year">1853–1880</div>
+      <h2>Veintisiete años de <em>cuestión capital</em></h2>
+
+      <p>La Constitución de 1853, en su artículo 3° original, designó a Buenos Aires como capital de la Confederación Argentina. Pero la provincia de Buenos Aires no había firmado esa Constitución: se había separado de la Confederación en 1852 tras la batalla de Caseros. La discusión sobre la capital del país pasó a ser uno de los grandes conflictos institucionales argentinos del siglo XIX, conocido como "la cuestión capital".</p>
+
+      <h3>Las soluciones provisorias</h3>
+      <p>Durante esos años, las soluciones fueron transitorias y conflictivas:</p>
+
+      <ul>
+        <li><strong>1853-1862:</strong> La Confederación tuvo su sede en Paraná (provincia de Entre Ríos), mientras Buenos Aires funcionaba como Estado separado con sus propias autoridades.</li>
+        <li><strong>1860:</strong> La reforma constitucional, producto del Pacto de San José de Flores, modificó el Art. 3°. La capital ya no quedaba fijada por la Constitución: debía ser "el lugar que se determine por una ley especial del Congreso, previa cesión hecha por una o más legislaturas provinciales del territorio que haya de federalizarse". Buenos Aires se incorporaba a la Confederación.</li>
+        <li><strong>1862:</strong> Después de la batalla de Pavón, se sancionó la <strong>Ley 12 (Ley de Compromiso)</strong>, que designó a Buenos Aires como sede provisoria del gobierno nacional por cinco años, mientras se buscaba una solución definitiva.</li>
+        <li><strong>1863-1880:</strong> Las autoridades federales residieron en Buenos Aires sin tener jurisdicción administrativa sobre el territorio. Convivían en la misma ciudad el gobierno nacional y el gobierno provincial bonaerense, una situación que generó tensiones constantes y enfrentamientos armados.</li>
+      </ul>
+
+      <p>Profundizamos sobre las reformas constitucionales del siglo XIX en nuestra <a href="reformas-constitucionales.html" style="color: var(--premium-dark);">página dedicada a las siete reformas constitucionales argentinas</a>.</p>
+    </section>
+
+    <section class="seccion" id="federalizacion">
+      <div class="seccion-eyebrow">— 03 / Federalización</div>
+      <div class="seccion-year">1880</div>
+      <h2>La <em>federalización</em>: Ley 1.029</h2>
+
+      <p>El conflicto se resolvió por la fuerza. En las elecciones de 1880 triunfó Julio Argentino Roca, candidato del interior, contra la oposición del gobernador bonaerense Carlos Tejedor. Tejedor no aceptó el resultado y movilizó milicias provinciales, desencadenando una guerra civil corta pero violenta. Las tropas nacionales derrotaron a las porteñas en las batallas de Olivera y Puente Alsina (junio de 1880).</p>
+
+      <p>Con la situación militar resuelta, el presidente saliente Nicolás Avellaneda envió el <strong>24 de agosto de 1880</strong> un proyecto de ley al Congreso (reunido provisoriamente en Belgrano, fuera de la ciudad por seguridad) para declarar a Buenos Aires capital de la República.</p>
+
+      <div class="ficha-norma">
+        <div class="ficha-norma-row"><div class="label">Norma</div><div class="valor">Ley Nº 1.029</div></div>
+        <div class="ficha-norma-row"><div class="label">Sanción</div><div class="valor">21 de septiembre de 1880</div></div>
+        <div class="ficha-norma-row"><div class="label">Promulgación</div><div class="valor">6 de diciembre de 1880</div></div>
+        <div class="ficha-norma-row"><div class="label">Sede del Congreso</div><div class="valor">Municipalidad de Belgrano (actual Museo Histórico Sarmiento)</div></div>
+        <div class="ficha-norma-row"><div class="label">Aceptación provincial</div><div class="valor">Ley provincial de cesión, 26 de noviembre de 1880</div></div>
+      </div>
+
+      <div class="cita-articulo">
+        Declárase Capital de la República, el Municipio de la Ciudad de Buenos Aires, bajo sus límites actuales.
+        <div class="cita-articulo-ref">— Artículo 1° de la Ley 1.029 (1880)</div>
+      </div>
+
+      <h3>Lo que estableció la Ley 1.029</h3>
+      <ul>
+        <li><strong>Federalización del territorio:</strong> el municipio porteño quedó bajo jurisdicción exclusiva del gobierno nacional.</li>
+        <li><strong>Edificios públicos:</strong> todos los establecimientos públicos del municipio pasaron a depender de la Nación, salvo conservación de carácter municipal en algunos casos.</li>
+        <li><strong>Bancos:</strong> el Banco de la Provincia, el Hipotecario y el Monte de Piedad permanecieron bajo dirección y propiedad de la provincia de Buenos Aires.</li>
+        <li><strong>Ferrocarriles y telégrafos:</strong> la provincia mantuvo la administración y propiedad de los suyos, aunque arrancaran en territorio del municipio.</li>
+        <li><strong>Garantía a empleados:</strong> la Nación se hizo cargo de los empleados públicos provinciales que pasaban a su jurisdicción.</li>
+      </ul>
+
+      <h3>Consecuencias institucionales</h3>
+      <p>La provincia de Buenos Aires perdió su capital histórica y debió fundar una nueva: la ciudad de <strong>La Plata</strong>, inaugurada el 19 de noviembre de 1882. Buenos Aires pasó a ser un territorio especial, federalizado, regido directamente por las autoridades nacionales. <strong>Su intendente municipal era designado por el Presidente de la Nación con acuerdo del Senado</strong>, no electo por la población local. Esta situación se mantendría durante <strong>114 años</strong>, hasta 1994.</p>
+
+      <div class="destacado">
+        <div class="destacado-titulo">Los límites territoriales actuales</div>
+        <p>Los límites territoriales de CABA siguen siendo los establecidos a fines del siglo XIX. En 1887 se incorporaron a la Capital los pueblos de Belgrano y Flores, ampliando significativamente su superficie hasta los 203 km² actuales. La Constitución porteña de 1996 (Art. 8°) reafirma como límites territoriales los que "históricamente y por derecho le corresponden", y declara a la Ciudad corribereña del Río de la Plata y del Riachuelo.</p>
+      </div>
+    </section>
+
+    <section class="seccion" id="municipalidad">
+      <div class="seccion-eyebrow">— 04 / Municipalidad federal</div>
+      <div class="seccion-year">1880–1994</div>
+      <h2>114 años como <em>municipalidad</em> bajo jurisdicción federal</h2>
+
+      <p>Durante más de un siglo, Buenos Aires funcionó bajo un régimen jurídico peculiar: era simultáneamente sede del gobierno federal y un territorio sin autoridades locales electas. Las normas básicas que regularon ese período fueron varias, con la <strong>Ley Orgánica Municipal Nº 19.987</strong> (de 1972) como la más relevante en las últimas décadas previas a la autonomía.</p>
+
+      <h3>El régimen institucional pre-autonómico</h3>
+      <p>El esquema funcionaba así:</p>
+
+      <ul>
+        <li><strong>Intendente Municipal:</strong> designado por el Presidente de la Nación con acuerdo del Senado. Era removible por el propio Presidente.</li>
+        <li><strong>Concejo Deliberante:</strong> órgano colegiado con concejales electos por la población. Fue creado por primera vez en 1885 y eliminado durante varios períodos de gobiernos de facto. Tenía facultades de control y de sanción de ordenanzas pero no era un órgano legislativo pleno.</li>
+        <li><strong>Justicia local:</strong> los temas judiciales se tramitaban ante la Justicia Nacional ordinaria (fueros Civil, Comercial, Penal, etc.), con jueces designados por el Presidente con acuerdo del Senado.</li>
+        <li><strong>Policía:</strong> a cargo de la Policía Federal Argentina, dependiente del gobierno nacional.</li>
+        <li><strong>Representación legislativa:</strong> hasta 1994, la ciudad enviaba diputados nacionales (en proporción a su población) pero no senadores nacionales propios.</li>
+      </ul>
+
+      <h3>Los intentos previos de autonomía</h3>
+      <p>A lo largo del siglo XX hubo varios proyectos para dar autonomía a la ciudad. En 1958, durante el gobierno de Frondizi, se presentó un proyecto que no prosperó. En 1986 se creó por decreto el cargo de Intendente "electo" para una elección simbólica, aunque la designación formal seguía requiriendo acuerdo del Senado. Recién la reforma constitucional de 1994 daría una solución definitiva.</p>
+
+      <div class="cita-legal">
+        Para profundizar en el régimen de la Municipalidad de Buenos Aires antes de 1994, consultar Ley Nº 19.987 (Ley Orgánica Municipal) y sus modificatorias, vigente hasta la sanción de la Constitución porteña de 1996.
+      </div>
+    </section>
+
+    <section class="seccion" id="reforma-1994">
+      <div class="seccion-eyebrow">— 05 / Reforma constitucional</div>
+      <div class="seccion-year">1994</div>
+      <h2>El nuevo <em>Artículo 129</em></h2>
+
+      <p>La reforma constitucional de 1994, fruto del Pacto de Olivos (1993) entre el Partido Justicialista y la Unión Cívica Radical, incluyó la transformación institucional de Buenos Aires entre los temas habilitados por la Ley 24.309 (declaración de necesidad de la reforma). El resultado fue uno de los cambios institucionales más profundos del siglo: el nuevo Artículo 129.</p>
+
+      <div class="ficha-norma">
+        <div class="ficha-norma-row"><div class="label">Norma</div><div class="valor">Constitución Nacional, Art. 129 (reforma de 1994)</div></div>
+        <div class="ficha-norma-row"><div class="label">Sanción</div><div class="valor">22 de agosto de 1994</div></div>
+        <div class="ficha-norma-row"><div class="label">Sede</div><div class="valor">Santa Fe y Paraná</div></div>
+        <div class="ficha-norma-row"><div class="label">Ley habilitante</div><div class="valor">Ley 24.309 (29 de diciembre de 1993)</div></div>
+      </div>
+
+      <div class="cita-articulo">
+        La ciudad de Buenos Aires tendrá un régimen de gobierno autónomo, con facultades propias de legislación y jurisdicción, y su jefe de gobierno será elegido directamente por el pueblo de la ciudad. Una ley garantizará los intereses del Estado nacional, mientras la ciudad de Buenos Aires sea capital de la Nación. En el marco de lo dispuesto en este artículo, el Congreso de la Nación convocará a los habitantes de la ciudad de Buenos Aires para que, mediante los representantes que elijan a ese efecto, dicten el estatuto organizativo de sus instituciones.
+        <div class="cita-articulo-ref">— Artículo 129 de la Constitución Nacional (texto vigente)</div>
+      </div>
+
+      <h3>Lo que cambió con el Art. 129</h3>
+      <ul>
+        <li><strong>Autonomía constitucional:</strong> la ciudad dejó de ser una municipalidad bajo jurisdicción federal para convertirse en una jurisdicción autónoma, con facultades propias de legislación y de administración de justicia.</li>
+        <li><strong>Jefe de Gobierno electo:</strong> ya no sería designado por el Presidente sino elegido directamente por los habitantes de la ciudad.</li>
+        <li><strong>Constitución propia:</strong> habilitación expresa para que la ciudad dicte su propio "estatuto organizativo" (que terminó siendo, en los hechos, una Constitución).</li>
+        <li><strong>Senadores propios:</strong> a partir de 1995, CABA pasó a tener 3 senadores nacionales como cualquier provincia, en lugar de no tener representación senatorial.</li>
+        <li><strong>Ley de garantías:</strong> el propio Art. 129 previó que una ley nacional debía "garantizar los intereses del Estado nacional" mientras la ciudad siguiera siendo Capital Federal. Esa ley sería la Ley 24.588 (Cafiero).</li>
+      </ul>
+
+      <h3>El debate sobre la naturaleza jurídica</h3>
+      <p>El Art. 129 generó (y sigue generando) un debate jurídico-doctrinario importante. La pregunta clave: <strong>¿es CABA una provincia, un municipio o algo distinto?</strong> Las posiciones principales son:</p>
+
+      <ul>
+        <li><strong>Tesis "provincial":</strong> sostiene que CABA tiene equivalencia plena con una provincia. Sus defensores señalan la elección directa del jefe de gobierno, la facultad de dictar Constitución, la representación senatorial idéntica, y el rol como "sujeto de la relación federal".</li>
+        <li><strong>Tesis "municipal sui generis":</strong> sostiene que CABA es un municipio especial, autónomo pero no equiparable a una provincia. Sus defensores señalan que el Art. 129 no la define como provincia y que existen materias (especialmente justicia ordinaria y seguridad) en las que su autonomía es limitada.</li>
+        <li><strong>Tesis "ciudad-estado":</strong> postura intermedia, que define a CABA como un caso único de "ciudad-estado autónoma con status constitucional especial", ni provincia ni municipio, sino una categoría nueva.</li>
+      </ul>
+
+      <p>El debate no es solo académico: tiene consecuencias prácticas en disputas judiciales y políticas concretas, especialmente en materia de coparticipación y transferencia de competencias.</p>
+    </section>
+
+    <section class="seccion" id="ley-cafiero">
+      <div class="seccion-eyebrow">— 06 / Ley de garantías</div>
+      <div class="seccion-year">1995</div>
+      <h2>La <em>Ley Cafiero</em>: garantías nacionales y límites a la autonomía</h2>
+
+      <p>El Art. 129 había dispuesto que una ley nacional garantizaría los intereses del Estado nacional mientras CABA siguiera siendo Capital Federal. Esa ley fue la <strong>Nº 24.588</strong>, conocida como "Ley Cafiero" en alusión al senador que la impulsó. Fue sancionada el 8 de noviembre de 1995 y es uno de los textos legales más discutidos del régimen porteño.</p>
+
+      <div class="ficha-norma">
+        <div class="ficha-norma-row"><div class="label">Norma</div><div class="valor">Ley Nº 24.588 (Ley Cafiero)</div></div>
+        <div class="ficha-norma-row"><div class="label">Sanción</div><div class="valor">8 de noviembre de 1995</div></div>
+        <div class="ficha-norma-row"><div class="label">Promulgación</div><div class="valor">27 de noviembre de 1995</div></div>
+        <div class="ficha-norma-row"><div class="label">Objeto</div><div class="valor">Garantizar intereses del Estado nacional en CABA</div></div>
+        <div class="ficha-norma-row"><div class="label">Modificaciones</div><div class="valor">Ley 26.288 (2007) — transferencia de competencias en seguridad</div></div>
+      </div>
+
+      <h3>Lo que limitó la Ley Cafiero</h3>
+      <p>El criterio de la Ley Cafiero fue maximalista: extendió las garantías nacionales a un conjunto amplio de competencias que, según los críticos, excedían lo que el Art. 129 requería. Los principales límites originales fueron:</p>
+
+      <ul>
+        <li><strong>Justicia ordinaria:</strong> el fuero ordinario (civil, comercial, penal común, laboral, etc.) permaneció bajo jurisdicción nacional. Solo se transfirieron a CABA fueros nuevos (Contencioso Administrativo y Tributario, Penal, Contravencional y de Faltas).</li>
+        <li><strong>Seguridad:</strong> la seguridad pública continuó en cabeza de la Policía Federal Argentina, dependiente del gobierno nacional. CABA no podía crear su propia policía. <em>Esto fue modificado en 2007 por la Ley 26.288, que habilitó la creación de la Policía Metropolitana, antecesora de la Policía de la Ciudad (Ley 5.688 de CABA, 2016).</em></li>
+        <li><strong>Registro de la Propiedad Inmueble:</strong> permaneció bajo jurisdicción nacional.</li>
+        <li><strong>Puerto de Buenos Aires:</strong> bajo administración federal a través de Administración General de Puertos.</li>
+        <li><strong>Transporte:</strong> el subte y los trenes urbanos permanecieron bajo jurisdicción nacional en cuestiones interjurisdiccionales.</li>
+      </ul>
+
+      <h3>El conflicto interpretativo</h3>
+      <p>La Constitución porteña, sancionada apenas un año después de la Ley Cafiero, declaró en su Art. 6° el "mandato expreso, permanente e irrenunciable del Pueblo de la Ciudad" a sus autoridades para preservar la autonomía y cuestionar normas que la limiten. Es una declaración directamente dirigida contra los límites impuestos por la Ley Cafiero.</p>
+
+      <p>Desde 1996, sucesivos gobiernos porteños han impulsado <strong>diversas acciones judiciales</strong> y han negociado con la Nación la transferencia gradual de competencias. La cuestión sigue abierta más de 30 años después.</p>
+
+      <div class="destacado atencion">
+        <div class="destacado-titulo">El fallo "Levinas" (CSJN, 2024)</div>
+        <p>En diciembre de 2024 la Corte Suprema de Justicia de la Nación dictó un fallo histórico en la causa "Levinas, Gabriel Isaías", donde reinterpretó el alcance de la autonomía judicial porteña. La Corte sostuvo que el Tribunal Superior de Justicia de la Ciudad es la instancia última de las causas que se tramitan ante los tribunales nacionales con asiento en CABA, configurando un cambio significativo en el reparto de competencias entre la Justicia Nacional y la justicia porteña. El fallo abre un nuevo capítulo en el proceso de transferencia que sigue siendo objeto de debate.</p>
+      </div>
+    </section>
+
+    <section class="seccion" id="constitucion-1996">
+      <div class="seccion-eyebrow">— 07 / Constitución porteña</div>
+      <div class="seccion-year">1996</div>
+      <h2>La <em>Constitución</em> de la Ciudad</h2>
+
+      <p>El proceso constituyente porteño fue iniciado por la <strong>Ley 24.620</strong> (sancionada el 21 de diciembre de 1995, conocida como "Ley Snopek"), que estableció las reglas para la elección del Jefe de Gobierno, su vice, y de 60 representantes que dictarían el Estatuto Organizativo. La Convención Estatuyente sesionó entre julio y octubre de 1996.</p>
+
+      <div class="ficha-norma">
+        <div class="ficha-norma-row"><div class="label">Norma</div><div class="valor">Constitución de la Ciudad Autónoma de Buenos Aires</div></div>
+        <div class="ficha-norma-row"><div class="label">Sanción</div><div class="valor">1° de octubre de 1996</div></div>
+        <div class="ficha-norma-row"><div class="label">Jura</div><div class="valor">10 de octubre de 1996</div></div>
+        <div class="ficha-norma-row"><div class="label">Convencionales</div><div class="valor">60 (electos el 30 de junio de 1996)</div></div>
+        <div class="ficha-norma-row"><div class="label">Sede</div><div class="valor">Centro Cultural San Martín</div></div>
+        <div class="ficha-norma-row"><div class="label">Ley habilitante nacional</div><div class="valor">Ley 24.620 ("Ley Snopek")</div></div>
+      </div>
+
+      <h3>Estructura del texto constitucional porteño</h3>
+      <p>La Constitución de CABA es un texto extenso, de 140 artículos más cláusulas transitorias. Se organiza en dos grandes Libros:</p>
+
+      <ul>
+        <li><strong>Libro Primero - Derechos, garantías y políticas especiales:</strong> contiene una declaración de derechos amplia, con énfasis especial en derechos sociales, ambientales, de igualdad de género, de personas mayores, niñez, salud, educación, trabajo, vivienda, consumidores y usuarios.</li>
+        <li><strong>Libro Segundo - Gobierno de la Ciudad:</strong> organiza los tres poderes (Ejecutivo, Legislativo y Judicial), los órganos de control (Defensoría del Pueblo, Auditoría General, Procuración, Sindicatura), las comunas y los mecanismos de democracia semidirecta.</li>
+      </ul>
+
+      <h3>Innovaciones del texto porteño</h3>
+      <p>Para su época, la Constitución porteña fue muy innovadora. Algunos elementos destacados:</p>
+
+      <ul>
+        <li><strong>Reconocimiento expreso de derechos sociales</strong> con un alcance superior al de muchas constituciones provinciales.</li>
+        <li><strong>Sistema D'Hondt</strong> para la Legislatura, sin piso de mínimo de votos (aunque luego una ley electoral porteña fijó pisos en algunos casos).</li>
+        <li><strong>Democracia semidirecta:</strong> iniciativa popular, referéndum, consulta popular, revocatoria de mandato, audiencias públicas.</li>
+        <li><strong>Comunas:</strong> creó el sistema de comunas como tercer nivel de organización política dentro de la Ciudad, aunque su implementación tardó casi diez años (Ley 1.777 de 2005, primera elección comunal en 2011). Profundizamos sobre esto en <a href="caba-comunas.html" style="color: var(--premium-dark);">el capítulo 09.03</a>.</li>
+        <li><strong>Órganos de control independientes:</strong> Defensoría del Pueblo elegida por mayoría agravada de la Legislatura, Auditoría General controlada por la primera minoría legislativa, etc.</li>
+      </ul>
+
+      <div class="cita-articulo">
+        La Ciudad de Buenos Aires, conforme al principio federal establecido en la Constitución Nacional, organiza sus instituciones autónomas como democracia participativa y adopta para su gobierno la forma republicana y representativa. Todos los actos de gobierno son públicos.
+        <div class="cita-articulo-ref">— Artículo 1° de la Constitución de CABA (1996)</div>
+      </div>
+
+      <h3>Las primeras elecciones</h3>
+      <p>El proceso institucional se completó con las primeras elecciones de autoridades porteñas:</p>
+
+      <ul>
+        <li><strong>30 de junio de 1996:</strong> elección de Jefe de Gobierno, Vicejefe y 60 convencionales estatuyentes.</li>
+        <li><strong>10 de diciembre de 1996:</strong> asunción del primer Jefe de Gobierno electo de la Ciudad.</li>
+        <li><strong>26 de octubre de 1997:</strong> primera elección de la Legislatura porteña, que reemplazó al antiguo Concejo Deliberante.</li>
+        <li><strong>10 de diciembre de 1997:</strong> instalación de la Legislatura de la Ciudad Autónoma de Buenos Aires (60 diputados/as).</li>
+      </ul>
+    </section>
+
+    <section class="seccion" id="consolidacion">
+      <div class="seccion-eyebrow">— 08 / Consolidación</div>
+      <div class="seccion-year">1996–presente</div>
+      <h2>Treinta años de <em>autonomía</em>: hitos principales</h2>
+
+      <p>Desde 1996, la consolidación institucional de CABA ha sido un proceso gradual y con conflictos abiertos. Esta línea de hitos sintetiza los principales eventos jurídico-institucionales de las tres décadas:</p>
+
+      <table class="tabla-datos">
+        <thead><tr><th>Año</th><th>Hito institucional</th></tr></thead>
+        <tbody>
+          <tr><td>1996</td><td>Constitución porteña, primer Jefe de Gobierno electo</td></tr>
+          <tr><td>1997</td><td>Primera Legislatura porteña electa</td></tr>
+          <tr><td>1998</td><td>Sanción de la Ley 1 de CABA (Ley de Ministerios) y comienzo de la organización institucional</td></tr>
+          <tr><td>2000</td><td>Funcionamiento pleno del Tribunal Superior de Justicia de la Ciudad</td></tr>
+          <tr><td>2003</td><td>Comienzo del traspaso de competencias en materia contencioso-administrativa</td></tr>
+          <tr><td>2005</td><td>Ley 1.777 (Ley de Comunas): establece las 15 comunas porteñas</td></tr>
+          <tr><td>2007</td><td>Ley nacional 26.288 modifica la Ley Cafiero: habilita creación de Policía Metropolitana</td></tr>
+          <tr><td>2008</td><td>Creación efectiva de la Policía Metropolitana</td></tr>
+          <tr><td>2011</td><td>Primera elección de Juntas Comunales (15 comunas)</td></tr>
+          <tr><td>2016</td><td>Ley 5.688 de CABA: creación de la Policía de la Ciudad por fusión de Policía Metropolitana y la división de la PFA que actuaba en CABA</td></tr>
+          <tr><td>2020</td><td>Decreto nacional 735/2020: conflicto por la reducción de la coparticipación porteña</td></tr>
+          <tr><td>2021</td><td>Comisión bicameral por el traspaso de la justicia ordinaria</td></tr>
+          <tr><td>2024</td><td>Fallo "Levinas" de la CSJN: reinterpretación del alcance de la autonomía judicial</td></tr>
+        </tbody>
+      </table>
+
+      <h3>Lo que queda pendiente</h3>
+      <p>Treinta años después, la autonomía porteña sigue siendo un proceso en construcción. Los principales temas abiertos son:</p>
+
+      <ul>
+        <li><strong>Transferencia plena de la justicia ordinaria</strong> (penal común, civil, comercial, laboral) desde la Justicia Nacional a la justicia porteña.</li>
+        <li><strong>Coparticipación federal:</strong> el porcentaje histórico, sus modificaciones, y las disputas judiciales (especialmente desde el decreto 735/2020) siguen siendo materia de conflicto. Profundizamos sobre esto en <a href="caba-coparticipacion.html" style="color: var(--premium-dark);">el capítulo 09.04</a>.</li>
+        <li><strong>Administración del puerto de Buenos Aires</strong> y del aeroparque Jorge Newbery.</li>
+        <li><strong>Régimen del transporte interjurisdiccional</strong> (subte, trenes urbanos, colectivos).</li>
+        <li><strong>Registro de la Propiedad Inmueble:</strong> sigue bajo jurisdicción nacional.</li>
+        <li><strong>Estatus jurídico futuro:</strong> ¿provincia plena? ¿ciudad-estado consolidada? ¿reforma del Art. 129? Los debates doctrinarios continúan.</li>
+      </ul>
+
+      <p>Estos pendientes los desarrollamos en detalle en <a href="caba-pendientes.html" style="color: var(--premium-dark);">el capítulo 09.05 (Pendientes de la autonomía)</a>.</p>
+
+      <div class="destacado premium">
+        <div class="destacado-titulo">Una historia que sigue escribiéndose</div>
+        <p>La historia institucional de CABA es la historia de un proceso en marcha. De pueblo colonial a virreinato, de capital disputada a federalización, de municipalidad a autonomía. Y todavía hoy, treinta años después del Art. 129, el alcance real de esa autonomía sigue siendo materia de leyes, fallos y negociaciones políticas. Es una de las cuestiones institucionales más vivas del federalismo argentino.</p>
+      </div>
+    </section>
+
+    <section class="fuentes">
+      <h3>— Fuentes oficiales y normativa</h3>
+      <ul>
+        <li><strong>Constitución Nacional</strong>, arts. 129 y cláusula transitoria séptima.</li>
+        <li><strong>Constitución de la Ciudad Autónoma de Buenos Aires</strong> (1996). <a href="https://www.infoleg.gob.ar/?page_id=166" target="_blank" rel="noopener">Texto oficial (Infoleg)</a></li>
+        <li><strong>Ley 1.029</strong> (1880) — Federalización de Buenos Aires.</li>
+        <li><strong>Ley 24.309</strong> (1993) — Necesidad de la reforma constitucional de 1994.</li>
+        <li><strong>Ley 24.588</strong> (1995) — Ley Cafiero. Garantías del Estado nacional en CABA.</li>
+        <li><strong>Ley 24.620</strong> (1995) — Convocatoria a la Convención Estatuyente porteña ("Ley Snopek").</li>
+        <li><strong>Ley 26.288</strong> (2007) — Modificación de la Ley Cafiero en materia de seguridad.</li>
+        <li><strong>Ley 5.688 de CABA</strong> (2016) — Sistema Integral de Seguridad Pública.</li>
+        <li><strong>Ley 1.777 de CABA</strong> (2005) — Régimen de Comunas.</li>
+        <li><strong>CSJN, "Levinas, Gabriel Isaías"</strong> (diciembre 2024). Fallo sobre alcance de la autonomía judicial.</li>
+        <li><strong>Boletín Oficial de la Ciudad de Buenos Aires</strong>. <a href="https://boletinoficial.buenosaires.gob.ar" target="_blank" rel="noopener">boletinoficial.buenosaires.gob.ar</a></li>
+        <li><strong>Sistema Argentino de Información Jurídica (SAIJ)</strong>. <a href="https://www.saij.gob.ar" target="_blank" rel="noopener">saij.gob.ar</a></li>
+        <li>Sagüés, Néstor P. <em>Constitución de la Ciudad Autónoma de Buenos Aires.</em> Editorial Astrea, 1996.</li>
+        <li>Colautti, Carlos. <em>Constitución de la Ciudad Autónoma de Buenos Aires.</em> Buenos Aires, 1996.</li>
+        <li>Bidart Campos, Germán J. <em>Tratado elemental de Derecho Constitucional argentino.</em> Editorial Ediar.</li>
+      </ul>
+      <p style="font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; color: var(--tinta-soft); margin-top: 1.5rem; padding-top: 1rem; border-top: 1px solid var(--linea); line-height: 1.6;">
+        Este capítulo recorre la historia institucional de CABA hasta mayo de 2026. Los procesos pendientes (transferencia de justicia ordinaria, coparticipación, estatus futuro) siguen en desarrollo. Última revisión: mayo de 2026.
+      </p>
+    </section>
+
+  </main>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div>
+      <h3>Educación Cívica</h3>
+      <p>Una guía visual y educativa sobre el Estado argentino, sus poderes, las provincias, el sistema electoral, los derechos del ciudadano y la historia institucional.</p>
+    </div>
+    <div>
+      <h3>Secciones</h3>
+      <a href="poderes.html">Los poderes</a>
+      <a href="provincias.html">Provincias</a>
+      <a href="historia.html">Historia</a>
+      <a href="caba-en-profundidad.html">CABA en profundidad</a>
+    </div>
+    <div>
+      <h3>El proyecto</h3>
+      <a href="#">Sobre nosotros</a>
+      <a href="#">Manifiesto editorial</a>
+      <a href="#">Suscribirse</a>
+      <a href="#">Contacto</a>
+    </div>
+    <div class="footer-meta">
+      educacioncivica.com.ar · v0.5 prototipo · Educación cívica con datos · Sin grieta · Datos institucionales actualizados a mayo de 2026
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

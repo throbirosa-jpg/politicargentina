@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Crect width=%22100%22 height=%22100%22 fill=%22%23FBF7F0%22/%3E%3Ccircle cx=%2250%22 cy=%2250%22 r=%2230%22 fill=%22%23F6B40E%22/%3E%3C/svg%3E">
+<title>CABA: Coparticipación y sistema fiscal — Educación Cívica</title>
+<meta name="description" content="El sistema fiscal de CABA: impuestos propios (IIBB, ABL, Patentes, Sellos), AGIP, y el conflicto histórico por la coparticipación federal con la Nación.">
+<link rel="canonical" href="https://educacioncivica.com.ar/caba-coparticipacion.html">
+<meta property="og:title" content="CABA: Coparticipación y sistema fiscal · Educación Cívica">
+<meta property="og:description" content="Cómo se financia CABA: AGIP, impuestos porteños, coparticipación federal y el conflicto por el decreto 735/2020.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://educacioncivica.com.ar/caba-coparticipacion.html">
+<meta property="og:site_name" content="Educación Cívica">
+<meta property="og:locale" content="es_AR">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="CABA: Coparticipación y sistema fiscal · Educación Cívica">
+<meta name="twitter:description" content="Sistema fiscal porteño: impuestos propios, AGIP, y el conflicto de coparticipación.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,400;0,500;0,600;1,400&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --crema: #FBF7F0; --crema-warm: #F4ECDB; --tinta: #1A1A2E; --tinta-soft: #545465;
+    --celeste: #74ACDF; --celeste-soft: #E4F0FA; --celeste-dark: #3D7BB0;
+    --sol: #F6B40E; --sol-soft: #FBE5AA; --sol-dark: #C8941A;
+    --rojo-fed: #B8341B; --rojo-soft: #F2D5CE;
+    --verde-ok: #4A7C59; --verde-soft: #DAEAE0;
+    --premium: #6B4F8C; --premium-soft: #E8DFF0; --premium-dark: #4A3661;
+    --linea: #DDD7CB; --linea-soft: #ECE6DA;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Fraunces', Georgia, serif; background: var(--crema); color: var(--tinta); line-height: 1.6; }
+  nav { background: white; border-bottom: 1px solid var(--linea); padding: 1.2rem 2rem; position: sticky; top: 0; z-index: 100; }
+  .nav-inner { max-width: 1400px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
+  .logo { display: flex; align-items: center; gap: 0.5rem; font-family: 'Fraunces', serif; font-weight: 500; font-size: 1.1rem; color: var(--tinta); text-decoration: none; }
+  .logo-dot { width: 12px; height: 12px; background: var(--sol); border-radius: 50%; }
+  .breadcrumb { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.1em; color: var(--tinta-soft); }
+  .breadcrumb a { color: var(--tinta-soft); text-decoration: none; }
+  .breadcrumb a:hover { color: var(--tinta); }
+  .premium-banner { background: var(--premium); color: white; padding: 0.6rem 2rem; font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase; text-align: center; }
+  .premium-banner strong { color: var(--sol); }
+  .page-header { background: linear-gradient(180deg, var(--premium-soft) 0%, var(--crema) 100%); padding: 4rem 2rem 3rem; border-bottom: 1px solid var(--linea); }
+  .page-header-inner { max-width: 900px; margin: 0 auto; }
+  .page-eyebrow { display: inline-block; font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--premium-dark); background: white; padding: 0.5rem 1rem; border: 1px solid var(--premium); margin-bottom: 1.5rem; }
+  .page-title { font-family: 'Fraunces', serif; font-weight: 300; font-size: clamp(2.2rem, 5vw, 3.6rem); line-height: 1.05; margin-bottom: 1.5rem; color: var(--tinta); }
+  .page-title em { font-style: italic; color: var(--premium-dark); font-weight: 400; }
+  .page-intro { font-size: 1.15rem; line-height: 1.7; color: var(--tinta); max-width: 720px; }
+  .layout { max-width: 1400px; margin: 0 auto; padding: 3rem 2rem; display: grid; grid-template-columns: 220px 1fr; gap: 4rem; align-items: start; }
+  .toc { position: sticky; top: 90px; font-family: 'JetBrains Mono', monospace; font-size: 0.78rem; }
+  .toc-titulo { font-size: 0.65rem; letter-spacing: 0.18em; color: var(--tinta-soft); text-transform: uppercase; margin-bottom: 1rem; padding-bottom: 0.8rem; border-bottom: 1px solid var(--linea); }
+  .toc ul { list-style: none; }
+  .toc li { margin-bottom: 0.6rem; line-height: 1.4; }
+  .toc a { color: var(--tinta-soft); text-decoration: none; border-left: 2px solid var(--linea); padding-left: 0.8rem; display: block; transition: all 0.18s ease; }
+  .toc a:hover { color: var(--tinta); border-left-color: var(--premium); }
+  .toc-num { color: var(--premium-dark); font-weight: 500; }
+  .contenido { max-width: 720px; }
+  .seccion { margin-bottom: 3.5rem; padding-bottom: 3rem; border-bottom: 1px solid var(--linea); }
+  .seccion:last-of-type { border-bottom: none; }
+  .seccion-eyebrow { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.18em; color: var(--premium-dark); text-transform: uppercase; margin-bottom: 0.6rem; }
+  .seccion h2 { font-family: 'Fraunces', serif; font-weight: 400; font-size: 1.9rem; line-height: 1.15; color: var(--tinta); margin-bottom: 1.5rem; }
+  .seccion h2 em { font-style: italic; color: var(--premium-dark); }
+  .seccion h3 { font-family: 'Fraunces', serif; font-weight: 500; font-size: 1.2rem; color: var(--tinta); margin-top: 2rem; margin-bottom: 0.8rem; }
+  .seccion p { margin-bottom: 1rem; font-size: 1rem; line-height: 1.75; color: var(--tinta); }
+  .seccion p strong { font-weight: 600; color: var(--tinta); }
+  .seccion ul { margin: 1rem 0 1.5rem 0; padding-left: 0; list-style: none; }
+  .seccion ul li { padding-left: 1.5rem; margin-bottom: 0.6rem; line-height: 1.6; position: relative; }
+  .seccion ul li::before { content: '→'; position: absolute; left: 0; color: var(--premium); font-weight: 600; }
+  .ficha-norma { background: white; border: 1px solid var(--linea); border-left: 4px solid var(--premium); padding: 1.5rem 1.8rem; margin: 1.5rem 0; }
+  .ficha-norma.conflicto { border-left-color: var(--rojo-fed); }
+  .ficha-norma.acuerdo { border-left-color: var(--verde-ok); }
+  .ficha-norma-row { display: flex; padding: 0.5rem 0; border-bottom: 1px dotted var(--linea); font-size: 0.9rem; }
+  .ficha-norma-row:last-child { border-bottom: none; }
+  .ficha-norma-row .label { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--tinta-soft); min-width: 160px; }
+  .ficha-norma-row .valor { flex: 1; color: var(--tinta); }
+  .destacado { background: white; border-left: 4px solid var(--celeste); padding: 1.5rem 1.8rem; margin: 1.5rem 0; font-size: 0.95rem; line-height: 1.6; }
+  .destacado-titulo { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.15em; color: var(--celeste-dark); text-transform: uppercase; margin-bottom: 0.6rem; }
+  .destacado.atencion { background: var(--sol-soft); border-left-color: var(--sol-dark); }
+  .destacado.atencion .destacado-titulo { color: var(--sol-dark); }
+  .destacado.historico { background: var(--rojo-soft); border-left-color: var(--rojo-fed); }
+  .destacado.historico .destacado-titulo { color: var(--rojo-fed); }
+  .destacado.premium { background: var(--premium-soft); border-left-color: var(--premium); }
+  .destacado.premium .destacado-titulo { color: var(--premium-dark); }
+  .cita-articulo { background: white; border: 1px solid var(--linea); padding: 1.5rem 1.8rem; margin: 1.5rem 0; font-family: 'Fraunces', serif; font-style: italic; font-size: 1.02rem; line-height: 1.7; color: var(--tinta); border-left: 4px solid var(--sol-dark); position: relative; }
+  .cita-articulo::before { content: '"'; position: absolute; top: -0.5rem; left: 1.2rem; font-size: 3rem; color: var(--sol); font-family: serif; line-height: 1; }
+  .cita-articulo-ref { font-family: 'JetBrains Mono', monospace; font-style: normal; font-size: 0.7rem; letter-spacing: 0.12em; color: var(--tinta-soft); text-transform: uppercase; margin-top: 0.8rem; }
+  .tabla-datos { width: 100%; margin: 1.5rem 0; border-collapse: collapse; font-size: 0.9rem; }
+  .tabla-datos th { text-align: left; padding: 0.8rem 1rem; background: var(--premium-soft); border-bottom: 2px solid var(--premium); font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--tinta); font-weight: 600; }
+  .tabla-datos td { padding: 0.85rem 1rem; border-bottom: 1px dotted var(--linea); vertical-align: top; }
+  .tabla-datos tr:last-child td { border-bottom: none; }
+  .tabla-datos td:first-child { font-weight: 500; color: var(--tinta); }
+  .timeline-conflicto { background: white; border: 1px solid var(--linea); padding: 1.5rem 1.8rem; margin: 1.5rem 0; }
+  .timeline-conflicto-row { display: flex; gap: 1.2rem; padding: 0.8rem 0; border-bottom: 1px dotted var(--linea); align-items: flex-start; }
+  .timeline-conflicto-row:last-child { border-bottom: none; }
+  .timeline-conflicto-fecha { font-family: 'JetBrains Mono', monospace; font-size: 0.75rem; color: var(--premium-dark); font-weight: 600; min-width: 90px; padding-top: 0.1rem; }
+  .timeline-conflicto-hecho { flex: 1; font-size: 0.92rem; line-height: 1.55; color: var(--tinta); }
+  .timeline-conflicto-hecho strong { font-weight: 600; color: var(--tinta); }
+  .fuentes { margin-top: 4rem; padding-top: 2.5rem; border-top: 2px solid var(--linea); }
+  .fuentes h3 { font-family: 'JetBrains Mono', monospace; font-size: 0.75rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--tinta-soft); margin-bottom: 1.5rem; border: none; padding: 0; }
+  .fuentes ul { list-style: none; padding: 0; }
+  .fuentes li { padding: 0.6rem 0; border-bottom: 1px dotted var(--linea); font-size: 0.88rem; padding-left: 0; }
+  .fuentes li::before { content: none; }
+  .fuentes a { color: var(--celeste-dark); text-decoration: none; border-bottom: 1px dotted var(--celeste-dark); }
+  .fuentes a:hover { color: var(--tinta); }
+  footer { background: var(--tinta); color: var(--crema); padding: 3rem 2rem; margin-top: 4rem; }
+  .footer-inner { max-width: 1400px; margin: 0 auto; display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 3rem; }
+  footer h3 { font-family: 'Fraunces', serif; font-weight: 400; font-size: 1.3rem; margin-bottom: 1rem; color: var(--crema); }
+  footer p, footer a { color: var(--crema); opacity: 0.85; font-size: 0.9rem; line-height: 1.6; }
+  footer a { text-decoration: none; display: block; padding: 0.3rem 0; }
+  footer a:hover { opacity: 1; color: var(--sol); }
+  .footer-meta { grid-column: 1 / -1; margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid rgba(251, 247, 240, 0.15); font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; opacity: 0.6; letter-spacing: 0.05em; }
+  @media (max-width: 900px) {
+    .layout { grid-template-columns: 1fr; gap: 2rem; }
+    .toc { position: relative; top: 0; padding: 1.5rem; background: white; border: 1px solid var(--linea); }
+    .footer-inner { grid-template-columns: 1fr; gap: 2rem; }
+    .ficha-norma-row { flex-direction: column; gap: 0.3rem; }
+    .ficha-norma-row .label { min-width: auto; }
+    .timeline-conflicto-row { flex-direction: column; gap: 0.3rem; }
+  }
+</style>
+</head>
+<body>
+
+<div class="premium-banner">— Capítulo premium · <strong>Acceso libre durante el período de prueba</strong></div>
+
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="logo"><span class="logo-dot"></span>Educación Cívica</a>
+    <div class="breadcrumb"><a href="index.html">Inicio</a> · <a href="caba-en-profundidad.html">CABA en profundidad</a> · <span>Coparticipación y sistema fiscal</span></div>
+  </div>
+</nav>
+
+<header class="page-header">
+  <div class="page-header-inner">
+    <div class="page-eyebrow">Capítulo 09.04 · CABA en profundidad</div>
+    <h1 class="page-title">Plata: <em>coparticipación</em> y sistema fiscal porteño</h1>
+    <p class="page-intro">CABA es la jurisdicción con mayor capacidad recaudatoria del país por habitante. Tiene sus propios impuestos y un organismo recaudador propio (AGIP). Pero también recibe coparticipación federal de la Nación, y ahí empieza un conflicto institucional de larga data: cuánto le corresponde, cómo se calcula, y quién decide. Este capítulo recorre el sistema fiscal porteño y el largo conflicto por la coparticipación que llegó a la Corte Suprema.</p>
+  </div>
+</header>
+
+<div class="layout">
+
+  <aside class="toc">
+    <div class="toc-titulo">— En esta página</div>
+    <ul>
+      <li><a href="#esquema-fiscal"><span class="toc-num">01</span> Esquema fiscal</a></li>
+      <li><a href="#agip"><span class="toc-num">02</span> AGIP</a></li>
+      <li><a href="#iibb"><span class="toc-num">03</span> Ingresos Brutos</a></li>
+      <li><a href="#otros-impuestos"><span class="toc-num">04</span> ABL, Patentes, Sellos</a></li>
+      <li><a href="#coparticipacion-general"><span class="toc-num">05</span> Régimen general</a></li>
+      <li><a href="#caba-en-copart"><span class="toc-num">06</span> CABA en el reparto</a></li>
+      <li><a href="#conflicto"><span class="toc-num">07</span> El conflicto 2020-2024</a></li>
+      <li><a href="#pendiente"><span class="toc-num">08</span> Lo pendiente</a></li>
+    </ul>
+  </aside>
+
+  <main class="contenido">
+
+    <section class="seccion" id="esquema-fiscal">
+      <div class="seccion-eyebrow">— 01 / Esquema general</div>
+      <h2>Cómo se <em>financia</em> CABA</h2>
+
+      <p>La Ciudad Autónoma de Buenos Aires tiene un esquema fiscal mixto que combina recursos propios y transferencias federales. Sus principales fuentes de financiamiento, en términos generales:</p>
+
+      <table class="tabla-datos">
+        <thead><tr><th>Fuente</th><th>Tipo</th><th>Peso relativo aproximado</th></tr></thead>
+        <tbody>
+          <tr><td>Ingresos Brutos</td><td>Tributo propio</td><td>~70-75% de los recursos propios</td></tr>
+          <tr><td>ABL (Alumbrado, Barrido y Limpieza)</td><td>Tributo propio</td><td>~8-10% de los propios</td></tr>
+          <tr><td>Patentes Automotor</td><td>Tributo propio</td><td>~5-7% de los propios</td></tr>
+          <tr><td>Sellos</td><td>Tributo propio</td><td>~5-7% de los propios</td></tr>
+          <tr><td>Otros tributos locales</td><td>Tasas, contribuciones</td><td>~3-5% de los propios</td></tr>
+          <tr><td>Coparticipación federal</td><td>Transferencia automática</td><td>~10-15% del total presupuestario</td></tr>
+          <tr><td>Otras transferencias nacionales</td><td>Programas, convenios</td><td>Variable</td></tr>
+        </tbody>
+      </table>
+
+      <p>Una diferencia importante respecto de las provincias del interior: <strong>CABA es altamente autónoma fiscalmente</strong>. La mayor parte de su presupuesto proviene de recursos propios, mientras que muchas provincias dependen estructuralmente de la coparticipación federal. Esto modifica la lógica política de la negociación fiscal: CABA tiene más poder de negociación porque puede "subsistir" relativamente bien sin las transferencias nacionales.</p>
+
+      <h3>El presupuesto porteño en perspectiva</h3>
+      <p>CABA tiene uno de los presupuestos públicos más grandes del país en términos absolutos, comparable al de varias provincias importantes. Solo es superado, entre las jurisdicciones subnacionales, por el presupuesto de la provincia de Buenos Aires. Esto se explica por:</p>
+      <ul>
+        <li>Su alta densidad económica (genera aproximadamente el 25% del PBI nacional).</li>
+        <li>La concentración de actividades comerciales, financieras y de servicios.</li>
+        <li>Su población relativamente acomodada en términos comparativos.</li>
+        <li>El nivel de servicios públicos urbanos que presta (transporte subterráneo, hospitales, educación, etc.).</li>
+      </ul>
+    </section>
+
+    <section class="seccion" id="agip">
+      <div class="seccion-eyebrow">— 02 / Organismo recaudador</div>
+      <h2>La <em>AGIP</em>: el recaudador porteño</h2>
+
+      <p>La <strong>Administración Gubernamental de Ingresos Públicos (AGIP)</strong> es el organismo de la Ciudad encargado de la recaudación de los tributos locales. Fue creada por la Ley 2.603 de 2007 y reemplazó a la antigua Dirección General de Rentas porteña.</p>
+
+      <div class="ficha-norma">
+        <div class="ficha-norma-row"><div class="label">Organismo</div><div class="valor">Administración Gubernamental de Ingresos Públicos (AGIP)</div></div>
+        <div class="ficha-norma-row"><div class="label">Creación</div><div class="valor">Ley 2.603 (2007)</div></div>
+        <div class="ficha-norma-row"><div class="label">Dependencia</div><div class="valor">Ministerio de Hacienda y Finanzas de CABA</div></div>
+        <div class="ficha-norma-row"><div class="label">Funciones</div><div class="valor">Recaudación, fiscalización, ejecución de tributos porteños</div></div>
+        <div class="ficha-norma-row"><div class="label">Equivalente nacional</div><div class="valor">AFIP / ARCA (a nivel nacional)</div></div>
+      </div>
+
+      <h3>Estructura interna</h3>
+      <p>AGIP se organiza en tres Direcciones Generales:</p>
+      <ul>
+        <li><strong>DGR (Dirección General de Rentas):</strong> recauda y fiscaliza los tributos generales (IIBB, Sellos).</li>
+        <li><strong>DGAC (Dirección General de Análisis y Control):</strong> auditoría y análisis fiscal.</li>
+        <li><strong>DGSyD (Dirección General de Sistemas y Desarrollos Tecnológicos):</strong> infraestructura tecnológica.</li>
+      </ul>
+      <p>El Administrador Gubernamental es designado por el Jefe de Gobierno y reporta al Ministro de Hacienda y Finanzas porteño.</p>
+
+      <h3>Atribuciones principales</h3>
+      <ul>
+        <li>Liquidar, recaudar y fiscalizar los tributos porteños.</li>
+        <li>Aplicar sanciones por incumplimientos tributarios.</li>
+        <li>Ejecutar judicialmente las deudas (con apoderados especiales).</li>
+        <li>Interpretar las normas tributarias y emitir dictámenes.</li>
+        <li>Mantener actualizado el padrón de contribuyentes.</li>
+        <li>Cooperar con la AFIP/ARCA y otros organismos provinciales.</li>
+      </ul>
+    </section>
+
+    <section class="seccion" id="iibb">
+      <div class="seccion-eyebrow">— 03 / Impuesto principal</div>
+      <h2>Ingresos Brutos: el <em>gran tributo</em> porteño</h2>
+
+      <p>Igual que en todas las provincias, en CABA el impuesto sobre los Ingresos Brutos (IIBB) es la principal fuente de recaudación propia. Representa típicamente entre el 70% y 75% de los recursos tributarios propios. Su régimen está fijado por el Código Fiscal de la Ciudad y las leyes tarifarias anuales.</p>
+
+      <h3>Características del IIBB porteño</h3>
+      <ul>
+        <li><strong>Base imponible:</strong> los ingresos brutos devengados de la actividad gravada, sin descuentos.</li>
+        <li><strong>Sujeto pasivo:</strong> las personas físicas, jurídicas y otras entidades que realicen actividades onerosas en territorio porteño.</li>
+        <li><strong>Alícuotas:</strong> variables según la actividad. Las generales rondan entre el 1% y el 5%, con tasas especiales más altas en algunas actividades específicas (servicios financieros, juegos de azar, etc.).</li>
+        <li><strong>Pago:</strong> mensual o bimestral según el contribuyente, con anticipos.</li>
+        <li><strong>Régimen Simplificado:</strong> para pequeños contribuyentes, similar al monotributo nacional.</li>
+      </ul>
+
+      <h3>Las críticas estructurales</h3>
+      <p>El IIBB es probablemente el impuesto más criticado del sistema fiscal argentino, tanto en CABA como en provincias. Las objeciones principales:</p>
+      <ul>
+        <li><strong>Efecto cascada:</strong> al gravarse en cada eslabón de la cadena productiva, se acumula sobre los precios finales.</li>
+        <li><strong>Regresividad:</strong> golpea más a sectores con menos capacidad de absorción.</li>
+        <li><strong>Distorsiones:</strong> incentiva la integración vertical para evitar el cascadeo.</li>
+        <li><strong>Doble tributación con IVA:</strong> los productos pagan IVA nacional + IIBB provincial sobre la misma operación.</li>
+      </ul>
+
+      <p>Pese a estas críticas, la sustitución del IIBB es muy difícil porque representa el grueso de los recursos provinciales y porteños. Sin él, las jurisdicciones perderían su principal herramienta fiscal autónoma. Profundizamos sobre el sistema tributario argentino general en <a href="impuestos.html" style="color: var(--premium-dark);">nuestra página de impuestos</a>.</p>
+    </section>
+
+    <section class="seccion" id="otros-impuestos">
+      <div class="seccion-eyebrow">— 04 / Otros tributos</div>
+      <h2>ABL, Patentes y <em>Sellos</em></h2>
+
+      <p>Además de IIBB, CABA tiene otros tres tributos propios que completan el grueso de su recaudación local.</p>
+
+      <h3>ABL (Alumbrado, Barrido y Limpieza)</h3>
+      <p>Es el tributo inmobiliario porteño. Su nombre evoca los servicios urbanos a los que tradicionalmente se asoció, aunque hoy funciona como un impuesto inmobiliario general.</p>
+      <ul>
+        <li><strong>Base imponible:</strong> la Valuación Fiscal Homogénea (VFH) del inmueble.</li>
+        <li><strong>Sujeto pasivo:</strong> propietarios, usufructuarios y poseedores a título de dueño.</li>
+        <li><strong>Alícuota:</strong> escalas progresivas según el valor del inmueble.</li>
+        <li><strong>Periodicidad:</strong> anual, con pago en cuotas (mensuales o bimestrales).</li>
+        <li><strong>Contribución mejoras y otros:</strong> también se cobran derecho de delineación, contribución por mejoras y demás conceptos vinculados.</li>
+      </ul>
+
+      <h3>Patentes sobre Vehículos en general</h3>
+      <p>Tributo anual sobre los vehículos radicados en CABA.</p>
+      <ul>
+        <li><strong>Base imponible:</strong> el valor del vehículo según tabla oficial elaborada por AGIP.</li>
+        <li><strong>Sujeto pasivo:</strong> el titular registral del vehículo.</li>
+        <li><strong>Alícuotas:</strong> progresivas según el valor del vehículo, con descuentos para autos con más años de antigüedad.</li>
+        <li><strong>Periodicidad:</strong> anual.</li>
+      </ul>
+
+      <h3>Sellos</h3>
+      <p>Impuesto sobre los actos jurídicos onerosos formalizados en CABA o cuyos efectos se produzcan en su territorio.</p>
+      <ul>
+        <li><strong>Hechos imponibles:</strong> contratos de alquiler, transferencias de inmuebles, contratos de locación de obra y servicios, ciertos documentos comerciales.</li>
+        <li><strong>Alícuota general:</strong> variable según el tipo de acto, típicamente entre 0,5% y 3,6%.</li>
+        <li><strong>Pago:</strong> al momento de la celebración del acto.</li>
+      </ul>
+
+      <h3>Otros conceptos menores</h3>
+      <ul>
+        <li><strong>Contribución por publicidad:</strong> sobre carteles publicitarios en vía pública.</li>
+        <li><strong>Derechos de habilitación:</strong> por inicio de actividades comerciales.</li>
+        <li><strong>Tasas de servicios especiales:</strong> verificación técnica, etc.</li>
+        <li><strong>Contribuciones por mejoras:</strong> obras públicas que valorizan propiedades.</li>
+      </ul>
+    </section>
+
+    <section class="seccion" id="coparticipacion-general">
+      <div class="seccion-eyebrow">— 05 / Coparticipación</div>
+      <h2>El régimen general de <em>coparticipación</em></h2>
+
+      <p>La coparticipación federal de impuestos es el mecanismo por el cual la Nación reparte la recaudación de los principales impuestos nacionales (IVA, Ganancias, Bienes Personales, etc.) entre la Nación, las provincias y CABA. Se rige principalmente por la <strong>Ley 23.548 de 1988</strong>, conocida como "Ley de Coparticipación". Profundizamos sobre el régimen general en <a href="coparticipacion.html" style="color: var(--premium-dark);">nuestra página dedicada</a>.</p>
+
+      <h3>El status especial de CABA</h3>
+      <p>Cuando se sancionó la Ley 23.548 (1988), CABA todavía era la "Municipalidad de la Ciudad de Buenos Aires" y no era una jurisdicción autónoma. La ley original no la incluyó como parte del reparto entre provincias. La situación cambió con la reforma constitucional de 1994 y la autonomía porteña: a partir de allí CABA empezó a recibir coparticipación, pero <strong>nunca fue incorporada formalmente a la Ley 23.548</strong>. Su coeficiente se fija por decretos y leyes específicas, lo que la pone en una situación normativamente débil.</p>
+
+      <div class="cita-articulo">
+        Una ley convenio, sobre la base de acuerdos entre la Nación y las provincias, instituirá regímenes de coparticipación de estas contribuciones, garantizando la automaticidad en la remisión de los fondos. La distribución entre la Nación, las provincias y la ciudad de Buenos Aires y entre éstas, se efectuará en relación directa a las competencias, servicios y funciones de cada una de ellas contemplando criterios objetivos de reparto; será equitativa, solidaria y dará prioridad al logro de un grado equivalente de desarrollo, calidad de vida e igualdad de oportunidades en todo el territorio nacional.
+        <div class="cita-articulo-ref">— Artículo 75 inciso 2 de la Constitución Nacional</div>
+      </div>
+
+      <p>La Constitución Nacional (Art. 75 inc. 2, párrafo 6) ordenó que <strong>antes de 1996</strong> se sancionara una nueva ley de coparticipación que incorporara a CABA y respetara la nueva organización federal. Esa ley nunca se sancionó. Treinta años después, el sistema sigue funcionando con la ley de 1988, parches decretales y conflictos permanentes.</p>
+    </section>
+
+    <section class="seccion" id="caba-en-copart">
+      <div class="seccion-eyebrow">— 06 / CABA en el reparto</div>
+      <h2>CABA en el <em>reparto</em>: 1996-2020</h2>
+
+      <p>La participación de CABA en la coparticipación fue cambiando a lo largo de los años, generalmente vinculada a la transferencia de competencias y servicios desde la Nación hacia la Ciudad.</p>
+
+      <h3>Las etapas históricas</h3>
+
+      <div class="timeline-conflicto">
+        <div class="timeline-conflicto-row">
+          <div class="timeline-conflicto-fecha">1996-2003</div>
+          <div class="timeline-conflicto-hecho">CABA recibe transferencias mínimas. Con la transferencia de salud, educación y registro civil se incorporan coeficientes específicos.</div>
+        </div>
+        <div class="timeline-conflicto-row">
+          <div class="timeline-conflicto-fecha">2003-2015</div>
+          <div class="timeline-conflicto-hecho">El coeficiente de CABA se fija en <strong>1,40%</strong> de la masa coparticipable.</div>
+        </div>
+        <div class="timeline-conflicto-row">
+          <div class="timeline-conflicto-fecha">Enero 2016</div>
+          <div class="timeline-conflicto-hecho">Por el <strong>Decreto 194/2016</strong>, el coeficiente sube a <strong>3,75%</strong>, junto con la transferencia de la Policía Federal a la órbita porteña.</div>
+        </div>
+        <div class="timeline-conflicto-row">
+          <div class="timeline-conflicto-fecha">2017</div>
+          <div class="timeline-conflicto-hecho">El coeficiente se ajusta a <strong>3,50%</strong> mediante el Consenso Fiscal (Ley 27.429), ratificado entre Nación y provincias.</div>
+        </div>
+        <div class="timeline-conflicto-row">
+          <div class="timeline-conflicto-fecha">2017-Sept 2020</div>
+          <div class="timeline-conflicto-hecho">El coeficiente del 3,50% se mantiene estable. CABA construye su Policía de la Ciudad con esos recursos.</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="seccion" id="conflicto">
+      <div class="seccion-eyebrow">— 07 / El conflicto</div>
+      <h2>El <em>conflicto</em> 2020-2024</h2>
+
+      <p>En septiembre de 2020 se desencadenó el principal conflicto fiscal de la última década entre la Nación y CABA. El detonante fue una protesta de la Policía Bonaerense (provincia de Buenos Aires) que reclamaba mejoras salariales en medio de la pandemia. El gobierno nacional, encabezado por el entonces presidente Alberto Fernández, decidió quitarle fondos a CABA para asistir a la Provincia.</p>
+
+      <div class="ficha-norma conflicto">
+        <div class="ficha-norma-row"><div class="label">Norma central</div><div class="valor">Decreto 735/2020 (PEN)</div></div>
+        <div class="ficha-norma-row"><div class="label">Fecha</div><div class="valor">9 de septiembre de 2020</div></div>
+        <div class="ficha-norma-row"><div class="label">Medida</div><div class="valor">Reducción unilateral del coeficiente de CABA de 3,50% a 2,32%</div></div>
+        <div class="ficha-norma-row"><div class="label">Argumento</div><div class="valor">Asistencia a la Provincia de Buenos Aires por crisis policial</div></div>
+        <div class="ficha-norma-row"><div class="label">Norma posterior</div><div class="valor">Ley 27.606 (diciembre 2020), redujo a 1,40%</div></div>
+      </div>
+
+      <h3>Cronología del conflicto</h3>
+
+      <div class="timeline-conflicto">
+        <div class="timeline-conflicto-row">
+          <div class="timeline-conflicto-fecha">9/9/2020</div>
+          <div class="timeline-conflicto-hecho"><strong>Decreto 735/2020:</strong> el PEN reduce unilateralmente el coeficiente de CABA del 3,50% al 2,32%. CABA presenta acción ante la Corte Suprema reclamando inconstitucionalidad.</div>
+        </div>
+        <div class="timeline-conflicto-row">
+          <div class="timeline-conflicto-fecha">Dic 2020</div>
+          <div class="timeline-conflicto-hecho"><strong>Ley 27.606:</strong> el Congreso ratifica la quita y la profundiza, fijando un nuevo coeficiente del 1,40%. La Ciudad agrega esta ley a su impugnación judicial.</div>
+        </div>
+        <div class="timeline-conflicto-row">
+          <div class="timeline-conflicto-fecha">2021-2022</div>
+          <div class="timeline-conflicto-hecho">Tramitación de la causa ante la Corte Suprema. Se realizan audiencias y se intenta una negociación entre Nación, CABA y las provincias, sin acuerdo.</div>
+        </div>
+        <div class="timeline-conflicto-row">
+          <div class="timeline-conflicto-fecha">21/12/2022</div>
+          <div class="timeline-conflicto-hecho"><strong>Medida cautelar de la CSJN:</strong> por unanimidad, la Corte Suprema ordena al Estado Nacional restituir provisoriamente el coeficiente de CABA al <strong>2,95%</strong> hasta que se resuelva la cuestión de fondo. Se dispone que las transferencias se hagan en forma diaria y automática por el Banco de la Nación.</div>
+        </div>
+        <div class="timeline-conflicto-row">
+          <div class="timeline-conflicto-fecha">2023</div>
+          <div class="timeline-conflicto-hecho">El gobierno nacional no cumple inicialmente la medida cautelar; transfiere fondos por otras vías. El conflicto político escala.</div>
+        </div>
+        <div class="timeline-conflicto-row">
+          <div class="timeline-conflicto-fecha">2024</div>
+          <div class="timeline-conflicto-hecho">Negociaciones entre el nuevo gobierno nacional y CABA. Acuerdo parcial ante la Corte Suprema. La causa de fondo continúa abierta a 2026.</div>
+        </div>
+      </div>
+
+      <h3>Los argumentos en disputa</h3>
+
+      <p><strong>Argumentos del Gobierno de la Ciudad (CABA):</strong></p>
+      <ul>
+        <li>El coeficiente del 3,50% se fijó por acuerdo (Consenso Fiscal 2017, Ley 27.429) y no podía modificarse unilateralmente.</li>
+        <li>La Constitución Nacional (Art. 75 inc. 2) exige que las modificaciones a la coparticipación sean por "ley convenio" entre Nación y provincias, no por decreto del PEN.</li>
+        <li>La quita afectaba servicios concretos transferidos (Policía de la Ciudad), generando un déficit estructural.</li>
+        <li>Se vulneraba el principio constitucional de "automaticidad" en la remisión de fondos.</li>
+        <li>Era una decisión arbitraria sin sustento técnico-presupuestario.</li>
+      </ul>
+
+      <p><strong>Argumentos del Estado Nacional:</strong></p>
+      <ul>
+        <li>El Decreto 194/2016 (que elevó el coeficiente al 3,75% inicialmente) era inválido por haberse dictado por decreto sin base técnica.</li>
+        <li>El 3,50% excedía el costo real de los servicios transferidos a CABA.</li>
+        <li>Existía urgencia institucional para auxiliar a la Provincia de Buenos Aires.</li>
+        <li>La modificación posterior por ley (27.606) sí cumplía con el procedimiento constitucional.</li>
+      </ul>
+
+      <h3>Los fundamentos del fallo de la Corte</h3>
+      <p>En la sentencia del 21 de diciembre de 2022, la Corte Suprema sostuvo, entre otros puntos:</p>
+      <ul>
+        <li>Las transferencias de competencias entre Nación y CABA son "actos concertados" entre ambos gobiernos, no decisiones unilaterales.</li>
+        <li>La modificación de los coeficientes de coparticipación porteña requiere acuerdo bilateral.</li>
+        <li>La medida unilateral del Decreto 735/2020 violaba el principio de buena fe federal.</li>
+        <li>La autonomía financiera de CABA aún no se concretó plenamente porque no se sancionó la ley de coparticipación que la Constitución de 1994 ordenó.</li>
+        <li>El coeficiente cautelar del 2,95% se fundamentaba como medida provisoria, no definitiva.</li>
+      </ul>
+
+      <div class="destacado historico">
+        <div class="destacado-titulo">Un precedente institucional</div>
+        <p>El fallo del 21/12/2022 es uno de los precedentes constitucionales más relevantes en materia de federalismo fiscal de las últimas décadas. Reconoció explícitamente que CABA, aunque no sea una provincia en sentido estricto, tiene los mismos derechos que las provincias en materia de coparticipación y que sus coeficientes no pueden ser modificados unilateralmente por la Nación. Es un argumento que CABA usará en futuras controversias.</p>
+      </div>
+    </section>
+
+    <section class="seccion" id="pendiente">
+      <div class="seccion-eyebrow">— 08 / Lo pendiente</div>
+      <h2>Lo que <em>queda</em> pendiente</h2>
+
+      <p>El conflicto fiscal entre CABA y la Nación es estructural, no coyuntural. Mientras no se sancione una nueva ley de coparticipación que defina el lugar de CABA en el sistema, los conflictos van a seguir reapareciendo cada vez que cambien las prioridades políticas de un gobierno nacional.</p>
+
+      <h3>La ley de coparticipación nunca sancionada</h3>
+      <p>El mandato constitucional de 1994 (Art. 75 inc. 2, párrafo 6) era claro: el Congreso debía sancionar una nueva ley convenio de coparticipación antes de 1996. Tres décadas después, esa ley sigue sin existir. Las razones son varias:</p>
+      <ul>
+        <li>Requiere acuerdo entre Nación, todas las provincias y CABA.</li>
+        <li>Cualquier nuevo reparto genera ganadores y perdedores entre las jurisdicciones.</li>
+        <li>Las provincias no quieren ceder porcentajes a CABA, que ya tiene alta capacidad fiscal propia.</li>
+        <li>La Nación no quiere comprometer recursos en un esquema rígido.</li>
+        <li>Existe ambigüedad sobre si CABA debe entrar como una "provincia más" o con un régimen especial.</li>
+      </ul>
+
+      <h3>El conflicto judicial de fondo</h3>
+      <p>A 2026, la causa de fondo sobre el Decreto 735/2020 y la Ley 27.606 sigue abierta ante la Corte Suprema. La medida cautelar (2,95%) rige provisoriamente pero la decisión final sobre cuánto le corresponde definitivamente a CABA, y si la Nación debe devolver los fondos retenidos entre 2020 y 2022, todavía no se resolvió.</p>
+
+      <h3>Las propuestas circulantes</h3>
+      <p>En el debate académico y político circulan diversas propuestas:</p>
+      <ul>
+        <li><strong>Ley de coparticipación moderna:</strong> que reorganice todo el sistema con criterios objetivos por jurisdicción.</li>
+        <li><strong>Cláusula automática para CABA:</strong> que fije el coeficiente en función del costo real de los servicios transferidos, actualizado periódicamente.</li>
+        <li><strong>Fondo compensador especial:</strong> para neutralizar los costos de CABA como capital federal (los gastos extra que genera ser sede del gobierno nacional).</li>
+        <li><strong>Bipartismo Nación-CABA:</strong> régimen específico bilateral, sin participación de las provincias.</li>
+      </ul>
+      <p>Ninguna de estas alternativas tiene consensos suficientes para concretarse en el corto plazo.</p>
+
+      <div class="destacado premium">
+        <div class="destacado-titulo">Para continuar</div>
+        <p>El último capítulo del apartado (<strong>09.05</strong>) cierra con los temas pendientes que aún limitan la autonomía plena de la Ciudad: el traslado incompleto de la justicia ordinaria, la administración del puerto, las riberas, el subte y los trenes, y el debate sobre si CABA debe seguir siendo Capital Federal o si debe replantearse el régimen.</p>
+      </div>
+    </section>
+
+    <section class="fuentes">
+      <h3>— Fuentes oficiales y normativa</h3>
+      <ul>
+        <li><strong>Constitución Nacional Argentina</strong>, arts. 75 inc. 2 y 129.</li>
+        <li><strong>Ley 23.548</strong> (1988) - Régimen de Coparticipación Federal de Impuestos.</li>
+        <li><strong>Ley 27.429</strong> (2017) - Consenso Fiscal.</li>
+        <li><strong>Decreto 194/2016</strong> - Aumento del coeficiente de CABA al 3,75%.</li>
+        <li><strong>Decreto 735/2020</strong> - Reducción unilateral del coeficiente al 2,32%.</li>
+        <li><strong>Ley 27.606</strong> (diciembre 2020) - Reducción adicional al 1,40%.</li>
+        <li><strong>CSJN, sentencia del 21/12/2022</strong>, "Gobierno de la Ciudad Autónoma de Buenos Aires c/ Estado Nacional s/ Acción declarativa de inconstitucionalidad".</li>
+        <li><strong>Código Fiscal de la Ciudad Autónoma de Buenos Aires</strong> (vigente y modificaciones anuales).</li>
+        <li><strong>Ley 2.603</strong> (2007) - Creación de la AGIP.</li>
+        <li><strong>Administración Gubernamental de Ingresos Públicos (AGIP)</strong>. <a href="https://www.agip.gob.ar" target="_blank" rel="noopener">agip.gob.ar</a></li>
+        <li><strong>Ministerio de Hacienda y Finanzas de CABA</strong>. <a href="https://buenosaires.gob.ar/hacienda" target="_blank" rel="noopener">buenosaires.gob.ar/hacienda</a></li>
+        <li><strong>Comisión Federal de Impuestos</strong>. <a href="https://www.cfi.gob.ar" target="_blank" rel="noopener">cfi.gob.ar</a></li>
+      </ul>
+      <p style="font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; color: var(--tinta-soft); margin-top: 1.5rem; padding-top: 1rem; border-top: 1px solid var(--linea); line-height: 1.6;">
+        Los porcentajes de coparticipación pueden modificarse por nuevas normas. Las alícuotas tributarias se actualizan periódicamente por leyes tarifarias. Última revisión: mayo de 2026.
+      </p>
+    </section>
+
+  </main>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div>
+      <h3>Educación Cívica</h3>
+      <p>Una guía visual y educativa sobre el Estado argentino, sus poderes, las provincias, el sistema electoral, los derechos del ciudadano y la historia institucional.</p>
+    </div>
+    <div>
+      <h3>Secciones</h3>
+      <a href="poderes.html">Los poderes</a>
+      <a href="provincias.html">Provincias</a>
+      <a href="index.html#sistema-electoral">Elecciones</a>
+      <a href="index.html#derechos">Derechos</a>
+      <a href="historia.html">Historia</a>
+      <a href="caba-en-profundidad.html">CABA en profundidad</a>
+    </div>
+    <div>
+      <h3>El proyecto</h3>
+      <a href="#">Sobre nosotros</a>
+      <a href="#">Manifiesto editorial</a>
+      <a href="#">Suscribirse</a>
+      <a href="#">Contacto</a>
+    </div>
+    <div class="footer-meta">
+      educacioncivica.com.ar · v0.5 prototipo · Educación cívica con datos · Sin grieta · Datos institucionales actualizados a mayo de 2026
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

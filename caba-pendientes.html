@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Crect width=%22100%22 height=%22100%22 fill=%22%23FBF7F0%22/%3E%3Ccircle cx=%2250%22 cy=%2250%22 r=%2230%22 fill=%22%23F6B40E%22/%3E%3C/svg%3E">
+<title>Pendientes de la autonomía de CABA — Educación Cívica</title>
+<meta name="description" content="Lo que falta de la autonomía porteña: justicia ordinaria (fallo Levinas), Policía, subte y transporte, puerto, aeroparque, registros, estatus futuro.">
+<link rel="canonical" href="https://educacioncivica.com.ar/caba-pendientes.html">
+<meta property="og:title" content="Pendientes de la autonomía de CABA · Educación Cívica">
+<meta property="og:description" content="Lo que falta de la autonomía porteña: justicia, seguridad, transporte, puerto, registros, estatus futuro.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://educacioncivica.com.ar/caba-pendientes.html">
+<meta property="og:site_name" content="Educación Cívica">
+<meta property="og:locale" content="es_AR">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Pendientes de la autonomía de CABA · Educación Cívica">
+<meta name="twitter:description" content="Lo que falta de la autonomía porteña: justicia, seguridad, transporte, puerto, registros, estatus futuro.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,400;0,500;0,600;1,400&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --crema: #FBF7F0; --crema-warm: #F4ECDB; --tinta: #1A1A2E; --tinta-soft: #545465;
+    --celeste: #74ACDF; --celeste-soft: #E4F0FA; --celeste-dark: #3D7BB0;
+    --sol: #F6B40E; --sol-soft: #FBE5AA; --sol-dark: #C8941A;
+    --rojo-fed: #B8341B; --rojo-soft: #F2D5CE;
+    --verde-ok: #4A7C59; --verde-soft: #DAEAE0;
+    --premium: #6B4F8C; --premium-soft: #E8DFF0; --premium-dark: #4A3661;
+    --linea: #DDD7CB; --linea-soft: #ECE6DA;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Fraunces', Georgia, serif; background: var(--crema); color: var(--tinta); line-height: 1.6; }
+  nav { background: white; border-bottom: 1px solid var(--linea); padding: 1.2rem 2rem; position: sticky; top: 0; z-index: 100; }
+  .nav-inner { max-width: 1400px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
+  .logo { display: flex; align-items: center; gap: 0.5rem; font-family: 'Fraunces', serif; font-weight: 500; font-size: 1.1rem; color: var(--tinta); text-decoration: none; }
+  .logo-dot { width: 12px; height: 12px; background: var(--sol); border-radius: 50%; }
+  .breadcrumb { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.1em; color: var(--tinta-soft); }
+  .breadcrumb a { color: var(--tinta-soft); text-decoration: none; }
+  .breadcrumb a:hover { color: var(--tinta); }
+  .premium-banner { background: var(--premium); color: white; padding: 0.6rem 2rem; font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase; text-align: center; }
+  .premium-banner strong { color: var(--sol); }
+  .page-header { background: linear-gradient(180deg, var(--premium-soft) 0%, var(--crema) 100%); padding: 4rem 2rem 3rem; border-bottom: 1px solid var(--linea); }
+  .page-header-inner { max-width: 900px; margin: 0 auto; }
+  .page-eyebrow { display: inline-block; font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--premium-dark); background: white; padding: 0.5rem 1rem; border: 1px solid var(--premium); margin-bottom: 1.5rem; }
+  .page-title { font-family: 'Fraunces', serif; font-weight: 300; font-size: clamp(2.2rem, 5vw, 3.6rem); line-height: 1.05; margin-bottom: 1.5rem; color: var(--tinta); }
+  .page-title em { font-style: italic; color: var(--premium-dark); font-weight: 400; }
+  .page-intro { font-size: 1.15rem; line-height: 1.7; color: var(--tinta); max-width: 720px; }
+  .layout { max-width: 1400px; margin: 0 auto; padding: 3rem 2rem; display: grid; grid-template-columns: 220px 1fr; gap: 4rem; align-items: start; }
+  .toc { position: sticky; top: 90px; font-family: 'JetBrains Mono', monospace; font-size: 0.78rem; }
+  .toc-titulo { font-size: 0.65rem; letter-spacing: 0.18em; color: var(--tinta-soft); text-transform: uppercase; margin-bottom: 1rem; padding-bottom: 0.8rem; border-bottom: 1px solid var(--linea); }
+  .toc ul { list-style: none; }
+  .toc li { margin-bottom: 0.6rem; line-height: 1.4; }
+  .toc a { color: var(--tinta-soft); text-decoration: none; border-left: 2px solid var(--linea); padding-left: 0.8rem; display: block; transition: all 0.18s ease; }
+  .toc a:hover { color: var(--tinta); border-left-color: var(--premium); }
+  .toc-num { color: var(--premium-dark); font-weight: 500; }
+  .contenido { max-width: 720px; }
+  .seccion { margin-bottom: 3.5rem; padding-bottom: 3rem; border-bottom: 1px solid var(--linea); }
+  .seccion:last-of-type { border-bottom: none; }
+  .seccion-eyebrow { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.18em; color: var(--premium-dark); text-transform: uppercase; margin-bottom: 0.6rem; }
+  .seccion h2 { font-family: 'Fraunces', serif; font-weight: 400; font-size: 1.9rem; line-height: 1.15; color: var(--tinta); margin-bottom: 1.5rem; }
+  .seccion h2 em { font-style: italic; color: var(--premium-dark); }
+  .seccion h3 { font-family: 'Fraunces', serif; font-weight: 500; font-size: 1.2rem; color: var(--tinta); margin-top: 2rem; margin-bottom: 0.8rem; }
+  .seccion p { margin-bottom: 1rem; font-size: 1rem; line-height: 1.75; color: var(--tinta); }
+  .seccion p strong { font-weight: 600; color: var(--tinta); }
+  .seccion ul { margin: 1rem 0 1.5rem 0; padding-left: 0; list-style: none; }
+  .seccion ul li { padding-left: 1.5rem; margin-bottom: 0.6rem; line-height: 1.6; position: relative; }
+  .seccion ul li::before { content: '→'; position: absolute; left: 0; color: var(--premium); font-weight: 600; }
+  .ficha-norma { background: white; border: 1px solid var(--linea); border-left: 4px solid var(--premium); padding: 1.5rem 1.8rem; margin-bottom: 1.5rem; }
+  .ficha-norma-row { display: flex; padding: 0.5rem 0; border-bottom: 1px dotted var(--linea); font-size: 0.9rem; }
+  .ficha-norma-row:last-child { border-bottom: none; }
+  .ficha-norma-row .label { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--tinta-soft); min-width: 130px; }
+  .ficha-norma-row .valor { flex: 1; color: var(--tinta); }
+  .destacado { background: white; border-left: 4px solid var(--celeste); padding: 1.5rem 1.8rem; margin: 1.5rem 0; font-size: 0.95rem; line-height: 1.6; }
+  .destacado-titulo { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.15em; color: var(--celeste-dark); text-transform: uppercase; margin-bottom: 0.6rem; }
+  .destacado.atencion { background: var(--sol-soft); border-left-color: var(--sol-dark); }
+  .destacado.atencion .destacado-titulo { color: var(--sol-dark); }
+  .destacado.historico { background: var(--rojo-soft); border-left-color: var(--rojo-fed); }
+  .destacado.historico .destacado-titulo { color: var(--rojo-fed); }
+  .destacado.premium { background: var(--premium-soft); border-left-color: var(--premium); }
+  .destacado.premium .destacado-titulo { color: var(--premium-dark); }
+  .cita-articulo { background: white; border: 1px solid var(--linea); padding: 1.5rem 1.8rem; margin: 1.5rem 0; font-family: 'Fraunces', serif; font-style: italic; font-size: 1.02rem; line-height: 1.7; color: var(--tinta); border-left: 4px solid var(--sol-dark); position: relative; }
+  .cita-articulo::before { content: '"'; position: absolute; top: -0.5rem; left: 1.2rem; font-size: 3rem; color: var(--sol); font-family: serif; line-height: 1; }
+  .cita-articulo-ref { font-family: 'JetBrains Mono', monospace; font-style: normal; font-size: 0.7rem; letter-spacing: 0.12em; color: var(--tinta-soft); text-transform: uppercase; margin-top: 0.8rem; }
+  .cita-legal { font-family: 'JetBrains Mono', monospace; font-size: 0.75rem; color: var(--tinta-soft); background: var(--linea-soft); padding: 0.8rem 1rem; margin: 1rem 0; line-height: 1.5; border-left: 3px solid var(--tinta-soft); }
+  .tabla-datos { width: 100%; margin: 1.5rem 0; border-collapse: collapse; font-size: 0.88rem; }
+  .tabla-datos th { text-align: left; padding: 0.7rem 0.8rem; background: var(--premium-soft); border-bottom: 2px solid var(--premium); font-family: 'JetBrains Mono', monospace; font-size: 0.65rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--tinta); font-weight: 600; }
+  .tabla-datos td { padding: 0.7rem 0.8rem; border-bottom: 1px dotted var(--linea); vertical-align: top; }
+  .tabla-datos tr:last-child td { border-bottom: none; }
+  .tabla-datos td:first-child { font-weight: 500; color: var(--tinta); }
+  .fuentes { margin-top: 4rem; padding-top: 2.5rem; border-top: 2px solid var(--linea); }
+  .fuentes h3 { font-family: 'JetBrains Mono', monospace; font-size: 0.75rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--tinta-soft); margin-bottom: 1.5rem; border: none; padding: 0; }
+  .fuentes ul { list-style: none; padding: 0; }
+  .fuentes li { padding: 0.6rem 0; border-bottom: 1px dotted var(--linea); font-size: 0.88rem; padding-left: 0; }
+  .fuentes li::before { content: none; }
+  .fuentes a { color: var(--premium-dark); text-decoration: none; border-bottom: 1px dotted var(--premium-dark); }
+  .fuentes a:hover { color: var(--tinta); }
+  footer { background: var(--tinta); color: var(--crema); padding: 3rem 2rem; margin-top: 4rem; }
+  .footer-inner { max-width: 1400px; margin: 0 auto; display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 3rem; }
+  footer h3 { font-family: 'Fraunces', serif; font-weight: 400; font-size: 1.3rem; margin-bottom: 1rem; color: var(--crema); }
+  footer p, footer a { color: var(--crema); opacity: 0.85; font-size: 0.9rem; line-height: 1.6; }
+  footer a { text-decoration: none; display: block; padding: 0.3rem 0; }
+  footer a:hover { opacity: 1; color: var(--sol); }
+  .footer-meta { grid-column: 1 / -1; margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid rgba(251, 247, 240, 0.15); font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; opacity: 0.6; letter-spacing: 0.05em; }
+  @media (max-width: 900px) {
+    .layout { grid-template-columns: 1fr; gap: 2rem; }
+    .toc { position: relative; top: 0; padding: 1.5rem; background: white; border: 1px solid var(--linea); }
+    .footer-inner { grid-template-columns: 1fr; gap: 2rem; }
+    .ficha-norma-row { flex-direction: column; gap: 0.3rem; }
+    .ficha-norma-row .label { min-width: auto; }
+  }
+</style>
+</head>
+<body>
+
+<div class="premium-banner">— Capítulo premium · <strong>Acceso libre durante el período de prueba</strong></div>
+
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="logo"><span class="logo-dot"></span>Educación Cívica</a>
+    <div class="breadcrumb"><a href="index.html">Inicio</a> · <a href="caba-en-profundidad.html">CABA en profundidad</a> · <span>Pendientes</span></div>
+  </div>
+</nav>
+
+<header class="page-header">
+  <div class="page-header-inner">
+    <div class="page-eyebrow">Capítulo 09.05 · Estudios en profundidad</div>
+    <h1 class="page-title">Lo que <em>falta</em>: pendientes de la autonomía</h1>
+    <p class="page-intro">Más de 30 años después de la reforma constitucional de 1994, la autonomía porteña sigue siendo un proceso en construcción. Justicia ordinaria, seguridad, transporte interjurisdiccional, puerto, registros, estatus jurídico futuro: cuestiones abiertas con fallos recientes, leyes pendientes y debates doctrinarios que no se cierran. Un recorrido por las asignaturas pendientes de la Ciudad-Estado.</p>
+  </div>
+</header>
+
+<div class="layout">
+
+  <aside class="toc">
+    <div class="toc-titulo">— En esta página</div>
+    <ul>
+      <li><a href="#justicia-ordinaria"><span class="toc-num">01</span> Justicia ordinaria</a></li>
+      <li><a href="#fallo-levinas"><span class="toc-num">02</span> El fallo Levinas</a></li>
+      <li><a href="#seguridad"><span class="toc-num">03</span> Policía y seguridad</a></li>
+      <li><a href="#transporte"><span class="toc-num">04</span> Subte y transporte</a></li>
+      <li><a href="#puerto"><span class="toc-num">05</span> Puerto y Aeroparque</a></li>
+      <li><a href="#registros"><span class="toc-num">06</span> Registros y otros</a></li>
+      <li><a href="#riberas"><span class="toc-num">07</span> Riberas y territorios</a></li>
+      <li><a href="#estatus-futuro"><span class="toc-num">08</span> El estatus jurídico futuro</a></li>
+    </ul>
+  </aside>
+
+  <main class="contenido">
+
+    <section class="seccion" id="justicia-ordinaria">
+      <div class="seccion-eyebrow">— 01 / Justicia ordinaria</div>
+      <h2>La <em>justicia ordinaria</em>: el gran pendiente</h2>
+
+      <p>El conflicto más importante de la autonomía porteña es el de la <strong>justicia ordinaria</strong>. La situación actual es paradójica: dentro del territorio de CABA conviven dos sistemas judiciales paralelos.</p>
+
+      <h3>La doble estructura judicial actual</h3>
+      <ul>
+        <li><strong>Justicia Nacional con asiento en CABA:</strong> los fueros tradicionales (Civil, Comercial, Penal Común, Laboral, Civil y Comercial Federal, Seguridad Social) siguen dependiendo del Poder Judicial de la Nación. Sus jueces son designados por el Presidente con acuerdo del Senado, conforme al procedimiento federal. Son aproximadamente 300 jueces y juezas que aplican el derecho común.</li>
+        <li><strong>Justicia de la Ciudad:</strong> los fueros creados desde 2000 (Contencioso Administrativo y Tributario; Penal, Contravencional y de Faltas; Penal Juvenil) dependen del Poder Judicial porteño, con jueces designados según el régimen local.</li>
+      </ul>
+
+      <p>Esto significa que <strong>un mismo delito penal puede tramitarse en uno u otro fuero según la materia</strong>: los delitos transferidos por convenios (tenencia de drogas para consumo personal, daños, amenazas simples, etc.) van al fuero Penal porteño; los delitos no transferidos (homicidio, robo, narcotráfico) van al fuero penal nacional. Es una situación que duplica estructuras y complejiza el funcionamiento judicial.</p>
+
+      <div class="cita-legal">
+        Para profundizar en la estructura del Poder Judicial porteño, ver el capítulo <a href="caba-poderes.html" style="color: var(--premium-dark);">09.02 (Los tres poderes porteños)</a>.
+      </div>
+
+      <h3>Los convenios de transferencia</h3>
+      <p>Entre 2000 y 2017 se firmaron <strong>tres convenios sucesivos</strong> de transferencia de competencias penales desde la Nación a CABA, todos ratificados por leyes nacionales y porteñas:</p>
+
+      <ul>
+        <li><strong>Convenio I (2000):</strong> ratificado por Ley nacional 25.752 y Ley 597 de CABA. Transferencia de algunas competencias penales menores.</li>
+        <li><strong>Convenio II (2004):</strong> ratificado por Ley nacional 26.357 y Ley 2.257 de CABA. Ampliación a más delitos.</li>
+        <li><strong>Convenio III (2017):</strong> ratificado por Ley nacional 26.702 (en realidad sancionada en 2011) y normas posteriores. Tercer paquete de delitos transferidos.</li>
+      </ul>
+
+      <p>Sin embargo, la transferencia completa de la justicia ordinaria nunca se concretó. La mayoría de los grandes fueros (Civil, Comercial, Laboral, Penal Común) siguen siendo Justicia Nacional, treinta años después del Art. 129.</p>
+
+      <h3>Las posiciones en el debate</h3>
+      <p>El estancamiento del proceso tiene defensores y críticos:</p>
+
+      <ul>
+        <li><strong>A favor de la transferencia plena:</strong> sostienen que el Art. 129 mandata facultades propias de jurisdicción para CABA, y que mantener la Justicia Nacional en su territorio limita inconstitucionalmente la autonomía. Argumentan también una eficiencia administrativa: que una sola estructura judicial sea coherente.</li>
+        <li><strong>Contra la transferencia:</strong> diversos colegios profesionales, asociaciones de magistrados y especialistas advierten sobre los riesgos prácticos: complejidad de migrar 300 jueces y miles de causas en trámite, distinto régimen procesal, garantías de los justiciables, costos administrativos.</li>
+        <li><strong>Una vía intermedia:</strong> hay quienes proponen una transferencia gradual, con plazos largos, recursos asignados y una mesa de coordinación permanente entre Nación y Ciudad.</li>
+      </ul>
+    </section>
+
+    <section class="seccion" id="fallo-levinas">
+      <div class="seccion-eyebrow">— 02 / Fallo Levinas</div>
+      <h2>El fallo <em>Levinas</em> (CSJN, 2024)</h2>
+
+      <p>El 27 de diciembre de 2024, la Corte Suprema de Justicia de la Nación dictó sentencia en el caso <strong>"Ferrari, María Alicia c/ Levinas, Gabriel Isaías s/ incidente de incompetencia"</strong>, conocido directamente como "el fallo Levinas". Es uno de los pronunciamientos judiciales más importantes en materia de autonomía porteña desde la reforma de 1994.</p>
+
+      <div class="ficha-norma">
+        <div class="ficha-norma-row"><div class="label">Tribunal</div><div class="valor">Corte Suprema de Justicia de la Nación</div></div>
+        <div class="ficha-norma-row"><div class="label">Carátula</div><div class="valor">Ferrari, María Alicia c/ Levinas, Gabriel Isaías s/ incidente de incompetencia</div></div>
+        <div class="ficha-norma-row"><div class="label">Fecha</div><div class="valor">27 de diciembre de 2024</div></div>
+        <div class="ficha-norma-row"><div class="label">Ratificación</div><div class="valor">18 de febrero de 2025 (rechazó planteo de Asociación de Magistrados)</div></div>
+        <div class="ficha-norma-row"><div class="label">Materia</div><div class="valor">Reparto de competencias judicial CABA-Nación</div></div>
+      </div>
+
+      <h3>Lo que decidió la Corte</h3>
+      <p>El fallo aborda una pregunta procesal precisa pero de enormes consecuencias: en las causas que tramitan ante la Justicia Nacional ordinaria con asiento en CABA, <strong>¿cuál es el "superior tribunal de la causa" a efectos del recurso extraordinario del Art. 14 de la Ley 48?</strong></p>
+
+      <p>La respuesta tradicional era: las Cámaras Nacionales de Apelaciones con asiento en CABA. La Corte, por mayoría, modificó ese criterio:</p>
+
+      <div class="cita-articulo">
+        El Tribunal Superior de Justicia de la Ciudad Autónoma de Buenos Aires es el superior tribunal de la causa al que se refiere el artículo 14 de la ley 48 para los procesos que tramitan ante la justicia nacional ordinaria de la CABA.
+        <div class="cita-articulo-ref">— CSJN, "Ferrari c/ Levinas", 27/12/2024</div>
+      </div>
+
+      <h3>Consecuencias prácticas</h3>
+      <p>El fallo cambia la arquitectura del sistema judicial porteño. Antes, el recorrido típico de una causa civil o comercial era: Juzgado Nacional → Cámara Nacional de Apelaciones → CSJN (vía recurso extraordinario). Ahora pasa a ser: Juzgado Nacional → Cámara Nacional de Apelaciones → <strong>Tribunal Superior de Justicia de CABA</strong> → CSJN.</p>
+
+      <p>El cambio afecta a:</p>
+
+      <ul>
+        <li><strong>Aproximadamente 300 jueces</strong> de la Justicia Nacional con asiento en CABA, cuyas decisiones quedan sujetas a revisión por el TSJ porteño.</li>
+        <li><strong>Miles de procesos en trámite</strong> con la regla nueva aplicable a partir del 27 de diciembre de 2024.</li>
+        <li><strong>El procedimiento aplicable:</strong> rige la Ley 402 de CABA (procedimientos ante el TSJ).</li>
+        <li><strong>La carga de trabajo del TSJ porteño,</strong> que pasa a recibir un volumen significativo de recursos extraordinarios.</li>
+      </ul>
+
+      <div class="destacado atencion">
+        <div class="destacado-titulo">Una resolución muy controvertida</div>
+        <p>El fallo generó reacciones intensas. La Asociación de Magistrados y Funcionarios de la Justicia Nacional (AMFJN) presentó un planteo contra la decisión, que fue rechazado por la CSJN el 18 de febrero de 2025. Colegios de abogados, asociaciones de jueces y sindicatos pidieron mesas de trabajo para definir cómo implementar el fallo: con qué procedimiento, qué Código aplicar en el TSJ, cómo manejar los plazos. La discusión continúa con leyes de implementación pendientes.</p>
+      </div>
+
+      <h3>El alcance institucional</h3>
+      <p>Más allá del aspecto técnico-procesal, el fallo tiene un alcance institucional profundo. La Corte interpretó que el "inmovilismo legislativo" en relación a la transferencia de la Justicia Nacional no podía sostenerse indefinidamente, y que el Art. 129 exigía consecuencias prácticas. Es un cambio jurisprudencial significativo en favor de una interpretación más amplia de la autonomía porteña.</p>
+
+      <p>El fallo es citado ya como precedente para abrir nuevos planteos sobre otros aspectos no transferidos: registros públicos, jurisdicción sobre el espacio público no edificable, regulaciones de servicios.</p>
+    </section>
+
+    <section class="seccion" id="seguridad">
+      <div class="seccion-eyebrow">— 03 / Seguridad</div>
+      <h2>Policía y <em>seguridad</em></h2>
+
+      <p>El reparto de competencias en materia de seguridad fue uno de los puntos más críticos de la Ley Cafiero original, y aunque se modificó en 2007, todavía tiene zonas grises.</p>
+
+      <h3>Cronología de la cuestión policial</h3>
+      <ul>
+        <li><strong>1995:</strong> Ley Cafiero (Ley 24.588). En su redacción original, prohibía a CABA tener policía propia. La seguridad quedaba a cargo de la Policía Federal Argentina (PFA).</li>
+        <li><strong>2007:</strong> Ley 26.288 modifica la Ley Cafiero. Habilita a CABA a tener una fuerza policial local: nace la <strong>Policía Metropolitana</strong>.</li>
+        <li><strong>2008:</strong> Implementación efectiva de la Policía Metropolitana, con funciones limitadas (delitos transferidos, contravenciones, faltas).</li>
+        <li><strong>2016:</strong> Ley 5.688 de CABA (Sistema Integral de Seguridad Pública). Crea la <strong>Policía de la Ciudad</strong> por fusión de la Policía Metropolitana con la división de la Policía Federal que actuaba en CABA. El traspaso operativo se completó en los años siguientes.</li>
+      </ul>
+
+      <h3>El reparto actual de competencias</h3>
+      <p>Hoy en CABA conviven varias fuerzas de seguridad con jurisdicciones específicas:</p>
+
+      <ul>
+        <li><strong>Policía de la Ciudad:</strong> fuerza local porteña, encargada de la seguridad ordinaria en el territorio.</li>
+        <li><strong>Policía Federal Argentina:</strong> mantiene funciones en delitos federales (drogas en escala interjurisdiccional, lavado de activos, terrorismo, etc.) y en seguridad de edificios federales.</li>
+        <li><strong>Gendarmería Nacional, Prefectura Naval, Policía de Seguridad Aeroportuaria:</strong> funciones específicas según jurisdicción.</li>
+      </ul>
+
+      <h3>Lo que sigue pendiente</h3>
+      <p>Aún con la creación de la Policía de la Ciudad, hay tensiones jurisdiccionales:</p>
+
+      <ul>
+        <li><strong>Financiamiento del traspaso:</strong> persisten controversias por los recursos transferidos junto con la fuerza.</li>
+        <li><strong>Articulación operativa</strong> entre Policía de la Ciudad y fuerzas federales en operativos complejos.</li>
+        <li><strong>Inteligencia criminal:</strong> el régimen de inteligencia sigue siendo federal, con consecuencias para la prevención del delito local.</li>
+        <li><strong>Subterráneos:</strong> jurisdicción específica que sigue tensionada (la seguridad del subte tiene historia compleja).</li>
+      </ul>
+    </section>
+
+    <section class="seccion" id="transporte">
+      <div class="seccion-eyebrow">— 04 / Transporte</div>
+      <h2>Subte y <em>transporte interjurisdiccional</em></h2>
+
+      <p>El régimen del transporte público es uno de los pendientes más complejos. La situación involucra al menos cuatro jurisdicciones: Nación, CABA, Provincia de Buenos Aires y municipios del conurbano.</p>
+
+      <h3>El subte (Subterráneos de Buenos Aires)</h3>
+      <p>La historia del subte porteño es atípica. Aunque circula íntegramente bajo el territorio de CABA, su régimen ha oscilado entre jurisdicción nacional y local. Hitos:</p>
+
+      <ul>
+        <li><strong>1939-2012:</strong> el subte fue operado por concesionarios privados bajo regulación nacional, con la concesión a Metrovías a partir de 1994.</li>
+        <li><strong>2012:</strong> traspaso del subte a la órbita de la Ciudad. La operación quedó bajo Subterráneos de Buenos Aires Sociedad del Estado (SBASE), empresa pública porteña.</li>
+        <li><strong>Régimen actual:</strong> CABA tiene la responsabilidad de la operación, los subsidios y las inversiones de expansión, aunque con tensiones recurrentes sobre el financiamiento.</li>
+      </ul>
+
+      <h3>Trenes urbanos y colectivos</h3>
+      <p>Los trenes urbanos del Área Metropolitana de Buenos Aires (líneas Mitre, Sarmiento, Roca, Belgrano Sur, Belgrano Norte, San Martín, Urquiza) son de jurisdicción <strong>nacional</strong>, gestionados a través de empresas estatales y privadas concesionarias bajo la regulación de la Secretaría de Transporte de la Nación y la CNRT.</p>
+
+      <p>Las líneas de colectivos del AMBA tienen un régimen mixto:</p>
+
+      <ul>
+        <li><strong>Líneas nacionales (1-199):</strong> regulación y subsidio nacional. Atraviesan CABA y el conurbano bonaerense.</li>
+        <li><strong>Líneas provinciales (200-499):</strong> dentro de la provincia de Buenos Aires.</li>
+        <li><strong>Líneas comunales (500+):</strong> servicios locales municipales.</li>
+      </ul>
+
+      <p>La interjurisdiccionalidad del sistema genera permanentes debates sobre subsidios, tarifas, frecuencias y planificación.</p>
+
+      <div class="destacado">
+        <div class="destacado-titulo">El AMBA como problema institucional</div>
+        <p>El Área Metropolitana de Buenos Aires (AMBA) abarca CABA y 40 municipios bonaerenses, con aproximadamente 15 millones de habitantes. Aunque funcionalmente es un territorio integrado (transporte, salud, residuos, agua, etc.), institucionalmente está fragmentado en decenas de jurisdicciones sin órgano de coordinación con autoridad real. Las propuestas de crear un ente metropolitano han existido por décadas pero no han prosperado.</p>
+      </div>
+    </section>
+
+    <section class="seccion" id="puerto">
+      <div class="seccion-eyebrow">— 05 / Puerto</div>
+      <h2>Puerto y <em>Aeroparque</em></h2>
+
+      <p>Dos infraestructuras estratégicas ubicadas físicamente en territorio porteño pero administradas por la Nación.</p>
+
+      <h3>El Puerto de Buenos Aires</h3>
+      <p>El Puerto de Buenos Aires es el principal puerto del país en términos de contenedores y carga general. Su administración está a cargo de la <strong>Administración General de Puertos Sociedad del Estado (AGP SE)</strong>, empresa pública nacional dependiente del Ministerio de Transporte (o el organismo equivalente según la organización del Poder Ejecutivo nacional).</p>
+
+      <p>La Constitución porteña de 1996, en su Art. 8°, reivindica derechos sobre las riberas y aguas adyacentes, pero la administración portuaria sigue siendo nacional. Esto genera tensiones recurrentes:</p>
+
+      <ul>
+        <li><strong>Recaudación:</strong> los ingresos del puerto (tarifas, concesiones, derechos) van a la Nación, no a CABA, pese a que el puerto ocupa un porcentaje significativo del territorio porteño.</li>
+        <li><strong>Planificación urbana:</strong> las decisiones de expansión, modernización o reconfiguración del puerto afectan directamente al desarrollo urbano de CABA pero se toman a nivel nacional.</li>
+        <li><strong>Concesiones de terminales:</strong> los contratos con operadores privados son nacionales.</li>
+      </ul>
+
+      <h3>Aeroparque Jorge Newbery</h3>
+      <p>El Aeroparque Internacional Jorge Newbery, ubicado en la Costanera Norte de CABA, opera bajo la jurisdicción de la <strong>Administración Nacional de Aviación Civil (ANAC)</strong> y su concesión es nacional. Atiende vuelos de cabotaje y, desde reformas recientes, también algunos internacionales regionales.</p>
+
+      <p>Como con el puerto, el Aeroparque está dentro del territorio porteño pero su régimen es federal. Las decisiones sobre tráfico aéreo, expansión y operaciones se toman a nivel nacional, generando recurrentes debates sobre su impacto urbano y ambiental.</p>
+    </section>
+
+    <section class="seccion" id="registros">
+      <div class="seccion-eyebrow">— 06 / Registros</div>
+      <h2>Registros y <em>otras competencias nacionales</em></h2>
+
+      <p>Varios registros públicos que afectan a la actividad cotidiana en CABA siguen siendo de jurisdicción nacional, lo que genera demandas de transferencia.</p>
+
+      <h3>Los registros pendientes</h3>
+      <ul>
+        <li><strong>Registro de la Propiedad Inmueble:</strong> sigue bajo administración nacional, pese a que la mayoría de los inmuebles que se registran están en CABA. Es uno de los reclamos históricos más concretos de la autonomía porteña.</li>
+        <li><strong>Inspección General de Justicia (IGJ):</strong> registra las sociedades comerciales con sede en CABA. Es un organismo nacional, dependiente del Ministerio de Justicia.</li>
+        <li><strong>Registro Nacional de las Personas (RENAPER):</strong> emite DNI y pasaporte, naturalmente federal.</li>
+        <li><strong>Registro de la Propiedad Automotor:</strong> régimen mixto, con seccionales locales pero bajo regulación nacional.</li>
+        <li><strong>Registro Civil:</strong> este sí es porteño (es una competencia provincial-municipal en todo el país, y CABA tiene el suyo).</li>
+      </ul>
+
+      <h3>Por qué importa esto</h3>
+      <p>Los registros no son una cuestión de orgullo institucional: son centros de información, recaudación de tasas, control de tráfico jurídico y empleo público. Que el Registro de la Propiedad Inmueble de CABA sea nacional implica que las tasas de inscripción de escrituras en la Ciudad las recauda la Nación. Lo mismo con la IGJ: las tasas de constitución y mantenimiento de sociedades en CABA son ingresos federales.</p>
+
+      <p>Las cifras no son menores. Por la Ciudad pasa una proporción significativa del tráfico inmobiliario y societario del país, y los recursos correspondientes no quedan en la jurisdicción local. Profundizamos sobre el sistema fiscal porteño en <a href="caba-coparticipacion.html" style="color: var(--premium-dark);">el capítulo 09.04</a>.</p>
+    </section>
+
+    <section class="seccion" id="riberas">
+      <div class="seccion-eyebrow">— 07 / Riberas</div>
+      <h2>Las <em>riberas</em> y el dominio territorial</h2>
+
+      <p>Otro frente de conflicto es el dominio sobre las riberas del Río de la Plata y del Riachuelo, y sobre territorios específicos dentro de CABA.</p>
+
+      <h3>El Art. 8° de la Constitución porteña</h3>
+
+      <div class="cita-articulo">
+        Los límites territoriales de la Ciudad de Buenos Aires son los que históricamente y por derecho le corresponden conforme a las leyes y decretos nacionales vigentes a la fecha. Se declara que la Ciudad de Buenos Aires es corribereña del Río de la Plata y del Riachuelo, los cuales constituyen en el área de su jurisdicción bienes de su dominio público.
+        <div class="cita-articulo-ref">— Artículo 8° de la Constitución de CABA (1996)</div>
+      </div>
+
+      <p>Esta declaración constitucional, sin embargo, no resuelve por sí sola la cuestión jurisdiccional. Algunos puntos abiertos:</p>
+
+      <ul>
+        <li><strong>La Reserva Ecológica Costanera Sur:</strong> está bajo administración porteña, pero su régimen es complejo por ser parte de las tierras ganadas al río.</li>
+        <li><strong>Tierras de la ribera:</strong> el frente costero del Río de la Plata tiene zonas de dominio nacional (puerto, aeroparque, terrenos militares) y zonas porteñas.</li>
+        <li><strong>Riachuelo:</strong> es un caso particular. La Cuenca Matanza-Riachuelo está bajo la supervisión de la Autoridad de Cuenca (ACUMAR), órgano interjurisdiccional creado tras el fallo "Mendoza" de la CSJN (2008), con participación de Nación, CABA y Provincia de Buenos Aires.</li>
+        <li><strong>Tierras públicas dentro de CABA:</strong> hay numerosos predios cuyo dominio está disputado entre Nación y Ciudad (ex predios ferroviarios, antiguos cuarteles, etc.). Cada uno es una negociación particular.</li>
+      </ul>
+    </section>
+
+    <section class="seccion" id="estatus-futuro">
+      <div class="seccion-eyebrow">— 08 / Estatus futuro</div>
+      <h2>El <em>estatus jurídico</em> futuro</h2>
+
+      <p>Más allá de los pendientes específicos, hay un debate de fondo: <strong>¿hacia dónde va el estatus jurídico de CABA?</strong> Las posibilidades doctrinarias y políticas son varias.</p>
+
+      <h3>Escenario 1: Provincialización plena</h3>
+      <p>Algunos sectores doctrinarios y políticos sostienen que CABA debería convertirse en una provincia más, en pie de igualdad con las 23 existentes. Eso implicaría:</p>
+
+      <ul>
+        <li><strong>Reforma constitucional</strong> para modificar el Art. 129 y suprimir el régimen especial.</li>
+        <li><strong>Traslado de la Capital Federal</strong> a otro lugar (proyectos históricos hubo varios, ninguno avanzó).</li>
+        <li><strong>Transferencia plena</strong> de todas las competencias hoy en discusión.</li>
+        <li><strong>Coparticipación según pautas constitucionales</strong> aplicables a las provincias.</li>
+      </ul>
+
+      <p>Es el escenario más radical. Requiere consensos políticos muy amplios (mayoría especial en el Congreso, convocatoria a Convención Constituyente, ratificaciones provinciales). Por ahora es más una posición doctrinaria que una agenda política concreta.</p>
+
+      <h3>Escenario 2: Consolidación de la autonomía actual</h3>
+      <p>Es la línea más probable a corto y mediano plazo. Implica:</p>
+
+      <ul>
+        <li><strong>Completar las transferencias pendientes</strong> de justicia, registros, eventualmente puerto.</li>
+        <li><strong>Mantener el régimen de Capital Federal</strong> sin cambios constitucionales.</li>
+        <li><strong>Resolver las disputas de coparticipación</strong> por negociación o vía judicial.</li>
+        <li><strong>Consolidar la jurisprudencia</strong> sobre el alcance del Art. 129 (línea que abrió el fallo Levinas).</li>
+      </ul>
+
+      <h3>Escenario 3: Reforma del Art. 129</h3>
+      <p>Algunos juristas proponen una reforma constitucional acotada al Art. 129 para clarificar definitivamente el estatus porteño. Las propuestas varían:</p>
+
+      <ul>
+        <li>Definir expresamente a CABA como provincia con régimen especial.</li>
+        <li>Eliminar la cláusula condicional ("mientras sea Capital Federal") que mantiene la ambigüedad.</li>
+        <li>Constitucionalizar la transferencia plena de competencias.</li>
+      </ul>
+
+      <p>Como toda reforma constitucional, requiere mayorías especiales y convocatoria a Convención. No hay actualmente proyectos serios en el Congreso al respecto.</p>
+
+      <h3>Escenario 4: Status quo dinámico</h3>
+      <p>El escenario más realista: el actual estado de cosas se mantiene, con ajustes graduales por leyes, convenios y fallos judiciales. La "autonomía en construcción" continúa siendo una autonomía en construcción, sin reforma constitucional pero con avances y retrocesos sectoriales según el contexto político de cada momento.</p>
+
+      <div class="destacado premium">
+        <div class="destacado-titulo">La paradoja de CABA</div>
+        <p>Después de 30 años, CABA sigue siendo el caso institucional más complejo del federalismo argentino. Tiene 3 millones de habitantes y aporta cerca de un cuarto del PBI nacional, pero su autonomía sigue siendo cuestionada en aspectos centrales. Es a la vez una jurisdicción autónoma y la sede del gobierno federal, dos status que generan tensiones recurrentes. Y treinta años después del Art. 129, ningún consenso amplio ha resuelto definitivamente qué tipo de entidad es. Esa indefinición es, en sí misma, una característica del sistema institucional argentino.</p>
+      </div>
+
+      <h3>Lo que sigue</h3>
+      <p>Los próximos años traerán probablemente:</p>
+
+      <ul>
+        <li><strong>Implementación efectiva del fallo Levinas</strong> y eventuales fallos derivados que vayan ampliando o limitando su alcance.</li>
+        <li><strong>Nuevas negociaciones</strong> por la coparticipación porteña, posiblemente con resoluciones judiciales.</li>
+        <li><strong>Transferencias parciales</strong> adicionales (registros, eventualmente Aeroparque, fueros menores).</li>
+        <li><strong>Continuidad de los debates</strong> académicos y políticos sobre el estatus futuro.</li>
+      </ul>
+
+      <p>El proceso institucional de CABA, en suma, es un proceso vivo. La autonomía es real pero incompleta. La capitalidad es real pero objeto de debate. Y el futuro jurídico del distrito sigue siendo materia de disputas abiertas que solo el tiempo y los procesos políticos definirán.</p>
+    </section>
+
+    <section class="fuentes">
+      <h3>— Fuentes oficiales y jurisprudencia</h3>
+      <ul>
+        <li><strong>Constitución Nacional</strong>, art. 129.</li>
+        <li><strong>Constitución de la Ciudad Autónoma de Buenos Aires</strong> (1996), arts. 6°, 8°, 106 y concordantes.</li>
+        <li><strong>Ley 24.588</strong> (Ley Cafiero, 1995) y modificatorias (Ley 26.288 de 2007).</li>
+        <li><strong>Ley 5.688 de CABA</strong> (2016) — Sistema Integral de Seguridad Pública. Policía de la Ciudad.</li>
+        <li><strong>Ley 48</strong> (régimen del recurso extraordinario federal, art. 14).</li>
+        <li><strong>Ley 402 de CABA</strong> (procedimientos ante el Tribunal Superior de Justicia).</li>
+        <li><strong>Leyes 25.752, 26.357 y 26.702</strong> — Convenios de transferencia de competencias penales Nación-CABA.</li>
+        <li><strong>CSJN, "Ferrari c/ Levinas"</strong> (27/12/2024). El fallo Levinas sobre alcance de la autonomía judicial.</li>
+        <li><strong>CSJN, ratificación del 18/02/2025</strong> (rechazo del planteo de la AMFJN).</li>
+        <li><strong>CSJN, "Mendoza, Beatriz Silvia y otros c/ Estado Nacional"</strong> (2008). Creación de ACUMAR.</li>
+        <li><strong>Tribunal Superior de Justicia de CABA</strong>. <a href="https://tribunalsuperior.gob.ar" target="_blank" rel="noopener">tribunalsuperior.gob.ar</a></li>
+        <li><strong>Boletín Oficial de la Ciudad de Buenos Aires</strong>. <a href="https://boletinoficial.buenosaires.gob.ar" target="_blank" rel="noopener">boletinoficial.buenosaires.gob.ar</a></li>
+        <li><strong>Boletín Oficial de la República Argentina</strong>. <a href="https://www.boletinoficial.gob.ar" target="_blank" rel="noopener">boletinoficial.gob.ar</a></li>
+        <li>Bidart Campos, Germán J. <em>Tratado elemental de Derecho Constitucional argentino.</em> Editorial Ediar.</li>
+        <li>Sabsay, Daniel A. <em>El derecho constitucional argentino.</em> Editorial Eudeba.</li>
+        <li>Gelli, María Angélica. <em>Constitución de la Nación Argentina comentada.</em> La Ley.</li>
+      </ul>
+      <p style="font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; color: var(--tinta-soft); margin-top: 1.5rem; padding-top: 1rem; border-top: 1px solid var(--linea); line-height: 1.6;">
+        Los procesos descriptos están en evolución constante. Para datos actualizados, consultar los sitios oficiales. Los criterios doctrinarios y jurisprudenciales mencionados pueden modificarse por fallos posteriores o legislación nueva. Última revisión: mayo de 2026.
+      </p>
+    </section>
+
+  </main>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div>
+      <h3>Educación Cívica</h3>
+      <p>Una guía visual y educativa sobre el Estado argentino, sus poderes, las provincias, el sistema electoral, los derechos del ciudadano y la historia institucional.</p>
+    </div>
+    <div>
+      <h3>Secciones</h3>
+      <a href="poderes.html">Los poderes</a>
+      <a href="provincias.html">Provincias</a>
+      <a href="historia.html">Historia</a>
+      <a href="caba-en-profundidad.html">CABA en profundidad</a>
+    </div>
+    <div>
+      <h3>El proyecto</h3>
+      <a href="#">Sobre nosotros</a>
+      <a href="#">Manifiesto editorial</a>
+      <a href="#">Suscribirse</a>
+      <a href="#">Contacto</a>
+    </div>
+    <div class="footer-meta">
+      educacioncivica.com.ar · v0.5 prototipo · Educación cívica con datos · Sin grieta · Datos institucionales actualizados a mayo de 2026
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Crect width=%22100%22 height=%22100%22 fill=%22%23FBF7F0%22/%3E%3Ccircle cx=%2250%22 cy=%2250%22 r=%2230%22 fill=%22%23F6B40E%22/%3E%3C/svg%3E">
+<title>CABA: Los tres poderes porteños — Educación Cívica</title>
+<meta name="description" content="Los tres poderes del Gobierno de la Ciudad Autónoma de Buenos Aires: Ejecutivo, Legislatura unicameral de 60 diputados, Poder Judicial y órganos de control.">
+<link rel="canonical" href="https://educacioncivica.com.ar/caba-poderes.html">
+<meta property="og:title" content="CABA: Los tres poderes porteños · Educación Cívica">
+<meta property="og:description" content="Jefe de Gobierno, Legislatura unicameral, Tribunal Superior de Justicia y órganos de control. La estructura institucional de CABA en detalle.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://educacioncivica.com.ar/caba-poderes.html">
+<meta property="og:site_name" content="Educación Cívica">
+<meta property="og:locale" content="es_AR">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="CABA: Los tres poderes porteños · Educación Cívica">
+<meta name="twitter:description" content="Jefe de Gobierno, Legislatura unicameral, Tribunal Superior de Justicia y órganos de control.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,400;0,500;0,600;1,400&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --crema: #FBF7F0; --crema-warm: #F4ECDB; --tinta: #1A1A2E; --tinta-soft: #545465;
+    --celeste: #74ACDF; --celeste-soft: #E4F0FA; --celeste-dark: #3D7BB0;
+    --sol: #F6B40E; --sol-soft: #FBE5AA; --sol-dark: #C8941A;
+    --rojo-fed: #B8341B; --rojo-soft: #F2D5CE;
+    --verde-ok: #4A7C59; --verde-soft: #DAEAE0;
+    --premium: #6B4F8C; --premium-soft: #E8DFF0; --premium-dark: #4A3661;
+    --linea: #DDD7CB; --linea-soft: #ECE6DA;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Fraunces', Georgia, serif; background: var(--crema); color: var(--tinta); line-height: 1.6; }
+  nav { background: white; border-bottom: 1px solid var(--linea); padding: 1.2rem 2rem; position: sticky; top: 0; z-index: 100; }
+  .nav-inner { max-width: 1400px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
+  .logo { display: flex; align-items: center; gap: 0.5rem; font-family: 'Fraunces', serif; font-weight: 500; font-size: 1.1rem; color: var(--tinta); text-decoration: none; }
+  .logo-dot { width: 12px; height: 12px; background: var(--sol); border-radius: 50%; }
+  .breadcrumb { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.1em; color: var(--tinta-soft); }
+  .breadcrumb a { color: var(--tinta-soft); text-decoration: none; }
+  .breadcrumb a:hover { color: var(--tinta); }
+  .premium-banner { background: var(--premium); color: white; padding: 0.6rem 2rem; font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase; text-align: center; }
+  .premium-banner strong { color: var(--sol); }
+  .page-header { background: linear-gradient(180deg, var(--premium-soft) 0%, var(--crema) 100%); padding: 4rem 2rem 3rem; border-bottom: 1px solid var(--linea); }
+  .page-header-inner { max-width: 900px; margin: 0 auto; }
+  .page-eyebrow { display: inline-block; font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--premium-dark); background: white; padding: 0.5rem 1rem; border: 1px solid var(--premium); margin-bottom: 1.5rem; }
+  .page-title { font-family: 'Fraunces', serif; font-weight: 300; font-size: clamp(2.2rem, 5vw, 3.6rem); line-height: 1.05; margin-bottom: 1.5rem; color: var(--tinta); }
+  .page-title em { font-style: italic; color: var(--premium-dark); font-weight: 400; }
+  .page-intro { font-size: 1.15rem; line-height: 1.7; color: var(--tinta); max-width: 720px; }
+  .layout { max-width: 1400px; margin: 0 auto; padding: 3rem 2rem; display: grid; grid-template-columns: 220px 1fr; gap: 4rem; align-items: start; }
+  .toc { position: sticky; top: 90px; font-family: 'JetBrains Mono', monospace; font-size: 0.78rem; }
+  .toc-titulo { font-size: 0.65rem; letter-spacing: 0.18em; color: var(--tinta-soft); text-transform: uppercase; margin-bottom: 1rem; padding-bottom: 0.8rem; border-bottom: 1px solid var(--linea); }
+  .toc ul { list-style: none; }
+  .toc li { margin-bottom: 0.6rem; line-height: 1.4; }
+  .toc a { color: var(--tinta-soft); text-decoration: none; border-left: 2px solid var(--linea); padding-left: 0.8rem; display: block; transition: all 0.18s ease; }
+  .toc a:hover { color: var(--tinta); border-left-color: var(--premium); }
+  .toc-num { color: var(--premium-dark); font-weight: 500; }
+  .contenido { max-width: 720px; }
+  .seccion { margin-bottom: 3.5rem; padding-bottom: 3rem; border-bottom: 1px solid var(--linea); }
+  .seccion:last-of-type { border-bottom: none; }
+  .seccion-eyebrow { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.18em; color: var(--premium-dark); text-transform: uppercase; margin-bottom: 0.6rem; }
+  .seccion h2 { font-family: 'Fraunces', serif; font-weight: 400; font-size: 1.9rem; line-height: 1.15; color: var(--tinta); margin-bottom: 1.5rem; }
+  .seccion h2 em { font-style: italic; color: var(--premium-dark); }
+  .seccion h3 { font-family: 'Fraunces', serif; font-weight: 500; font-size: 1.2rem; color: var(--tinta); margin-top: 2rem; margin-bottom: 0.8rem; }
+  .seccion p { margin-bottom: 1rem; font-size: 1rem; line-height: 1.75; color: var(--tinta); }
+  .seccion p strong { font-weight: 600; color: var(--tinta); }
+  .seccion ul { margin: 1rem 0 1.5rem 0; padding-left: 0; list-style: none; }
+  .seccion ul li { padding-left: 1.5rem; margin-bottom: 0.6rem; line-height: 1.6; position: relative; }
+  .seccion ul li::before { content: '→'; position: absolute; left: 0; color: var(--premium); font-weight: 600; }
+  .ficha-organo { background: white; border: 1px solid var(--linea); border-left: 4px solid var(--premium); padding: 1.5rem 1.8rem; margin: 1.5rem 0; }
+  .ficha-organo-row { display: flex; padding: 0.5rem 0; border-bottom: 1px dotted var(--linea); font-size: 0.9rem; }
+  .ficha-organo-row:last-child { border-bottom: none; }
+  .ficha-organo-row .label { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--tinta-soft); min-width: 160px; }
+  .ficha-organo-row .valor { flex: 1; color: var(--tinta); }
+  .destacado { background: white; border-left: 4px solid var(--celeste); padding: 1.5rem 1.8rem; margin: 1.5rem 0; font-size: 0.95rem; line-height: 1.6; }
+  .destacado-titulo { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.15em; color: var(--celeste-dark); text-transform: uppercase; margin-bottom: 0.6rem; }
+  .destacado.atencion { background: var(--sol-soft); border-left-color: var(--sol-dark); }
+  .destacado.atencion .destacado-titulo { color: var(--sol-dark); }
+  .destacado.premium { background: var(--premium-soft); border-left-color: var(--premium); }
+  .destacado.premium .destacado-titulo { color: var(--premium-dark); }
+  .cita-articulo { background: white; border: 1px solid var(--linea); padding: 1.5rem 1.8rem; margin: 1.5rem 0; font-family: 'Fraunces', serif; font-style: italic; font-size: 1.02rem; line-height: 1.7; color: var(--tinta); border-left: 4px solid var(--sol-dark); position: relative; }
+  .cita-articulo::before { content: '"'; position: absolute; top: -0.5rem; left: 1.2rem; font-size: 3rem; color: var(--sol); font-family: serif; line-height: 1; }
+  .cita-articulo-ref { font-family: 'JetBrains Mono', monospace; font-style: normal; font-size: 0.7rem; letter-spacing: 0.12em; color: var(--tinta-soft); text-transform: uppercase; margin-top: 0.8rem; }
+  .tabla-datos { width: 100%; margin: 1.5rem 0; border-collapse: collapse; font-size: 0.9rem; }
+  .tabla-datos th { text-align: left; padding: 0.8rem 1rem; background: var(--premium-soft); border-bottom: 2px solid var(--premium); font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--tinta); font-weight: 600; }
+  .tabla-datos td { padding: 0.85rem 1rem; border-bottom: 1px dotted var(--linea); vertical-align: top; }
+  .tabla-datos tr:last-child td { border-bottom: none; }
+  .tabla-datos td:first-child { font-weight: 500; color: var(--tinta); }
+  .fuentes { margin-top: 4rem; padding-top: 2.5rem; border-top: 2px solid var(--linea); }
+  .fuentes h3 { font-family: 'JetBrains Mono', monospace; font-size: 0.75rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--tinta-soft); margin-bottom: 1.5rem; border: none; padding: 0; }
+  .fuentes ul { list-style: none; padding: 0; }
+  .fuentes li { padding: 0.6rem 0; border-bottom: 1px dotted var(--linea); font-size: 0.88rem; padding-left: 0; }
+  .fuentes li::before { content: none; }
+  .fuentes a { color: var(--celeste-dark); text-decoration: none; border-bottom: 1px dotted var(--celeste-dark); }
+  .fuentes a:hover { color: var(--tinta); }
+  footer { background: var(--tinta); color: var(--crema); padding: 3rem 2rem; margin-top: 4rem; }
+  .footer-inner { max-width: 1400px; margin: 0 auto; display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 3rem; }
+  footer h3 { font-family: 'Fraunces', serif; font-weight: 400; font-size: 1.3rem; margin-bottom: 1rem; color: var(--crema); }
+  footer p, footer a { color: var(--crema); opacity: 0.85; font-size: 0.9rem; line-height: 1.6; }
+  footer a { text-decoration: none; display: block; padding: 0.3rem 0; }
+  footer a:hover { opacity: 1; color: var(--sol); }
+  .footer-meta { grid-column: 1 / -1; margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid rgba(251, 247, 240, 0.15); font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; opacity: 0.6; letter-spacing: 0.05em; }
+  @media (max-width: 900px) {
+    .layout { grid-template-columns: 1fr; gap: 2rem; }
+    .toc { position: relative; top: 0; padding: 1.5rem; background: white; border: 1px solid var(--linea); }
+    .footer-inner { grid-template-columns: 1fr; gap: 2rem; }
+    .ficha-organo-row { flex-direction: column; gap: 0.3rem; }
+    .ficha-organo-row .label { min-width: auto; }
+  }
+</style>
+</head>
+<body>
+
+<div class="premium-banner">— Capítulo premium · <strong>Acceso libre durante el período de prueba</strong></div>
+
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="logo"><span class="logo-dot"></span>Educación Cívica</a>
+    <div class="breadcrumb"><a href="index.html">Inicio</a> · <a href="caba-en-profundidad.html">CABA en profundidad</a> · <span>Los tres poderes porteños</span></div>
+  </div>
+</nav>
+
+<header class="page-header">
+  <div class="page-header-inner">
+    <div class="page-eyebrow">Capítulo 09.02 · CABA en profundidad</div>
+    <h1 class="page-title">Los <em>tres poderes</em> porteños</h1>
+    <p class="page-intro">La Constitución porteña de 1996 organizó el gobierno de la Ciudad bajo el clásico esquema republicano de tres poderes, pero con particularidades técnicas significativas: una Legislatura unicameral con sistema D'Hondt sin umbral legal explícito, un Poder Judicial con tres fueros propios y un sistema de órganos de control especialmente robusto. Este capítulo recorre toda la arquitectura institucional vigente.</p>
+  </div>
+</header>
+
+<div class="layout">
+
+  <aside class="toc">
+    <div class="toc-titulo">— En esta página</div>
+    <ul>
+      <li><a href="#esquema"><span class="toc-num">01</span> Esquema general</a></li>
+      <li><a href="#ejecutivo"><span class="toc-num">02</span> Poder Ejecutivo</a></li>
+      <li><a href="#legislatura"><span class="toc-num">03</span> Legislatura porteña</a></li>
+      <li><a href="#judicial"><span class="toc-num">04</span> Poder Judicial</a></li>
+      <li><a href="#tribunal-superior"><span class="toc-num">05</span> Tribunal Superior</a></li>
+      <li><a href="#fueros"><span class="toc-num">06</span> Los fueros locales</a></li>
+      <li><a href="#consejo-mp"><span class="toc-num">07</span> Consejo y MP</a></li>
+      <li><a href="#control"><span class="toc-num">08</span> Órganos de control</a></li>
+    </ul>
+  </aside>
+
+  <main class="contenido">
+
+    <section class="seccion" id="esquema">
+      <div class="seccion-eyebrow">— 01 / Esquema general</div>
+      <h2>La <em>arquitectura</em> institucional porteña</h2>
+      <p>La Constitución de la Ciudad Autónoma de Buenos Aires, sancionada el 1 de octubre de 1996, organiza el gobierno porteño bajo el sistema republicano de división de poderes, con adaptaciones propias respecto del modelo nacional. La estructura general:</p>
+
+      <table class="tabla-datos">
+        <thead><tr><th>Poder / Órgano</th><th>Composición</th><th>Mandato</th></tr></thead>
+        <tbody>
+          <tr><td>Jefe de Gobierno</td><td>Ejecutivo unipersonal con Vicejefe</td><td>4 años, una reelección</td></tr>
+          <tr><td>Legislatura</td><td>Unicameral, 60 diputados</td><td>4 años (renovación parcial cada 2 años)</td></tr>
+          <tr><td>Tribunal Superior de Justicia</td><td>5 jueces</td><td>Inamovibilidad mientras dure su buena conducta</td></tr>
+          <tr><td>Consejo de la Magistratura</td><td>9 miembros</td><td>4 años</td></tr>
+          <tr><td>Ministerio Público</td><td>Fiscal + Defensa + Tutelar</td><td>Cada cabeza por 7 años</td></tr>
+          <tr><td>Defensoría del Pueblo</td><td>Defensor + 5 adjuntos</td><td>5 años, una reelección</td></tr>
+          <tr><td>Auditoría General</td><td>Presidente + 6 auditores</td><td>4 años</td></tr>
+          <tr><td>Sindicatura General</td><td>Síndico General + adjuntos</td><td>Designación PE</td></tr>
+          <tr><td>15 Comunas</td><td>Junta Comunal de 7 miembros cada una</td><td>4 años</td></tr>
+        </tbody>
+      </table>
+
+      <div class="cita-articulo">
+        La Ciudad de Buenos Aires, conforme al principio federal establecido en la Constitución Nacional, organiza sus instituciones autónomas como democracia participativa y adopta para su gobierno la forma republicana y representativa. Todos los actos de gobierno son públicos. Se suprimen en los actos y documentos oficiales los títulos honoríficos de los funcionarios y cuerpos colegiados.
+        <div class="cita-articulo-ref">— Artículo 1 de la Constitución de la Ciudad de Buenos Aires</div>
+      </div>
+
+      <p>Una particularidad ideológica relevante: el texto porteño se autodefine como "democracia participativa", incorporando mecanismos como audiencias públicas, iniciativa popular, referéndum y consulta popular (Arts. 63-67 de la Constitución porteña).</p>
+    </section>
+
+    <section class="seccion" id="ejecutivo">
+      <div class="seccion-eyebrow">— 02 / Poder Ejecutivo</div>
+      <h2>El <em>Jefe de Gobierno</em></h2>
+
+      <p>El Poder Ejecutivo porteño es unipersonal y se ejerce por el Jefe de Gobierno. La Constitución porteña reguló los aspectos centrales en sus artículos 95 al 105.</p>
+
+      <div class="ficha-organo">
+        <div class="ficha-organo-row"><div class="label">Cargo</div><div class="valor">Jefe de Gobierno de la Ciudad Autónoma de Buenos Aires</div></div>
+        <div class="ficha-organo-row"><div class="label">Sistema electoral</div><div class="valor">Voto directo. Balotaje si ningún candidato obtiene más del 50% en primera vuelta</div></div>
+        <div class="ficha-organo-row"><div class="label">Mandato</div><div class="valor">4 años</div></div>
+        <div class="ficha-organo-row"><div class="label">Reelección</div><div class="valor">Una reelección consecutiva inmediata</div></div>
+        <div class="ficha-organo-row"><div class="label">Requisitos</div><div class="valor">Los mismos que para ser diputado nacional (30 años, 4 años de ciudadanía, etc.)</div></div>
+        <div class="ficha-organo-row"><div class="label">Sede</div><div class="valor">Jefatura de Gobierno (Uspallata 3160, Parque Patricios)</div></div>
+      </div>
+
+      <h3>Atribuciones principales (Art. 104)</h3>
+      <p>El Jefe de Gobierno tiene atribuciones equivalentes a las de un gobernador provincial, con las limitaciones derivadas del status de capital federal. Las principales:</p>
+      <ul>
+        <li>Es el jefe de la administración pública de la Ciudad.</li>
+        <li>Promulga las leyes sancionadas por la Legislatura y las hace publicar.</li>
+        <li>Reglamenta las leyes sin alterar su espíritu.</li>
+        <li>Conduce la política administrativa, económica, social y cultural de la Ciudad.</li>
+        <li>Designa a los Ministros y demás funcionarios del Poder Ejecutivo.</li>
+        <li>Es el comandante de la Policía de la Ciudad (desde su transferencia formal en 2016).</li>
+        <li>Convoca a la Legislatura a sesiones extraordinarias.</li>
+        <li>Puede dictar decretos de necesidad y urgencia bajo ciertas condiciones (Art. 103).</li>
+        <li>Designa a los Jueces a propuesta del Consejo de la Magistratura, con acuerdo de la Legislatura.</li>
+      </ul>
+
+      <h3>El Vicejefe de Gobierno</h3>
+      <p>El Vicejefe de Gobierno se elige en la misma fórmula que el Jefe. Sus funciones (Art. 99):</p>
+      <ul>
+        <li>Reemplaza al Jefe de Gobierno en caso de ausencia, enfermedad, muerte, renuncia o destitución.</li>
+        <li>Preside la Legislatura, pero solo vota en caso de empate.</li>
+        <li>Coordina la relación entre el Ejecutivo y la Legislatura.</li>
+        <li>Puede recibir delegaciones específicas del Jefe de Gobierno.</li>
+      </ul>
+
+      <h3>El Jefe de Gabinete de Ministros</h3>
+      <p>A diferencia del esquema nacional (donde el Jefe de Gabinete tiene rango constitucional desde 1994), en CABA el cargo de Jefe de Gabinete de Ministros no está en la Constitución porteña. Es una figura administrativa creada por el Decreto 660/2011 y consolidada por sucesivas leyes de Ministerios. Su rol es coordinar el gabinete y administrar los recursos del Ejecutivo, bajo la dirección del Jefe de Gobierno.</p>
+
+      <h3>Los Ministerios</h3>
+      <p>La organización ministerial se define por ley (Ley de Ministerios), modificable por cada gestión. A 2026, la estructura típica incluye ministerios como:</p>
+      <ul>
+        <li>Hacienda y Finanzas</li>
+        <li>Salud</li>
+        <li>Educación</li>
+        <li>Seguridad</li>
+        <li>Justicia</li>
+        <li>Desarrollo Económico y Producción</li>
+        <li>Desarrollo Humano y Hábitat</li>
+        <li>Cultura</li>
+        <li>Espacio Público e Higiene Urbana</li>
+        <li>Gobierno (responsable de la relación con las comunas)</li>
+      </ul>
+      <p>La estructura ministerial concreta puede variar entre gestiones según la ley de Ministerios vigente.</p>
+    </section>
+
+    <section class="seccion" id="legislatura">
+      <div class="seccion-eyebrow">— 03 / Poder Legislativo</div>
+      <h2>La <em>Legislatura</em> porteña</h2>
+
+      <p>El Poder Legislativo de CABA reside en la Legislatura, un cuerpo unicameral integrado por 60 diputados. Es uno de los rasgos distintivos del sistema porteño: a diferencia del Congreso Nacional o de varias legislaturas provinciales (Buenos Aires, Catamarca, Mendoza, etc.), CABA no tiene cámara de senadores. La Constitución porteña reguló este poder en los artículos 68 al 90.</p>
+
+      <div class="ficha-organo">
+        <div class="ficha-organo-row"><div class="label">Cuerpo</div><div class="valor">Legislatura de la Ciudad Autónoma de Buenos Aires</div></div>
+        <div class="ficha-organo-row"><div class="label">Composición</div><div class="valor">Unicameral, 60 diputados</div></div>
+        <div class="ficha-organo-row"><div class="label">Sistema electoral</div><div class="valor">D'Hondt, sin umbral legal explícito</div></div>
+        <div class="ficha-organo-row"><div class="label">Distrito electoral</div><div class="valor">CABA como distrito único</div></div>
+        <div class="ficha-organo-row"><div class="label">Mandato</div><div class="valor">4 años</div></div>
+        <div class="ficha-organo-row"><div class="label">Renovación</div><div class="valor">Parcial cada 2 años (30 bancas)</div></div>
+        <div class="ficha-organo-row"><div class="label">Presidencia</div><div class="valor">A cargo del Vicejefe de Gobierno (sin voto, salvo empate)</div></div>
+        <div class="ficha-organo-row"><div class="label">Sede</div><div class="valor">Palacio de la Legislatura, Perú 160, Monserrat</div></div>
+      </div>
+
+      <h3>El sistema electoral porteño</h3>
+      <p>La Legislatura se elige bajo el sistema proporcional D'Hondt, que profundizamos en <a href="dhondt.html" style="color: var(--premium-dark);">nuestra página dedicada al sistema D'Hondt</a>. Características específicas del caso porteño:</p>
+      <ul>
+        <li>Las 30 bancas en juego se distribuyen proporcionalmente entre las listas según los votos obtenidos.</li>
+        <li>Toda CABA es un único distrito electoral.</li>
+        <li>Las listas son cerradas y bloqueadas.</li>
+        <li>El Código Electoral porteño (Ley 6.031 de 2018) regula el procedimiento.</li>
+        <li>A diferencia del sistema nacional para diputados, <strong>no hay un umbral legal explícito del 3% del padrón</strong>. En la práctica, las listas necesitan superar entre 3% y 4% de votos válidos para acceder a una banca.</li>
+        <li>El régimen incluyó PASO porteñas hasta su suspensión por reformas posteriores.</li>
+      </ul>
+
+      <h3>Atribuciones principales (Art. 80)</h3>
+      <ul>
+        <li>Dicta su reglamento interno.</li>
+        <li>Sanciona las leyes locales de la Ciudad.</li>
+        <li>Aprueba el Presupuesto y la Cuenta de Inversión.</li>
+        <li>Crea organismos y dicta el régimen jurídico del empleo público.</li>
+        <li>Aprueba tratados de la Ciudad con otras jurisdicciones.</li>
+        <li>Otorga acuerdos para nombramientos (jueces, defensores, auditores, etc.).</li>
+        <li>Recibe interpelaciones de ministros y Jefe de Gabinete.</li>
+        <li>Inicia el juicio político contra el Jefe de Gobierno, Vicejefe y ministros.</li>
+      </ul>
+
+      <h3>Las mayorías especiales</h3>
+      <p>Algunas decisiones requieren mayorías agravadas (más de la simple mayoría):</p>
+
+      <table class="tabla-datos">
+        <thead><tr><th>Mayoría requerida</th><th>Tipo de decisiones</th></tr></thead>
+        <tbody>
+          <tr><td>Mayoría simple</td><td>Leyes ordinarias, presupuesto, designaciones comunes.</td></tr>
+          <tr><td>Mayoría absoluta del total</td><td>Leyes que modifican el Código Electoral, partidos políticos, ciertos órganos.</td></tr>
+          <tr><td>2/3 del total</td><td>Reforma constitucional porteña, declaraciones especiales, ciertas remociones.</td></tr>
+          <tr><td>3/4 del total</td><td>Algunas designaciones especiales y temas excepcionales.</td></tr>
+        </tbody>
+      </table>
+
+      <h3>El sistema de doble lectura</h3>
+      <p>El artículo 89 de la Constitución porteña establece el "procedimiento de doble lectura" para ciertas leyes especialmente sensibles. Algunos ejemplos:</p>
+      <ul>
+        <li>Códigos de la Ciudad (Tributario, de Habilitaciones, de Procedimiento, etc.).</li>
+        <li>Régimen electoral.</li>
+        <li>Leyes que disponen sobre bienes inmuebles de dominio público.</li>
+        <li>Régimen jurídico del empleo público porteño.</li>
+        <li>Régimen de las comunas.</li>
+      </ul>
+      <p>Cómo funciona: la ley se aprueba en una primera votación, se publica para conocimiento público, se reciben opiniones (incluso por audiencia pública obligatoria si se trata de ciertos temas), y se vuelve a someter a votación final. Este mecanismo busca dar más deliberación a temas estructurales.</p>
+
+      <div class="destacado">
+        <div class="destacado-titulo">Las comisiones permanentes</div>
+        <p>La Legislatura porteña funciona, como todo cuerpo legislativo moderno, a través de comisiones permanentes que estudian los proyectos antes del debate en el recinto. Las principales son Asuntos Constitucionales, Presupuesto, Hacienda, Justicia, Educación, Salud, Seguridad, Obras y Servicios Públicos, Cultura y Comunicación Social, entre otras. Los proyectos de ley típicamente atraviesan varias comisiones antes de llegar al recinto.</p>
+      </div>
+    </section>
+
+    <section class="seccion" id="judicial">
+      <div class="seccion-eyebrow">— 04 / Poder Judicial</div>
+      <h2>El <em>Poder Judicial</em> porteño</h2>
+
+      <p>El Poder Judicial de CABA es el más complejo de los tres poderes, en parte porque su construcción está incompleta. La Constitución porteña lo organizó en los artículos 106 al 124, previendo un sistema completo similar al de cualquier provincia. Pero la Ley Cafiero (Ley 24.588) limitó qué materias podía juzgar el Poder Judicial porteño y reservó las restantes a la "justicia nacional ordinaria con asiento en CABA".</p>
+
+      <div class="cita-articulo">
+        El Poder Judicial de la Ciudad lo ejercen el Tribunal Superior de Justicia, el Consejo de la Magistratura, los demás tribunales que la ley establezca y el Ministerio Público.
+        <div class="cita-articulo-ref">— Artículo 107 de la Constitución de la Ciudad de Buenos Aires</div>
+      </div>
+
+      <h3>Las dos justicias en CABA: una situación atípica</h3>
+      <p>En el territorio de CABA conviven hoy dos sistemas judiciales:</p>
+      <ul>
+        <li><strong>Poder Judicial de la Ciudad:</strong> creado por la Constitución porteña, juzga las materias que se han ido transfiriendo desde la Nación: contencioso administrativo y tributario, penal contravencional y de faltas, ciertos casos de violencia familiar, etc.</li>
+        <li><strong>Justicia Nacional Ordinaria con asiento en CABA:</strong> los jueces nacionales que aplican el Código Civil, Comercial, Laboral y Penal en la Ciudad. Formalmente son "nacionales" pero territorialmente actúan solo en CABA. Su transferencia a la órbita porteña está pendiente desde 1994.</li>
+      </ul>
+
+      <p>Esta dualidad genera complicaciones procesales y políticas continuas. Es el principal tema pendiente de la autonomía y se desarrolla en detalle en el capítulo <strong>09.05</strong>.</p>
+
+      <div class="destacado atencion">
+        <div class="destacado-titulo">El fallo "Levinas" (diciembre 2024)</div>
+        <p>En diciembre de 2024, la Corte Suprema de Justicia de la Nación, en el caso "Levinas, Gabriel I. c/ Estado Nacional", reconoció al Tribunal Superior de Justicia porteño competencia para revisar fallos de los jueces nacionales en CABA. Esto reactivó el debate sobre la transferencia plena de la justicia ordinaria y abrió un nuevo capítulo institucional, que se desarrolla en 09.05.</p>
+      </div>
+    </section>
+
+    <section class="seccion" id="tribunal-superior">
+      <div class="seccion-eyebrow">— 05 / TSJ</div>
+      <h2>El <em>Tribunal Superior</em> de Justicia</h2>
+
+      <p>El Tribunal Superior de Justicia (TSJ) es el órgano máximo del Poder Judicial porteño. Tiene funciones similares a las de las cortes supremas provinciales.</p>
+
+      <div class="ficha-organo">
+        <div class="ficha-organo-row"><div class="label">Órgano</div><div class="valor">Tribunal Superior de Justicia de la Ciudad</div></div>
+        <div class="ficha-organo-row"><div class="label">Composición</div><div class="valor">5 jueces</div></div>
+        <div class="ficha-organo-row"><div class="label">Designación</div><div class="valor">Por el Jefe de Gobierno con acuerdo de 2/3 de la Legislatura</div></div>
+        <div class="ficha-organo-row"><div class="label">Mandato</div><div class="valor">Inamovibilidad mientras dure su buena conducta</div></div>
+        <div class="ficha-organo-row"><div class="label">Sede</div><div class="valor">Cerrito 760, Buenos Aires</div></div>
+      </div>
+
+      <h3>Competencias del TSJ (Art. 113)</h3>
+      <p>Las atribuciones principales del Tribunal Superior:</p>
+      <ul>
+        <li><strong>Recurso de inconstitucionalidad:</strong> contra sentencias definitivas que pongan en cuestión la Constitución porteña.</li>
+        <li><strong>Recurso de queja:</strong> por denegación o demora.</li>
+        <li><strong>Acción declarativa de inconstitucionalidad:</strong> sobre la validez de las leyes, decretos y cualquier norma de carácter general emanada de las autoridades de la Ciudad.</li>
+        <li><strong>Conflictos de poderes:</strong> entre poderes de la Ciudad y demandas de demarcación de competencias.</li>
+        <li><strong>Conflictos de competencia entre tribunales inferiores.</strong></li>
+        <li><strong>Acción de amparo</strong> en ciertas materias específicas.</li>
+        <li><strong>Acción originaria de habeas corpus, habeas data y amparo</strong> cuando se trata de derechos constitucionales porteños.</li>
+        <li>Tras el fallo "Levinas" (2024): revisión de ciertas decisiones de la justicia nacional ordinaria en CABA cuando se invocan derechos federales o porteños.</li>
+      </ul>
+    </section>
+
+    <section class="seccion" id="fueros">
+      <div class="seccion-eyebrow">— 06 / Fueros</div>
+      <h2>Los <em>fueros</em> locales</h2>
+
+      <p>Debajo del Tribunal Superior, el Poder Judicial porteño se organiza en fueros especializados. Los principales:</p>
+
+      <h3>Fuero Contencioso Administrativo y Tributario</h3>
+      <ul>
+        <li>Conoce las causas en que la Ciudad sea parte (demandas contra el Gobierno porteño).</li>
+        <li>Resuelve impugnaciones a actos administrativos y resoluciones tributarias.</li>
+        <li>Tiene Juzgados de Primera Instancia, Cámara de Apelaciones y el Tribunal Superior como instancia final.</li>
+        <li>Creado y puesto en funcionamiento desde 2000.</li>
+      </ul>
+
+      <h3>Fuero Penal, Contravencional y de Faltas</h3>
+      <ul>
+        <li>Aplica el Código Contravencional de la Ciudad y el Código de Faltas (régimen administrativo sancionatorio).</li>
+        <li>Tiene competencia en materia penal solamente para los delitos transferidos por la Nación: hasta 2026 se transfirieron varios delitos como amenazas, lesiones leves, daños, usurpación, tenencia y portación de armas no de guerra, conducción peligrosa, entre otros.</li>
+        <li>Cuenta con Juzgados de Primera Instancia (jueces unipersonales), Cámara de Apelaciones y el Tribunal Superior.</li>
+        <li>Funciona desde el año 2000.</li>
+      </ul>
+
+      <h3>Fuero Penal Juvenil</h3>
+      <ul>
+        <li>Conoce de los hechos delictivos atribuidos a menores de edad punibles según el régimen penal juvenil.</li>
+        <li>Aplica el Código Procesal Penal de la Ciudad con las modulaciones del régimen penal juvenil.</li>
+      </ul>
+
+      <div class="destacado">
+        <div class="destacado-titulo">Lo que NO juzga el Poder Judicial porteño</div>
+        <p>Pese a la autonomía de 1994, el Poder Judicial de CABA aún <strong>no juzga</strong>: el grueso del derecho civil (divorcios, sucesiones, contratos), comercial (sociedades, concursos, quiebras), laboral (despidos, accidentes), y la mayor parte del derecho penal (homicidios, robos, estafas, narcotráfico, entre muchos otros). Todo eso lo siguen resolviendo los jueces nacionales con asiento en CABA. Es el principal "déficit" institucional pendiente de la Ciudad y se aborda en el capítulo 09.05.</p>
+      </div>
+    </section>
+
+    <section class="seccion" id="consejo-mp">
+      <div class="seccion-eyebrow">— 07 / Consejo y MP</div>
+      <h2>Consejo de la Magistratura y <em>Ministerio Público</em></h2>
+
+      <h3>El Consejo de la Magistratura</h3>
+      <p>El Consejo de la Magistratura de la Ciudad Autónoma de Buenos Aires es el órgano encargado de la selección y disciplina de los jueces del Poder Judicial porteño (excluyendo a los jueces del TSJ, que se designan por procedimiento político).</p>
+
+      <div class="ficha-organo">
+        <div class="ficha-organo-row"><div class="label">Composición</div><div class="valor">9 miembros</div></div>
+        <div class="ficha-organo-row"><div class="label">Integrantes</div><div class="valor">3 por el estamento de jueces, 3 por la Legislatura, 3 por el estamento de abogados</div></div>
+        <div class="ficha-organo-row"><div class="label">Mandato</div><div class="valor">4 años</div></div>
+        <div class="ficha-organo-row"><div class="label">Funciones</div><div class="valor">Selección, disciplina y remoción de jueces inferiores</div></div>
+      </div>
+
+      <h3>El Ministerio Público porteño</h3>
+      <p>El Ministerio Público es un órgano "extra-poder" con autonomía funcional. La Constitución porteña lo organizó como tripartito (Art. 124-126):</p>
+      <ul>
+        <li><strong>Ministerio Público Fiscal:</strong> ejerce la acción penal pública, defiende la legalidad. A cargo del Fiscal General.</li>
+        <li><strong>Ministerio Público de la Defensa:</strong> defiende a quienes no pueden pagar abogado en causas penales y de menores. A cargo del Defensor General.</li>
+        <li><strong>Ministerio Público Tutelar:</strong> representa y defiende los intereses de niños, niñas, adolescentes, personas con padecimiento mental y otros sujetos especialmente protegidos. A cargo del Asesor Tutelar General.</li>
+      </ul>
+
+      <p>Los tres cabezas se designan por el procedimiento del Art. 126: a propuesta del Consejo de la Magistratura, con acuerdo de la Legislatura por 2/3 de votos. Mandato de 7 años.</p>
+    </section>
+
+    <section class="seccion" id="control">
+      <div class="seccion-eyebrow">— 08 / Control</div>
+      <h2>Los <em>órganos de control</em></h2>
+
+      <p>La Constitución porteña previó un sistema robusto de órganos de control extra-poder, todos con autonomía funcional. Esto es un rasgo distintivo del diseño porteño respecto del nacional.</p>
+
+      <h3>Defensoría del Pueblo (Arts. 137-138)</h3>
+      <p>Órgano de defensa de los derechos individuales y colectivos frente al gobierno porteño.</p>
+      <ul>
+        <li><strong>Composición:</strong> Defensor del Pueblo + 5 Defensores Adjuntos.</li>
+        <li><strong>Designación:</strong> por 2/3 de la Legislatura.</li>
+        <li><strong>Mandato:</strong> 5 años, con una reelección consecutiva.</li>
+        <li><strong>Funciones:</strong> investigar quejas, hacer recomendaciones, interponer acciones judiciales en defensa de derechos.</li>
+        <li>Puede actuar por iniciativa propia o por denuncia.</li>
+      </ul>
+
+      <h3>Auditoría General de la Ciudad (Arts. 135-136)</h3>
+      <p>Órgano de control externo del Estado porteño.</p>
+      <ul>
+        <li><strong>Composición:</strong> 7 miembros (Presidente + 6 Auditores).</li>
+        <li><strong>Designación:</strong> por la Legislatura. La presidencia corresponde a la primera minoría legislativa (igual que la AGN nacional).</li>
+        <li><strong>Mandato:</strong> 4 años.</li>
+        <li><strong>Funciones:</strong> auditoría externa y posterior de la administración pública porteña; emite dictámenes sobre la cuenta de inversión; produce informes públicos.</li>
+      </ul>
+
+      <h3>Sindicatura General (Art. 133)</h3>
+      <p>Órgano de control interno del Poder Ejecutivo porteño, equivalente a la SIGEN nacional.</p>
+      <ul>
+        <li><strong>Composición:</strong> Síndico General + Síndicos Generales Adjuntos.</li>
+        <li><strong>Designación:</strong> por el Jefe de Gobierno.</li>
+        <li><strong>Funciones:</strong> auditoría interna del Ejecutivo, control concomitante y previo.</li>
+      </ul>
+
+      <h3>Procuración General (Arts. 134)</h3>
+      <p>Órgano que representa y defiende al Estado porteño en juicio.</p>
+      <ul>
+        <li><strong>Composición:</strong> Procurador General + Procuradores Adjuntos.</li>
+        <li><strong>Designación:</strong> por el Jefe de Gobierno con acuerdo de la Legislatura.</li>
+        <li><strong>Funciones:</strong> patrocinio jurídico del Estado, dictámenes vinculantes para el PE en cuestiones de relevante interés.</li>
+      </ul>
+
+      <h3>Ente Único Regulador de los Servicios Públicos (Art. 138)</h3>
+      <p>Organismo descentralizado que regula y controla los servicios públicos prestados por terceros en CABA.</p>
+      <ul>
+        <li><strong>Composición:</strong> 5 directores designados por procedimientos previstos por ley.</li>
+        <li><strong>Funciones:</strong> controlar la calidad y precios de servicios públicos, resolver reclamos de usuarios, sancionar a prestadores.</li>
+      </ul>
+
+      <div class="destacado premium">
+        <div class="destacado-titulo">Para continuar</div>
+        <p>Habiendo recorrido la estructura de los tres poderes y los órganos de control, el capítulo siguiente (<strong>09.03</strong>) se mete en el "tercer nivel" del gobierno porteño que el grueso de los porteños desconoce: las 15 Comunas, su naturaleza, sus competencias y los límites de su autonomía dentro de la Ciudad.</p>
+      </div>
+    </section>
+
+    <section class="fuentes">
+      <h3>— Fuentes oficiales y normativa</h3>
+      <ul>
+        <li><strong>Constitución de la Ciudad Autónoma de Buenos Aires</strong> (1996), arts. 1, 68-90 (Poder Legislativo), 95-105 (Poder Ejecutivo), 106-126 (Poder Judicial), 133-140 (órganos de control). <a href="https://www.argentina.gob.ar/sites/default/files/constitucion-caba.pdf" target="_blank" rel="noopener">Texto oficial</a></li>
+        <li><strong>Ley 6.031</strong> (2018) - Código Electoral de la Ciudad Autónoma de Buenos Aires.</li>
+        <li><strong>Ley 7</strong> (1998) - Ley Orgánica del Poder Judicial de la Ciudad.</li>
+        <li><strong>Ley 1.903</strong> - Ley Orgánica del Ministerio Público.</li>
+        <li><strong>Ley 2.095</strong> - Régimen de Compras y Contrataciones de la Ciudad.</li>
+        <li><strong>Legislatura de la Ciudad Autónoma de Buenos Aires</strong>. <a href="https://www.legislatura.gob.ar" target="_blank" rel="noopener">legislatura.gob.ar</a></li>
+        <li><strong>Tribunal Superior de Justicia de la Ciudad</strong>. <a href="https://www.tsjbaires.gob.ar" target="_blank" rel="noopener">tsjbaires.gob.ar</a></li>
+        <li><strong>Consejo de la Magistratura de la Ciudad</strong>. <a href="https://consejo.jusbaires.gob.ar" target="_blank" rel="noopener">consejo.jusbaires.gob.ar</a></li>
+        <li><strong>Defensoría del Pueblo de la Ciudad</strong>. <a href="https://www.defensoria.org.ar" target="_blank" rel="noopener">defensoria.org.ar</a></li>
+        <li><strong>Auditoría General de la Ciudad</strong>. <a href="https://www.agcba.gob.ar" target="_blank" rel="noopener">agcba.gob.ar</a></li>
+      </ul>
+      <p style="font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; color: var(--tinta-soft); margin-top: 1.5rem; padding-top: 1rem; border-top: 1px solid var(--linea); line-height: 1.6;">
+        Este capítulo describe el sistema institucional vigente en CABA según la Constitución porteña y las leyes complementarias. Última revisión: mayo de 2026.
+      </p>
+    </section>
+
+  </main>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div>
+      <h3>Educación Cívica</h3>
+      <p>Una guía visual y educativa sobre el Estado argentino, sus poderes, las provincias, el sistema electoral, los derechos del ciudadano y la historia institucional.</p>
+    </div>
+    <div>
+      <h3>Secciones</h3>
+      <a href="poderes.html">Los poderes</a>
+      <a href="provincias.html">Provincias</a>
+      <a href="index.html#sistema-electoral">Elecciones</a>
+      <a href="index.html#derechos">Derechos</a>
+      <a href="historia.html">Historia</a>
+      <a href="caba-en-profundidad.html">CABA en profundidad</a>
+    </div>
+    <div>
+      <h3>El proyecto</h3>
+      <a href="#">Sobre nosotros</a>
+      <a href="#">Manifiesto editorial</a>
+      <a href="#">Suscribirse</a>
+      <a href="#">Contacto</a>
+    </div>
+    <div class="footer-meta">
+      educacioncivica.com.ar · v0.5 prototipo · Educación cívica con datos · Sin grieta · Datos institucionales actualizados a mayo de 2026
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

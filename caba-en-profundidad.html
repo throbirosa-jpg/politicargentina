@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Crect width=%22100%22 height=%22100%22 fill=%22%23FBF7F0%22/%3E%3Ccircle cx=%2250%22 cy=%2250%22 r=%2230%22 fill=%22%23F6B40E%22/%3E%3C/svg%3E">
+<title>Ciudad Autónoma de Buenos Aires en profundidad — Educación Cívica</title>
+<meta name="description" content="Estudio profundo de CABA: historia institucional, los tres poderes porteños, las 15 comunas, sistema fiscal y pendientes de la autonomía. Sección premium.">
+<link rel="canonical" href="https://educacioncivica.com.ar/caba-en-profundidad.html">
+
+<!-- Open Graph -->
+<meta property="og:title" content="CABA en profundidad · Estudio premium · Educación Cívica">
+<meta property="og:description" content="Estudio profundo de CABA: historia institucional, los tres poderes porteños, las 15 comunas, sistema fiscal y pendientes de la autonomía.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://educacioncivica.com.ar/caba-en-profundidad.html">
+<meta property="og:site_name" content="Educación Cívica">
+<meta property="og:locale" content="es_AR">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="CABA en profundidad · Estudio premium · Educación Cívica">
+<meta name="twitter:description" content="Estudio profundo de CABA: historia institucional, los tres poderes porteños, las 15 comunas, sistema fiscal y pendientes de la autonomía.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,400;0,500;0,600;1,400&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --crema: #FBF7F0; --crema-warm: #F4ECDB; --tinta: #1A1A2E; --tinta-soft: #545465;
+    --celeste: #74ACDF; --celeste-soft: #E4F0FA; --celeste-dark: #3D7BB0;
+    --sol: #F6B40E; --sol-soft: #FBE5AA; --sol-dark: #C8941A;
+    --rojo-fed: #B8341B; --rojo-soft: #F2D5CE;
+    --verde-ok: #4A7C59; --verde-soft: #DAEAE0;
+    --premium: #6B4F8C; --premium-soft: #E8DFF0; --premium-dark: #4A3661;
+    --linea: #DDD7CB; --linea-soft: #ECE6DA;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Fraunces', Georgia, serif; background: var(--crema); color: var(--tinta); line-height: 1.6; }
+  nav { background: white; border-bottom: 1px solid var(--linea); padding: 1.2rem 2rem; position: sticky; top: 0; z-index: 100; }
+  .nav-inner { max-width: 1400px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
+  .logo { display: flex; align-items: center; gap: 0.5rem; font-family: 'Fraunces', serif; font-weight: 500; font-size: 1.1rem; color: var(--tinta); text-decoration: none; }
+  .logo-dot { width: 12px; height: 12px; background: var(--sol); border-radius: 50%; }
+  .breadcrumb { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.1em; color: var(--tinta-soft); }
+  .breadcrumb a { color: var(--tinta-soft); text-decoration: none; }
+  .breadcrumb a:hover { color: var(--tinta); }
+
+  /* Banner premium */
+  .premium-banner { background: var(--premium); color: white; padding: 0.6rem 2rem; font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase; text-align: center; }
+  .premium-banner strong { color: var(--sol); }
+
+  .page-header {
+    background: linear-gradient(180deg, var(--premium-soft) 0%, var(--crema) 100%);
+    padding: 5rem 2rem 4rem;
+    border-bottom: 1px solid var(--linea);
+    position: relative;
+    overflow: hidden;
+  }
+  .page-header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: -100px;
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, var(--premium) 0%, transparent 70%);
+    opacity: 0.08;
+    border-radius: 50%;
+  }
+  .page-header-inner { max-width: 900px; margin: 0 auto; position: relative; z-index: 1; }
+  .page-eyebrow { display: inline-block; font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--premium-dark); background: white; padding: 0.5rem 1rem; border: 1px solid var(--premium); margin-bottom: 1.5rem; }
+  .page-title { font-family: 'Fraunces', serif; font-weight: 300; font-size: clamp(2.5rem, 6vw, 4rem); line-height: 1.05; margin-bottom: 1.5rem; color: var(--tinta); letter-spacing: -0.01em; }
+  .page-title em { font-style: italic; color: var(--premium-dark); font-weight: 400; }
+  .page-intro { font-size: 1.2rem; line-height: 1.7; color: var(--tinta); max-width: 720px; }
+  .page-intro strong { color: var(--premium-dark); font-weight: 600; }
+
+  .container { max-width: 1100px; margin: 0 auto; padding: 4rem 2rem; }
+
+  /* Tesis editorial */
+  .tesis-section { margin-bottom: 4rem; }
+  .tesis-section h2 {
+    font-family: 'Fraunces', serif;
+    font-weight: 400;
+    font-size: 2rem;
+    color: var(--tinta);
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+  }
+  .tesis-section h2 em { font-style: italic; color: var(--premium-dark); }
+  .tesis-section p {
+    font-size: 1.05rem;
+    line-height: 1.75;
+    color: var(--tinta);
+    margin-bottom: 1rem;
+    max-width: 720px;
+  }
+  .tesis-section p strong { font-weight: 600; }
+
+  /* Caja "Qué encontrarás" */
+  .que-encontraras {
+    background: white;
+    border: 1px solid var(--linea);
+    border-left: 4px solid var(--premium);
+    padding: 2rem 2.2rem;
+    margin: 2.5rem 0;
+  }
+  .que-encontraras h3 {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.75rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--premium-dark);
+    margin-bottom: 1rem;
+  }
+  .que-encontraras ul {
+    list-style: none;
+    padding: 0;
+  }
+  .que-encontraras li {
+    padding: 0.6rem 0 0.6rem 1.8rem;
+    position: relative;
+    font-size: 0.95rem;
+    line-height: 1.55;
+    color: var(--tinta);
+    border-bottom: 1px dotted var(--linea);
+  }
+  .que-encontraras li:last-child { border-bottom: none; }
+  .que-encontraras li::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: var(--premium);
+    font-weight: 600;
+  }
+
+  /* Dato curioso destacado */
+  .dato-curioso {
+    background: var(--premium-soft);
+    border-left: 4px solid var(--premium);
+    padding: 1.5rem 1.8rem;
+    margin: 1.5rem 0;
+  }
+  .dato-curioso-titulo {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.7rem;
+    letter-spacing: 0.15em;
+    color: var(--premium-dark);
+    text-transform: uppercase;
+    margin-bottom: 0.6rem;
+  }
+  .dato-curioso p {
+    font-size: 0.95rem;
+    line-height: 1.65;
+    color: var(--tinta);
+    margin: 0;
+  }
+
+  /* Cita constitucional */
+  .cita-articulo {
+    background: white;
+    border: 1px solid var(--linea);
+    padding: 1.5rem 1.8rem;
+    margin: 1.5rem 0;
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-size: 1.02rem;
+    line-height: 1.7;
+    color: var(--tinta);
+    border-left: 4px solid var(--sol-dark);
+    position: relative;
+  }
+  .cita-articulo::before {
+    content: '"';
+    position: absolute;
+    top: -0.5rem;
+    left: 1.2rem;
+    font-size: 3rem;
+    color: var(--sol);
+    font-family: serif;
+    line-height: 1;
+  }
+  .cita-articulo-ref {
+    font-family: 'JetBrains Mono', monospace;
+    font-style: normal;
+    font-size: 0.7rem;
+    letter-spacing: 0.12em;
+    color: var(--tinta-soft);
+    text-transform: uppercase;
+    margin-top: 0.8rem;
+  }
+
+  /* Datos rápidos: stats grid */
+  .stats-rapidos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 1rem;
+    margin: 2rem 0;
+  }
+  .stat-card {
+    background: white;
+    border: 1px solid var(--linea);
+    padding: 1.3rem;
+    text-align: center;
+  }
+  .stat-card-num {
+    font-family: 'Fraunces', serif;
+    font-size: 2.2rem;
+    font-weight: 300;
+    color: var(--premium-dark);
+    line-height: 1;
+    margin-bottom: 0.5rem;
+  }
+  .stat-card-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.7rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--tinta-soft);
+    line-height: 1.4;
+  }
+
+  /* Título de sección contenidos */
+  .contenido-disponible-titulo {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.75rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--tinta-soft);
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.8rem;
+    border-bottom: 1px solid var(--linea);
+  }
+
+  /* Grid de capítulos */
+  .capitulos-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+  }
+  @media (min-width: 700px) {
+    .capitulos-grid { grid-template-columns: 1fr 1fr; }
+  }
+
+  .capitulo-card {
+    background: white;
+    border: 1px solid var(--linea);
+    padding: 2rem;
+    text-decoration: none;
+    color: inherit;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    min-height: 280px;
+    position: relative;
+  }
+  .capitulo-card.disponible:hover {
+    border-color: var(--premium);
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(107, 79, 140, 0.12);
+  }
+  .capitulo-card.proximamente {
+    background: var(--crema-warm);
+    border-style: dashed;
+    cursor: default;
+  }
+  .capitulo-card.proximamente:hover { transform: none; }
+  .capitulo-card-num {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.7rem;
+    letter-spacing: 0.15em;
+    color: var(--premium-dark);
+    margin-bottom: 0.8rem;
+  }
+  .capitulo-card.proximamente .capitulo-card-num { color: var(--tinta-soft); }
+  .capitulo-card-titulo {
+    font-family: 'Fraunces', serif;
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: var(--tinta);
+    margin-bottom: 0.8rem;
+    line-height: 1.2;
+  }
+  .capitulo-card-titulo em { font-style: italic; color: var(--premium-dark); }
+  .capitulo-card-desc {
+    font-size: 0.92rem;
+    line-height: 1.55;
+    color: var(--tinta-soft);
+    margin-bottom: 1.2rem;
+    flex: 1;
+  }
+  .capitulo-card-tags {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    margin-bottom: 1rem;
+  }
+  .capitulo-card-tag {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.6rem;
+    letter-spacing: 0.1em;
+    padding: 0.3rem 0.6rem;
+    background: var(--premium-soft);
+    color: var(--premium-dark);
+    text-transform: uppercase;
+  }
+  .capitulo-card-tag.estado-pronto {
+    background: var(--sol-soft);
+    color: var(--sol-dark);
+  }
+  .capitulo-card-tag.estado-disponible {
+    background: var(--verde-soft);
+    color: var(--verde-ok);
+  }
+  .capitulo-card-link {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.78rem;
+    letter-spacing: 0.05em;
+    color: var(--premium-dark);
+    font-weight: 600;
+    margin-top: auto;
+  }
+  .capitulo-card.proximamente .capitulo-card-link { color: var(--tinta-soft); }
+
+  /* Caja modelo premium */
+  .modelo-premium {
+    background: var(--tinta);
+    color: var(--crema);
+    padding: 3rem;
+    margin: 4rem 0 2rem;
+  }
+  .modelo-premium-eyebrow {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.7rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--sol);
+    margin-bottom: 1rem;
+  }
+  .modelo-premium h3 {
+    font-family: 'Fraunces', serif;
+    font-weight: 400;
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+  }
+  .modelo-premium h3 em { color: var(--sol); font-style: italic; }
+  .modelo-premium p {
+    font-size: 1rem;
+    line-height: 1.7;
+    margin-bottom: 1rem;
+    opacity: 0.92;
+    max-width: 720px;
+  }
+  .modelo-premium p strong { color: var(--sol); font-weight: 600; }
+  .modelo-premium a {
+    color: var(--sol);
+    text-decoration: none;
+    border-bottom: 1px dotted var(--sol);
+  }
+
+  footer { background: var(--tinta); color: var(--crema); padding: 3rem 2rem; margin-top: 4rem; }
+  .footer-inner { max-width: 1400px; margin: 0 auto; display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 3rem; }
+  footer h3 { font-family: 'Fraunces', serif; font-weight: 400; font-size: 1.3rem; margin-bottom: 1rem; color: var(--crema); }
+  footer p, footer a { color: var(--crema); opacity: 0.85; font-size: 0.9rem; line-height: 1.6; }
+  footer a { text-decoration: none; display: block; padding: 0.3rem 0; }
+  footer a:hover { opacity: 1; color: var(--sol); }
+  .footer-meta { grid-column: 1 / -1; margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid rgba(251, 247, 240, 0.15); font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; opacity: 0.6; letter-spacing: 0.05em; }
+
+  @media (max-width: 700px) {
+    .footer-inner { grid-template-columns: 1fr; gap: 2rem; }
+    .modelo-premium { padding: 2rem; }
+    .capitulo-card { min-height: auto; }
+  }
+</style>
+</head>
+<body>
+
+<div class="premium-banner">— Sección premium · <strong>Acceso libre durante el período de prueba</strong></div>
+
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="logo"><span class="logo-dot"></span>Educación Cívica</a>
+    <div class="breadcrumb"><a href="index.html">Inicio</a> · <span>Ciudad Autónoma de Buenos Aires</span></div>
+  </div>
+</nav>
+
+<header class="page-header">
+  <div class="page-header-inner">
+    <div class="page-eyebrow">Capítulo 09 · Estudios en profundidad</div>
+    <h1 class="page-title">Ciudad Autónoma de <em>Buenos Aires</em></h1>
+    <p class="page-intro">CABA no es una provincia, no es un municipio, no es la Capital Federal de antes de 1994. Es algo nuevo y único en la organización política argentina: <strong>una ciudad-estado autónoma con status constitucional especial</strong>. Entender CABA es entender uno de los nudos institucionales más complejos del federalismo argentino.</p>
+  </div>
+</header>
+
+<div class="container">
+
+  <section class="tesis-section">
+    <h2>Por qué CABA merece <em>un estudio aparte</em></h2>
+    <p>En el resto del sitio tratamos a CABA junto a las 23 provincias, como una jurisdicción más. Es una simplificación útil para dar un panorama general del país. Pero <strong>CABA tiene una naturaleza jurídica distinta</strong> que merece ser estudiada por sí misma.</p>
+    <p>Es la única jurisdicción argentina que no fue una provincia preexistente y que ganó autonomía recién con la reforma constitucional de 1994. Su Constitución se sancionó en 1996, hace apenas 30 años. <strong>Tiene tres millones de habitantes</strong>, genera aproximadamente el 25% del PBI nacional, y es sede del gobierno federal. Su régimen institucional combina elementos de provincia, de municipio y de "distrito federal" en una mezcla única.</p>
+    <p>Y todavía hoy, treinta años después, hay <strong>peleas jurisdiccionales sin resolver</strong> entre CABA y la Nación: justicia ordinaria, transporte, puerto, coparticipación. La autonomía está reconocida pero no está completa.</p>
+
+    <div class="cita-articulo">
+      La ciudad de Buenos Aires tendrá un régimen de gobierno autónomo, con facultades propias de legislación y jurisdicción, y su jefe de gobierno será elegido directamente por el pueblo de la ciudad. Una ley garantizará los intereses del Estado nacional, mientras la ciudad de Buenos Aires sea capital de la Nación.
+      <div class="cita-articulo-ref">— Artículo 129 de la Constitución Nacional (reforma de 1994)</div>
+    </div>
+
+    <p>Estas 64 palabras del Art. 129 cambiaron todo. De ellas surge una nueva entidad política: ni provincia, ni municipio. Algo distinto. Este apartado intenta desarmar esa rareza y entender qué es, cómo funciona y por dónde van sus debates pendientes.</p>
+  </section>
+
+  <section class="tesis-section">
+    <h2>CABA <em>en números</em></h2>
+    <p>Antes de meternos en lo institucional, algunos datos para dimensionar el caso:</p>
+
+    <div class="stats-rapidos">
+      <div class="stat-card">
+        <div class="stat-card-num">3M</div>
+        <div class="stat-card-label">Habitantes (Censo 2022)</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-card-num">203 km²</div>
+        <div class="stat-card-label">Superficie</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-card-num">15</div>
+        <div class="stat-card-label">Comunas</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-card-num">48</div>
+        <div class="stat-card-label">Barrios oficiales</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-card-num">60</div>
+        <div class="stat-card-label">Legisladores porteños</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-card-num">~25%</div>
+        <div class="stat-card-label">PBI nacional aportado</div>
+      </div>
+    </div>
+
+    <div class="dato-curioso">
+      <div class="dato-curioso-titulo">— Para tener en perspectiva</div>
+      <p>Si CABA fuera un país, con sus 3 millones de habitantes tendría una población similar a la de Uruguay o Mongolia. Su densidad poblacional (alrededor de 15.000 hab/km²) es comparable a la de Tokio o Hong Kong, y mucho mayor que la de cualquier provincia argentina.</p>
+    </div>
+  </section>
+
+  <section class="tesis-section">
+    <h2>Qué vas a encontrar en <em>este apartado</em></h2>
+
+    <div class="que-encontraras">
+      <h3>— Los 5 capítulos del estudio</h3>
+      <ul>
+        <li>Cómo CABA llegó a ser lo que es hoy: del pueblo colonial a la capital, de la federalización de 1880 a la autonomía de 1994.</li>
+        <li>El sistema institucional actual: los tres poderes porteños, la Constitución de 1996, los órganos de control.</li>
+        <li>Las 15 comunas: el "tercer nivel" de gobierno porteño que poca gente conoce y casi nadie entiende del todo.</li>
+        <li>El sistema fiscal porteño: cómo se financia, qué impuestos cobra, y la pelea histórica por la coparticipación.</li>
+        <li>Los pendientes de la autonomía: justicia ordinaria, transferencias incompletas, transporte, puerto, riberas.</li>
+      </ul>
+    </div>
+
+    <p>Cada capítulo está pensado con la misma profundidad y el mismo rigor que las páginas educativas básicas del sitio, pero con un nivel de detalle, citas a fuentes oficiales y referencias jurisprudenciales que pertenecen al territorio del análisis especializado.</p>
+  </section>
+
+  <section>
+    <div class="contenido-disponible-titulo">— Contenido del estudio</div>
+
+    <div class="capitulos-grid">
+
+      <a href="caba-historia.html" class="capitulo-card disponible">
+        <div class="capitulo-card-num">09.01</div>
+        <h3 class="capitulo-card-titulo">Cómo <em>llegamos</em> hasta acá: historia institucional</h3>
+        <p class="capitulo-card-desc">De pueblo colonial a Capital de la Confederación. La federalización de 1880 (Ley 1.029). La Municipalidad de la Ciudad de Buenos Aires. La reforma constitucional de 1994 y el nacimiento de la Ciudad Autónoma. La Constitución porteña de 1996.</p>
+        <div class="capitulo-card-tags">
+          <span class="capitulo-card-tag estado-disponible">Disponible</span>
+        </div>
+        <span class="capitulo-card-link">Leer capítulo →</span>
+      </a>
+
+      <a href="caba-poderes.html" class="capitulo-card disponible">
+        <div class="capitulo-card-num">09.02</div>
+        <h3 class="capitulo-card-titulo">Los <em>tres poderes</em> porteños</h3>
+        <p class="capitulo-card-desc">Jefe de Gobierno, Vice, Jefe de Gabinete y los ministerios. La Legislatura unicameral (60 diputados, D'Hondt). El Poder Judicial porteño y el Tribunal Superior de Justicia. Los órganos de control: Defensoría del Pueblo, Auditoría, Procuración, Sindicatura.</p>
+        <div class="capitulo-card-tags">
+          <span class="capitulo-card-tag estado-disponible">Disponible</span>
+        </div>
+        <span class="capitulo-card-link">Leer capítulo →</span>
+      </a>
+
+      <a href="caba-comunas.html" class="capitulo-card disponible">
+        <div class="capitulo-card-num">09.03</div>
+        <h3 class="capitulo-card-titulo">Las <em>15 comunas</em>: el tercer nivel</h3>
+        <p class="capitulo-card-desc">Algo que pocos porteños saben usar: las comunas. Ley 1.777 de 2005. Las 15 comunas y sus barrios. La Junta Comunal de 7 miembros electos. Qué competencias tienen, qué deciden, qué les sigue faltando.</p>
+        <div class="capitulo-card-tags">
+          <span class="capitulo-card-tag estado-disponible">Disponible</span>
+        </div>
+        <span class="capitulo-card-link">Leer capítulo →</span>
+      </a>
+
+      <a href="caba-coparticipacion.html" class="capitulo-card disponible">
+        <div class="capitulo-card-num">09.04</div>
+        <h3 class="capitulo-card-titulo">Plata: <em>coparticipación</em> y sistema fiscal porteño</h3>
+        <p class="capitulo-card-desc">Cómo se financia la Ciudad. Los impuestos porteños: Ingresos Brutos, ABL, Patentes, Sellos. La AGIP. El conflicto histórico de la coparticipación porteña: decretos, fallos de la Corte y negociaciones recientes. El presupuesto en perspectiva.</p>
+        <div class="capitulo-card-tags">
+          <span class="capitulo-card-tag estado-disponible">Disponible</span>
+        </div>
+        <span class="capitulo-card-link">Leer capítulo →</span>
+      </a>
+
+      <a href="caba-pendientes.html" class="capitulo-card disponible">
+        <div class="capitulo-card-num">09.05</div>
+        <h3 class="capitulo-card-titulo">Lo que <em>falta</em>: pendientes de la autonomía</h3>
+        <p class="capitulo-card-desc">La justicia ordinaria que sigue en manos de la Nación. La Policía de la Ciudad y la transferencia incompleta. El subte, los trenes y la jurisdicción compartida. El puerto, las riberas, Aeroparque. El estatus jurídico futuro de la Ciudad.</p>
+        <div class="capitulo-card-tags">
+          <span class="capitulo-card-tag estado-disponible">Disponible</span>
+        </div>
+        <span class="capitulo-card-link">Leer capítulo →</span>
+      </a>
+
+    </div>
+  </section>
+
+  <section class="modelo-premium">
+    <div class="modelo-premium-eyebrow">— Sobre este apartado</div>
+    <h3>Un formato que vamos a <em>replicar</em></h3>
+    <p>Los estudios en profundidad son una nueva línea de contenido del sitio. CABA es el primero, pero la idea es que cada cierto tiempo se sume un nuevo estudio profundo sobre una temática institucional argentina específica: una provincia, una región, una institución, un período histórico.</p>
+    <p>El criterio es siempre el mismo: <strong>tomar un tema que en el resto del sitio se trata de forma general, y desarrollarlo con la densidad, las citas y las referencias que merece</strong>. Sin nombres propios, sin grieta, con foco institucional.</p>
+    <p>Durante el período de prueba, todos los estudios son de acceso libre. Cuando el modelo premium se active, los lectores actuales tendrán acceso preferencial. Mientras tanto, si te interesa este formato, te invito a recorrer también el <a href="historia.html">apartado de Historia institucional</a>, que sigue la misma lógica editorial.</p>
+  </section>
+
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div>
+      <h3>Educación Cívica</h3>
+      <p>Una guía visual y educativa sobre el Estado argentino, sus poderes, las provincias, el sistema electoral, los derechos del ciudadano y la historia institucional.</p>
+    </div>
+    <div>
+      <h3>Secciones</h3>
+      <a href="poderes.html">Los poderes</a>
+      <a href="provincias.html">Provincias</a>
+      <a href="index.html#sistema-electoral">Elecciones</a>
+      <a href="index.html#derechos">Derechos</a>
+      <a href="historia.html">Historia</a>
+      <a href="caba-en-profundidad.html">CABA en profundidad</a>
+    </div>
+    <div>
+      <h3>El proyecto</h3>
+      <a href="#">Sobre nosotros</a>
+      <a href="#">Manifiesto editorial</a>
+      <a href="#">Suscribirse</a>
+      <a href="#">Contacto</a>
+    </div>
+    <div class="footer-meta">
+      educacioncivica.com.ar · v0.5 prototipo · Educación cívica con datos · Sin grieta · Datos institucionales actualizados a mayo de 2026
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
