@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Las reformas constitucionales argentinas — Educación Cívica</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,400;0,500;0,600;1,400&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --crema: #FBF7F0; --crema-warm: #F4ECDB; --tinta: #1A1A2E; --tinta-soft: #545465;
+    --celeste: #74ACDF; --celeste-soft: #E4F0FA; --celeste-dark: #3D7BB0;
+    --sol: #F6B40E; --sol-soft: #FBE5AA; --sol-dark: #C8941A;
+    --rojo-fed: #B8341B; --rojo-soft: #F2D5CE;
+    --verde-ok: #4A7C59; --verde-soft: #DAEAE0;
+    --premium: #6B4F8C; --premium-soft: #E8DFF0; --premium-dark: #4A3661;
+    --linea: #DDD7CB; --linea-soft: #ECE6DA;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Fraunces', Georgia, serif; background: var(--crema); color: var(--tinta); line-height: 1.6; }
+  nav { background: white; border-bottom: 1px solid var(--linea); padding: 1.2rem 2rem; position: sticky; top: 0; z-index: 100; }
+  .nav-inner { max-width: 1400px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
+  .logo { display: flex; align-items: center; gap: 0.5rem; font-family: 'Fraunces', serif; font-weight: 500; font-size: 1.1rem; color: var(--tinta); text-decoration: none; }
+  .logo-dot { width: 12px; height: 12px; background: var(--sol); border-radius: 50%; }
+  .breadcrumb { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.1em; color: var(--tinta-soft); }
+  .breadcrumb a { color: var(--tinta-soft); text-decoration: none; }
+  .breadcrumb a:hover { color: var(--tinta); }
+
+  /* Banner premium */
+  .premium-banner { background: var(--premium); color: white; padding: 0.6rem 2rem; font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase; text-align: center; }
+  .premium-banner strong { color: var(--sol); }
+
+  .page-header { background: linear-gradient(180deg, var(--premium-soft) 0%, var(--crema) 100%); padding: 4rem 2rem 3rem; border-bottom: 1px solid var(--linea); }
+  .page-header-inner { max-width: 900px; margin: 0 auto; }
+  .page-eyebrow { display: inline-block; font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--premium-dark); background: white; padding: 0.5rem 1rem; border: 1px solid var(--premium); margin-bottom: 1.5rem; }
+  .page-title { font-family: 'Fraunces', serif; font-weight: 300; font-size: clamp(2.2rem, 5vw, 3.6rem); line-height: 1.05; margin-bottom: 1.5rem; color: var(--tinta); }
+  .page-title em { font-style: italic; color: var(--premium-dark); font-weight: 400; }
+  .page-intro { font-size: 1.15rem; line-height: 1.7; color: var(--tinta); max-width: 720px; }
+
+  .layout { max-width: 1400px; margin: 0 auto; padding: 3rem 2rem; display: grid; grid-template-columns: 220px 1fr; gap: 4rem; align-items: start; }
+  .toc { position: sticky; top: 90px; font-family: 'JetBrains Mono', monospace; font-size: 0.78rem; }
+  .toc-titulo { font-size: 0.65rem; letter-spacing: 0.18em; color: var(--tinta-soft); text-transform: uppercase; margin-bottom: 1rem; padding-bottom: 0.8rem; border-bottom: 1px solid var(--linea); }
+  .toc ul { list-style: none; }
+  .toc li { margin-bottom: 0.6rem; line-height: 1.4; }
+  .toc a { color: var(--tinta-soft); text-decoration: none; border-left: 2px solid var(--linea); padding-left: 0.8rem; display: block; transition: all 0.18s ease; }
+  .toc a:hover { color: var(--tinta); border-left-color: var(--premium); }
+  .toc-num { color: var(--premium-dark); font-weight: 500; }
+
+  .contenido { max-width: 720px; }
+  .intro-bloque { background: white; border: 1px solid var(--linea); padding: 2rem; margin-bottom: 3rem; }
+  .intro-bloque p { font-size: 1rem; line-height: 1.75; color: var(--tinta); margin-bottom: 1rem; }
+  .intro-bloque p:last-child { margin-bottom: 0; }
+
+  /* Línea de tiempo visual */
+  .timeline-master {
+    position: relative;
+    margin: 3rem 0;
+    padding-left: 2rem;
+    border-left: 3px solid var(--premium);
+  }
+  .timeline-evento {
+    position: relative;
+    padding-bottom: 1.5rem;
+    padding-left: 1.5rem;
+  }
+  .timeline-evento::before {
+    content: '';
+    position: absolute;
+    left: -2.7rem;
+    top: 0.3rem;
+    width: 14px;
+    height: 14px;
+    background: var(--premium);
+    border-radius: 50%;
+    border: 3px solid var(--crema);
+  }
+  .timeline-evento.dictadura::before { background: var(--rojo-fed); }
+  .timeline-evento.democratica::before { background: var(--verde-ok); }
+  .timeline-evento .year { font-family: 'JetBrains Mono', monospace; font-size: 0.85rem; font-weight: 600; color: var(--premium-dark); letter-spacing: 0.05em; }
+  .timeline-evento .titulo-mini { font-family: 'Fraunces', serif; font-size: 1rem; font-weight: 500; color: var(--tinta); margin-top: 0.2rem; }
+  .timeline-evento .desc { font-size: 0.85rem; line-height: 1.5; color: var(--tinta-soft); margin-top: 0.3rem; }
+
+  .seccion { margin-bottom: 3.5rem; padding-bottom: 3rem; border-bottom: 1px solid var(--linea); }
+  .seccion:last-of-type { border-bottom: none; }
+  .seccion-eyebrow { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.18em; color: var(--premium-dark); text-transform: uppercase; margin-bottom: 0.6rem; }
+  .seccion-year { font-family: 'Fraunces', serif; font-size: 3rem; font-weight: 300; color: var(--premium); line-height: 1; margin-bottom: 0.5rem; }
+  .seccion h2 { font-family: 'Fraunces', serif; font-weight: 400; font-size: 1.9rem; line-height: 1.15; color: var(--tinta); margin-bottom: 1.5rem; }
+  .seccion h2 em { font-style: italic; color: var(--premium-dark); }
+  .seccion h3 { font-family: 'Fraunces', serif; font-weight: 500; font-size: 1.2rem; color: var(--tinta); margin-top: 2rem; margin-bottom: 0.8rem; }
+  .seccion p { margin-bottom: 1rem; font-size: 1rem; line-height: 1.75; color: var(--tinta); }
+  .seccion p strong { font-weight: 600; color: var(--tinta); }
+  .seccion ul { margin: 1rem 0 1.5rem 0; padding-left: 0; list-style: none; }
+  .seccion ul li { padding-left: 1.5rem; margin-bottom: 0.6rem; line-height: 1.6; position: relative; }
+  .seccion ul li::before { content: '→'; position: absolute; left: 0; color: var(--premium); font-weight: 600; }
+
+  /* Tarjeta de "ficha" de cada reforma */
+  .ficha-reforma {
+    background: white;
+    border: 1px solid var(--linea);
+    border-left: 4px solid var(--premium);
+    padding: 1.5rem 1.8rem;
+    margin-bottom: 1.5rem;
+  }
+  .ficha-reforma.controvertida { border-left-color: var(--sol-dark); }
+  .ficha-reforma.dictadura { border-left-color: var(--rojo-fed); }
+  .ficha-reforma-row { display: flex; padding: 0.5rem 0; border-bottom: 1px dotted var(--linea); font-size: 0.9rem; }
+  .ficha-reforma-row:last-child { border-bottom: none; }
+  .ficha-reforma-row .label { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--tinta-soft); min-width: 130px; }
+  .ficha-reforma-row .valor { flex: 1; color: var(--tinta); }
+
+  .destacado { background: white; border-left: 4px solid var(--celeste); padding: 1.5rem 1.8rem; margin: 1.5rem 0; font-size: 0.95rem; line-height: 1.6; }
+  .destacado-titulo { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.15em; color: var(--celeste-dark); text-transform: uppercase; margin-bottom: 0.6rem; }
+  .destacado.atencion { background: var(--sol-soft); border-left-color: var(--sol-dark); }
+  .destacado.atencion .destacado-titulo { color: var(--sol-dark); }
+  .destacado.historico { background: var(--rojo-soft); border-left-color: var(--rojo-fed); }
+  .destacado.historico .destacado-titulo { color: var(--rojo-fed); }
+  .destacado.premium { background: var(--premium-soft); border-left-color: var(--premium); }
+  .destacado.premium .destacado-titulo { color: var(--premium-dark); }
+
+  .cita-articulo { background: white; border: 1px solid var(--linea); padding: 1.5rem 1.8rem; margin: 1.5rem 0; font-family: 'Fraunces', serif; font-style: italic; font-size: 1.02rem; line-height: 1.7; color: var(--tinta); border-left: 4px solid var(--sol-dark); position: relative; }
+  .cita-articulo::before { content: '"'; position: absolute; top: -0.5rem; left: 1.2rem; font-size: 3rem; color: var(--sol); font-family: serif; line-height: 1; }
+  .cita-articulo-ref { font-family: 'JetBrains Mono', monospace; font-style: normal; font-size: 0.7rem; letter-spacing: 0.12em; color: var(--tinta-soft); text-transform: uppercase; margin-top: 0.8rem; }
+
+  .cita-legal { font-family: 'JetBrains Mono', monospace; font-size: 0.75rem; color: var(--tinta-soft); background: var(--linea-soft); padding: 0.8rem 1rem; margin: 1rem 0; line-height: 1.5; border-left: 3px solid var(--tinta-soft); }
+
+  .tabla-datos { width: 100%; margin: 1.5rem 0; border-collapse: collapse; font-size: 0.9rem; }
+  .tabla-datos th { text-align: left; padding: 0.8rem 1rem; background: var(--premium-soft); border-bottom: 2px solid var(--premium); font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--tinta); font-weight: 600; }
+  .tabla-datos td { padding: 0.85rem 1rem; border-bottom: 1px dotted var(--linea); vertical-align: top; }
+  .tabla-datos tr:last-child td { border-bottom: none; }
+  .tabla-datos td:first-child { font-weight: 500; color: var(--tinta); }
+
+  /* Divider de "época" */
+  .epoca-divider {
+    margin: 4rem 0;
+    text-align: center;
+    position: relative;
+  }
+  .epoca-divider::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: var(--linea);
+  }
+  .epoca-divider span {
+    position: relative;
+    background: var(--crema);
+    padding: 0 1.5rem;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.7rem;
+    letter-spacing: 0.2em;
+    color: var(--tinta-soft);
+    text-transform: uppercase;
+  }
+
+  .fuentes { margin-top: 4rem; padding-top: 2.5rem; border-top: 2px solid var(--linea); }
+  .fuentes h3 { font-family: 'JetBrains Mono', monospace; font-size: 0.75rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--tinta-soft); margin-bottom: 1.5rem; border: none; padding: 0; }
+  .fuentes ul { list-style: none; padding: 0; }
+  .fuentes li { padding: 0.6rem 0; border-bottom: 1px dotted var(--linea); font-size: 0.88rem; padding-left: 0; }
+  .fuentes li::before { content: none; }
+  .fuentes a { color: var(--celeste-dark); text-decoration: none; border-bottom: 1px dotted var(--celeste-dark); }
+  .fuentes a:hover { color: var(--tinta); }
+
+  footer { background: var(--tinta); color: var(--crema); padding: 3rem 2rem; margin-top: 4rem; }
+  .footer-inner { max-width: 1400px; margin: 0 auto; display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 3rem; }
+  footer h3 { font-family: 'Fraunces', serif; font-weight: 400; font-size: 1.3rem; margin-bottom: 1rem; color: var(--crema); }
+  footer p, footer a { color: var(--crema); opacity: 0.85; font-size: 0.9rem; line-height: 1.6; }
+  footer a { text-decoration: none; display: block; padding: 0.3rem 0; }
+  footer a:hover { opacity: 1; color: var(--sol); }
+  .footer-meta { grid-column: 1 / -1; margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid rgba(251, 247, 240, 0.15); font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; opacity: 0.6; letter-spacing: 0.05em; }
+
+  @media (max-width: 900px) {
+    .layout { grid-template-columns: 1fr; gap: 2rem; }
+    .toc { position: relative; top: 0; padding: 1.5rem; background: white; border: 1px solid var(--linea); }
+    .footer-inner { grid-template-columns: 1fr; gap: 2rem; }
+    .ficha-reforma-row { flex-direction: column; gap: 0.3rem; }
+    .ficha-reforma-row .label { min-width: auto; }
+  }
+</style>
+</head>
+<body>
+
+<div class="premium-banner">— Capítulo premium · <strong>Acceso libre durante el período de prueba</strong></div>
+
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="logo"><span class="logo-dot"></span>Educación Cívica</a>
+    <div class="breadcrumb"><a href="index.html">Inicio</a> · <a href="historia.html">Historia</a> · <span>Reformas constitucionales</span></div>
+  </div>
+</nav>
+
+<header class="page-header">
+  <div class="page-header-inner">
+    <div class="page-eyebrow">Capítulo 07.01 · Historia institucional</div>
+    <h1 class="page-title">Las <em>siete reformas</em> constitucionales</h1>
+    <p class="page-intro">Desde 1853, la Constitución argentina fue modificada formalmente siete veces. Cada reforma cuenta una historia: un país que se unía, una provincia que pedía representación, un peronismo que sancionaba derechos sociales, una dictadura que los derogaba, una democracia que recuperaba garantías. Esta es la historia institucional de Argentina contada a través de sus textos fundamentales.</p>
+  </div>
+</header>
+
+<div class="layout">
+
+  <aside class="toc">
+    <div class="toc-titulo">— En esta página</div>
+    <ul>
+      <li><a href="#contexto"><span class="toc-num">00</span> El punto de partida: 1853</a></li>
+      <li><a href="#reforma-1860"><span class="toc-num">01</span> 1860 · Buenos Aires</a></li>
+      <li><a href="#reforma-1866"><span class="toc-num">02</span> 1866 · Aduana</a></li>
+      <li><a href="#reforma-1898"><span class="toc-num">03</span> 1898 · Cámaras</a></li>
+      <li><a href="#reforma-1949"><span class="toc-num">04</span> 1949 · Derechos sociales</a></li>
+      <li><a href="#reforma-1957"><span class="toc-num">05</span> 1957 · El 14 bis</a></li>
+      <li><a href="#reforma-1972"><span class="toc-num">06</span> 1972 · Estatuto</a></li>
+      <li><a href="#reforma-1994"><span class="toc-num">07</span> 1994 · Modernización</a></li>
+      <li><a href="#hoy"><span class="toc-num">08</span> Lo que tenemos hoy</a></li>
+    </ul>
+  </aside>
+
+  <main class="contenido">
+
+    <section class="seccion" id="contexto">
+      <div class="seccion-eyebrow">— 00 / Punto de partida</div>
+      <h2>El <em>texto original</em>: la Constitución de 1853</h2>
+
+      <div class="intro-bloque">
+        <p>Antes de hablar de reformas, hay que hablar del texto original. La Constitución argentina fue sancionada el <strong>1 de mayo de 1853</strong> por el Congreso General Constituyente reunido en la ciudad de Santa Fe. Estableció la forma de gobierno representativa, republicana y federal, y organizó el Estado Nacional con tres poderes.</p>
+        <p>Sin embargo, hubo un detalle crucial: <strong>la provincia de Buenos Aires no la firmó</strong>. Buenos Aires se había separado de la Confederación en 1852 y no participó del proceso constituyente. Esa ausencia haría inevitable la primera reforma, apenas siete años después.</p>
+      </div>
+
+      <h3>Características del texto original</h3>
+      <ul>
+        <li>Fuerte inspiración en la Constitución de Estados Unidos (1787) y en las ideas de Juan Bautista Alberdi.</li>
+        <li>Forma de gobierno: representativa, republicana, federal.</li>
+        <li>Tres poderes: Ejecutivo, Legislativo (bicameral) y Judicial.</li>
+        <li>Presidencia con mandato de 6 años, sin reelección inmediata.</li>
+        <li>Sistema de elección indirecta del Presidente (Colegio Electoral).</li>
+        <li>Federalización de Buenos Aires como capital (causa del conflicto inmediato).</li>
+        <li>Cláusulas que prohibían la esclavitud y consagraban derechos civiles básicos.</li>
+      </ul>
+
+      <h3>Línea de tiempo de las siete reformas</h3>
+      <div class="timeline-master">
+        <div class="timeline-evento democratica">
+          <div class="year">1860</div>
+          <div class="titulo-mini">Reforma de Buenos Aires</div>
+          <div class="desc">Buenos Aires se incorpora a la Confederación. Modificaciones técnicas y federalismo más equilibrado.</div>
+        </div>
+        <div class="timeline-evento democratica">
+          <div class="year">1866</div>
+          <div class="titulo-mini">Reforma de Aduana</div>
+          <div class="desc">Se hacen permanentes los derechos de exportación que la reforma del 60 había puesto como transitorios.</div>
+        </div>
+        <div class="timeline-evento democratica">
+          <div class="year">1898</div>
+          <div class="titulo-mini">Composición de las Cámaras</div>
+          <div class="desc">Se modifica la base poblacional para elegir Diputados y se aumenta el número de ministros del PEN.</div>
+        </div>
+        <div class="timeline-evento democratica">
+          <div class="year">1949</div>
+          <div class="titulo-mini">Constitucionalismo social</div>
+          <div class="desc">Se incorporan derechos sociales, voto femenino, autonomía universitaria. Habilitó la reelección. Derogada en 1956.</div>
+        </div>
+        <div class="timeline-evento democratica">
+          <div class="year">1957</div>
+          <div class="titulo-mini">El artículo 14 bis</div>
+          <div class="desc">Sin quórum y con muchas dudas, se incorpora el 14 bis con los derechos laborales y sociales.</div>
+        </div>
+        <div class="timeline-evento dictadura">
+          <div class="year">1972</div>
+          <div class="titulo-mini">Estatuto provisorio</div>
+          <div class="desc">Una junta militar reforma 15 artículos. No es técnicamente una reforma constitucional plena, pero rige durante años.</div>
+        </div>
+        <div class="timeline-evento democratica">
+          <div class="year">1994</div>
+          <div class="titulo-mini">La gran modernización</div>
+          <div class="desc">La reforma más amplia: balotaje, reelección, autonomía de CABA, tratados de DDHH con jerarquía constitucional, nuevos derechos.</div>
+        </div>
+      </div>
+
+      <p style="font-size: 0.85rem; color: var(--tinta-soft); font-style: italic; margin-top: 1rem;">Los puntos verdes marcan reformas hechas bajo gobiernos civiles. Los puntos rojos marcan procesos hechos bajo gobiernos militares.</p>
+    </section>
+
+    <section class="seccion" id="reforma-1860">
+      <div class="seccion-eyebrow">— 01 / Primera reforma</div>
+      <div class="seccion-year">1860</div>
+      <h2>Buenos Aires se <em>incorpora</em> a la Confederación</h2>
+
+      <p>La primera reforma respondió al problema de Buenos Aires. Tras la batalla de Cepeda (1859), Buenos Aires aceptó ingresar a la Confederación Argentina, pero exigió revisar la Constitución de 1853 antes de adherir. El Pacto de San José de Flores (1859) estableció ese compromiso, y una Convención reformadora se reunió en Santa Fe en 1860.</p>
+
+      <div class="ficha-reforma">
+        <div class="ficha-reforma-row"><div class="label">Año</div><div class="valor">1860</div></div>
+        <div class="ficha-reforma-row"><div class="label">Contexto</div><div class="valor">Incorporación de Buenos Aires</div></div>
+        <div class="ficha-reforma-row"><div class="label">Convocatoria</div><div class="valor">Pacto de San José de Flores (1859)</div></div>
+        <div class="ficha-reforma-row"><div class="label">Sede</div><div class="valor">Santa Fe</div></div>
+        <div class="ficha-reforma-row"><div class="label">Vigencia</div><div class="valor">Plena hasta hoy</div></div>
+      </div>
+
+      <h3>Principales modificaciones</h3>
+      <ul>
+        <li><strong>Federalización de Buenos Aires:</strong> se eliminó la declaración automática de Buenos Aires como capital federal (lo que había generado conflicto). La capitalización quedó como decisión legislativa futura.</li>
+        <li><strong>Derechos individuales:</strong> se fortalecieron varios derechos en la Primera Parte (libertad de prensa sin censura previa, inviolabilidad del domicilio, etc.).</li>
+        <li><strong>Reforma del federalismo fiscal:</strong> se prohibió la intervención federal en las provincias salvo casos específicos.</li>
+        <li><strong>Aduana:</strong> se prohibieron los impuestos provinciales a la exportación, dejándolos como recurso exclusivo del gobierno federal (medida que después debió ampliarse en 1866).</li>
+        <li><strong>Cambios técnicos:</strong> múltiples ajustes en la redacción, incorporando criterios constitucionales modernos.</li>
+      </ul>
+
+      <h3>Importancia histórica</h3>
+      <p>La reforma de 1860 es lo que muchos juristas consideran la <strong>"verdadera" Constitución argentina</strong>. Algunos autores incluso hablan de "Constitución de 1853-1860" como un solo cuerpo, dado que la reforma fue tan profunda y tan cercana en el tiempo. Sin esta reforma, Buenos Aires nunca habría aceptado el texto y la Argentina podría haberse dividido en dos estados.</p>
+
+      <div class="destacado historico">
+        <div class="destacado-titulo">Curiosidad</div>
+        <p>La cláusula que prohíbe los derechos a la exportación que se reformó en 1860 y se modificó en 1866 sigue siendo objeto de controversia hasta hoy. Cuando se debate sobre las "retenciones" (impuestos a las exportaciones agrícolas), esa cláusula constitucional es uno de los argumentos centrales del debate jurídico.</p>
+      </div>
+    </section>
+
+    <section class="seccion" id="reforma-1866">
+      <div class="seccion-eyebrow">— 02 / Segunda reforma</div>
+      <div class="seccion-year">1866</div>
+      <h2>Los <em>derechos de aduana</em></h2>
+
+      <p>Apenas seis años después de la reforma del 60, llegó la segunda. Fue de alcance limitado pero económicamente crucial. Buenos Aires había logrado en 1860 que los derechos de exportación fueran solo transitorios (con vigencia hasta 1866). Pero el Estado nacional necesitaba esos ingresos para sostenerse, especialmente en plena Guerra del Paraguay.</p>
+
+      <div class="ficha-reforma">
+        <div class="ficha-reforma-row"><div class="label">Año</div><div class="valor">1866</div></div>
+        <div class="ficha-reforma-row"><div class="label">Contexto</div><div class="valor">Guerra del Paraguay, urgencia fiscal</div></div>
+        <div class="ficha-reforma-row"><div class="label">Sede</div><div class="valor">Santa Fe</div></div>
+        <div class="ficha-reforma-row"><div class="label">Alcance</div><div class="valor">Muy limitado, solo dos artículos</div></div>
+        <div class="ficha-reforma-row"><div class="label">Vigencia</div><div class="valor">Vigente hasta hoy</div></div>
+      </div>
+
+      <h3>Modificaciones principales</h3>
+      <ul>
+        <li>Se eliminó la cláusula transitoria que prohibía los derechos de exportación a partir de 1866.</li>
+        <li>Se establecieron como recurso permanente del Estado nacional las contribuciones aduaneras (tanto importación como exportación).</li>
+        <li>Quedó consolidada la <strong>renta aduanera</strong> como base económica del Estado federal durante todo el siglo XIX.</li>
+      </ul>
+
+      <h3>Importancia histórica</h3>
+      <p>Aunque técnicamente pequeña, esta reforma definió el modelo económico argentino del siglo XIX y principios del XX. La aduana fue durante décadas la principal fuente de ingresos del Estado nacional, lo que explica por qué el puerto de Buenos Aires (y su control político) era tan disputado. Solo con la creación del impuesto a las ganancias (1932) y otros tributos del siglo XX se diversificó realmente la base tributaria nacional.</p>
+    </section>
+
+    <section class="seccion" id="reforma-1898">
+      <div class="seccion-eyebrow">— 03 / Tercera reforma</div>
+      <div class="seccion-year">1898</div>
+      <h2>El crecimiento <em>institucional</em></h2>
+
+      <p>A fines del siglo XIX, Argentina vivía un proceso acelerado de crecimiento poblacional (por la inmigración europea) y económico. La estructura institucional original quedaba chica. La reforma de 1898 buscó adaptar el Estado a esa nueva realidad.</p>
+
+      <div class="ficha-reforma">
+        <div class="ficha-reforma-row"><div class="label">Año</div><div class="valor">1898</div></div>
+        <div class="ficha-reforma-row"><div class="label">Contexto</div><div class="valor">Modernización institucional</div></div>
+        <div class="ficha-reforma-row"><div class="label">Sede</div><div class="valor">Buenos Aires</div></div>
+        <div class="ficha-reforma-row"><div class="label">Alcance</div><div class="valor">Dos artículos modificados</div></div>
+        <div class="ficha-reforma-row"><div class="label">Vigencia</div><div class="valor">Modificada después por la reforma de 1994</div></div>
+      </div>
+
+      <h3>Modificaciones principales</h3>
+      <ul>
+        <li><strong>Base poblacional para Diputados:</strong> se aumentó la base de habitantes que se necesitan para elegir un Diputado nacional, ajustándola al crecimiento poblacional.</li>
+        <li><strong>Ministerios del Poder Ejecutivo:</strong> se aumentó el número de ministros del Presidente. La Constitución de 1853 limitaba a cinco ministerios; 1898 lo amplió a ocho.</li>
+      </ul>
+
+      <h3>Importancia histórica</h3>
+      <p>Aunque parezca un detalle técnico, esta reforma reflejó un cambio profundo: Argentina ya no era el país pequeño y agrario de 1853, sino una potencia regional en expansión que necesitaba un aparato estatal más complejo. La reforma de 1994 volvió a modificar el régimen ministerial, eliminando la limitación constitucional al número de ministros (hoy lo define una ley común).</p>
+    </section>
+
+    <div class="epoca-divider"><span>— Siglo XX —</span></div>
+
+    <section class="seccion" id="reforma-1949">
+      <div class="seccion-eyebrow">— 04 / Cuarta reforma</div>
+      <div class="seccion-year">1949</div>
+      <h2>El <em>constitucionalismo social</em></h2>
+
+      <p>Después de medio siglo sin reformas, en 1949 llegó la más ambiciosa de toda la historia argentina hasta ese momento. Marcó la entrada formal del <strong>constitucionalismo social</strong> al texto fundamental: derechos del trabajador, derechos sociales, función social de la propiedad, voto femenino.</p>
+
+      <div class="ficha-reforma controvertida">
+        <div class="ficha-reforma-row"><div class="label">Año</div><div class="valor">1949</div></div>
+        <div class="ficha-reforma-row"><div class="label">Contexto</div><div class="valor">Primera presidencia de Juan Domingo Perón</div></div>
+        <div class="ficha-reforma-row"><div class="label">Sede</div><div class="valor">Buenos Aires</div></div>
+        <div class="ficha-reforma-row"><div class="label">Alcance</div><div class="valor">Reforma muy amplia, prácticamente nuevo texto</div></div>
+        <div class="ficha-reforma-row"><div class="label">Vigencia</div><div class="valor">Derogada en 1956 por proclamación militar</div></div>
+      </div>
+
+      <h3>Modificaciones principales</h3>
+      <ul>
+        <li><strong>Derechos del trabajador:</strong> jornada limitada, descanso, vacaciones pagas, salario mínimo, condiciones dignas de trabajo, protección contra el despido arbitrario.</li>
+        <li><strong>Derechos de la familia, la ancianidad, la cultura y la educación:</strong> bloques temáticos novedosos para la época.</li>
+        <li><strong>Función social de la propiedad:</strong> se reconoció que la propiedad privada tiene una "función social" y puede ser limitada en interés colectivo.</li>
+        <li><strong>Voto femenino:</strong> aunque ya había sido sancionado por ley en 1947 (Ley 13.010), la reforma le dio rango constitucional.</li>
+        <li><strong>Autonomía universitaria:</strong> reconocida en el texto constitucional.</li>
+        <li><strong>Nacionalización de servicios públicos:</strong> se habilitó constitucionalmente el control estatal sobre actividades estratégicas.</li>
+        <li><strong>Reelección presidencial inmediata:</strong> se eliminó la prohibición de reelección consecutiva del Presidente.</li>
+      </ul>
+
+      <h3>El proceso de sanción</h3>
+      <p>La Convención Constituyente sesionó en Buenos Aires entre enero y marzo de 1949. Fue convocada por una ley sancionada por el Congreso, con mayoría peronista. La reforma fue muy controvertida desde el inicio: la oposición cuestionó la validez del procedimiento, especialmente la mayoría requerida para declarar la necesidad de la reforma.</p>
+
+      <div class="destacado historico">
+        <div class="destacado-titulo">El golpe y la derogación de 1956</div>
+        <p>El gobierno de Perón fue derrocado por un golpe militar en septiembre de 1955 (autodenominado "Revolución Libertadora"). En abril de 1956, la junta militar, por <strong>simple proclamación</strong> (sin convocar a una nueva convención constituyente), declaró nula la reforma de 1949 y restableció el texto de 1853 con las reformas anteriores. Este acto generó (y sigue generando) un debate jurídico intenso: ¿puede un gobierno de facto derogar una reforma constitucional sin convocar a otra convención? Para algunos juristas la respuesta es no, lo que implicaría que jurídicamente la reforma de 1949 nunca dejó de estar vigente.</p>
+      </div>
+
+      <h3>Importancia histórica</h3>
+      <p>Aunque la reforma de 1949 fue derogada formalmente, su influencia perdura. Muchos de sus principios fueron recuperados en el <strong>artículo 14 bis</strong> incorporado en 1957 (los derechos del trabajador), y la lógica del constitucionalismo social atraviesa toda la legislación argentina posterior. Es uno de los textos constitucionales más estudiados en las universidades de Derecho.</p>
+    </section>
+
+    <section class="seccion" id="reforma-1957">
+      <div class="seccion-eyebrow">— 05 / Quinta reforma</div>
+      <div class="seccion-year">1957</div>
+      <h2>El <em>artículo 14 bis</em></h2>
+
+      <p>Después de la derogación de la reforma del 49, surgió la necesidad de incorporar derechos sociales al texto vigente. El gobierno militar de la "Revolución Libertadora" convocó a una Convención Constituyente, pero el proceso fue muy accidentado y dejó un legado mínimo aunque trascendental: el <strong>famoso artículo 14 bis</strong>.</p>
+
+      <div class="ficha-reforma controvertida">
+        <div class="ficha-reforma-row"><div class="label">Año</div><div class="valor">1957</div></div>
+        <div class="ficha-reforma-row"><div class="label">Contexto</div><div class="valor">Gobierno de facto, peronismo proscripto</div></div>
+        <div class="ficha-reforma-row"><div class="label">Sede</div><div class="valor">Santa Fe</div></div>
+        <div class="ficha-reforma-row"><div class="label">Alcance</div><div class="valor">Mínimo, prácticamente solo el 14 bis</div></div>
+        <div class="ficha-reforma-row"><div class="label">Vigencia</div><div class="valor">Plena hasta hoy</div></div>
+      </div>
+
+      <h3>El proceso accidentado</h3>
+      <p>La Convención fue convocada por decreto del gobierno militar. El peronismo estaba proscripto y muchos convencionales peronistas votaron en blanco. La asamblea estuvo dividida desde el inicio. Las primeras sesiones se dedicaron a convalidar la derogación de la reforma del 49, lo que fue muy resistido. Cuando empezaron a discutirse las nuevas reformas, varios convencionales empezaron a retirarse, dejando a la asamblea sin quórum suficiente.</p>
+
+      <p>En medio del derrumbe, los convencionales que quedaban lograron sancionar un único artículo nuevo: el <strong>artículo 14 bis</strong>, que recogía buena parte de los derechos sociales que habían estado en la reforma de 1949. Después de eso, la Convención no logró nunca más reunir quórum y los demás temas quedaron sin tratamiento.</p>
+
+      <div class="cita-articulo">
+        El trabajo en sus diversas formas gozará de la protección de las leyes, las que asegurarán al trabajador: condiciones dignas y equitativas de labor; jornada limitada; descanso y vacaciones pagados; retribución justa; salario mínimo vital móvil; igual remuneración por igual tarea; participación en las ganancias de las empresas (...); protección contra el despido arbitrario (...).
+        <div class="cita-articulo-ref">— Artículo 14 bis de la Constitución Nacional (incorporado en 1957)</div>
+      </div>
+
+      <h3>Modificaciones principales</h3>
+      <ul>
+        <li><strong>Artículo 14 bis:</strong> el corazón de los derechos laborales y sociales. Profundizamos en él en <a href="derechos-fundamentales.html" style="color: var(--premium-dark);">nuestra página de derechos fundamentales</a>.</li>
+        <li><strong>Modificación del Art. 67:</strong> ampliación de las atribuciones del Congreso para legislar sobre seguridad social.</li>
+      </ul>
+
+      <div class="destacado atencion">
+        <div class="destacado-titulo">Una paradoja constitucional</div>
+        <p>La reforma de 1957 es considerada por algunos juristas como técnicamente cuestionada (fue hecha durante un gobierno de facto, con el peronismo proscripto y sin quórum suficiente). Sin embargo, su producto principal (el 14 bis) sobrevivió a todas las dictaduras posteriores y sigue siendo uno de los artículos más reverenciados del texto vigente. La realidad política terminó convalidando lo que técnicamente algunos cuestionaban.</p>
+      </div>
+    </section>
+
+    <section class="seccion" id="reforma-1972">
+      <div class="seccion-eyebrow">— 06 / Sexta modificación</div>
+      <div class="seccion-year">1972</div>
+      <h2>El <em>Estatuto Fundamental</em></h2>
+
+      <p>La de 1972 no fue técnicamente una reforma constitucional plena, sino un <strong>"Estatuto Fundamental"</strong> dictado por la junta militar de la Revolución Argentina. Es un caso jurídico atípico. Durante un gobierno de facto, sin Convención Constituyente, una junta de comandantes dictó por decreto modificaciones a 15 artículos de la Constitución, declarando además inaplicables otros cuatro.</p>
+
+      <div class="ficha-reforma dictadura">
+        <div class="ficha-reforma-row"><div class="label">Año</div><div class="valor">1972</div></div>
+        <div class="ficha-reforma-row"><div class="label">Contexto</div><div class="valor">Junta militar Revolución Argentina</div></div>
+        <div class="ficha-reforma-row"><div class="label">Origen</div><div class="valor">Decreto de la junta militar</div></div>
+        <div class="ficha-reforma-row"><div class="label">Naturaleza</div><div class="valor">"Estatuto" transitorio, no reforma plena</div></div>
+        <div class="ficha-reforma-row"><div class="label">Vigencia</div><div class="valor">Caducó en 1976; algunos puntos absorbidos por la reforma de 1994</div></div>
+      </div>
+
+      <h3>Modificaciones principales del Estatuto</h3>
+      <ul>
+        <li><strong>Reducción del mandato presidencial:</strong> de 6 a 4 años (esto fue luego adoptado por la reforma del 94).</li>
+        <li><strong>Elección directa del Presidente:</strong> se eliminó el Colegio Electoral, adoptando el voto directo con sistema de balotaje (idea también recuperada después en 1994).</li>
+        <li><strong>Posibilidad de reelección presidencial</strong> por un período inmediato.</li>
+        <li><strong>Diputados y senadores:</strong> ajustes en la composición de las cámaras.</li>
+        <li><strong>Otros cambios técnicos</strong> en el funcionamiento de los poderes.</li>
+      </ul>
+
+      <h3>El destino del Estatuto</h3>
+      <p>El Estatuto contenía una cláusula de caducidad: regiría hasta el 24 de mayo de 1977, salvo que fuera ratificado por el Congreso. Como ya en 1973 había vuelto la democracia con la elección de Cámpora, y como el Congreso nunca lo ratificó, el Estatuto caducó automáticamente y volvieron a regir los artículos originales. Sin embargo, durante 5 años (1972-1977) el texto constitucional argentino fue de hecho el modificado por la junta militar.</p>
+
+      <div class="destacado historico">
+        <div class="destacado-titulo">Un legado paradójico</div>
+        <p>Aunque el Estatuto fue producto de una dictadura y caducó por decisión democrática, varios de sus contenidos terminaron siendo adoptados por la reforma democrática de 1994: el mandato de 4 años, la reelección, la elección directa con balotaje. Es un ejemplo de cómo ideas constitucionales pueden sobrevivir a sus contextos políticos originales.</p>
+      </div>
+    </section>
+
+    <section class="seccion" id="reforma-1994">
+      <div class="seccion-eyebrow">— 07 / Séptima reforma</div>
+      <div class="seccion-year">1994</div>
+      <h2>La gran <em>modernización</em></h2>
+
+      <p>La reforma de 1994 es la más ambiciosa y la más extensa de toda la historia constitucional argentina vigente. Producto de un acuerdo político entre el Partido Justicialista (en el gobierno) y la Unión Cívica Radical (principal oposición) plasmado en el <strong>Pacto de Olivos</strong>, esta reforma modernizó profundamente el texto constitucional y lo adaptó al siglo XXI.</p>
+
+      <div class="ficha-reforma">
+        <div class="ficha-reforma-row"><div class="label">Año</div><div class="valor">1994</div></div>
+        <div class="ficha-reforma-row"><div class="label">Contexto</div><div class="valor">Pacto de Olivos (1993) entre PJ y UCR</div></div>
+        <div class="ficha-reforma-row"><div class="label">Convocatoria</div><div class="valor">Ley 24.309 (declaración de necesidad de la reforma)</div></div>
+        <div class="ficha-reforma-row"><div class="label">Sede</div><div class="valor">Santa Fe y Paraná</div></div>
+        <div class="ficha-reforma-row"><div class="label">Alcance</div><div class="valor">El más amplio: nuevo capítulo entero, decenas de artículos modificados</div></div>
+        <div class="ficha-reforma-row"><div class="label">Vigencia</div><div class="valor">Plena hasta hoy</div></div>
+      </div>
+
+      <h3>Los grandes ejes de la reforma</h3>
+
+      <h3>1. Modificaciones al sistema presidencial</h3>
+      <ul>
+        <li><strong>Reducción del mandato:</strong> de 6 a 4 años.</li>
+        <li><strong>Reelección consecutiva:</strong> habilitada por una sola vez. Después de dos mandatos, hay que esperar un período antes de poder volver a postularse.</li>
+        <li><strong>Eliminación del Colegio Electoral:</strong> el Presidente y Vicepresidente se eligen por voto directo en distrito único nacional.</li>
+        <li><strong>Sistema de balotaje:</strong> con umbral reducido (45% o 40%+10 de diferencia). Profundizamos en <a href="paso-balotaje.html" style="color: var(--premium-dark);">nuestra página sobre PASO y balotaje</a>.</li>
+        <li><strong>Jefatura de Gabinete:</strong> figura nueva, un ministro coordinador que puede ser interpelado y removido por el Congreso.</li>
+        <li><strong>Eliminación del requisito de catolicidad:</strong> antes de 1994, el Presidente debía ser católico. Esa cláusula fue eliminada.</li>
+      </ul>
+
+      <h3>2. Tratados internacionales con jerarquía constitucional</h3>
+      <p>Uno de los cambios más trascendentales: el <strong>artículo 75 inciso 22</strong> otorgó jerarquía constitucional a 11 instrumentos internacionales de derechos humanos. Esta lista se amplió después: actualmente son 15 los instrumentos con esa jerarquía. Profundizamos en <a href="derechos-fundamentales.html" style="color: var(--premium-dark);">nuestra página de derechos fundamentales</a>.</p>
+
+      <h3>3. Nuevos derechos y garantías</h3>
+      <p>Se incorporó un capítulo entero ("Nuevos derechos y garantías", arts. 36 a 43):</p>
+      <ul>
+        <li><strong>Defensa de la democracia (Art. 36):</strong> sanción a quienes interrumpan el orden constitucional.</li>
+        <li><strong>Derechos políticos y electorales (Arts. 37-40):</strong> sufragio universal, partidos políticos, iniciativa popular, consulta popular.</li>
+        <li><strong>Derecho al ambiente sano (Art. 41).</strong></li>
+        <li><strong>Derechos del consumidor (Art. 42).</strong></li>
+        <li><strong>Garantías constitucionales (Art. 43):</strong> amparo, habeas data, habeas corpus. Profundizamos en nuestras páginas de <a href="amparo.html" style="color: var(--premium-dark);">amparo</a> y <a href="habeas.html" style="color: var(--premium-dark);">habeas corpus y data</a>.</li>
+      </ul>
+
+      <h3>4. Autonomía de la Ciudad de Buenos Aires</h3>
+      <p>El <strong>artículo 129</strong> reconoció a la Ciudad de Buenos Aires como autónoma, con facultades propias de legislación y jurisdicción. Eso permitió que en 1996 CABA sancionara su propia Constitución y eligiera su primer Jefe de Gobierno.</p>
+
+      <h3>5. Reforma del Poder Judicial</h3>
+      <ul>
+        <li><strong>Consejo de la Magistratura:</strong> nuevo órgano para la designación y remoción de jueces inferiores.</li>
+        <li><strong>Ministerio Público:</strong> elevado a "órgano extra-poder", independiente de los tres poderes clásicos.</li>
+        <li><strong>Cambios procesales:</strong> selección de jueces, juicio político, etc.</li>
+      </ul>
+
+      <h3>6. Reformas en el régimen federal</h3>
+      <ul>
+        <li><strong>Coparticipación federal:</strong> rango constitucional para la ley de coparticipación, con mecanismos especiales para su modificación. Profundizamos en <a href="coparticipacion.html" style="color: var(--premium-dark);">nuestra página dedicada</a>.</li>
+        <li><strong>Autonomía municipal:</strong> obligatoria en todo el país (Art. 123).</li>
+        <li><strong>Senado:</strong> se ampliaron las bancas (3 por provincia) y se cambió el sistema de elección.</li>
+        <li><strong>Dominio originario de los recursos naturales:</strong> reconocido a las provincias.</li>
+      </ul>
+
+      <h3>7. Decretos de Necesidad y Urgencia</h3>
+      <p>Se constitucionalizó la figura del DNU pero con restricciones: el Presidente puede dictarlos solo en casos excepcionales y nunca sobre ciertas materias (penal, tributaria, electoral, etc.). Deben pasar después por el Congreso.</p>
+
+      <h3>Importancia histórica</h3>
+      <p>La reforma de 1994 modernizó el texto constitucional argentino, lo puso en sintonía con el constitucionalismo global de fines del siglo XX (con énfasis en derechos humanos), y resolvió varios problemas institucionales que arrastraba desde hacía décadas. Sin embargo, también dejó tareas pendientes: por ejemplo, la nueva ley de coparticipación que debía sancionarse antes de 1996 nunca se sancionó.</p>
+
+      <div class="destacado premium">
+        <div class="destacado-titulo">Tres legados de 1994</div>
+        <p>1) <strong>Los tratados de derechos humanos como bloque constitucional.</strong> Eso transformó la jerarquía normativa argentina y vinculó al país con el sistema internacional de DDHH. 2) <strong>La autonomía de CABA.</strong> Antes era una "municipalidad", desde 1994 es una jurisdicción autónoma. 3) <strong>Los nuevos derechos.</strong> Ambiente, consumidores, garantías expresas. Estos derechos hoy son ejercidos diariamente por miles de personas a través de amparos y otras acciones.</p>
+      </div>
+    </section>
+
+    <section class="seccion" id="hoy">
+      <div class="seccion-eyebrow">— 08 / Hoy</div>
+      <h2>El texto <em>vigente</em>: 1853 más siete capas</h2>
+
+      <p>La Constitución argentina que rige hoy es el resultado acumulado de todas estas reformas. Es un texto que tiene <strong>169 años</strong> de historia constitucional acumulada, pero que en su forma actual lleva la marca más clara de la reforma de 1994. Algunos números para dimensionar:</p>
+
+      <table class="tabla-datos">
+        <thead><tr><th>Dato</th><th>Valor</th></tr></thead>
+        <tbody>
+          <tr><td>Texto base</td><td>Constitución de 1853, reformada</td></tr>
+          <tr><td>Reformas formales aceptadas</td><td>7 (1860, 1866, 1898, 1949 derogada, 1957, 1994)</td></tr>
+          <tr><td>"Estatuto" de facto (no plenamente válido)</td><td>1 (1972, caducó en 1977)</td></tr>
+          <tr><td>Tratados con jerarquía constitucional</td><td>15 instrumentos internacionales</td></tr>
+          <tr><td>Artículos totales</td><td>129 + cláusulas transitorias</td></tr>
+          <tr><td>Partes principales</td><td>Preámbulo + Parte dogmática + Parte orgánica</td></tr>
+        </tbody>
+      </table>
+
+      <h3>Lo que quedó pendiente</h3>
+      <p>La reforma de 1994 estableció varias tareas que el Congreso debía completar pero que aún no se hicieron:</p>
+      <ul>
+        <li><strong>Nueva ley de coparticipación federal:</strong> debía sancionarse antes de 1996. No se sancionó. Sigue rigiendo la Ley 23.548 de 1988.</li>
+        <li><strong>Adecuación de la Capital Federal:</strong> el Congreso debía sancionar una ley para definir los aspectos pendientes de la autonomía porteña. Lo hizo solo parcialmente.</li>
+        <li><strong>Régimen electoral:</strong> hubo varias modificaciones (PASO en 2009, BUP en 2024) pero el régimen sigue siendo motivo de debate.</li>
+      </ul>
+
+      <h3>¿Una nueva reforma?</h3>
+      <p>El debate sobre una eventual nueva reforma constitucional aparece periódicamente. Algunos temas que se mencionan: actualización del sistema judicial, reforma del federalismo fiscal, ajustes al sistema electoral, profundización de derechos. Pero una reforma constitucional requiere un proceso largo y un acuerdo político amplio. Por ahora, el texto de 1853/1994 sigue siendo el marco institucional argentino.</p>
+
+      <div class="destacado">
+        <div class="destacado-titulo">Para profundizar</div>
+        <p>En la próxima entrega de esta sección histórica desarrollaremos cómo evolucionó cada institución (Congreso, Corte Suprema, Presidencia) a lo largo de las décadas. También: cómo se aplicó cada reforma en la práctica, qué fallos emblemáticos las interpretaron, y qué propuestas hay hoy para nuevas modificaciones.</p>
+      </div>
+    </section>
+
+    <section class="fuentes">
+      <h3>— Fuentes oficiales y bibliografía</h3>
+      <ul>
+        <li><strong>Constitución Nacional Argentina</strong>, texto vigente. <a href="https://www.argentina.gob.ar/normativa/nacional/constituci%C3%B3n-de-la-naci%C3%B3n-argentina-804" target="_blank" rel="noopener">Texto oficial</a></li>
+        <li><strong>Ley 24.309</strong> — Declaración de necesidad de la reforma constitucional de 1994.</li>
+        <li><strong>Convención Constituyente de 1994</strong>. Diario de sesiones de Santa Fe-Paraná.</li>
+        <li><strong>Pacto de Olivos</strong> (1993). Acuerdo político PJ-UCR que dio origen a la reforma del 94.</li>
+        <li><strong>Sistema Argentino de Información Jurídica (SAIJ)</strong>. <a href="https://www.saij.gob.ar" target="_blank" rel="noopener">saij.gob.ar</a></li>
+        <li><strong>Honorable Congreso de la Nación</strong>. <a href="https://www.congreso.gob.ar" target="_blank" rel="noopener">congreso.gob.ar</a></li>
+        <li><strong>Biblioteca del Congreso de la Nación</strong>. Constituciones argentinas, compilación histórica.</li>
+        <li>Bidart Campos, Germán J. <em>Tratado elemental de Derecho Constitucional argentino.</em> Editorial Ediar.</li>
+        <li>Sabsay, Daniel A. <em>El derecho constitucional argentino.</em> Editorial Eudeba.</li>
+        <li>Gelli, María Angélica. <em>Constitución de la Nación Argentina comentada.</em> La Ley.</li>
+      </ul>
+      <p style="font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; color: var(--tinta-soft); margin-top: 1.5rem; padding-top: 1rem; border-top: 1px solid var(--linea); line-height: 1.6;">
+        Esta página es un material educativo basado en fuentes históricas y bibliográficas constitucionalistas. La interpretación de la validez jurídica de ciertas reformas (especialmente 1949 y 1957) sigue siendo objeto de debate académico. Última revisión: mayo de 2026.
+      </p>
+    </section>
+
+  </main>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div>
+      <h3>Educación Cívica</h3>
+      <p>Una guía visual y educativa sobre el Estado argentino, sus poderes, las provincias, el sistema electoral, los derechos del ciudadano y la historia institucional.</p>
+    </div>
+    <div>
+      <h3>Secciones</h3>
+      <a href="poderes.html">Los poderes</a>
+      <a href="provincias.html">Provincias</a>
+      <a href="index.html#sistema-electoral">Elecciones</a>
+      <a href="index.html#derechos">Derechos</a>
+      <a href="historia.html">Historia</a>
+    </div>
+    <div>
+      <h3>El proyecto</h3>
+      <a href="#">Sobre nosotros</a>
+      <a href="#">Manifiesto editorial</a>
+      <a href="#">Suscribirse</a>
+      <a href="#">Contacto</a>
+    </div>
+    <div class="footer-meta">
+      educacioncivica.com.ar · v0.4 prototipo · Educación cívica con datos · Sin grieta · Datos institucionales actualizados a mayo de 2026
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
