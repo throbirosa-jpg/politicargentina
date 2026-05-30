@@ -1,0 +1,8 @@
+# robots.txt para educacioncivica.com.ar
+# Permitimos a todos los buscadores indexar el sitio
+
+User-agent: *
+Allow: /
+
+# Ubicación del sitemap
+Sitemap: https://educacioncivica.com.ar/sitemap.xml
