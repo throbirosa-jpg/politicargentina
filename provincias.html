@@ -86,7 +86,7 @@
   .breadcrumb a { color: var(--tinta-soft); text-decoration: none; }
   .breadcrumb a:hover { color: var(--tinta); }
 
-  /* ========== VIEW TOGGLE ========== */
+  /* ========== VIEW TOGGLE (botón volver) ========== */
   .view-toggle {
     background: white;
     border-bottom: 1px solid var(--linea);
@@ -94,6 +94,10 @@
     position: sticky;
     top: 64px;
     z-index: 90;
+    display: none; /* Oculto por defecto, se muestra cuando se ve una ficha */
+  }
+  .view-toggle.visible {
+    display: block;
   }
   .view-toggle-inner {
     max-width: 1400px;
@@ -111,6 +115,11 @@
     border: 1px solid var(--linea);
     background: white;
     transition: all 0.2s;
+  }
+  .view-tab:hover {
+    background: var(--tinta);
+    color: var(--crema);
+    border-color: var(--tinta);
   }
   .view-tab.active {
     background: var(--tinta);
@@ -1044,10 +1053,9 @@
   </div>
 </nav>
 
-<div class="view-toggle">
+<div class="view-toggle" id="view-toggle">
   <div class="view-toggle-inner">
-    <button class="view-tab active" data-view="indice">Índice nacional</button>
-    <button class="view-tab" data-view="ficha">Ver ficha (ej: Buenos Aires)</button>
+    <button class="view-tab back-to-index" data-view="indice">← Volver al índice nacional</button>
   </div>
 </div>
 
@@ -1435,20 +1443,19 @@
     });
 
   // ============================================================
-  // NAVEGACIÓN ENTRE PANELES (ÍNDICE / FICHA)
+  // NAVEGACIÓN: VOLVER AL ÍNDICE
   // ============================================================
+  const viewToggle = document.getElementById('view-toggle');
   tabs.forEach(tab => {
     tab.addEventListener('click', () => {
-      const target = tab.getAttribute('data-view');
-      tabs.forEach(t => t.classList.remove('active'));
+      // El único botón que queda es "Volver al índice"
       panels.forEach(p => p.classList.remove('active'));
-      tab.classList.add('active');
-      document.getElementById('panel-' + target).classList.add('active');
-      bc.textContent = target === 'indice' ? 'Provincias' : 'Provincias · Ficha';
-      // Limpiar el ?id= si volvemos al índice
-      if (target === 'indice') {
-        history.replaceState(null, '', 'provincias.html');
-      }
+      document.getElementById('panel-indice').classList.add('active');
+      bc.textContent = 'Provincias';
+      // Ocultar el botón de volver
+      viewToggle.classList.remove('visible');
+      // Limpiar el ?id= de la URL
+      history.replaceState(null, '', 'provincias.html');
       window.scrollTo({ top: 0, behavior: 'smooth' });
     });
   });
@@ -1508,14 +1515,21 @@
     const ficha = document.getElementById('ficha-content');
     ficha.innerHTML = construirFichaHTML(p);
 
-    // Cambiar al panel de ficha
-    document.querySelector('[data-view="ficha"]').click();
+    // Cambiar al panel de ficha directamente
+    panels.forEach(panel => panel.classList.remove('active'));
+    document.getElementById('panel-ficha').classList.add('active');
+
+    // Mostrar el botón "Volver al índice"
+    viewToggle.classList.add('visible');
 
     // Actualizar URL sin recargar
     history.replaceState(null, '', `provincias.html?id=${id}`);
 
     // Actualizar breadcrumb
     bc.textContent = 'Provincias · ' + (p.nombre_corto || p.nombre);
+
+    // Scroll arriba
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   }
 
   function construirFichaHTML(p) {
