@@ -795,6 +795,100 @@
     border-left: 3px solid var(--celeste);
   }
 
+  /* ========== ALIADOS ========== */
+  .aliados {
+    padding: 4rem 2rem;
+    max-width: 1400px;
+    margin: 0 auto;
+    border-top: 1px solid var(--linea);
+  }
+  .aliados-eyebrow {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.7rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--tinta-soft);
+    margin-bottom: 0.8rem;
+    text-align: center;
+  }
+  .aliados-title {
+    font-family: 'Fraunces', serif;
+    font-weight: 400;
+    font-size: clamp(1.4rem, 2.5vw, 1.8rem);
+    color: var(--tinta);
+    text-align: center;
+    margin-bottom: 0.6rem;
+    line-height: 1.2;
+  }
+  .aliados-title em {
+    font-style: italic;
+    color: var(--celeste-dark);
+  }
+  .aliados-intro {
+    font-size: 0.95rem;
+    color: var(--tinta-soft);
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto 2.5rem;
+    line-height: 1.6;
+  }
+  .aliados-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 360px));
+    gap: 1.2rem;
+    justify-content: center;
+  }
+  .aliado-card {
+    background: white;
+    border: 1px solid var(--linea);
+    padding: 1.5rem 1.8rem;
+    text-decoration: none;
+    color: inherit;
+    transition: all 0.25s ease;
+    display: block;
+  }
+  .aliado-card:hover {
+    border-color: var(--celeste);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 24px -8px rgba(26, 26, 46, 0.08);
+  }
+  .aliado-card-nombre {
+    font-family: 'Fraunces', serif;
+    font-weight: 500;
+    font-size: 1.15rem;
+    color: var(--tinta);
+    margin-bottom: 0.4rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5rem;
+  }
+  .aliado-card-arrow {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.9rem;
+    color: var(--celeste-dark);
+    transition: transform 0.2s ease;
+  }
+  .aliado-card:hover .aliado-card-arrow {
+    transform: translateX(4px);
+  }
+  .aliado-card-tipo {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.65rem;
+    letter-spacing: 0.12em;
+    color: var(--celeste-dark);
+    text-transform: uppercase;
+    margin-bottom: 0.8rem;
+  }
+  .aliado-card-desc {
+    font-size: 0.88rem;
+    line-height: 1.55;
+    color: var(--tinta-soft);
+  }
+  @media (max-width: 600px) {
+    .aliados-grid { grid-template-columns: 1fr; }
+  }
+
   /* ========== FOOTER ========== */
   footer {
     background: var(--crema);
@@ -1353,6 +1447,23 @@
         <strong>Versión borrador.</strong> Este disclaimer es una versión preliminar elaborada como punto de partida. Antes del lanzamiento público, será revisado por un profesional del derecho especializado en derecho digital, propiedad intelectual y medios.
       </div>
     </div>
+  </div>
+</section>
+
+<!-- PROYECTOS EDUCATIVOS ALIADOS -->
+<section class="aliados">
+  <div class="aliados-eyebrow">— Red de proyectos</div>
+  <h2 class="aliados-title">Proyectos educativos <em>aliados</em></h2>
+  <p class="aliados-intro">Iniciativas afines comprometidas con la educación argentina, que comparten el espíritu de este sitio.</p>
+  <div class="aliados-grid">
+    <a href="https://ajedrezargentina.com.ar/" target="_blank" rel="noopener" class="aliado-card">
+      <div class="aliado-card-nombre">
+        Ajedrez Argentina
+        <span class="aliado-card-arrow">→</span>
+      </div>
+      <div class="aliado-card-tipo">Escuela federal de iniciadores</div>
+      <p class="aliado-card-desc">Escuela federal de iniciadores de ajedrez. Forma docentes online de todo el país para llevar el ajedrez educativo a cada provincia.</p>
+    </a>
   </div>
 </section>
 
