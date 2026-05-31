@@ -114,6 +114,12 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
+  <url>
+    <loc>https://educacioncivica.com.ar/historia-inestabilidad-1930-1983.html</loc>
+    <lastmod>2026-05-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
 
   <!-- Capítulo 09: Estudios en profundidad (Premium) - CABA -->
   <url>
