@@ -1,0 +1,934 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Crect width=%22100%22 height=%22100%22 fill=%22%23FBF7F0%22/%3E%3Ccircle cx=%2250%22 cy=%2250%22 r=%2230%22 fill=%22%23F6B40E%22/%3E%3C/svg%3E">
+<title>El Congreso argentino a lo largo del tiempo · 07.03 — Educación Cívica</title>
+<meta name="description" content="Historia del Congreso Nacional argentino desde las Asambleas Constituyentes de 1813 hasta la actualidad. Composición histórica, sistemas electorales, las sedes del Congreso, los cierres por dictaduras, la reapertura democrática de 1983.">
+<link rel="canonical" href="https://educacioncivica.com.ar/historia-congreso-argentino.html">
+
+<meta property="og:title" content="El Congreso argentino a lo largo del tiempo · 07.03">
+<meta property="og:description" content="Dos siglos de Congreso argentino. Composición histórica, sistemas electorales, las sedes, los cierres y reaperturas.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://educacioncivica.com.ar/historia-congreso-argentino.html">
+<meta property="og:site_name" content="Educación Cívica">
+<meta property="og:locale" content="es_AR">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="El Congreso argentino a lo largo del tiempo · 07.03">
+<meta name="twitter:description" content="Dos siglos de historia del Congreso argentino.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,400;0,500;0,600;1,400&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --crema: #FBF7F0; --crema-warm: #F4ECDB; --tinta: #1A1A2E; --tinta-soft: #545465;
+    --celeste: #74ACDF; --celeste-soft: #E4F0FA; --celeste-dark: #3D7BB0;
+    --sol: #F6B40E; --sol-soft: #FBE5AA; --sol-dark: #C8941A;
+    --rojo-fed: #B8341B; --rojo-soft: #F2D5CE;
+    --premium: #6B4F8C; --premium-soft: #E8DFF0; --premium-dark: #4A3661;
+    --linea: #DDD7CB; --linea-soft: #ECE6DA;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Fraunces', Georgia, serif; background: var(--crema); color: var(--tinta); line-height: 1.6; }
+  nav { background: white; border-bottom: 1px solid var(--linea); padding: 1.2rem 2rem; position: sticky; top: 0; z-index: 100; }
+  .nav-inner { max-width: 1400px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
+  .logo { display: flex; align-items: center; gap: 0.5rem; font-family: 'Fraunces', serif; font-weight: 500; font-size: 1.1rem; color: var(--tinta); text-decoration: none; }
+  .logo-dot { width: 12px; height: 12px; background: var(--sol); border-radius: 50%; }
+  .breadcrumb { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.1em; color: var(--tinta-soft); }
+  .breadcrumb a { color: var(--tinta-soft); text-decoration: none; }
+  .breadcrumb a:hover { color: var(--tinta); }
+  .premium-banner { background: var(--premium); color: white; padding: 0.6rem 2rem; font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase; text-align: center; }
+  .premium-banner strong { color: var(--sol); }
+
+  .page-header {
+    background: linear-gradient(180deg, var(--premium-soft) 0%, var(--crema) 100%);
+    padding: 4rem 2rem 3rem;
+    border-bottom: 1px solid var(--linea);
+  }
+  .page-header-inner { max-width: 900px; margin: 0 auto; }
+  .page-eyebrow { display: inline-block; font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--premium-dark); background: white; padding: 0.5rem 1rem; border: 1px solid var(--premium); margin-bottom: 1.5rem; }
+  .page-title { font-family: 'Fraunces', serif; font-weight: 300; font-size: clamp(2.2rem, 5vw, 3.4rem); line-height: 1.1; margin-bottom: 1.2rem; color: var(--tinta); letter-spacing: -0.01em; }
+  .page-title em { font-style: italic; color: var(--premium-dark); font-weight: 400; }
+  .page-intro { font-size: 1.1rem; line-height: 1.7; color: var(--tinta); max-width: 720px; }
+  .page-intro strong { color: var(--premium-dark); font-weight: 600; }
+
+  .page-stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 1.5rem; max-width: 900px; margin: 2.5rem auto 0; padding: 2rem; background: white; border: 1px solid var(--linea); }
+  .page-stat { text-align: center; }
+  .page-stat-num { font-family: 'Fraunces', serif; font-size: 2.5rem; font-weight: 300; color: var(--premium); line-height: 1; }
+  .page-stat-label { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--tinta-soft); margin-top: 0.5rem; line-height: 1.4; }
+
+  .container { max-width: 1200px; margin: 0 auto; padding: 4rem 2rem; display: grid; grid-template-columns: 240px 1fr; gap: 4rem; }
+  @media (max-width: 900px) { .container { grid-template-columns: 1fr; gap: 2rem; } }
+
+  .toc-sticky { position: sticky; top: 100px; align-self: start; }
+  @media (max-width: 900px) { .toc-sticky { position: static; padding-bottom: 2rem; border-bottom: 1px solid var(--linea); } }
+  .toc-titulo { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--tinta-soft); margin-bottom: 1rem; padding-bottom: 0.6rem; border-bottom: 1px solid var(--linea); }
+  .toc-sticky ul { list-style: none; }
+  .toc-sticky li { margin-bottom: 0.4rem; }
+  .toc-sticky a { font-size: 0.85rem; color: var(--tinta-soft); text-decoration: none; line-height: 1.45; display: block; padding: 0.3rem 0; border-left: 2px solid transparent; padding-left: 0.6rem; transition: all 0.2s; }
+  .toc-sticky a:hover { color: var(--premium-dark); border-left-color: var(--premium); }
+
+  .contenido { max-width: 780px; }
+  .contenido h2 { font-family: 'Fraunces', serif; font-weight: 400; font-size: 1.95rem; color: var(--tinta); margin: 3.5rem 0 1.2rem; line-height: 1.2; letter-spacing: -0.005em; }
+  .contenido h2:first-child { margin-top: 0; }
+  .contenido h2 em { font-style: italic; color: var(--premium-dark); }
+  .contenido h2 .seccion-num { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.15em; color: var(--premium); display: block; margin-bottom: 0.4rem; font-weight: 500; }
+  .contenido h3 { font-family: 'Fraunces', serif; font-weight: 500; font-size: 1.3rem; color: var(--tinta); margin: 2rem 0 0.8rem; line-height: 1.3; }
+  .contenido h3 em { font-style: italic; color: var(--premium-dark); }
+  .contenido h4 { font-family: 'Fraunces', serif; font-weight: 500; font-size: 1.1rem; color: var(--tinta); margin: 1.5rem 0 0.6rem; line-height: 1.3; }
+  .contenido p { font-size: 1.02rem; line-height: 1.75; color: var(--tinta); margin-bottom: 1.1rem; }
+  .contenido p strong { font-weight: 600; }
+  .contenido ul, .contenido ol { margin: 1rem 0 1.4rem 1.5rem; }
+  .contenido li { font-size: 1rem; line-height: 1.7; margin-bottom: 0.5rem; color: var(--tinta); }
+
+  .cita-articulo { background: white; border: 1px solid var(--linea); padding: 1.5rem 1.8rem; margin: 1.5rem 0; font-family: 'Fraunces', serif; font-style: italic; font-size: 1rem; line-height: 1.7; color: var(--tinta); border-left: 4px solid var(--sol-dark); position: relative; }
+  .cita-articulo::before { content: '"'; position: absolute; top: -0.5rem; left: 1.2rem; font-size: 3rem; color: var(--sol); font-family: serif; line-height: 1; }
+  .cita-articulo-ref { font-family: 'JetBrains Mono', monospace; font-style: normal; font-size: 0.7rem; letter-spacing: 0.12em; color: var(--tinta-soft); text-transform: uppercase; margin-top: 0.8rem; }
+
+  .ficha-data { background: white; border: 1px solid var(--linea); border-left: 5px solid var(--premium); padding: 1.8rem 2rem; margin: 2rem 0 1.5rem; }
+  .ficha-data-tag { font-family: 'JetBrains Mono', monospace; font-size: 0.68rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--premium-dark); background: var(--premium-soft); padding: 0.4rem 0.8rem; display: inline-block; margin-bottom: 1rem; font-weight: 600; }
+  .ficha-data h4 { font-family: 'Fraunces', serif; font-size: 1.3rem; color: var(--tinta); margin-bottom: 1.2rem; font-weight: 500; }
+  .ficha-data dl { display: grid; grid-template-columns: 150px 1fr; gap: 0.55rem 1.2rem; font-size: 0.92rem; }
+  .ficha-data dt { font-family: 'JetBrains Mono', monospace; font-size: 0.74rem; color: var(--tinta-soft); text-transform: uppercase; letter-spacing: 0.05em; padding-top: 0.15rem; }
+  .ficha-data dd { color: var(--tinta); line-height: 1.55; }
+  .ficha-data dd strong { color: var(--premium-dark); }
+  @media (max-width: 600px) {
+    .ficha-data dl { grid-template-columns: 1fr; gap: 0.3rem; }
+    .ficha-data dt { margin-top: 0.8rem; }
+  }
+
+  .dato-destacado { background: var(--premium-soft); border-left: 4px solid var(--premium); padding: 1.3rem 1.6rem; margin: 1.5rem 0; }
+  .dato-destacado-titulo { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.15em; color: var(--premium-dark); text-transform: uppercase; margin-bottom: 0.5rem; }
+  .dato-destacado p { font-size: 0.95rem; line-height: 1.65; color: var(--tinta); margin: 0; }
+
+  .articulo-cn { background: var(--celeste-soft); border-left: 4px solid var(--celeste-dark); padding: 1.3rem 1.6rem; margin: 1.5rem 0; }
+  .articulo-cn-tag { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.15em; color: var(--celeste-dark); text-transform: uppercase; margin-bottom: 0.5rem; font-weight: 600; }
+  .articulo-cn p { font-size: 0.95rem; line-height: 1.65; color: var(--tinta); margin: 0; }
+  .articulo-cn p em { font-style: italic; color: var(--celeste-dark); }
+
+  .tabla-comparativa { width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 0.85rem; background: white; border: 1px solid var(--linea); }
+  .tabla-comparativa thead { background: var(--premium); color: white; }
+  .tabla-comparativa th { font-family: 'JetBrains Mono', monospace; font-size: 0.68rem; letter-spacing: 0.08em; text-transform: uppercase; padding: 0.8rem; text-align: left; font-weight: 500; }
+  .tabla-comparativa td { padding: 0.8rem; border-top: 1px solid var(--linea); line-height: 1.5; vertical-align: top; }
+  .tabla-comparativa tr:hover { background: var(--crema-warm); }
+  .tabla-comparativa td:first-child { font-family: 'JetBrains Mono', monospace; font-size: 0.82rem; color: var(--premium-dark); font-weight: 600; white-space: nowrap; }
+
+  .linea-tiempo { background: var(--tinta); color: var(--crema); padding: 2.5rem; margin: 2rem 0; }
+  .linea-tiempo h3 { color: var(--sol); font-family: 'JetBrains Mono', monospace; font-size: 0.78rem; letter-spacing: 0.18em; text-transform: uppercase; margin-bottom: 1.5rem; font-weight: 500; }
+  .linea-tiempo ol { list-style: none; margin: 0; padding: 0; counter-reset: hito; }
+  .linea-tiempo li { padding: 1rem 0; border-bottom: 1px solid rgba(251,247,240,0.15); counter-increment: hito; display: grid; grid-template-columns: 100px 1fr; gap: 1.2rem; align-items: baseline; }
+  .linea-tiempo li:last-child { border-bottom: none; }
+  .linea-tiempo-fecha { font-family: 'JetBrains Mono', monospace; font-size: 0.95rem; color: var(--sol); font-weight: 600; letter-spacing: 0.05em; }
+  .linea-tiempo-titulo { font-family: 'Fraunces', serif; font-size: 1.05rem; line-height: 1.5; }
+  .linea-tiempo-titulo strong { color: var(--sol); }
+
+  .periodo-cita { background: var(--tinta); color: var(--crema); padding: 2.2rem 2.5rem; margin: 2rem 0; }
+  .periodo-cita-tag { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.18em; color: var(--sol); text-transform: uppercase; margin-bottom: 0.8rem; font-weight: 500; }
+  .periodo-cita-texto { font-family: 'Fraunces', serif; font-style: italic; font-size: 1.15rem; line-height: 1.6; color: var(--crema); margin: 0; }
+
+  .fuentes { background: var(--crema-warm); padding: 2rem; margin-top: 4rem; border: 1px solid var(--linea); }
+  .fuentes-titulo { font-family: 'JetBrains Mono', monospace; font-size: 0.75rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--tinta-soft); margin-bottom: 1rem; }
+  .fuentes ul { list-style: none; margin: 0; }
+  .fuentes li { font-size: 0.85rem; line-height: 1.6; padding: 0.4rem 0 0.4rem 1.2rem; position: relative; color: var(--tinta-soft); }
+  .fuentes li::before { content: '§'; position: absolute; left: 0; color: var(--premium); }
+
+  .nav-capitulos { margin-top: 4rem; padding: 2rem; background: white; border: 1px solid var(--linea); display: flex; justify-content: space-between; gap: 1rem; }
+  @media (max-width: 600px) { .nav-capitulos { flex-direction: column; } }
+  .nav-cap-link { text-decoration: none; padding: 1rem 1.2rem; border: 1px solid var(--linea); flex: 1; transition: all 0.2s; }
+  .nav-cap-link:hover { border-color: var(--premium); background: var(--premium-soft); }
+  .nav-cap-tipo { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.1em; color: var(--tinta-soft); text-transform: uppercase; margin-bottom: 0.4rem; }
+  .nav-cap-titulo { font-family: 'Fraunces', serif; font-size: 1.05rem; color: var(--tinta); }
+  .nav-cap-link.atras { text-align: left; }
+  .nav-cap-link.adelante { text-align: right; }
+
+  footer { background: var(--tinta); color: var(--crema); padding: 3rem 2rem; margin-top: 4rem; }
+  .footer-inner { max-width: 1400px; margin: 0 auto; display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 3rem; }
+  footer h3 { font-family: 'Fraunces', serif; font-weight: 400; font-size: 1.3rem; margin-bottom: 1rem; color: var(--crema); }
+  footer p, footer a { color: var(--crema); opacity: 0.85; font-size: 0.9rem; line-height: 1.6; }
+  footer a { text-decoration: none; display: block; padding: 0.3rem 0; }
+  footer a:hover { opacity: 1; color: var(--sol); }
+  .footer-meta { grid-column: 1 / -1; margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid rgba(251, 247, 240, 0.15); font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; opacity: 0.6; letter-spacing: 0.05em; }
+  @media (max-width: 700px) { .footer-inner { grid-template-columns: 1fr; gap: 2rem; } }
+</style>
+</head>
+<body>
+
+<div class="premium-banner">— Sección premium · <strong>Acceso libre durante el período de prueba</strong></div>
+
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="logo"><span class="logo-dot"></span>Educación Cívica</a>
+    <div class="breadcrumb"><a href="index.html">Inicio</a> · <a href="historia.html">Historia</a> · <span>El Congreso</span></div>
+  </div>
+</nav>
+
+<header class="page-header">
+  <div class="page-header-inner">
+    <div class="page-eyebrow">Capítulo 07.03 · Historia institucional</div>
+    <h1 class="page-title">El <em>Congreso argentino</em> a lo largo del tiempo</h1>
+    <p class="page-intro">El Congreso Nacional es el corazón institucional de la democracia argentina. Desde las primeras Asambleas Constituyentes de 1813 hasta el bicameralismo actual, pasando por décadas de fraude electoral, golpes de Estado que lo cerraron seis veces y la reapertura definitiva de 1983, su historia es la historia política del país. Este capítulo recorre <strong>200 años de evolución del Congreso</strong>: sus sedes, sus composiciones, sus sistemas electorales y las leyes fundacionales que sancionó.</p>
+
+    <div class="page-stats">
+      <div class="page-stat">
+        <div class="page-stat-num">257</div>
+        <div class="page-stat-label">Diputados actuales</div>
+      </div>
+      <div class="page-stat">
+        <div class="page-stat-num">72</div>
+        <div class="page-stat-label">Senadores actuales</div>
+      </div>
+      <div class="page-stat">
+        <div class="page-stat-num">6</div>
+        <div class="page-stat-label">Cierres por golpes</div>
+      </div>
+      <div class="page-stat">
+        <div class="page-stat-num">1854</div>
+        <div class="page-stat-label">Primeras sesiones</div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="container">
+
+  <aside class="toc-sticky">
+    <div class="toc-titulo">— En este capítulo</div>
+    <ul>
+      <li><a href="#hoy">1. El Congreso hoy</a></li>
+      <li><a href="#origenes">2. Los orígenes (1810-1853)</a></li>
+      <li><a href="#1854">3. Primeras sesiones (1854-1880)</a></li>
+      <li><a href="#oligarquia">4. El Congreso oligárquico (1880-1916)</a></li>
+      <li><a href="#palacio">5. El Palacio del Congreso</a></li>
+      <li><a href="#saenz-pena">6. La Ley Sáenz Peña (1916-1930)</a></li>
+      <li><a href="#decada-infame">7. La Década Infame (1930-1943)</a></li>
+      <li><a href="#peronismo">8. Congreso peronista (1946-1955)</a></li>
+      <li><a href="#cierres">9. Los cierres del Congreso</a></li>
+      <li><a href="#democracia">10. Democracia desde 1983</a></li>
+      <li><a href="#evolucion">11. Evolución institucional</a></li>
+      <li><a href="#sesiones-memorables">12. Sesiones memorables</a></li>
+      <li><a href="#linea-tiempo">13. Línea de tiempo</a></li>
+      <li><a href="#fuentes">Fuentes</a></li>
+    </ul>
+  </aside>
+
+  <main class="contenido">
+
+    <h2 id="hoy"><span class="seccion-num">— Sección 1</span>El <em>Congreso</em> argentino hoy</h2>
+    <p>Antes de recorrer su historia, conviene tener presente cómo funciona el Congreso Nacional en la actualidad. El Art. 44 de la Constitución Nacional establece su composición bicameral:</p>
+
+    <div class="articulo-cn">
+      <div class="articulo-cn-tag">— Art. 44 Constitución Nacional</div>
+      <p><em>Un Congreso compuesto de dos Cámaras, una de Diputados de la Nación y otra de Senadores de las provincias y de la Ciudad de Buenos Aires, será investido del Poder Legislativo de la Nación.</em></p>
+    </div>
+
+    <h3>La Cámara de Diputados</h3>
+    <ul>
+      <li><strong>257 diputados</strong>, que representan al pueblo de la Nación (no a las provincias como entidades políticas).</li>
+      <li>Elegidos directamente por el pueblo, con mandato de <strong>4 años</strong>, renovables.</li>
+      <li>La cámara se renueva por mitades cada dos años.</li>
+      <li>El número de diputados por distrito es proporcional a la población. Conforme a la <strong>Ley 22.847</strong> (sancionada en 1983 durante el último gobierno militar y mantenida por los gobiernos democráticos), corresponde 1 diputado cada 161.000 habitantes o fracción superior a 80.500, con un piso mínimo de 5 diputados por distrito.</li>
+      <li>Se eligen por el sistema D'Hondt (representación proporcional).</li>
+    </ul>
+
+    <h3>La Cámara de Senadores</h3>
+    <ul>
+      <li><strong>72 senadores</strong>: 3 por cada una de las 23 provincias más la Ciudad Autónoma de Buenos Aires.</li>
+      <li>Elegidos directamente desde la reforma constitucional de 1994. Antes eran elegidos por las legislaturas provinciales.</li>
+      <li>Mandato de <strong>6 años</strong>, renovables.</li>
+      <li>El Senado se renueva por tercios cada dos años (un tercio de los distritos en cada elección).</li>
+      <li>De los 3 senadores por distrito, <strong>2 corresponden al partido más votado y 1 a la primera minoría</strong> (sistema introducido en la reforma de 1994).</li>
+      <li>El presidente nato del Senado es el Vicepresidente de la Nación.</li>
+    </ul>
+
+    <h3>El régimen de sesiones</h3>
+    <p>El Congreso sesiona anualmente del <strong>1° de marzo al 30 de noviembre</strong> (período de sesiones ordinarias). El Presidente de la Nación puede convocar a sesiones extraordinarias (con temario que él determina) o prorrogar las ordinarias (en cuyo caso el Congreso conserva libre iniciativa). Hasta 1995, las sesiones ordinarias iban del 1° de mayo al 30 de septiembre; el cambio se introdujo en la reforma constitucional de 1994 (Art. 63).</p>
+
+    <p>Para profundizar sobre el funcionamiento actual del Congreso, ver nuestra página <a href="poderes.html" style="color: var(--premium-dark); border-bottom: 1px dotted var(--premium);">sobre los tres poderes del Estado</a>.</p>
+
+    <h2 id="origenes"><span class="seccion-num">— Sección 2</span>Los <em>orígenes</em>: 1810-1853</h2>
+    <p>El Congreso Nacional argentino, tal como existe hoy, fue creado por la Constitución de 1853. Pero antes de él hubo varias asambleas y congresos que prefiguraron la institución legislativa argentina, con distinto grado de éxito y permanencia.</p>
+
+    <h3>Las primeras asambleas (1810-1820)</h3>
+    <p>Tras la Revolución de Mayo de 1810, se sucedieron distintos órganos con funciones cuasi-legislativas:</p>
+
+    <ul>
+      <li><strong>Primera Junta</strong> (1810) y luego Junta Grande (1810-1811): incorporaba representantes de las provincias del interior.</li>
+      <li><strong>Asamblea General Constituyente del Año XIII</strong> (1813): el primer órgano con voluntad legislativa nacional. Aprobó importantes resoluciones (libertad de vientres, escudo nacional, himno) pero no llegó a dictar una constitución.</li>
+      <li><strong>Congreso de Tucumán</strong> (1816-1819): declaró la independencia el 9 de julio de 1816 y sancionó la <strong>Constitución de 1819</strong>, de carácter unitario y centralista, que fue rechazada por las provincias del Litoral. Su rechazo derivó en la batalla de Cepeda (1820) y la disolución del gobierno central.</li>
+    </ul>
+
+    <h3>Los Congresos Constituyentes posteriores</h3>
+    <p>Durante el período 1820-1853, hubo dos congresos constituyentes adicionales:</p>
+
+    <ul>
+      <li><strong>Congreso General Constituyente</strong> (1824-1827): convocado en Buenos Aires bajo el gobierno de Bernardino Rivadavia. Sancionó la <strong>Constitución de 1826</strong>, también de carácter unitario, que fue rechazada por las provincias federales. El congreso se disolvió en 1827.</li>
+      <li><strong>Convención Nacional</strong> (1828): liderada por federales, intentó organizar el país pero fracasó por el conflicto político permanente.</li>
+    </ul>
+
+    <p>Durante el período de la Confederación de Rosas (1831-1852), <strong>no hubo Congreso Nacional</strong>. La política exterior estaba delegada en el gobernador de Buenos Aires, y las leyes nacionales propiamente dichas no existían: cada provincia tenía su propia legislación.</p>
+
+    <h3>El Congreso General Constituyente de 1852-1853</h3>
+    <p>Tras la batalla de Caseros (3 de febrero de 1852) y la firma del Acuerdo de San Nicolás (31 de mayo de 1852), se convocó al Congreso General Constituyente. Sus características:</p>
+
+    <ul>
+      <li>Sede: <strong>Santa Fe</strong> (no Buenos Aires, que estaba en rebelión).</li>
+      <li>Representación: dos diputados por cada provincia, sin distinción de población. Era una asamblea estrictamente <em>federal</em> (representación por provincia).</li>
+      <li>13 provincias representadas; Buenos Aires ausente.</li>
+      <li>Sanción de la Constitución: <strong>1° de mayo de 1853</strong>.</li>
+    </ul>
+
+    <p>La Constitución sancionada en 1853 organizó el Poder Legislativo de la Nación en una estructura bicameral. El bicameralismo argentino respondía a la lógica federal: una cámara para representar al pueblo (Diputados) y otra para representar a las provincias (Senadores), siguiendo el modelo norteamericano de 1787.</p>
+
+    <p>Para profundizar sobre esta etapa, ver el capítulo <a href="historia-federalismo.html" style="color: var(--premium-dark); border-bottom: 1px dotted var(--premium);">07.05 sobre el federalismo argentino en perspectiva histórica</a>.</p>
+
+    <h2 id="1854"><span class="seccion-num">— Sección 3</span>Las <em>primeras sesiones</em>: 1854-1880</h2>
+    <p>El Congreso Nacional argentino —tal como lo conocemos— comenzó a funcionar en Paraná, capital provisional de la Confederación, en 1854.</p>
+
+    <h3>Las primeras sesiones en Paraná</h3>
+    <p>El 24 de octubre de 1854 se inauguraron las primeras sesiones ordinarias del Congreso Nacional argentino, en cumplimiento del Art. 42 de la Constitución de 1853. La sede era <strong>Paraná</strong>, capital provisional de la Confederación designada por el Acuerdo de San Nicolás.</p>
+
+    <ul>
+      <li>Los senadores sesionaban en un edificio construido específicamente para esa función (hoy ocupado por las Hermanas de la Caridad, declarado Monumento Histórico Nacional en 1942).</li>
+      <li>Los diputados sesionaban en un edificio aparte, que fue demolido décadas después.</li>
+      <li>Las provincias eligieron senadores y diputados de manera espontánea, sin que existiera todavía una ley electoral nacional.</li>
+      <li>La <strong>Ley 7 de la Confederación</strong> (28 de noviembre de 1854) y la <strong>Ley 33 de la Confederación</strong> (20 de agosto de 1855) regularon la cuestión de los suplentes legislativos.</li>
+    </ul>
+
+    <p>El Congreso funcionó en Paraná hasta el <strong>12 de diciembre de 1861</strong>, cuando se dispuso su traslado a Buenos Aires luego de la victoria de Mitre en la batalla de Pavón (17 de septiembre de 1861) y la reincorporación de Buenos Aires.</p>
+
+    <h3>El traslado a Buenos Aires (1862)</h3>
+    <p>A partir de 1862, con la presidencia de Bartolomé Mitre, el Congreso comenzó a sesionar en Buenos Aires. Durante los primeros años, las cámaras sesionaron en el recinto de la Legislatura de la provincia de Buenos Aires (en la Manzana de las Luces, que funcionaba allí desde 1821).</p>
+
+    <h3>El Congreso de Mitre (1864-1905)</h3>
+    <p>En 1864, Mitre encargó al arquitecto <strong>Jonás Larguía</strong> la construcción de una sede definitiva para el Congreso Nacional:</p>
+
+    <div class="ficha-data">
+      <div class="ficha-data-tag">★ Primera sede propia del Congreso</div>
+      <h4>Antiguo Congreso Nacional (edificio Mitre)</h4>
+      <dl>
+        <dt>Arquitecto</dt>
+        <dd>Jonás Larguía</dd>
+        <dt>Inauguración</dt>
+        <dd><strong>12 de mayo de 1864</strong>, por el presidente Mitre y sus ministros (Rufino de Elizalde, Gelly y Obes, Eduardo Costa y Dalmacio Vélez Sársfield)</dd>
+        <dt>Uso</dt>
+        <dd>Sede del Congreso Nacional durante <strong>cuatro décadas</strong> (1864-1905)</dd>
+        <dt>Última sesión</dt>
+        <dd>15 de diciembre de 1905. El presidente de la Cámara de Diputados Ángel Sastre declaró levantada la última sesión.</dd>
+        <dt>Uso posterior</dt>
+        <dd>Pasó a ser sede del Archivo General de la Nación</dd>
+        <dt>Estado actual</dt>
+        <dd>Edificio conservado, declarado Monumento Histórico</dd>
+      </dl>
+    </div>
+
+    <h3>El traslado a Belgrano (1880)</h3>
+    <p>Durante la <strong>guerra civil de 1880</strong> por la federalización de Buenos Aires, el Congreso debió abandonar abruptamente su sede. Senadores y diputados se trasladaron al vecino pueblo de Belgrano (entonces fuera de la ciudad), donde sesionaron durante <strong>cuatro meses</strong> en la municipalidad local (actual Museo Histórico Sarmiento). Allí, en pleno conflicto, se votó la ley de federalización.</p>
+
+    <p>Para profundizar sobre esta etapa, ver nuestro capítulo <a href="historia-federalismo.html#federalizacion" style="color: var(--premium-dark); border-bottom: 1px dotted var(--premium);">07.05 sobre la federalización de Buenos Aires</a>.</p>
+
+    <h2 id="oligarquia"><span class="seccion-num">— Sección 4</span>El <em>Congreso oligárquico</em>: 1880-1916</h2>
+    <p>El período entre la federalización de Buenos Aires (1880) y la sanción de la Ley Sáenz Peña (1912) corresponde a la hegemonía del <strong>Partido Autonomista Nacional (PAN)</strong>, una coalición de las élites provinciales que controló el gobierno argentino durante casi cuatro décadas. El Congreso de este período es conocido como el "Congreso oligárquico" o "régimen del 80".</p>
+
+    <h3>El sistema electoral previo a 1912</h3>
+    <p>El régimen electoral argentino entre 1853 y 1912 atravesó por varias leyes sucesivas que fueron modificando los detalles pero no la lógica fundamental:</p>
+
+    <ul>
+      <li><strong>1857, 1859, 1863, 1873, 1877</strong>: sucesivas leyes electorales que regularon los detalles del sistema.</li>
+      <li><strong>Voto cantado</strong>: el elector votaba en público, ante la mesa electoral. Permitía la fácil identificación de quién votaba a quién, y por tanto la coerción por parte de patrones, caudillos y autoridades.</li>
+      <li><strong>Voto facultativo</strong>: la participación no era obligatoria. La concurrencia real era muy baja (10-15% del padrón).</li>
+      <li><strong>Lista completa</strong>: el partido ganador se llevaba la totalidad de las bancas del distrito. No había representación de las minorías.</li>
+      <li><strong>Fraude estructural</strong>: padrones manipulados, "robo de urnas", "uso de muertos" (votación a nombre de personas fallecidas), votación múltiple.</li>
+    </ul>
+
+    <h3>La Ley 4.161 de 1902</h3>
+    <p>Durante la segunda presidencia de Roca, en 1902 se sancionó la <strong>Ley 4.161</strong>, llamada también "Ley Joaquín V. González" por el ministro del Interior que la impulsó. Estableció:</p>
+    <ul>
+      <li>División del país en <strong>distritos uninominales</strong> (un diputado por distrito).</li>
+      <li>Voto secreto (por primera vez).</li>
+      <li>Voto facultativo (no obligatorio).</li>
+    </ul>
+
+    <p>La ley funcionó una sola vez, en las elecciones de 1904. Permitió la elección del primer diputado socialista de América Latina: <strong>Alfredo Palacios</strong>, por el barrio porteño de La Boca. Pero el sistema fue rápidamente revertido por las fuerzas conservadoras temerosas de la representación de las minorías.</p>
+
+    <h3>Composición del Congreso oligárquico</h3>
+    <p>El Congreso del período 1880-1916 estaba dominado casi exclusivamente por el PAN y sus aliados. Los partidos opositores (Unión Cívica desde 1890, Partido Socialista desde 1894) tenían representación mínima o nula. La rotación de cargos se hacía dentro del propio régimen, sin alternancia política real.</p>
+
+    <p>El sistema funcionó hasta que la presión social, las revoluciones radicales (1890, 1893, 1905) y el cambio generacional dentro de la propia élite llevaron a Roque Sáenz Peña a impulsar una reforma electoral profunda.</p>
+
+    <h2 id="palacio"><span class="seccion-num">— Sección 5</span>El <em>Palacio</em> del Congreso</h2>
+    <p>El edificio que actualmente alberga al Congreso Nacional es uno de los monumentos más importantes de la arquitectura argentina. Su historia merece un apartado propio.</p>
+
+    <h3>El concurso internacional</h3>
+    <p>En 1889, el presidente Miguel Juárez Celman presentó un proyecto de ley proponiendo la construcción de una sede definitiva para el Congreso. En 1895 se realizó un <strong>concurso internacional</strong> en el que se presentaron 28 propuestas. Ganó el arquitecto italiano <strong>Vittorio Meano</strong>.</p>
+
+    <div class="ficha-data">
+      <div class="ficha-data-tag">★ Datos del Palacio</div>
+      <h4>Palacio del Congreso de la Nación Argentina</h4>
+      <dl>
+        <dt>Arquitecto</dt>
+        <dd><strong>Vittorio Meano</strong> (proyecto original); Julio Dormal (continuación tras la muerte de Meano)</dd>
+        <dt>Concurso</dt>
+        <dd>1895 (concurso internacional)</dd>
+        <dt>Inicio de obras</dt>
+        <dd>Agosto de <strong>1897</strong></dd>
+        <dt>Asesinato del arquitecto</dt>
+        <dd>1° de julio de 1904. Meano fue asesinado en su residencia; el caso conmocionó al país. La dirección de las obras pasó a la Inspección General de Arquitectura.</dd>
+        <dt>Inauguración</dt>
+        <dd><strong>12 de mayo de 1906</strong>, en la apertura del 45° período legislativo. Presidente: José Figueroa Alcorta.</dd>
+        <dt>Conclusión total</dt>
+        <dd>1946 (con la colocación del revestimiento de mármol exterior)</dd>
+        <dt>Altura de la cúpula</dt>
+        <dd><strong>80 metros</strong></dd>
+        <dt>Superficie</dt>
+        <dd>39.210 m²</dd>
+        <dt>Esculturas</dt>
+        <dd>Lola Mora (alegorías de la Libertad, el Comercio, la Paz y la Justicia); Víctor de Pol (otras esculturas)</dd>
+        <dt>Plaza del Congreso</dt>
+        <dd>Creada por la Ley 4.869 de 1905, impulsada por el senador Miguel Cané</dd>
+        <dt>Monumento Histórico</dt>
+        <dd>Declarado <strong>Monumento Histórico y Artístico Nacional</strong> por el Decreto 2676 del 28 de diciembre de 1993</dd>
+      </dl>
+    </div>
+
+    <h3>Detalles arquitectónicos</h3>
+    <p>El Palacio es un edificio de estilo academicista grecorromano. Su ubicación fue cuidadosamente elegida: se buscó delinear un <strong>eje cívico</strong> en torno a la Avenida de Mayo, con la Casa Rosada en un extremo y el Congreso en el otro. La cúpula de 80 metros refuerza la monumentalidad simbólica del edificio.</p>
+
+    <p>La obra costó muchísimo más de lo presupuestado originalmente, lo que generó polémicas durante años. Para mediados de 1900, la revista <em>Caras y Caretas</em> publicaba que la obra ya había consumido "cerca de cuatro millones y medio de pesos" cuando apenas había comenzado. Meano comprometió finalizar la obra por 8,5 millones de pesos. Pero entre 1995 y 1999 hubo otra restauración integral.</p>
+
+    <h2 id="saenz-pena"><span class="seccion-num">— Sección 6</span>La <em>Ley Sáenz Peña</em>: el Congreso democratizado (1916-1930)</h2>
+    <p>La sanción de la Ley 8.871, conocida como Ley Sáenz Peña, marcó el inicio del Congreso moderno argentino. Por primera vez, las elecciones legislativas y presidenciales se hacían sobre la base del sufragio universal masculino, secreto y obligatorio.</p>
+
+    <div class="ficha-data">
+      <div class="ficha-data-tag">★ Norma fundamental</div>
+      <h4>Ley 8.871 ("Ley Sáenz Peña")</h4>
+      <dl>
+        <dt>Sanción</dt>
+        <dd><strong>10 de febrero de 1912</strong></dd>
+        <dt>Promulgación</dt>
+        <dd>13 de febrero de 1912</dd>
+        <dt>Publicación</dt>
+        <dd>26 de marzo de 1912 en el Boletín Oficial</dd>
+        <dt>Presidente impulsor</dt>
+        <dd>Roque Sáenz Peña</dd>
+        <dt>Redacción del proyecto</dt>
+        <dd>Indalecio Gómez (ministro del Interior)</dd>
+        <dt>Sufragio</dt>
+        <dd><strong>Universal masculino, secreto y obligatorio</strong> para argentinos nativos y naturalizados mayores de 18 años</dd>
+        <dt>Exclusiones</dt>
+        <dd>Mujeres, miembros de las fuerzas de seguridad, religiosos, dementes, mendigos. Mayores de 70 años eximidos de la obligatoriedad.</dd>
+        <dt>Padrón</dt>
+        <dd>Basado en el padrón del servicio militar obligatorio (introducido en 1901)</dd>
+        <dt>Sistema</dt>
+        <dd><strong>Lista incompleta</strong>: dos tercios de las bancas para el ganador, un tercio para la primera minoría</dd>
+        <dt>Fiscalización</dt>
+        <dd>Ejército Argentino</dd>
+      </dl>
+    </div>
+
+    <h3>El sistema de lista incompleta</h3>
+    <p>La principal innovación de la Ley Sáenz Peña, además del voto obligatorio y secreto, fue el sistema de <strong>lista incompleta</strong>. En lugar de la "lista completa" del régimen anterior (donde el ganador se llevaba todas las bancas del distrito), se estableció:</p>
+    <ul>
+      <li><strong>2/3 de las bancas</strong> para el partido más votado.</li>
+      <li><strong>1/3 de las bancas</strong> para la segunda fuerza más votada.</li>
+    </ul>
+
+    <p>El ministro Indalecio Gómez explicaba la reforma así, al defender el proyecto en el Congreso: <em>"Puesto que el mal es que esa máquina da el producto de todas las diputaciones, y esto es lo que se quiere evitar, hagamos pues que no produzca todas, que produzca sólo una parte."</em></p>
+
+    <h3>Las primeras elecciones</h3>
+    <p>La ley se estrenó en las elecciones legislativas de 1912 y se aplicó completamente en las presidenciales de 1916:</p>
+
+    <ul>
+      <li><strong>Abril 1912</strong>: primeras elecciones provinciales bajo la nueva ley. Triunfo de la UCR en Santa Fe (gobernador Manuel Menchaca).</li>
+      <li><strong>1912</strong>: legislativas nacionales. Triunfo del Partido Conservador (escisión del PAN). La UCR, segunda fuerza, ingresó al Congreso luego de más de dos décadas de abstencionismo electoral.</li>
+      <li><strong>1913</strong>: triunfo del Partido Socialista en Capital Federal.</li>
+      <li><strong>1914</strong>: legislativas. La UCR triunfó ampliamente a nivel nacional.</li>
+      <li><strong>2 de abril de 1916</strong>: primeras elecciones presidenciales bajo la nueva ley. Votaron 747.471 hombres sobre 1.189.254 habilitados. Triunfo de la fórmula UCR <strong>Hipólito Yrigoyen - Pelagio Luna</strong>.</li>
+    </ul>
+
+    <p>La elección de 1916 puso fin a casi cuatro décadas de hegemonía del PAN. La UCR, que había nacido en 1890 como movimiento revolucionario y había practicado el abstencionismo durante décadas, llegaba al poder por la vía electoral.</p>
+
+    <h3>El Congreso radical (1916-1930)</h3>
+    <p>Durante las dos presidencias radicales (Yrigoyen 1916-1922, Alvear 1922-1928, Yrigoyen 1928-1930), el Congreso vivió una etapa de pluralismo creciente:</p>
+
+    <ul>
+      <li>El Senado conservó mayoría conservadora durante varios años (porque los senadores eran elegidos por las legislaturas provinciales, muchas en manos del PAN).</li>
+      <li>La Cámara de Diputados tuvo composiciones más diversas, con presencia de la UCR, el Partido Socialista, el Partido Demócrata Progresista (DP), y los conservadores.</li>
+      <li>Las leyes sociales más importantes del período (jornada laboral, descanso dominical, salario mínimo) fueron sancionadas en este Congreso.</li>
+    </ul>
+
+    <h2 id="decada-infame"><span class="seccion-num">— Sección 7</span>La <em>Década Infame</em>: 1930-1943</h2>
+    <p>El golpe de Estado del <strong>6 de septiembre de 1930</strong>, liderado por el general José Félix Uriburu, derrocó al presidente Yrigoyen y abrió un período de inestabilidad institucional que duraría más de cinco décadas. El Congreso fue clausurado por primera vez.</p>
+
+    <h3>El primer cierre (1930-1932)</h3>
+    <p>La dictadura de Uriburu (1930-1932) cerró el Congreso Nacional y gobernó por decreto. Fue el primer cierre de la institución desde 1854. La Corte Suprema convalidó la situación mediante la <strong>Acordada del 10 de septiembre de 1930</strong> que creó la doctrina de los gobiernos de facto.</p>
+
+    <p>Para profundizar sobre este tema, ver nuestro capítulo <a href="historia-corte-suprema-fallos.html#acordada-30" style="color: var(--premium-dark); border-bottom: 1px dotted var(--premium);">07.04 sobre la Corte Suprema y la Acordada de 1930</a>.</p>
+
+    <h3>El Congreso bajo el fraude (1932-1943)</h3>
+    <p>Tras el llamado a elecciones de 1931, asumió el presidente Agustín P. Justo (electo en comicios donde la UCR fue proscripta). El Congreso volvió a funcionar pero bajo el sistema del "fraude patriótico":</p>
+
+    <ul>
+      <li>Proscripción de la UCR (hasta 1935).</li>
+      <li>Fraude electoral sistemático, especialmente en la provincia de Buenos Aires.</li>
+      <li>Padrones manipulados, "voto cadena", coacción a los electores.</li>
+      <li>Alianza gobernante: la <strong>"Concordancia"</strong>, integrada por conservadores, radicales antipersonalistas y socialistas independientes.</li>
+    </ul>
+
+    <p>Este Congreso, pese a su origen fraudulento, tuvo algunos hitos importantes:</p>
+    <ul>
+      <li>Sanción de impuestos modernos: Impuesto a los Réditos (1932), antecedente del Impuesto a las Ganancias.</li>
+      <li>Creación del Banco Central de la República Argentina (Ley 12.155 de 1935).</li>
+      <li>Investigación del comercio de carnes (Comisión Investigadora del Senado liderada por Lisandro de la Torre, que terminó en el asesinato del senador Enzo Bordabehere en el recinto del Senado el 23 de julio de 1935).</li>
+    </ul>
+
+    <p>La Década Infame terminó con el golpe de Estado del <strong>4 de junio de 1943</strong> (la "Revolución del 43"), liderado por el GOU (Grupo de Oficiales Unidos), que cerró nuevamente el Congreso.</p>
+
+    <h2 id="peronismo"><span class="seccion-num">— Sección 8</span>El <em>Congreso peronista</em>: 1946-1955</h2>
+    <p>Tras el golpe del 43 y el ascenso político de Juan Domingo Perón, las elecciones del 24 de febrero de 1946 dieron la presidencia a Perón con el 52% de los votos. El Congreso reabrió en 1946 con una composición radicalmente nueva.</p>
+
+    <h3>La nueva composición</h3>
+    <p>El Congreso peronista (1946-1955) se caracterizó por:</p>
+    <ul>
+      <li><strong>Mayorías holgadas del peronismo</strong> en ambas cámaras.</li>
+      <li>Oposición concentrada en la <strong>UCR</strong> (con figuras como Arturo Frondizi, Ricardo Balbín, Crisólogo Larralde).</li>
+      <li>Sanción de leyes sociales fundamentales: estatuto del peón rural (Ley 12.921), Ley de jubilaciones para empleados de comercio (1944), Ley 13.010 de voto femenino (1947).</li>
+    </ul>
+
+    <h3>La Ley 13.010 del voto femenino</h3>
+    <div class="ficha-data">
+      <div class="ficha-data-tag">★ Hito democrático</div>
+      <h4>Ley 13.010 - Voto femenino</h4>
+      <dl>
+        <dt>Sanción</dt>
+        <dd><strong>9 de septiembre de 1947</strong></dd>
+        <dt>Impulsora</dt>
+        <dd>Eva Perón (Eva Duarte de Perón)</dd>
+        <dt>Contenido</dt>
+        <dd>Reconocimiento del derecho al sufragio activo y pasivo (votar y ser elegida) para las mujeres argentinas mayores de 18 años</dd>
+        <dt>Primera aplicación</dt>
+        <dd>Elecciones del 11 de noviembre de 1951</dd>
+        <dt>Primeras legisladoras</dt>
+        <dd>23 diputadas y 6 senadoras electas en 1951</dd>
+      </dl>
+    </div>
+
+    <p>El proyecto de ley había sido presentado por Eva Perón y aprobado prácticamente sin oposición. El voto femenino había sido reclamado durante décadas por feministas como Alicia Moreau de Justo y Julieta Lanteri (que en 1907 habían creado el Comité Pro-Sufragio Femenino), pero recién se hizo efectivo en 1947.</p>
+
+    <h3>La Reforma Constitucional de 1949</h3>
+    <p>El Congreso peronista impulsó la <strong>Convención Constituyente de 1949</strong>, que reformó profundamente la Constitución de 1853:</p>
+    <ul>
+      <li>Habilitó la reelección presidencial inmediata.</li>
+      <li>Constitucionalizó los derechos sociales (Art. 37 derechos del trabajador, de la familia, de la ancianidad y de la educación y la cultura).</li>
+      <li>Estableció la función social de la propiedad.</li>
+      <li>Reconocía el voto femenino.</li>
+    </ul>
+
+    <p>La Constitución de 1949 fue derogada por la "Revolución Libertadora" en 1956 mediante una proclama del gobierno militar (sin participación de un órgano constituyente), lo que ha generado un debate jurídico-histórico permanente.</p>
+
+    <h3>El final (1955)</h3>
+    <p>El golpe de Estado del 16 de septiembre de 1955 (la "Revolución Libertadora") derrocó a Perón y cerró el Congreso. Comenzaba una nueva etapa de proscripción del peronismo que se extendería 18 años (1955-1973).</p>
+
+    <h2 id="cierres"><span class="seccion-num">— Sección 9</span>Los <em>cierres</em> del Congreso por dictaduras</h2>
+    <p>Entre 1930 y 1983, el Congreso Nacional argentino fue cerrado <strong>seis veces</strong> por golpes de Estado militares. En total, durante 53 años de inestabilidad institucional, el Congreso estuvo cerrado o subordinado a las Fuerzas Armadas durante aproximadamente 25 años.</p>
+
+    <h3>Los seis cierres</h3>
+
+    <table class="tabla-comparativa">
+      <thead>
+        <tr>
+          <th>Año</th>
+          <th>Dictadura</th>
+          <th>Reapertura</th>
+          <th>Forma de reemplazo legislativo</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1930</td>
+          <td>Uriburu / Justo</td>
+          <td>1932</td>
+          <td>Gobierno por decreto</td>
+        </tr>
+        <tr>
+          <td>1943</td>
+          <td>"Revolución del 43"</td>
+          <td>1946</td>
+          <td>Gobierno por decreto-ley</td>
+        </tr>
+        <tr>
+          <td>1955</td>
+          <td>"Revolución Libertadora"</td>
+          <td>1958</td>
+          <td>Gobierno por decreto-ley. Proscripción del peronismo.</td>
+        </tr>
+        <tr>
+          <td>1962</td>
+          <td>Guido (gob. interino)</td>
+          <td>1963</td>
+          <td>Gobierno por decreto-ley. Cierre breve.</td>
+        </tr>
+        <tr>
+          <td>1966</td>
+          <td>"Revolución Argentina"</td>
+          <td>1973</td>
+          <td>Gobierno por decreto-ley. Cierre de 7 años.</td>
+        </tr>
+        <tr>
+          <td>1976</td>
+          <td>"Proceso de Reorganización Nacional"</td>
+          <td>1983</td>
+          <td>CAL (Comisión de Asesoramiento Legislativo). 7 años.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3>La Comisión de Asesoramiento Legislativo (1976-1983)</h3>
+    <p>La última dictadura cívico-militar (1976-1983) creó un órgano específico para reemplazar al Congreso: la <strong>Comisión de Asesoramiento Legislativo (CAL)</strong>. Sus características:</p>
+
+    <ul>
+      <li>Integrada por <strong>nueve oficiales superiores</strong> de las Fuerzas Armadas (tres por arma: Ejército, Marina, Aeronáutica).</li>
+      <li>Sesionaba en las instalaciones del propio Senado de la Nación, ocupadas violentamente desde el golpe del 24 de marzo de 1976.</li>
+      <li>Su función era "asesorar" sobre los proyectos de "ley" elaborados por la Junta Militar y el Ejecutivo.</li>
+      <li>Durante su existencia, se sancionaron más de <strong>1.700 normas</strong> con rango de ley.</li>
+      <li>Muchas de esas leyes siguen vigentes hoy, lo que ha generado debates sobre su validez jurídica desde el retorno democrático.</li>
+    </ul>
+
+    <p>El paso de senadores y diputados constitucionalmente electos a oficiales militares sentados en sus bancas es uno de los símbolos más fuertes del quiebre institucional del período. El Congreso, físicamente, había sido <strong>tomado</strong>.</p>
+
+    <p>Para profundizar sobre los seis golpes de Estado y la inestabilidad institucional, ver nuestro capítulo <a href="historia-inestabilidad-1930-1983.html" style="color: var(--premium-dark); border-bottom: 1px dotted var(--premium);">07.02 sobre Inestabilidad institucional 1930-1983</a>.</p>
+
+    <h2 id="democracia"><span class="seccion-num">— Sección 10</span>La <em>democracia continua</em> desde 1983</h2>
+    <p>El 10 de diciembre de 1983, con la asunción de Raúl Alfonsín como presidente, se reabrió el Congreso Nacional argentino. Por primera vez desde 1853, el Congreso ha funcionado <strong>ininterrumpidamente durante más de 40 años</strong>.</p>
+
+    <h3>El Congreso de Alfonsín (1983-1989)</h3>
+    <p>El Congreso de 1983 tenía esta composición:</p>
+    <ul>
+      <li><strong>Cámara de Diputados</strong>: la UCR obtuvo 129 bancas (51,7%), el PJ 111 (45%), restantes para otros partidos.</li>
+      <li><strong>Senado</strong>: el PJ tenía mayoría (con la mayor parte de las provincias en su poder).</li>
+      <li>Esta asimetría entre cámaras (UCR en Diputados, PJ en Senado) marcaría el período Alfonsín.</li>
+    </ul>
+
+    <p>Hitos legislativos del período:</p>
+    <ul>
+      <li><strong>Ley 23.040</strong> (27 de diciembre de 1983): derogación de la Ley de Autoamnistía sancionada por el gobierno militar saliente.</li>
+      <li><strong>Ley 23.515 de Divorcio Vincular</strong> (3 de junio de 1987): tras el fallo "Sejean" de la Corte. Ver nuestro capítulo <a href="historia-corte-suprema-fallos.html#sejean" style="color: var(--premium-dark); border-bottom: 1px dotted var(--premium);">07.04 sobre el fallo Sejean</a> y el de <a href="historia-debates-parlamentarios.html" style="color: var(--premium-dark); border-bottom: 1px dotted var(--premium);">07.07 sobre debates parlamentarios</a>.</li>
+      <li><strong>Leyes 23.492 (Punto Final) y 23.521 (Obediencia Debida)</strong> (1986-1987): leyes muy controvertidas que cerraron la persecución penal de los crímenes de la dictadura.</li>
+    </ul>
+
+    <h3>El Congreso de la reforma constitucional (1989-1994)</h3>
+    <p>Durante el primer gobierno de Carlos Menem, el Congreso tuvo mayorías diversas. El hito fundamental del período fue la <strong>Ley 24.309</strong> (29 de diciembre de 1993) que declaró la necesidad de reformar la Constitución. El "Pacto de Olivos" entre Menem y Alfonsín definió el núcleo de la reforma.</p>
+
+    <p>Tras la reforma constitucional de 1994, el Congreso adoptó la composición actual: 257 diputados, 72 senadores (3 por distrito desde 1995), elección directa de senadores, sesiones del 1° de marzo al 30 de noviembre.</p>
+
+    <h3>El Congreso desde 1995</h3>
+    <p>Desde la reforma de 1994 hasta hoy, el Congreso ha atravesado por períodos de mayorías holgadas para distintas fuerzas (peronismo bajo Menem y los Kirchner, oposición en momentos clave), períodos de fragmentación creciente y, en los últimos años, mayor presencia de fuerzas no tradicionales.</p>
+
+    <h2 id="evolucion"><span class="seccion-num">— Sección 11</span><em>Evolución</em> institucional del Congreso</h2>
+    <p>Más allá de los cierres y reaperturas, el Congreso argentino atravesó por evoluciones institucionales importantes en su funcionamiento, composición y reglas.</p>
+
+    <h3>La evolución de los sistemas electorales</h3>
+    <p>Los sistemas con los que se eligieron los diputados nacionales argentinos atravesaron por varias etapas:</p>
+
+    <table class="tabla-comparativa">
+      <thead>
+        <tr>
+          <th>Período</th>
+          <th>Sistema</th>
+          <th>Características</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1854-1902</td>
+          <td>Lista completa, voto cantado</td>
+          <td>El ganador se llevaba todas las bancas. Voto público.</td>
+        </tr>
+        <tr>
+          <td>1902-1904</td>
+          <td>Distritos uninominales</td>
+          <td>Ley 4.161 (Joaquín V. González). Un diputado por distrito.</td>
+        </tr>
+        <tr>
+          <td>1904-1912</td>
+          <td>Vuelta a lista completa</td>
+          <td>Las élites revierten la reforma de 1902.</td>
+        </tr>
+        <tr>
+          <td>1912-1962</td>
+          <td>Lista incompleta (Ley Sáenz Peña)</td>
+          <td>2/3 al ganador, 1/3 a la primera minoría.</td>
+        </tr>
+        <tr>
+          <td>1962-1973</td>
+          <td>Representación proporcional</td>
+          <td>Sistema D'Hondt (con interrupciones por golpes).</td>
+        </tr>
+        <tr>
+          <td>1973-presente</td>
+          <td>D'Hondt con piso</td>
+          <td>Sistema actual. Piso del 3% del padrón para acceder al reparto.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3>El juicio político</h3>
+    <p>El juicio político es uno de los mecanismos institucionales más importantes del Congreso (Arts. 53, 59 y 60 CN). Permite remover al Presidente, Vicepresidente, ministros del Ejecutivo y a los jueces de la Corte Suprema:</p>
+    <ul>
+      <li><strong>Acusa</strong> la Cámara de Diputados (con dos tercios de los presentes).</li>
+      <li><strong>Juzga</strong> la Cámara de Senadores constituida en jurado (con dos tercios de los presentes para destituir).</li>
+      <li>El fallo se limita a destituir al acusado e inhabilitarlo eventualmente para cargos públicos.</li>
+    </ul>
+
+    <p>Algunos juicios políticos notables en la historia argentina:</p>
+    <ul>
+      <li><strong>1947</strong>: la Corte Suprema de Justicia fue removida íntegramente. La cámara de Diputados acusó a los jueces; el Senado los destituyó. El proceso fue muy criticado por la doctrina como ejecución masiva de la independencia judicial.</li>
+      <li><strong>1996</strong>: juicio político (no concretado) al ministro de la Corte Carlos Boggiano.</li>
+      <li><strong>2003-2006</strong>: removidos los jueces Eduardo Moliné O'Connor (2003), Antonio Boggiano (2005) y otros, como parte del cambio de la Corte ampliada de Menem.</li>
+    </ul>
+
+    <h3>Las comisiones investigadoras</h3>
+    <p>El Congreso tiene la facultad de formar <strong>comisiones investigadoras</strong> para indagar sobre asuntos de interés público. Algunas comisiones históricamente importantes:</p>
+
+    <ul>
+      <li><strong>Comisión de Investigación sobre el Comercio de Carnes</strong> (Senado, 1935): dirigida por Lisandro de la Torre. Investigaba las prácticas de las empresas frigoríficas inglesas (Anglo, Armour). El 23 de julio de 1935, durante una sesión, el senador Enzo Bordabehere (también demócrata progresista) recibió disparos de Ramón Valdez Cora y murió. De la Torre, devastado por la pérdida de su compañero, se suicidaría en 1939.</li>
+      <li><strong>Comisión Investigadora del Senado de 1992</strong> sobre el caso AMIA (atentado del 18 de julio de 1994).</li>
+      <li><strong>Comisión Bicameral sobre el atentado de la AMIA</strong> creada en 2003.</li>
+    </ul>
+
+    <h3>La paridad de género (2019)</h3>
+    <p>La <strong>Ley 27.412 de Paridad de Género en Ámbitos de Representación Política</strong>, sancionada en noviembre de 2017 y aplicada a partir de las elecciones de 2019, estableció que las listas de candidatos al Congreso Nacional deben estar compuestas por un <strong>50% de mujeres y un 50% de varones</strong>, en forma intercalada y consecutiva.</p>
+
+    <p>El impacto de la ley en la composición del Congreso fue inmediato:</p>
+    <ul>
+      <li>En 1983, las mujeres representaban menos del 6% de los diputados nacionales.</li>
+      <li>En 1993, tras la primera ley de cupo femenino (Ley 24.012 de 1991), llegaron al 21%.</li>
+      <li>Después de 2019, la representación femenina superó el 40% en ambas cámaras.</li>
+    </ul>
+
+    <h2 id="sesiones-memorables"><span class="seccion-num">— Sección 12</span>Sesiones <em>memorables</em></h2>
+    <p>El recinto del Congreso ha sido escenario de algunas de las sesiones más importantes de la historia política argentina. Una selección:</p>
+
+    <h3>1916 - Asunción de Yrigoyen ante una Asamblea Legislativa</h3>
+    <p>El 12 de octubre de 1916, Hipólito Yrigoyen asumió la presidencia ante una Asamblea Legislativa repleta. Era la primera vez que un presidente surgido del voto universal masculino, secreto y obligatorio asumía el cargo. La calle estaba colmada de simpatizantes radicales que desengancharon los caballos del coche presidencial y lo arrastraron hasta la Casa Rosada.</p>
+
+    <h3>1935 - El asesinato de Bordabehere</h3>
+    <p>El 23 de julio de 1935, durante la investigación del comercio de carnes liderada por Lisandro de la Torre, el senador Enzo Bordabehere fue asesinado en el recinto del Senado por Ramón Valdez Cora, ex policía vinculado a sectores conservadores. Fue uno de los hechos más oscuros de la Década Infame.</p>
+
+    <h3>1947 - Sanción del voto femenino</h3>
+    <p>El 9 de septiembre de 1947 se sancionó la Ley 13.010 que estableció el voto femenino. Eva Perón asistió a la sesión desde el palco oficial. Días después, el 23 de septiembre, recibió en Plaza de Mayo el ejemplar de la ley promulgada de manos del propio Juan Domingo Perón.</p>
+
+    <h3>1949 - Reforma constitucional</h3>
+    <p>La Convención Nacional Constituyente sesionó en el Congreso entre el 24 de enero y el 11 de marzo de 1949. Sancionó la Constitución de 1949 que introdujo profundos cambios en la organización del Estado.</p>
+
+    <h3>1983 - Sesión inaugural del retorno democrático</h3>
+    <p>El 10 de diciembre de 1983, con la asunción de Raúl Alfonsín, el Congreso reabrió tras 7 años de cierre. Las cámaras estaban llenas de figuras de la oposición democrática que regresaban de proscripciones y exilios. Era el comienzo de la democracia continua que dura hasta hoy.</p>
+
+    <h3>1987 - Debate del divorcio vincular</h3>
+    <p>El 21 y 22 de mayo de 1987, tras maratónicas sesiones, el Congreso aprobó la Ley 23.515 de divorcio vincular. Fue uno de los debates más intensos del período democrático, con la Iglesia Católica oponiéndose fuertemente y la sociedad argentina dividida.</p>
+
+    <p>Para profundizar sobre este debate, ver el capítulo <a href="historia-debates-parlamentarios.html#divorcio" style="color: var(--premium-dark); border-bottom: 1px dotted var(--premium);">07.07 sobre debates parlamentarios</a>.</p>
+
+    <h3>1994 - Sanción de la reforma constitucional</h3>
+    <p>El 22 de agosto de 1994, la Convención Constituyente reunida en Santa Fe y Paraná sancionó la última reforma constitucional argentina. Sus disposiciones rigen hoy.</p>
+
+    <p>Para más sobre las distintas reformas, ver el capítulo <a href="reformas-constitucionales.html" style="color: var(--premium-dark); border-bottom: 1px dotted var(--premium);">07.01 sobre las siete reformas constitucionales</a>.</p>
+
+    <h3>2010 - Debate del matrimonio igualitario</h3>
+    <p>El 15 de julio de 2010, el Senado argentino aprobó la Ley 26.618 de Matrimonio Igualitario tras una sesión maratónica de más de 14 horas. La votación fue 33 a 27. Argentina se convertía en el primer país de América Latina en reconocer el matrimonio entre personas del mismo sexo.</p>
+
+    <h3>2018 y 2020 - Debate de la interrupción legal del embarazo</h3>
+    <p>El 13 y 14 de junio de 2018, la Cámara de Diputados aprobó (por 129 votos contra 125) un proyecto de Interrupción Legal del Embarazo, que luego fue rechazado por el Senado (38 a 31) el 9 de agosto. En diciembre de 2020, un nuevo proyecto fue aprobado por ambas cámaras: Diputados (131 a 117) y Senado (38 a 29). La Ley 27.610 estableció el derecho a la interrupción del embarazo hasta la semana 14.</p>
+
+    <p>Ambos debates fueron extensamente transmitidos por televisión y generaron movilizaciones masivas en torno al Congreso, expresadas en los pañuelos verdes (a favor) y celestes (en contra).</p>
+
+    <h2 id="linea-tiempo"><span class="seccion-num">— Sección 13</span>Línea de <em>tiempo</em> del Congreso argentino</h2>
+    <p>Resumen cronológico de los principales hitos institucionales del Congreso Nacional argentino.</p>
+
+    <div class="linea-tiempo">
+      <h3>— Hitos del Congreso argentino</h3>
+      <ol>
+        <li>
+          <span class="linea-tiempo-fecha">1813</span>
+          <div class="linea-tiempo-titulo">Asamblea del Año XIII. Primer órgano legislativo de carácter nacional.</div>
+        </li>
+        <li>
+          <span class="linea-tiempo-fecha">1816</span>
+          <div class="linea-tiempo-titulo">Congreso de Tucumán. Declaración de la Independencia (9 de julio).</div>
+        </li>
+        <li>
+          <span class="linea-tiempo-fecha">1853</span>
+          <div class="linea-tiempo-titulo">Constitución Nacional. Creación del Congreso bicameral.</div>
+        </li>
+        <li>
+          <span class="linea-tiempo-fecha">1854</span>
+          <div class="linea-tiempo-titulo"><strong>24 de octubre</strong>: primeras sesiones del Congreso Nacional en Paraná.</div>
+        </li>
+        <li>
+          <span class="linea-tiempo-fecha">1862</span>
+          <div class="linea-tiempo-titulo">Traslado del Congreso a Buenos Aires tras Pavón. Mitre asume la presidencia.</div>
+        </li>
+        <li>
+          <span class="linea-tiempo-fecha">1864</span>
+          <div class="linea-tiempo-titulo"><strong>12 de mayo</strong>: inauguración del primer edificio propio del Congreso (arq. Larguía).</div>
+        </li>
+        <li>
+          <span class="linea-tiempo-fecha">1880</span>
+          <div class="linea-tiempo-titulo">El Congreso sesiona 4 meses en Belgrano durante la federalización de Buenos Aires.</div>
+        </li>
+        <li>
+          <span class="linea-tiempo-fecha">1895</span>
+          <div class="linea-tiempo-titulo">Concurso internacional ganado por Vittorio Meano para el nuevo Palacio.</div>
+        </li>
+        <li>
+          <span class="linea-tiempo-fecha">1902</span>
+          <div class="linea-tiempo-titulo">Ley 4.161 de Joaquín V. González. Distritos uninominales y voto secreto.</div>
+        </li>
+        <li>
+          <span class="linea-tiempo-fecha">1906</span>
+          <div class="linea-tiempo-titulo"><strong>12 de mayo</strong>: inauguración del actual Palacio del Congreso. Presidente Figueroa Alcorta.</div>
+        </li>
+        <li>
+          <span class="linea-tiempo-fecha">1912</span>
+          <div class="linea-tiempo-titulo"><strong>13 de febrero</strong>: promulgación de la Ley 8.871 (Sáenz Peña).</div>
+        </li>
+        <li>
+          <span class="linea-tiempo-fecha">1916</span>
+          <div class="linea-tiempo-titulo"><strong>2 de abril</strong>: primeras elecciones presidenciales bajo la nueva ley. Triunfo de Yrigoyen.</div>
+        </li>
+        <li>
+          <span class="linea-tiempo-fecha">1930</span>
+          <div class="linea-tiempo-titulo">Primer cierre del Congreso por golpe de Estado (Uriburu).</div>
+        </li>
+        <li>
+          <span class="linea-tiempo-fecha">1947</span>
+          <div class="linea-tiempo-titulo"><strong>9 de septiembre</strong>: Ley 13.010 de voto femenino.</div>
+        </li>
+        <li>
+          <span class="linea-tiempo-fecha">1949</span>
+          <div class="linea-tiempo-titulo">Convención Constituyente. Constitución de 1949 (derogada en 1956).</div>
+        </li>
+        <li>
+          <span class="linea-tiempo-fecha">1951</span>
+          <div class="linea-tiempo-titulo">Primer voto femenino. Primeras 23 diputadas y 6 senadoras electas.</div>
+        </li>
+        <li>
+          <span class="linea-tiempo-fecha">1955-1973</span>
+          <div class="linea-tiempo-titulo">Período de proscripción del peronismo. Tres cierres del Congreso (1955, 1962, 1966).</div>
+        </li>
+        <li>
+          <span class="linea-tiempo-fecha">1976-1983</span>
+          <div class="linea-tiempo-titulo">Cierre por la última dictadura. CAL en lugar del Congreso. 1.700 normas con rango de "ley".</div>
+        </li>
+        <li>
+          <span class="linea-tiempo-fecha">1983</span>
+          <div class="linea-tiempo-titulo"><strong>10 de diciembre</strong>: reapertura democrática del Congreso. Asume Alfonsín.</div>
+        </li>
+        <li>
+          <span class="linea-tiempo-fecha">1991</span>
+          <div class="linea-tiempo-titulo">Ley 24.012 de cupo femenino (30% mínimo en las listas).</div>
+        </li>
+        <li>
+          <span class="linea-tiempo-fecha">1994</span>
+          <div class="linea-tiempo-titulo">Reforma constitucional. 3 senadores por distrito, elección directa, paridad ampliada en composición.</div>
+        </li>
+        <li>
+          <span class="linea-tiempo-fecha">2010</span>
+          <div class="linea-tiempo-titulo">Ley 26.618 de Matrimonio Igualitario.</div>
+        </li>
+        <li>
+          <span class="linea-tiempo-fecha">2017</span>
+          <div class="linea-tiempo-titulo">Ley 27.412 de Paridad de Género (50% en las listas).</div>
+        </li>
+        <li>
+          <span class="linea-tiempo-fecha">2020</span>
+          <div class="linea-tiempo-titulo">Ley 27.610 de Interrupción Voluntaria del Embarazo.</div>
+        </li>
+        <li>
+          <span class="linea-tiempo-fecha">2023</span>
+          <div class="linea-tiempo-titulo">40 años de democracia continua. El Congreso ha funcionado ininterrumpidamente desde 1983.</div>
+        </li>
+      </ol>
+    </div>
+
+    <div class="periodo-cita">
+      <div class="periodo-cita-tag">— Reflexión final</div>
+      <p class="periodo-cita-texto">El Congreso argentino atravesó la mayor parte del siglo XX como una institución frágil, sometida a cierres reiterados y reaperturas con reglas cambiantes. Desde 1983, en cambio, ha cumplido sus períodos legislativos sin interrupciones. Cuatro décadas son, en perspectiva histórica, el período de funcionamiento continuo más largo desde la fundación del país. Cuidar el Congreso es cuidar la posibilidad misma de la deliberación democrática.</p>
+    </div>
+
+    <div class="dato-destacado">
+      <div class="dato-destacado-titulo">— Próximos contenidos en desarrollo</div>
+      <p>Este capítulo es un primer envío sobre el Congreso a lo largo del tiempo. Otros temas que se podrán sumar en próximas entregas: <strong>el rol del Vicepresidente como presidente del Senado</strong>; <strong>la presidencia de la Cámara de Diputados</strong> a lo largo del tiempo; <strong>los grandes oradores parlamentarios</strong> (de Vélez Sársfield a Alfonsín); <strong>la evolución del trabajo en comisiones</strong>; <strong>las sesiones especiales y extraordinarias</strong>; <strong>la historia de los bloques parlamentarios</strong>; <strong>la dimensión arquitectónica y simbólica del Palacio</strong>. Si tenés sugerencias sobre qué tema desarrollar, escribinos.</p>
+    </div>
+
+    <div class="fuentes" id="fuentes">
+      <div class="fuentes-titulo">— Fuentes</div>
+      <ul>
+        <li>Constitución de la Nación Argentina, texto vigente desde la reforma de 1994 (Arts. 44-86 y concordantes).</li>
+        <li>Constitución de la Nación Argentina de 1853, texto original.</li>
+        <li>Constitución de la Nación Argentina de 1949 (vigente entre 1949 y 1956).</li>
+        <li>Ley 7 de la Confederación (28 de noviembre de 1854) sobre suplentes legislativos.</li>
+        <li>Ley 33 de la Confederación (20 de agosto de 1855).</li>
+        <li>Ley 4.161 (1902) - "Ley Joaquín V. González" sobre distritos uninominales.</li>
+        <li>Ley 8.871 (1912) - "Ley Sáenz Peña" sobre sufragio universal masculino, secreto y obligatorio.</li>
+        <li>Ley 13.010 (1947) - Voto femenino.</li>
+        <li>Ley 22.847 (1983) - Régimen de representación de las provincias en la Cámara de Diputados.</li>
+        <li>Ley 24.012 (1991) - Cupo femenino del 30% en las listas.</li>
+        <li>Ley 27.412 (2017) - Paridad de Género en Ámbitos de Representación Política (50%).</li>
+        <li>Ley 14.036 (1951) - Declaración de Monumento Histórico (palacio legislativo).</li>
+        <li>Decreto 2676/1993 - Declaración de Monumento Histórico y Artístico Nacional del Palacio del Congreso.</li>
+        <li>Congreso de la Nación Argentina. <em>Historia del Palacio del Congreso</em>. Edición oficial.</li>
+        <li>Senado de la Nación. <em>Historia política del Senado de la Nación Argentina</em>. Biblioteca del Congreso de la Nación, 2017.</li>
+        <li>Cámara de Diputados de la Nación. <em>Estadísticas Parlamentarias</em>, períodos 1983-2025.</li>
+        <li>Bidart Campos, Germán J. <em>Tratado elemental de Derecho Constitucional argentino</em>. Ediar.</li>
+        <li>Sabsay, Daniel A. <em>El derecho constitucional argentino</em>. Eudeba.</li>
+        <li>Gelli, María Angélica. <em>Constitución de la Nación Argentina comentada y concordada</em>. La Ley.</li>
+        <li>Romero, Luis Alberto. <em>Breve historia contemporánea de la Argentina</em>. FCE.</li>
+        <li>Botana, Natalio. <em>El orden conservador. La política argentina entre 1880 y 1916</em>. Edhasa.</li>
+        <li>Devoto, Fernando y Madero, Marta (eds.). <em>Historia de la vida privada en la Argentina</em>. Taurus.</li>
+      </ul>
+    </div>
+
+    <div class="nav-capitulos">
+      <a href="historia.html" class="nav-cap-link atras">
+        <div class="nav-cap-tipo">← Volver al índice</div>
+        <div class="nav-cap-titulo">Historia institucional</div>
+      </a>
+      <a href="historia-debates-parlamentarios.html" class="nav-cap-link adelante">
+        <div class="nav-cap-tipo">Capítulo relacionado · 07.07</div>
+        <div class="nav-cap-titulo">Debates parlamentarios</div>
+      </a>
+    </div>
+
+  </main>
+
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div>
+      <h3>Educación Cívica</h3>
+      <p>Una guía visual y educativa sobre el Estado argentino, sus poderes, las provincias, el sistema electoral, los derechos del ciudadano y la historia institucional.</p>
+    </div>
+    <div>
+      <h3>Secciones</h3>
+      <a href="poderes.html">Los poderes</a>
+      <a href="provincias.html">Provincias</a>
+      <a href="historia.html">Historia</a>
+      <a href="caba-en-profundidad.html">CABA en profundidad</a>
+    </div>
+    <div>
+      <h3>El proyecto</h3>
+      <a href="#">Sobre nosotros</a>
+      <a href="#">Manifiesto editorial</a>
+      <a href="#">Contacto</a>
+    </div>
+    <div class="footer-meta">
+      educacioncivica.com.ar · v0.5 prototipo · Sin grieta · Datos institucionales actualizados a mayo de 2026
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
